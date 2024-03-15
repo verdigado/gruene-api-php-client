@@ -1,5 +1,7 @@
 # PHP Client for Gruene API
 
+The API documentation can be found at https://api.gruene.de/api
+
 ## Installation & Usage
 
 ### Requirements

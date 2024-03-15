@@ -4,9 +4,10 @@ All URIs are relative to https://app.gruene.de, except if the operation defines 
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**findUsers()**](UsersApi.md#findUsers) | **GET** /v0/users | Find users |
-| [**getSelf()**](UsersApi.md#getSelf) | **GET** /v0/users/self | Get the authenticated user |
-| [**getUser()**](UsersApi.md#getUser) | **GET** /v0/users/{userId} | Get user by id |
+| [**findUsers()**](UsersApi.md#findUsers) | **GET** /v0/users | Find users in ldap |
+| [**getSelf()**](UsersApi.md#getSelf) | **GET** /v1/users/self | Get the authenticated user |
+| [**getUser()**](UsersApi.md#getUser) | **GET** /v1/users/{userId} | Get user by id |
+| [**getUserRbacStructure()**](UsersApi.md#getUserRbacStructure) | **GET** /v1/users/{userId}/rbac-structure | Get user RBAC structure |
 
 
 ## `findUsers()`
@@ -15,7 +16,7 @@ All URIs are relative to https://app.gruene.de, except if the operation defines 
 findUsers($search, $user_ids, $limit): \Verdigado\GrueneApiClient\models\FindUsersResponse
 ```
 
-Find users
+Find users in ldap
 
 ### Example
 
@@ -200,6 +201,74 @@ try {
 ### Return type
 
 [**\Verdigado\GrueneApiClient\models\User**](../Model/User.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key), [bearer](../../README.md#bearer), [basic](../../README.md#basic)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getUserRbacStructure()`
+
+```php
+getUserRbacStructure($user_id): \Verdigado\GrueneApiClient\models\UserRbacStructure
+```
+
+Get user RBAC structure
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure API key authorization: api_key
+$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+
+// Configure Bearer (JWT) authorization: bearer
+$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+// Configure HTTP basic authorization: basic
+$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new Verdigado\GrueneApiClient\Api\UsersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$user_id = 'user_id_example'; // string
+
+try {
+    $result = $apiInstance->getUserRbacStructure($user_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UsersApi->getUserRbacStructure: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **user_id** | **string**|  | |
+
+### Return type
+
+[**\Verdigado\GrueneApiClient\models\UserRbacStructure**](../Model/UserRbacStructure.md)
 
 ### Authorization
 

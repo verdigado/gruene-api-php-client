@@ -80,6 +80,9 @@ class UsersApi
         'getUser' => [
             'application/json',
         ],
+        'getUserRbacStructure' => [
+            'application/json',
+        ],
     ];
 
 /**
@@ -131,7 +134,7 @@ class UsersApi
     /**
      * Operation findUsers
      *
-     * Find users
+     * Find users in ldap
      *
      * @param  string $search Search term to look for in firstname, lastname, email, username. (optional)
      * @param  string[] $user_ids Only return users with matching user id. (optional)
@@ -151,7 +154,7 @@ class UsersApi
     /**
      * Operation findUsersWithHttpInfo
      *
-     * Find users
+     * Find users in ldap
      *
      * @param  string $search Search term to look for in firstname, lastname, email, username. (optional)
      * @param  string[] $user_ids Only return users with matching user id. (optional)
@@ -253,7 +256,7 @@ class UsersApi
     /**
      * Operation findUsersAsync
      *
-     * Find users
+     * Find users in ldap
      *
      * @param  string $search Search term to look for in firstname, lastname, email, username. (optional)
      * @param  string[] $user_ids Only return users with matching user id. (optional)
@@ -276,7 +279,7 @@ class UsersApi
     /**
      * Operation findUsersAsyncWithHttpInfo
      *
-     * Find users
+     * Find users in ldap
      *
      * @param  string $search Search term to look for in firstname, lastname, email, username. (optional)
      * @param  string[] $user_ids Only return users with matching user id. (optional)
@@ -654,7 +657,7 @@ class UsersApi
     {
 
 
-        $resourcePath = '/v0/users/self';
+        $resourcePath = '/v1/users/self';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -942,7 +945,303 @@ class UsersApi
         }
 
 
-        $resourcePath = '/v0/users/{userId}';
+        $resourcePath = '/v1/users/{userId}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+        // path params
+        if ($user_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'userId' . '}',
+                ObjectSerializer::toPathValue($user_id),
+                $resourcePath
+            );
+        }
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('x-api-key');
+        if ($apiKey !== null) {
+            $headers['x-api-key'] = $apiKey;
+        }
+        // this endpoint requires Bearer (JWT) authentication (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+        // this endpoint requires HTTP basic authentication
+        if (!empty($this->config->getUsername()) || !(empty($this->config->getPassword()))) {
+            $headers['Authorization'] = 'Basic ' . base64_encode($this->config->getUsername() . ":" . $this->config->getPassword());
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation getUserRbacStructure
+     *
+     * Get user RBAC structure
+     *
+     * @param  string $user_id user_id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getUserRbacStructure'] to see the possible values for this operation
+     *
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Verdigado\GrueneApiClient\models\UserRbacStructure
+     */
+    public function getUserRbacStructure($user_id, string $contentType = self::contentTypes['getUserRbacStructure'][0])
+    {
+        list($response) = $this->getUserRbacStructureWithHttpInfo($user_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation getUserRbacStructureWithHttpInfo
+     *
+     * Get user RBAC structure
+     *
+     * @param  string $user_id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getUserRbacStructure'] to see the possible values for this operation
+     *
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Verdigado\GrueneApiClient\models\UserRbacStructure, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getUserRbacStructureWithHttpInfo($user_id, string $contentType = self::contentTypes['getUserRbacStructure'][0])
+    {
+        $request = $this->getUserRbacStructureRequest($user_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\Verdigado\GrueneApiClient\models\UserRbacStructure' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Verdigado\GrueneApiClient\models\UserRbacStructure' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\UserRbacStructure', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Verdigado\GrueneApiClient\models\UserRbacStructure';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Verdigado\GrueneApiClient\models\UserRbacStructure',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getUserRbacStructureAsync
+     *
+     * Get user RBAC structure
+     *
+     * @param  string $user_id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getUserRbacStructure'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getUserRbacStructureAsync($user_id, string $contentType = self::contentTypes['getUserRbacStructure'][0])
+    {
+        return $this->getUserRbacStructureAsyncWithHttpInfo($user_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getUserRbacStructureAsyncWithHttpInfo
+     *
+     * Get user RBAC structure
+     *
+     * @param  string $user_id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getUserRbacStructure'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getUserRbacStructureAsyncWithHttpInfo($user_id, string $contentType = self::contentTypes['getUserRbacStructure'][0])
+    {
+        $returnType = '\Verdigado\GrueneApiClient\models\UserRbacStructure';
+        $request = $this->getUserRbacStructureRequest($user_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getUserRbacStructure'
+     *
+     * @param  string $user_id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getUserRbacStructure'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function getUserRbacStructureRequest($user_id, string $contentType = self::contentTypes['getUserRbacStructure'][0])
+    {
+
+        // verify the required parameter 'user_id' is set
+        if ($user_id === null || (is_array($user_id) && count($user_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $user_id when calling getUserRbacStructure'
+            );
+        }
+
+
+        $resourcePath = '/v1/users/{userId}/rbac-structure';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
