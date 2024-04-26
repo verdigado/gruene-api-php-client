@@ -49,7 +49,7 @@ class FindOffboardingUsersResponseMeta implements ModelInterface, ArrayAccess, \
       *
       * @var string
       */
-    protected static $openAPIModelName = 'FindOffboardingUsersResponseMeta';
+    protected static $openAPIModelName = 'FindOffboardingUsersResponse_meta';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

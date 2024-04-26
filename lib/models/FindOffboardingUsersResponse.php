@@ -57,7 +57,7 @@ class FindOffboardingUsersResponse implements ModelInterface, ArrayAccess, \Json
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Verdigado\GrueneApiClient\models\OffboardingUserInfoDto[]',
+        'data' => '\Verdigado\GrueneApiClient\models\OffboardingUserInfo[]',
         'meta' => '\Verdigado\GrueneApiClient\models\FindOffboardingUsersResponseMeta'
     ];
 
@@ -305,7 +305,7 @@ class FindOffboardingUsersResponse implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets data
      *
-     * @return \Verdigado\GrueneApiClient\models\OffboardingUserInfoDto[]
+     * @return \Verdigado\GrueneApiClient\models\OffboardingUserInfo[]
      */
     public function getData()
     {
@@ -315,7 +315,7 @@ class FindOffboardingUsersResponse implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets data
      *
-     * @param \Verdigado\GrueneApiClient\models\OffboardingUserInfoDto[] $data data
+     * @param \Verdigado\GrueneApiClient\models\OffboardingUserInfo[] $data data
      *
      * @return self
      */

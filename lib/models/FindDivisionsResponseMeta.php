@@ -1,6 +1,6 @@
 <?php
 /**
- * FindUsersResponse
+ * FindDivisionsResponseMeta
  *
  * PHP version 7.4
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Verdigado\GrueneApiClient\ObjectSerializer;
 
 /**
- * FindUsersResponse Class Doc Comment
+ * FindDivisionsResponseMeta Class Doc Comment
  *
  * @category Class
  * @package  Verdigado\GrueneApiClient
@@ -40,7 +40,7 @@ use \Verdigado\GrueneApiClient\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializable
+class FindDivisionsResponseMeta implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       *
       * @var string
       */
-    protected static $openAPIModelName = 'FindUsersResponse';
+    protected static $openAPIModelName = 'FindDivisionsResponse_meta';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,7 +57,10 @@ class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Verdigado\GrueneApiClient\models\User[]'
+        'count' => 'float',
+        'total' => 'float',
+        'offset' => 'float',
+        'limit' => 'float'
     ];
 
     /**
@@ -68,7 +71,10 @@ class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'data' => null
+        'count' => null,
+        'total' => null,
+        'offset' => null,
+        'limit' => null
     ];
 
     /**
@@ -77,7 +83,10 @@ class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'data' => false
+        'count' => false,
+		'total' => false,
+		'offset' => false,
+		'limit' => false
     ];
 
     /**
@@ -166,7 +175,10 @@ class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $attributeMap = [
-        'data' => 'data'
+        'count' => 'count',
+        'total' => 'total',
+        'offset' => 'offset',
+        'limit' => 'limit'
     ];
 
     /**
@@ -175,7 +187,10 @@ class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $setters = [
-        'data' => 'setData'
+        'count' => 'setCount',
+        'total' => 'setTotal',
+        'offset' => 'setOffset',
+        'limit' => 'setLimit'
     ];
 
     /**
@@ -184,7 +199,10 @@ class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $getters = [
-        'data' => 'getData'
+        'count' => 'getCount',
+        'total' => 'getTotal',
+        'offset' => 'getOffset',
+        'limit' => 'getLimit'
     ];
 
     /**
@@ -244,7 +262,10 @@ class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('data', $data ?? [], null);
+        $this->setIfExists('count', $data ?? [], null);
+        $this->setIfExists('total', $data ?? [], null);
+        $this->setIfExists('offset', $data ?? [], null);
+        $this->setIfExists('limit', $data ?? [], null);
     }
 
     /**
@@ -274,9 +295,6 @@ class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
     {
         $invalidProperties = [];
 
-        if ($this->container['data'] === null) {
-            $invalidProperties[] = "'data' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -293,28 +311,109 @@ class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
 
 
     /**
-     * Gets data
+     * Gets count
      *
-     * @return \Verdigado\GrueneApiClient\models\User[]
+     * @return float|null
      */
-    public function getData()
+    public function getCount()
     {
-        return $this->container['data'];
+        return $this->container['count'];
     }
 
     /**
-     * Sets data
+     * Sets count
      *
-     * @param \Verdigado\GrueneApiClient\models\User[] $data data
+     * @param float|null $count count
      *
      * @return self
      */
-    public function setData($data)
+    public function setCount($count)
     {
-        if (is_null($data)) {
-            throw new \InvalidArgumentException('non-nullable data cannot be null');
+        if (is_null($count)) {
+            throw new \InvalidArgumentException('non-nullable count cannot be null');
         }
-        $this->container['data'] = $data;
+        $this->container['count'] = $count;
+
+        return $this;
+    }
+
+    /**
+     * Gets total
+     *
+     * @return float|null
+     */
+    public function getTotal()
+    {
+        return $this->container['total'];
+    }
+
+    /**
+     * Sets total
+     *
+     * @param float|null $total total
+     *
+     * @return self
+     */
+    public function setTotal($total)
+    {
+        if (is_null($total)) {
+            throw new \InvalidArgumentException('non-nullable total cannot be null');
+        }
+        $this->container['total'] = $total;
+
+        return $this;
+    }
+
+    /**
+     * Gets offset
+     *
+     * @return float|null
+     */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+     * Sets offset
+     *
+     * @param float|null $offset offset
+     *
+     * @return self
+     */
+    public function setOffset($offset)
+    {
+        if (is_null($offset)) {
+            throw new \InvalidArgumentException('non-nullable offset cannot be null');
+        }
+        $this->container['offset'] = $offset;
+
+        return $this;
+    }
+
+    /**
+     * Gets limit
+     *
+     * @return float|null
+     */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+     * Sets limit
+     *
+     * @param float|null $limit limit
+     *
+     * @return self
+     */
+    public function setLimit($limit)
+    {
+        if (is_null($limit)) {
+            throw new \InvalidArgumentException('non-nullable limit cannot be null');
+        }
+        $this->container['limit'] = $limit;
 
         return $this;
     }

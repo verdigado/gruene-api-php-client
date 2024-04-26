@@ -141,16 +141,15 @@ class NbApiApi
      * @param  string $filter_level Filter by role level (optional)
      * @param  string $filter_type Filter by role type (optional)
      * @param  string $filter_slug Filter by role slug (optional)
-     * @param  string $filter_active Filter by active status. True by default (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findGroups'] to see the possible values for this operation
      *
      * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Verdigado\GrueneApiClient\models\FindNbGroupsResponse
      */
-    public function findGroups($filter_external_refs_type = null, $filter_external_refs_key = null, $filter_level = null, $filter_type = null, $filter_slug = null, $filter_active = null, string $contentType = self::contentTypes['findGroups'][0])
+    public function findGroups($filter_external_refs_type = null, $filter_external_refs_key = null, $filter_level = null, $filter_type = null, $filter_slug = null, string $contentType = self::contentTypes['findGroups'][0])
     {
-        list($response) = $this->findGroupsWithHttpInfo($filter_external_refs_type, $filter_external_refs_key, $filter_level, $filter_type, $filter_slug, $filter_active, $contentType);
+        list($response) = $this->findGroupsWithHttpInfo($filter_external_refs_type, $filter_external_refs_key, $filter_level, $filter_type, $filter_slug, $contentType);
         return $response;
     }
 
@@ -164,16 +163,15 @@ class NbApiApi
      * @param  string $filter_level Filter by role level (optional)
      * @param  string $filter_type Filter by role type (optional)
      * @param  string $filter_slug Filter by role slug (optional)
-     * @param  string $filter_active Filter by active status. True by default (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findGroups'] to see the possible values for this operation
      *
      * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Verdigado\GrueneApiClient\models\FindNbGroupsResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function findGroupsWithHttpInfo($filter_external_refs_type = null, $filter_external_refs_key = null, $filter_level = null, $filter_type = null, $filter_slug = null, $filter_active = null, string $contentType = self::contentTypes['findGroups'][0])
+    public function findGroupsWithHttpInfo($filter_external_refs_type = null, $filter_external_refs_key = null, $filter_level = null, $filter_type = null, $filter_slug = null, string $contentType = self::contentTypes['findGroups'][0])
     {
-        $request = $this->findGroupsRequest($filter_external_refs_type, $filter_external_refs_key, $filter_level, $filter_type, $filter_slug, $filter_active, $contentType);
+        $request = $this->findGroupsRequest($filter_external_refs_type, $filter_external_refs_key, $filter_level, $filter_type, $filter_slug, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -269,15 +267,14 @@ class NbApiApi
      * @param  string $filter_level Filter by role level (optional)
      * @param  string $filter_type Filter by role type (optional)
      * @param  string $filter_slug Filter by role slug (optional)
-     * @param  string $filter_active Filter by active status. True by default (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findGroups'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findGroupsAsync($filter_external_refs_type = null, $filter_external_refs_key = null, $filter_level = null, $filter_type = null, $filter_slug = null, $filter_active = null, string $contentType = self::contentTypes['findGroups'][0])
+    public function findGroupsAsync($filter_external_refs_type = null, $filter_external_refs_key = null, $filter_level = null, $filter_type = null, $filter_slug = null, string $contentType = self::contentTypes['findGroups'][0])
     {
-        return $this->findGroupsAsyncWithHttpInfo($filter_external_refs_type, $filter_external_refs_key, $filter_level, $filter_type, $filter_slug, $filter_active, $contentType)
+        return $this->findGroupsAsyncWithHttpInfo($filter_external_refs_type, $filter_external_refs_key, $filter_level, $filter_type, $filter_slug, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -295,16 +292,15 @@ class NbApiApi
      * @param  string $filter_level Filter by role level (optional)
      * @param  string $filter_type Filter by role type (optional)
      * @param  string $filter_slug Filter by role slug (optional)
-     * @param  string $filter_active Filter by active status. True by default (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findGroups'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findGroupsAsyncWithHttpInfo($filter_external_refs_type = null, $filter_external_refs_key = null, $filter_level = null, $filter_type = null, $filter_slug = null, $filter_active = null, string $contentType = self::contentTypes['findGroups'][0])
+    public function findGroupsAsyncWithHttpInfo($filter_external_refs_type = null, $filter_external_refs_key = null, $filter_level = null, $filter_type = null, $filter_slug = null, string $contentType = self::contentTypes['findGroups'][0])
     {
         $returnType = '\Verdigado\GrueneApiClient\models\FindNbGroupsResponse';
-        $request = $this->findGroupsRequest($filter_external_refs_type, $filter_external_refs_key, $filter_level, $filter_type, $filter_slug, $filter_active, $contentType);
+        $request = $this->findGroupsRequest($filter_external_refs_type, $filter_external_refs_key, $filter_level, $filter_type, $filter_slug, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -350,15 +346,13 @@ class NbApiApi
      * @param  string $filter_level Filter by role level (optional)
      * @param  string $filter_type Filter by role type (optional)
      * @param  string $filter_slug Filter by role slug (optional)
-     * @param  string $filter_active Filter by active status. True by default (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findGroups'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function findGroupsRequest($filter_external_refs_type = null, $filter_external_refs_key = null, $filter_level = null, $filter_type = null, $filter_slug = null, $filter_active = null, string $contentType = self::contentTypes['findGroups'][0])
+    public function findGroupsRequest($filter_external_refs_type = null, $filter_external_refs_key = null, $filter_level = null, $filter_type = null, $filter_slug = null, string $contentType = self::contentTypes['findGroups'][0])
     {
-
 
 
 
@@ -413,15 +407,6 @@ class NbApiApi
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
             $filter_slug,
             'filter[slug]', // param base name
-            'string', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $filter_active,
-            'filter[active]', // param base name
             'string', // openApiType
             'form', // style
             true, // explode
@@ -1131,7 +1116,7 @@ class NbApiApi
      *
      * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\GrueneApiClient\models\NbRegionalChapterDto
+     * @return \Verdigado\GrueneApiClient\models\NbRegionalChapter
      */
     public function getRegionalChapter($division_key, string $contentType = self::contentTypes['getRegionalChapter'][0])
     {
@@ -1149,7 +1134,7 @@ class NbApiApi
      *
      * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\GrueneApiClient\models\NbRegionalChapterDto, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\NbRegionalChapter, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRegionalChapterWithHttpInfo($division_key, string $contentType = self::contentTypes['getRegionalChapter'][0])
     {
@@ -1192,23 +1177,23 @@ class NbApiApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\GrueneApiClient\models\NbRegionalChapterDto' === '\SplFileObject') {
+                    if ('\Verdigado\GrueneApiClient\models\NbRegionalChapter' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\GrueneApiClient\models\NbRegionalChapterDto' !== 'string') {
+                        if ('\Verdigado\GrueneApiClient\models\NbRegionalChapter' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\NbRegionalChapterDto', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\NbRegionalChapter', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\GrueneApiClient\models\NbRegionalChapterDto';
+            $returnType = '\Verdigado\GrueneApiClient\models\NbRegionalChapter';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1229,7 +1214,7 @@ class NbApiApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\GrueneApiClient\models\NbRegionalChapterDto',
+                        '\Verdigado\GrueneApiClient\models\NbRegionalChapter',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1273,7 +1258,7 @@ class NbApiApi
      */
     public function getRegionalChapterAsyncWithHttpInfo($division_key, string $contentType = self::contentTypes['getRegionalChapter'][0])
     {
-        $returnType = '\Verdigado\GrueneApiClient\models\NbRegionalChapterDto';
+        $returnType = '\Verdigado\GrueneApiClient\models\NbRegionalChapter';
         $request = $this->getRegionalChapterRequest($division_key, $contentType);
 
         return $this->client

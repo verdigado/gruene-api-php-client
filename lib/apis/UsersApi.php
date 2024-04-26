@@ -134,7 +134,7 @@ class UsersApi
     /**
      * Operation findUsers
      *
-     * Find users in ldap
+     * Find users
      *
      * @param  string $search Search term to look for in firstname, lastname, email, username. (optional)
      * @param  string[] $user_ids Only return users with matching user id. (optional)
@@ -154,7 +154,7 @@ class UsersApi
     /**
      * Operation findUsersWithHttpInfo
      *
-     * Find users in ldap
+     * Find users
      *
      * @param  string $search Search term to look for in firstname, lastname, email, username. (optional)
      * @param  string[] $user_ids Only return users with matching user id. (optional)
@@ -256,7 +256,7 @@ class UsersApi
     /**
      * Operation findUsersAsync
      *
-     * Find users in ldap
+     * Find users
      *
      * @param  string $search Search term to look for in firstname, lastname, email, username. (optional)
      * @param  string[] $user_ids Only return users with matching user id. (optional)
@@ -279,7 +279,7 @@ class UsersApi
     /**
      * Operation findUsersAsyncWithHttpInfo
      *
-     * Find users in ldap
+     * Find users
      *
      * @param  string $search Search term to look for in firstname, lastname, email, username. (optional)
      * @param  string[] $user_ids Only return users with matching user id. (optional)
@@ -354,7 +354,7 @@ class UsersApi
         }
         
 
-        $resourcePath = '/v0/users';
+        $resourcePath = '/v1/users';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

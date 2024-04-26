@@ -1,6 +1,6 @@
 <?php
 /**
- * FindUsersResponse
+ * NbRegionalChapter
  *
  * PHP version 7.4
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Verdigado\GrueneApiClient\ObjectSerializer;
 
 /**
- * FindUsersResponse Class Doc Comment
+ * NbRegionalChapter Class Doc Comment
  *
  * @category Class
  * @package  Verdigado\GrueneApiClient
@@ -40,7 +40,7 @@ use \Verdigado\GrueneApiClient\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializable
+class NbRegionalChapter implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       *
       * @var string
       */
-    protected static $openAPIModelName = 'FindUsersResponse';
+    protected static $openAPIModelName = 'NbRegionalChapter';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,7 +57,11 @@ class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Verdigado\GrueneApiClient\models\User[]'
+        'id' => 'string',
+        'name' => 'string',
+        'type' => 'string',
+        'organization' => '\Verdigado\GrueneApiClient\models\NbOrganization',
+        'zip_code' => 'string'
     ];
 
     /**
@@ -68,7 +72,11 @@ class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'data' => null
+        'id' => null,
+        'name' => null,
+        'type' => null,
+        'organization' => null,
+        'zip_code' => null
     ];
 
     /**
@@ -77,7 +85,11 @@ class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'data' => false
+        'id' => false,
+		'name' => false,
+		'type' => false,
+		'organization' => false,
+		'zip_code' => false
     ];
 
     /**
@@ -166,7 +178,11 @@ class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $attributeMap = [
-        'data' => 'data'
+        'id' => 'id',
+        'name' => 'name',
+        'type' => 'type',
+        'organization' => 'organization',
+        'zip_code' => 'zip_code'
     ];
 
     /**
@@ -175,7 +191,11 @@ class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $setters = [
-        'data' => 'setData'
+        'id' => 'setId',
+        'name' => 'setName',
+        'type' => 'setType',
+        'organization' => 'setOrganization',
+        'zip_code' => 'setZipCode'
     ];
 
     /**
@@ -184,7 +204,11 @@ class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $getters = [
-        'data' => 'getData'
+        'id' => 'getId',
+        'name' => 'getName',
+        'type' => 'getType',
+        'organization' => 'getOrganization',
+        'zip_code' => 'getZipCode'
     ];
 
     /**
@@ -228,6 +252,25 @@ class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
         return self::$openAPIModelName;
     }
 
+    public const TYPE_BV = 'BV';
+    public const TYPE_LV = 'LV';
+    public const TYPE_KV = 'KV';
+    public const TYPE_OV = 'OV';
+
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_BV,
+            self::TYPE_LV,
+            self::TYPE_KV,
+            self::TYPE_OV,
+        ];
+    }
 
     /**
      * Associative array for storing property values
@@ -244,7 +287,11 @@ class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('data', $data ?? [], null);
+        $this->setIfExists('id', $data ?? [], null);
+        $this->setIfExists('name', $data ?? [], null);
+        $this->setIfExists('type', $data ?? [], null);
+        $this->setIfExists('organization', $data ?? [], null);
+        $this->setIfExists('zip_code', $data ?? [], null);
     }
 
     /**
@@ -274,8 +321,29 @@ class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
     {
         $invalidProperties = [];
 
-        if ($this->container['data'] === null) {
-            $invalidProperties[] = "'data' can't be null";
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
+        }
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
+        }
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
+        }
+        $allowedValues = $this->getTypeAllowableValues();
+        if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value '%s' for 'type', must be one of '%s'",
+                $this->container['type'],
+                implode("', '", $allowedValues)
+            );
+        }
+
+        if ($this->container['organization'] === null) {
+            $invalidProperties[] = "'organization' can't be null";
+        }
+        if ($this->container['zip_code'] === null) {
+            $invalidProperties[] = "'zip_code' can't be null";
         }
         return $invalidProperties;
     }
@@ -293,28 +361,146 @@ class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
 
 
     /**
-     * Gets data
+     * Gets id
      *
-     * @return \Verdigado\GrueneApiClient\models\User[]
+     * @return string
      */
-    public function getData()
+    public function getId()
     {
-        return $this->container['data'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets data
+     * Sets id
      *
-     * @param \Verdigado\GrueneApiClient\models\User[] $data data
+     * @param string $id Id of the regional chapter (division key)
      *
      * @return self
      */
-    public function setData($data)
+    public function setId($id)
     {
-        if (is_null($data)) {
-            throw new \InvalidArgumentException('non-nullable data cannot be null');
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
         }
-        $this->container['data'] = $data;
+        $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+     * Sets name
+     *
+     * @param string $name Regional chapter name
+     *
+     * @return self
+     */
+    public function setName($name)
+    {
+        if (is_null($name)) {
+            throw new \InvalidArgumentException('non-nullable name cannot be null');
+        }
+        $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets type
+     *
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     *
+     * @param string $type Regional chapter type Possible values: BV | LV | KV | OV
+     *
+     * @return self
+     */
+    public function setType($type)
+    {
+        if (is_null($type)) {
+            throw new \InvalidArgumentException('non-nullable type cannot be null');
+        }
+        $allowedValues = $this->getTypeAllowableValues();
+        if (!in_array($type, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value '%s' for 'type', must be one of '%s'",
+                    $type,
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['type'] = $type;
+
+        return $this;
+    }
+
+    /**
+     * Gets organization
+     *
+     * @return \Verdigado\GrueneApiClient\models\NbOrganization
+     */
+    public function getOrganization()
+    {
+        return $this->container['organization'];
+    }
+
+    /**
+     * Sets organization
+     *
+     * @param \Verdigado\GrueneApiClient\models\NbOrganization $organization organization
+     *
+     * @return self
+     */
+    public function setOrganization($organization)
+    {
+        if (is_null($organization)) {
+            throw new \InvalidArgumentException('non-nullable organization cannot be null');
+        }
+        $this->container['organization'] = $organization;
+
+        return $this;
+    }
+
+    /**
+     * Gets zip_code
+     *
+     * @return string
+     */
+    public function getZipCode()
+    {
+        return $this->container['zip_code'];
+    }
+
+    /**
+     * Sets zip_code
+     *
+     * @param string $zip_code Zip code of office location
+     *
+     * @return self
+     */
+    public function setZipCode($zip_code)
+    {
+        if (is_null($zip_code)) {
+            throw new \InvalidArgumentException('non-nullable zip_code cannot be null');
+        }
+        $this->container['zip_code'] = $zip_code;
 
         return $this;
     }

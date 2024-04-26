@@ -4,7 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**\Verdigado\GrueneApiClient\models\User[]**](User.md) |  |
-**page_info** | [**\Verdigado\GrueneApiClient\models\PageInfo**](PageInfo.md) |  | [optional]
+**data** | [**\Verdigado\GrueneApiClient\models\User[]**](User.md) |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

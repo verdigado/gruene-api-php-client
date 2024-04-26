@@ -57,7 +57,7 @@ class FindNbGroupsResponse implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'items' => '\Verdigado\GrueneApiClient\models\NbGroupDto[]'
+        'items' => '\Verdigado\GrueneApiClient\models\NbGroup[]'
     ];
 
     /**
@@ -295,7 +295,7 @@ class FindNbGroupsResponse implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets items
      *
-     * @return \Verdigado\GrueneApiClient\models\NbGroupDto[]
+     * @return \Verdigado\GrueneApiClient\models\NbGroup[]
      */
     public function getItems()
     {
@@ -305,7 +305,7 @@ class FindNbGroupsResponse implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets items
      *
-     * @param \Verdigado\GrueneApiClient\models\NbGroupDto[] $items items
+     * @param \Verdigado\GrueneApiClient\models\NbGroup[] $items items
      *
      * @return self
      */

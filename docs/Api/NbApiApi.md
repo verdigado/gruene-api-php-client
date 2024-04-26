@@ -1,6 +1,6 @@
 # Verdigado\GrueneApiClient\NbApiApi
 
-All URIs are relative to https://app.gruene.de, except if the operation defines another base path.
+All URIs are relative to https://api.gruene.de, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
@@ -13,7 +13,7 @@ All URIs are relative to https://app.gruene.de, except if the operation defines 
 ## `findGroups()`
 
 ```php
-findGroups($filter_external_refs_type, $filter_external_refs_key, $filter_level, $filter_type, $filter_slug, $filter_active): \Verdigado\GrueneApiClient\models\FindNbGroupsResponse
+findGroups($filter_external_refs_type, $filter_external_refs_key, $filter_level, $filter_type, $filter_slug): \Verdigado\GrueneApiClient\models\FindNbGroupsResponse
 ```
 
 Find all groups
@@ -47,10 +47,9 @@ $filter_external_refs_key = 12345678; // string | Filter by external reference I
 $filter_level = 'filter_level_example'; // string | Filter by role level
 $filter_type = EXECUTIVE_BOARD; // string | Filter by role type
 $filter_slug = KV_EXECUTIVE_BOARD; // string | Filter by role slug
-$filter_active = true; // string | Filter by active status. True by default
 
 try {
-    $result = $apiInstance->findGroups($filter_external_refs_type, $filter_external_refs_key, $filter_level, $filter_type, $filter_slug, $filter_active);
+    $result = $apiInstance->findGroups($filter_external_refs_type, $filter_external_refs_key, $filter_level, $filter_type, $filter_slug);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling NbApiApi->findGroups: ', $e->getMessage(), PHP_EOL;
@@ -66,7 +65,6 @@ try {
 | **filter_level** | **string**| Filter by role level | [optional] |
 | **filter_type** | **string**| Filter by role type | [optional] |
 | **filter_slug** | **string**| Filter by role slug | [optional] |
-| **filter_active** | **string**| Filter by active status. True by default | [optional] |
 
 ### Return type
 
@@ -223,7 +221,7 @@ try {
 ## `getRegionalChapter()`
 
 ```php
-getRegionalChapter($division_key): \Verdigado\GrueneApiClient\models\NbRegionalChapterDto
+getRegionalChapter($division_key): \Verdigado\GrueneApiClient\models\NbRegionalChapter
 ```
 
 Get regional chapter by division key
@@ -270,7 +268,7 @@ try {
 
 ### Return type
 
-[**\Verdigado\GrueneApiClient\models\NbRegionalChapterDto**](../Model/NbRegionalChapterDto.md)
+[**\Verdigado\GrueneApiClient\models\NbRegionalChapter**](../Model/NbRegionalChapter.md)
 
 ### Authorization
 

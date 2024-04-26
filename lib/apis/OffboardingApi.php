@@ -130,16 +130,16 @@ class OffboardingApi
      *
      * Batch update offboarding users for the authenticated service.
      *
-     * @param  \Verdigado\GrueneApiClient\models\BatchUpdateOffboardingServiceUsersDto $batch_update_offboarding_service_users_dto batch_update_offboarding_service_users_dto (required)
+     * @param  \Verdigado\GrueneApiClient\models\BatchUpdateOffboardingServiceUsers $batch_update_offboarding_service_users batch_update_offboarding_service_users (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['batchUpdateOffboardingServiceUsers'] to see the possible values for this operation
      *
      * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function batchUpdateOffboardingServiceUsers($batch_update_offboarding_service_users_dto, string $contentType = self::contentTypes['batchUpdateOffboardingServiceUsers'][0])
+    public function batchUpdateOffboardingServiceUsers($batch_update_offboarding_service_users, string $contentType = self::contentTypes['batchUpdateOffboardingServiceUsers'][0])
     {
-        $this->batchUpdateOffboardingServiceUsersWithHttpInfo($batch_update_offboarding_service_users_dto, $contentType);
+        $this->batchUpdateOffboardingServiceUsersWithHttpInfo($batch_update_offboarding_service_users, $contentType);
     }
 
     /**
@@ -147,16 +147,16 @@ class OffboardingApi
      *
      * Batch update offboarding users for the authenticated service.
      *
-     * @param  \Verdigado\GrueneApiClient\models\BatchUpdateOffboardingServiceUsersDto $batch_update_offboarding_service_users_dto (required)
+     * @param  \Verdigado\GrueneApiClient\models\BatchUpdateOffboardingServiceUsers $batch_update_offboarding_service_users (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['batchUpdateOffboardingServiceUsers'] to see the possible values for this operation
      *
      * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function batchUpdateOffboardingServiceUsersWithHttpInfo($batch_update_offboarding_service_users_dto, string $contentType = self::contentTypes['batchUpdateOffboardingServiceUsers'][0])
+    public function batchUpdateOffboardingServiceUsersWithHttpInfo($batch_update_offboarding_service_users, string $contentType = self::contentTypes['batchUpdateOffboardingServiceUsers'][0])
     {
-        $request = $this->batchUpdateOffboardingServiceUsersRequest($batch_update_offboarding_service_users_dto, $contentType);
+        $request = $this->batchUpdateOffboardingServiceUsersRequest($batch_update_offboarding_service_users, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -207,15 +207,15 @@ class OffboardingApi
      *
      * Batch update offboarding users for the authenticated service.
      *
-     * @param  \Verdigado\GrueneApiClient\models\BatchUpdateOffboardingServiceUsersDto $batch_update_offboarding_service_users_dto (required)
+     * @param  \Verdigado\GrueneApiClient\models\BatchUpdateOffboardingServiceUsers $batch_update_offboarding_service_users (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['batchUpdateOffboardingServiceUsers'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function batchUpdateOffboardingServiceUsersAsync($batch_update_offboarding_service_users_dto, string $contentType = self::contentTypes['batchUpdateOffboardingServiceUsers'][0])
+    public function batchUpdateOffboardingServiceUsersAsync($batch_update_offboarding_service_users, string $contentType = self::contentTypes['batchUpdateOffboardingServiceUsers'][0])
     {
-        return $this->batchUpdateOffboardingServiceUsersAsyncWithHttpInfo($batch_update_offboarding_service_users_dto, $contentType)
+        return $this->batchUpdateOffboardingServiceUsersAsyncWithHttpInfo($batch_update_offboarding_service_users, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -228,16 +228,16 @@ class OffboardingApi
      *
      * Batch update offboarding users for the authenticated service.
      *
-     * @param  \Verdigado\GrueneApiClient\models\BatchUpdateOffboardingServiceUsersDto $batch_update_offboarding_service_users_dto (required)
+     * @param  \Verdigado\GrueneApiClient\models\BatchUpdateOffboardingServiceUsers $batch_update_offboarding_service_users (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['batchUpdateOffboardingServiceUsers'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function batchUpdateOffboardingServiceUsersAsyncWithHttpInfo($batch_update_offboarding_service_users_dto, string $contentType = self::contentTypes['batchUpdateOffboardingServiceUsers'][0])
+    public function batchUpdateOffboardingServiceUsersAsyncWithHttpInfo($batch_update_offboarding_service_users, string $contentType = self::contentTypes['batchUpdateOffboardingServiceUsers'][0])
     {
         $returnType = '';
-        $request = $this->batchUpdateOffboardingServiceUsersRequest($batch_update_offboarding_service_users_dto, $contentType);
+        $request = $this->batchUpdateOffboardingServiceUsersRequest($batch_update_offboarding_service_users, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -265,19 +265,19 @@ class OffboardingApi
     /**
      * Create request for operation 'batchUpdateOffboardingServiceUsers'
      *
-     * @param  \Verdigado\GrueneApiClient\models\BatchUpdateOffboardingServiceUsersDto $batch_update_offboarding_service_users_dto (required)
+     * @param  \Verdigado\GrueneApiClient\models\BatchUpdateOffboardingServiceUsers $batch_update_offboarding_service_users (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['batchUpdateOffboardingServiceUsers'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function batchUpdateOffboardingServiceUsersRequest($batch_update_offboarding_service_users_dto, string $contentType = self::contentTypes['batchUpdateOffboardingServiceUsers'][0])
+    public function batchUpdateOffboardingServiceUsersRequest($batch_update_offboarding_service_users, string $contentType = self::contentTypes['batchUpdateOffboardingServiceUsers'][0])
     {
 
-        // verify the required parameter 'batch_update_offboarding_service_users_dto' is set
-        if ($batch_update_offboarding_service_users_dto === null || (is_array($batch_update_offboarding_service_users_dto) && count($batch_update_offboarding_service_users_dto) === 0)) {
+        // verify the required parameter 'batch_update_offboarding_service_users' is set
+        if ($batch_update_offboarding_service_users === null || (is_array($batch_update_offboarding_service_users) && count($batch_update_offboarding_service_users) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $batch_update_offboarding_service_users_dto when calling batchUpdateOffboardingServiceUsers'
+                'Missing the required parameter $batch_update_offboarding_service_users when calling batchUpdateOffboardingServiceUsers'
             );
         }
 
@@ -300,12 +300,12 @@ class OffboardingApi
         );
 
         // for model (json/xml)
-        if (isset($batch_update_offboarding_service_users_dto)) {
+        if (isset($batch_update_offboarding_service_users)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($batch_update_offboarding_service_users_dto));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($batch_update_offboarding_service_users));
             } else {
-                $httpBody = $batch_update_offboarding_service_users_dto;
+                $httpBody = $batch_update_offboarding_service_users;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

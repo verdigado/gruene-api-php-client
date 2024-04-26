@@ -57,7 +57,7 @@ class FindNbOrganizationsResponse implements ModelInterface, ArrayAccess, \JsonS
       * @var string[]
       */
     protected static $openAPITypes = [
-        'items' => '\Verdigado\GrueneApiClient\models\NbOrganizationDto[]',
+        'items' => '\Verdigado\GrueneApiClient\models\NbOrganization[]',
         'count' => 'float'
     ];
 
@@ -305,7 +305,7 @@ class FindNbOrganizationsResponse implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets items
      *
-     * @return \Verdigado\GrueneApiClient\models\NbOrganizationDto[]
+     * @return \Verdigado\GrueneApiClient\models\NbOrganization[]
      */
     public function getItems()
     {
@@ -315,7 +315,7 @@ class FindNbOrganizationsResponse implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets items
      *
-     * @param \Verdigado\GrueneApiClient\models\NbOrganizationDto[] $items items
+     * @param \Verdigado\GrueneApiClient\models\NbOrganization[] $items items
      *
      * @return self
      */

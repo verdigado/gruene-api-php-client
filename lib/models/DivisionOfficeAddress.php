@@ -1,6 +1,6 @@
 <?php
 /**
- * FindUsersResponse
+ * DivisionOfficeAddress
  *
  * PHP version 7.4
  *
@@ -32,15 +32,16 @@ use \ArrayAccess;
 use \Verdigado\GrueneApiClient\ObjectSerializer;
 
 /**
- * FindUsersResponse Class Doc Comment
+ * DivisionOfficeAddress Class Doc Comment
  *
  * @category Class
+ * @description Office address
  * @package  Verdigado\GrueneApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializable
+class DivisionOfficeAddress implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +50,7 @@ class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       *
       * @var string
       */
-    protected static $openAPIModelName = 'FindUsersResponse';
+    protected static $openAPIModelName = 'Division_officeAddress';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,7 +58,7 @@ class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Verdigado\GrueneApiClient\models\User[]'
+        'zip' => 'string'
     ];
 
     /**
@@ -68,7 +69,7 @@ class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'data' => null
+        'zip' => null
     ];
 
     /**
@@ -77,7 +78,7 @@ class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'data' => false
+        'zip' => false
     ];
 
     /**
@@ -166,7 +167,7 @@ class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $attributeMap = [
-        'data' => 'data'
+        'zip' => 'zip'
     ];
 
     /**
@@ -175,7 +176,7 @@ class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $setters = [
-        'data' => 'setData'
+        'zip' => 'setZip'
     ];
 
     /**
@@ -184,7 +185,7 @@ class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $getters = [
-        'data' => 'getData'
+        'zip' => 'getZip'
     ];
 
     /**
@@ -244,7 +245,7 @@ class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('data', $data ?? [], null);
+        $this->setIfExists('zip', $data ?? [], null);
     }
 
     /**
@@ -274,8 +275,8 @@ class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
     {
         $invalidProperties = [];
 
-        if ($this->container['data'] === null) {
-            $invalidProperties[] = "'data' can't be null";
+        if ($this->container['zip'] === null) {
+            $invalidProperties[] = "'zip' can't be null";
         }
         return $invalidProperties;
     }
@@ -293,28 +294,28 @@ class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
 
 
     /**
-     * Gets data
+     * Gets zip
      *
-     * @return \Verdigado\GrueneApiClient\models\User[]
+     * @return string
      */
-    public function getData()
+    public function getZip()
     {
-        return $this->container['data'];
+        return $this->container['zip'];
     }
 
     /**
-     * Sets data
+     * Sets zip
      *
-     * @param \Verdigado\GrueneApiClient\models\User[] $data data
+     * @param string $zip Location zip code
      *
      * @return self
      */
-    public function setData($data)
+    public function setZip($zip)
     {
-        if (is_null($data)) {
-            throw new \InvalidArgumentException('non-nullable data cannot be null');
+        if (is_null($zip)) {
+            throw new \InvalidArgumentException('non-nullable zip cannot be null');
         }
-        $this->container['data'] = $data;
+        $this->container['zip'] = $zip;
 
         return $this;
     }

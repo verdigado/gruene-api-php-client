@@ -49,7 +49,7 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'User';
+    protected static $openAPIModelName = 'User ';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

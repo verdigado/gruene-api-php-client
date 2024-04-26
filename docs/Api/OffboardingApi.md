@@ -1,6 +1,6 @@
 # Verdigado\GrueneApiClient\OffboardingApi
 
-All URIs are relative to https://app.gruene.de, except if the operation defines another base path.
+All URIs are relative to https://api.gruene.de, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
@@ -11,7 +11,7 @@ All URIs are relative to https://app.gruene.de, except if the operation defines 
 ## `batchUpdateOffboardingServiceUsers()`
 
 ```php
-batchUpdateOffboardingServiceUsers($batch_update_offboarding_service_users_dto)
+batchUpdateOffboardingServiceUsers($batch_update_offboarding_service_users)
 ```
 
 Batch update offboarding users for the authenticated service.
@@ -35,10 +35,10 @@ $apiInstance = new Verdigado\GrueneApiClient\Api\OffboardingApi(
     new GuzzleHttp\Client(),
     $config
 );
-$batch_update_offboarding_service_users_dto = new \Verdigado\GrueneApiClient\models\BatchUpdateOffboardingServiceUsersDto(); // \Verdigado\GrueneApiClient\models\BatchUpdateOffboardingServiceUsersDto
+$batch_update_offboarding_service_users = new \Verdigado\GrueneApiClient\models\BatchUpdateOffboardingServiceUsers(); // \Verdigado\GrueneApiClient\models\BatchUpdateOffboardingServiceUsers
 
 try {
-    $apiInstance->batchUpdateOffboardingServiceUsers($batch_update_offboarding_service_users_dto);
+    $apiInstance->batchUpdateOffboardingServiceUsers($batch_update_offboarding_service_users);
 } catch (Exception $e) {
     echo 'Exception when calling OffboardingApi->batchUpdateOffboardingServiceUsers: ', $e->getMessage(), PHP_EOL;
 }
@@ -48,7 +48,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **batch_update_offboarding_service_users_dto** | [**\Verdigado\GrueneApiClient\models\BatchUpdateOffboardingServiceUsersDto**](../Model/BatchUpdateOffboardingServiceUsersDto.md)|  | |
+| **batch_update_offboarding_service_users** | [**\Verdigado\GrueneApiClient\models\BatchUpdateOffboardingServiceUsers**](../Model/BatchUpdateOffboardingServiceUsers.md)|  | |
 
 ### Return type
 

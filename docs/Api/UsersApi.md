@@ -1,10 +1,10 @@
 # Verdigado\GrueneApiClient\UsersApi
 
-All URIs are relative to https://app.gruene.de, except if the operation defines another base path.
+All URIs are relative to https://api.gruene.de, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**findUsers()**](UsersApi.md#findUsers) | **GET** /v0/users | Find users in ldap |
+| [**findUsers()**](UsersApi.md#findUsers) | **GET** /v1/users | Find users |
 | [**getSelf()**](UsersApi.md#getSelf) | **GET** /v1/users/self | Get the authenticated user |
 | [**getUser()**](UsersApi.md#getUser) | **GET** /v1/users/{userId} | Get user by id |
 | [**getUserRbacStructure()**](UsersApi.md#getUserRbacStructure) | **GET** /v1/users/{userId}/rbac-structure | Get user RBAC structure |
@@ -16,7 +16,7 @@ All URIs are relative to https://app.gruene.de, except if the operation defines 
 findUsers($search, $user_ids, $limit): \Verdigado\GrueneApiClient\models\FindUsersResponse
 ```
 
-Find users in ldap
+Find users
 
 ### Example
 

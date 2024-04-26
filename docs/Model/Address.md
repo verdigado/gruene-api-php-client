@@ -1,10 +1,9 @@
-# # FindNbOrganizationsResponse
+# # Address
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**\Verdigado\GrueneApiClient\models\NbOrganization[]**](NbOrganization.md) |  |
-**count** | **float** |  |
+**zip** | **string** | Location zip code |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

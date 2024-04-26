@@ -1,0 +1,16 @@
+# # Division
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **string** | The division id |
+**division_key** | **string** | The division key |
+**name1** | **string** |  |
+**name2** | **string** |  |
+**short_name** | **string** | Descriptive name of the division. |
+**hierarchy** | **object** | The root hierarchy the division belongs to |
+**level** | **string** | Level in the hierarchy |
+**office_address** | [**\Verdigado\GrueneApiClient\models\DivisionOfficeAddress**](DivisionOfficeAddress.md) |  |
+
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

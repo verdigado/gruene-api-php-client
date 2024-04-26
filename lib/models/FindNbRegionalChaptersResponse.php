@@ -58,7 +58,7 @@ class FindNbRegionalChaptersResponse implements ModelInterface, ArrayAccess, \Js
       */
     protected static $openAPITypes = [
         'count' => 'float',
-        'items' => '\Verdigado\GrueneApiClient\models\NbRegionalChapterDto[]'
+        'items' => '\Verdigado\GrueneApiClient\models\NbRegionalChapter[]'
     ];
 
     /**
@@ -332,7 +332,7 @@ class FindNbRegionalChaptersResponse implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets items
      *
-     * @return \Verdigado\GrueneApiClient\models\NbRegionalChapterDto[]
+     * @return \Verdigado\GrueneApiClient\models\NbRegionalChapter[]
      */
     public function getItems()
     {
@@ -342,7 +342,7 @@ class FindNbRegionalChaptersResponse implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets items
      *
-     * @param \Verdigado\GrueneApiClient\models\NbRegionalChapterDto[] $items items
+     * @param \Verdigado\GrueneApiClient\models\NbRegionalChapter[] $items items
      *
      * @return self
      */

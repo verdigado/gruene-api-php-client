@@ -1,6 +1,6 @@
 <?php
 /**
- * FindUsersResponse
+ * NbGroup
  *
  * PHP version 7.4
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Verdigado\GrueneApiClient\ObjectSerializer;
 
 /**
- * FindUsersResponse Class Doc Comment
+ * NbGroup Class Doc Comment
  *
  * @category Class
  * @package  Verdigado\GrueneApiClient
@@ -40,7 +40,7 @@ use \Verdigado\GrueneApiClient\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializable
+class NbGroup implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       *
       * @var string
       */
-    protected static $openAPIModelName = 'FindUsersResponse';
+    protected static $openAPIModelName = 'NbGroup';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,7 +57,13 @@ class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Verdigado\GrueneApiClient\models\User[]'
+        'name' => 'string',
+        'slug' => 'string',
+        'type' => 'string',
+        'active' => 'bool',
+        'level' => 'string',
+        'organization' => '\Verdigado\GrueneApiClient\models\NbOrganization',
+        'external_refs' => '\Verdigado\GrueneApiClient\models\NbExternalRef[]'
     ];
 
     /**
@@ -68,7 +74,13 @@ class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'data' => null
+        'name' => null,
+        'slug' => null,
+        'type' => null,
+        'active' => null,
+        'level' => null,
+        'organization' => null,
+        'external_refs' => null
     ];
 
     /**
@@ -77,7 +89,13 @@ class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'data' => false
+        'name' => false,
+		'slug' => false,
+		'type' => false,
+		'active' => false,
+		'level' => false,
+		'organization' => false,
+		'external_refs' => false
     ];
 
     /**
@@ -166,7 +184,13 @@ class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $attributeMap = [
-        'data' => 'data'
+        'name' => 'name',
+        'slug' => 'slug',
+        'type' => 'type',
+        'active' => 'active',
+        'level' => 'level',
+        'organization' => 'organization',
+        'external_refs' => 'external_refs'
     ];
 
     /**
@@ -175,7 +199,13 @@ class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $setters = [
-        'data' => 'setData'
+        'name' => 'setName',
+        'slug' => 'setSlug',
+        'type' => 'setType',
+        'active' => 'setActive',
+        'level' => 'setLevel',
+        'organization' => 'setOrganization',
+        'external_refs' => 'setExternalRefs'
     ];
 
     /**
@@ -184,7 +214,13 @@ class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $getters = [
-        'data' => 'getData'
+        'name' => 'getName',
+        'slug' => 'getSlug',
+        'type' => 'getType',
+        'active' => 'getActive',
+        'level' => 'getLevel',
+        'organization' => 'getOrganization',
+        'external_refs' => 'getExternalRefs'
     ];
 
     /**
@@ -244,7 +280,13 @@ class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('data', $data ?? [], null);
+        $this->setIfExists('name', $data ?? [], null);
+        $this->setIfExists('slug', $data ?? [], null);
+        $this->setIfExists('type', $data ?? [], null);
+        $this->setIfExists('active', $data ?? [], null);
+        $this->setIfExists('level', $data ?? [], null);
+        $this->setIfExists('organization', $data ?? [], null);
+        $this->setIfExists('external_refs', $data ?? [], null);
     }
 
     /**
@@ -274,8 +316,26 @@ class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
     {
         $invalidProperties = [];
 
-        if ($this->container['data'] === null) {
-            $invalidProperties[] = "'data' can't be null";
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
+        }
+        if ($this->container['slug'] === null) {
+            $invalidProperties[] = "'slug' can't be null";
+        }
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
+        }
+        if ($this->container['active'] === null) {
+            $invalidProperties[] = "'active' can't be null";
+        }
+        if ($this->container['level'] === null) {
+            $invalidProperties[] = "'level' can't be null";
+        }
+        if ($this->container['organization'] === null) {
+            $invalidProperties[] = "'organization' can't be null";
+        }
+        if ($this->container['external_refs'] === null) {
+            $invalidProperties[] = "'external_refs' can't be null";
         }
         return $invalidProperties;
     }
@@ -293,28 +353,190 @@ class FindUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
 
 
     /**
-     * Gets data
+     * Gets name
      *
-     * @return \Verdigado\GrueneApiClient\models\User[]
+     * @return string
      */
-    public function getData()
+    public function getName()
     {
-        return $this->container['data'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets data
+     * Sets name
      *
-     * @param \Verdigado\GrueneApiClient\models\User[] $data data
+     * @param string $name name
      *
      * @return self
      */
-    public function setData($data)
+    public function setName($name)
     {
-        if (is_null($data)) {
-            throw new \InvalidArgumentException('non-nullable data cannot be null');
+        if (is_null($name)) {
+            throw new \InvalidArgumentException('non-nullable name cannot be null');
         }
-        $this->container['data'] = $data;
+        $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets slug
+     *
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->container['slug'];
+    }
+
+    /**
+     * Sets slug
+     *
+     * @param string $slug slug
+     *
+     * @return self
+     */
+    public function setSlug($slug)
+    {
+        if (is_null($slug)) {
+            throw new \InvalidArgumentException('non-nullable slug cannot be null');
+        }
+        $this->container['slug'] = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Gets type
+     *
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     *
+     * @param string $type type
+     *
+     * @return self
+     */
+    public function setType($type)
+    {
+        if (is_null($type)) {
+            throw new \InvalidArgumentException('non-nullable type cannot be null');
+        }
+        $this->container['type'] = $type;
+
+        return $this;
+    }
+
+    /**
+     * Gets active
+     *
+     * @return bool
+     */
+    public function getActive()
+    {
+        return $this->container['active'];
+    }
+
+    /**
+     * Sets active
+     *
+     * @param bool $active active
+     *
+     * @return self
+     */
+    public function setActive($active)
+    {
+        if (is_null($active)) {
+            throw new \InvalidArgumentException('non-nullable active cannot be null');
+        }
+        $this->container['active'] = $active;
+
+        return $this;
+    }
+
+    /**
+     * Gets level
+     *
+     * @return string
+     */
+    public function getLevel()
+    {
+        return $this->container['level'];
+    }
+
+    /**
+     * Sets level
+     *
+     * @param string $level level
+     *
+     * @return self
+     */
+    public function setLevel($level)
+    {
+        if (is_null($level)) {
+            throw new \InvalidArgumentException('non-nullable level cannot be null');
+        }
+        $this->container['level'] = $level;
+
+        return $this;
+    }
+
+    /**
+     * Gets organization
+     *
+     * @return \Verdigado\GrueneApiClient\models\NbOrganization
+     */
+    public function getOrganization()
+    {
+        return $this->container['organization'];
+    }
+
+    /**
+     * Sets organization
+     *
+     * @param \Verdigado\GrueneApiClient\models\NbOrganization $organization organization
+     *
+     * @return self
+     */
+    public function setOrganization($organization)
+    {
+        if (is_null($organization)) {
+            throw new \InvalidArgumentException('non-nullable organization cannot be null');
+        }
+        $this->container['organization'] = $organization;
+
+        return $this;
+    }
+
+    /**
+     * Gets external_refs
+     *
+     * @return \Verdigado\GrueneApiClient\models\NbExternalRef[]
+     */
+    public function getExternalRefs()
+    {
+        return $this->container['external_refs'];
+    }
+
+    /**
+     * Sets external_refs
+     *
+     * @param \Verdigado\GrueneApiClient\models\NbExternalRef[] $external_refs external_refs
+     *
+     * @return self
+     */
+    public function setExternalRefs($external_refs)
+    {
+        if (is_null($external_refs)) {
+            throw new \InvalidArgumentException('non-nullable external_refs cannot be null');
+        }
+        $this->container['external_refs'] = $external_refs;
 
         return $this;
     }
