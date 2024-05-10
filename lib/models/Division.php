@@ -64,7 +64,8 @@ class Division implements ModelInterface, ArrayAccess, \JsonSerializable
         'short_name' => 'string',
         'hierarchy' => 'object',
         'level' => 'string',
-        'office_address' => '\Verdigado\GrueneApiClient\models\DivisionOfficeAddress'
+        'office_address' => '\Verdigado\GrueneApiClient\models\DivisionOfficeAddress',
+        'emails' => '\Verdigado\GrueneApiClient\models\DivisionEmail[]'
     ];
 
     /**
@@ -82,7 +83,8 @@ class Division implements ModelInterface, ArrayAccess, \JsonSerializable
         'short_name' => null,
         'hierarchy' => null,
         'level' => null,
-        'office_address' => null
+        'office_address' => null,
+        'emails' => null
     ];
 
     /**
@@ -98,7 +100,8 @@ class Division implements ModelInterface, ArrayAccess, \JsonSerializable
 		'short_name' => false,
 		'hierarchy' => false,
 		'level' => false,
-		'office_address' => false
+		'office_address' => false,
+		'emails' => false
     ];
 
     /**
@@ -194,7 +197,8 @@ class Division implements ModelInterface, ArrayAccess, \JsonSerializable
         'short_name' => 'shortName',
         'hierarchy' => 'hierarchy',
         'level' => 'level',
-        'office_address' => 'officeAddress'
+        'office_address' => 'officeAddress',
+        'emails' => 'emails'
     ];
 
     /**
@@ -210,7 +214,8 @@ class Division implements ModelInterface, ArrayAccess, \JsonSerializable
         'short_name' => 'setShortName',
         'hierarchy' => 'setHierarchy',
         'level' => 'setLevel',
-        'office_address' => 'setOfficeAddress'
+        'office_address' => 'setOfficeAddress',
+        'emails' => 'setEmails'
     ];
 
     /**
@@ -226,7 +231,8 @@ class Division implements ModelInterface, ArrayAccess, \JsonSerializable
         'short_name' => 'getShortName',
         'hierarchy' => 'getHierarchy',
         'level' => 'getLevel',
-        'office_address' => 'getOfficeAddress'
+        'office_address' => 'getOfficeAddress',
+        'emails' => 'getEmails'
     ];
 
     /**
@@ -313,6 +319,7 @@ class Division implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('hierarchy', $data ?? [], null);
         $this->setIfExists('level', $data ?? [], null);
         $this->setIfExists('office_address', $data ?? [], null);
+        $this->setIfExists('emails', $data ?? [], null);
     }
 
     /**
@@ -374,6 +381,9 @@ class Division implements ModelInterface, ArrayAccess, \JsonSerializable
 
         if ($this->container['office_address'] === null) {
             $invalidProperties[] = "'office_address' can't be null";
+        }
+        if ($this->container['emails'] === null) {
+            $invalidProperties[] = "'emails' can't be null";
         }
         return $invalidProperties;
     }
@@ -612,6 +622,33 @@ class Division implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable office_address cannot be null');
         }
         $this->container['office_address'] = $office_address;
+
+        return $this;
+    }
+
+    /**
+     * Gets emails
+     *
+     * @return \Verdigado\GrueneApiClient\models\DivisionEmail[]
+     */
+    public function getEmails()
+    {
+        return $this->container['emails'];
+    }
+
+    /**
+     * Sets emails
+     *
+     * @param \Verdigado\GrueneApiClient\models\DivisionEmail[] $emails Email Addresses
+     *
+     * @return self
+     */
+    public function setEmails($emails)
+    {
+        if (is_null($emails)) {
+            throw new \InvalidArgumentException('non-nullable emails cannot be null');
+        }
+        $this->container['emails'] = $emails;
 
         return $this;
     }

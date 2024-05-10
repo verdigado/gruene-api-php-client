@@ -12,5 +12,6 @@ Name | Type | Description | Notes
 **hierarchy** | **object** | The root hierarchy the division belongs to |
 **level** | **string** | Level in the hierarchy |
 **office_address** | [**\Verdigado\GrueneApiClient\models\DivisionOfficeAddress**](DivisionOfficeAddress.md) |  |
+**emails** | [**\Verdigado\GrueneApiClient\models\DivisionEmail[]**](DivisionEmail.md) | Email Addresses |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
