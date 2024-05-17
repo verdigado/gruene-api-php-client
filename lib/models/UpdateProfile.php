@@ -1,6 +1,6 @@
 <?php
 /**
- * FindDivisionsResponse
+ * UpdateProfile
  *
  * PHP version 7.4
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Verdigado\GrueneApiClient\ObjectSerializer;
 
 /**
- * FindDivisionsResponse Class Doc Comment
+ * UpdateProfile Class Doc Comment
  *
  * @category Class
  * @package  Verdigado\GrueneApiClient
@@ -40,7 +40,7 @@ use \Verdigado\GrueneApiClient\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSerializable
+class UpdateProfile implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       *
       * @var string
       */
-    protected static $openAPIModelName = 'FindDivisionsResponse';
+    protected static $openAPIModelName = 'UpdateProfile';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,12 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Verdigado\GrueneApiClient\models\Division[]',
-        'meta' => '\Verdigado\GrueneApiClient\models\FindProfileTagsResponseMeta'
+        'email' => 'string',
+        'phone_numbers' => '\Verdigado\GrueneApiClient\models\UpdatePhoneNumber[]',
+        'messengers' => '\Verdigado\GrueneApiClient\models\UpdateMessengerEntry[]',
+        'social_media' => '\Verdigado\GrueneApiClient\models\UpdateSocialMediaEntry[]',
+        'tags' => 'string[]',
+        'privacy' => '\Verdigado\GrueneApiClient\models\ProfilePrivacySettings'
     ];
 
     /**
@@ -69,8 +73,12 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'data' => null,
-        'meta' => null
+        'email' => null,
+        'phone_numbers' => null,
+        'messengers' => null,
+        'social_media' => null,
+        'tags' => null,
+        'privacy' => null
     ];
 
     /**
@@ -79,8 +87,12 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'data' => false,
-		'meta' => false
+        'email' => false,
+		'phone_numbers' => false,
+		'messengers' => false,
+		'social_media' => false,
+		'tags' => false,
+		'privacy' => false
     ];
 
     /**
@@ -169,8 +181,12 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $attributeMap = [
-        'data' => 'data',
-        'meta' => 'meta'
+        'email' => 'email',
+        'phone_numbers' => 'phoneNumbers',
+        'messengers' => 'messengers',
+        'social_media' => 'socialMedia',
+        'tags' => 'tags',
+        'privacy' => 'privacy'
     ];
 
     /**
@@ -179,8 +195,12 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $setters = [
-        'data' => 'setData',
-        'meta' => 'setMeta'
+        'email' => 'setEmail',
+        'phone_numbers' => 'setPhoneNumbers',
+        'messengers' => 'setMessengers',
+        'social_media' => 'setSocialMedia',
+        'tags' => 'setTags',
+        'privacy' => 'setPrivacy'
     ];
 
     /**
@@ -189,8 +209,12 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $getters = [
-        'data' => 'getData',
-        'meta' => 'getMeta'
+        'email' => 'getEmail',
+        'phone_numbers' => 'getPhoneNumbers',
+        'messengers' => 'getMessengers',
+        'social_media' => 'getSocialMedia',
+        'tags' => 'getTags',
+        'privacy' => 'getPrivacy'
     ];
 
     /**
@@ -250,8 +274,12 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('data', $data ?? [], null);
-        $this->setIfExists('meta', $data ?? [], null);
+        $this->setIfExists('email', $data ?? [], null);
+        $this->setIfExists('phone_numbers', $data ?? [], null);
+        $this->setIfExists('messengers', $data ?? [], null);
+        $this->setIfExists('social_media', $data ?? [], null);
+        $this->setIfExists('tags', $data ?? [], null);
+        $this->setIfExists('privacy', $data ?? [], null);
     }
 
     /**
@@ -281,11 +309,23 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     {
         $invalidProperties = [];
 
-        if ($this->container['data'] === null) {
-            $invalidProperties[] = "'data' can't be null";
+        if ($this->container['email'] === null) {
+            $invalidProperties[] = "'email' can't be null";
         }
-        if ($this->container['meta'] === null) {
-            $invalidProperties[] = "'meta' can't be null";
+        if ($this->container['phone_numbers'] === null) {
+            $invalidProperties[] = "'phone_numbers' can't be null";
+        }
+        if ($this->container['messengers'] === null) {
+            $invalidProperties[] = "'messengers' can't be null";
+        }
+        if ($this->container['social_media'] === null) {
+            $invalidProperties[] = "'social_media' can't be null";
+        }
+        if ($this->container['tags'] === null) {
+            $invalidProperties[] = "'tags' can't be null";
+        }
+        if ($this->container['privacy'] === null) {
+            $invalidProperties[] = "'privacy' can't be null";
         }
         return $invalidProperties;
     }
@@ -303,55 +343,163 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
 
 
     /**
-     * Gets data
+     * Gets email
      *
-     * @return \Verdigado\GrueneApiClient\models\Division[]
+     * @return string
      */
-    public function getData()
+    public function getEmail()
     {
-        return $this->container['data'];
+        return $this->container['email'];
     }
 
     /**
-     * Sets data
+     * Sets email
      *
-     * @param \Verdigado\GrueneApiClient\models\Division[] $data data
+     * @param string $email email
      *
      * @return self
      */
-    public function setData($data)
+    public function setEmail($email)
     {
-        if (is_null($data)) {
-            throw new \InvalidArgumentException('non-nullable data cannot be null');
+        if (is_null($email)) {
+            throw new \InvalidArgumentException('non-nullable email cannot be null');
         }
-        $this->container['data'] = $data;
+        $this->container['email'] = $email;
 
         return $this;
     }
 
     /**
-     * Gets meta
+     * Gets phone_numbers
      *
-     * @return \Verdigado\GrueneApiClient\models\FindProfileTagsResponseMeta
+     * @return \Verdigado\GrueneApiClient\models\UpdatePhoneNumber[]
      */
-    public function getMeta()
+    public function getPhoneNumbers()
     {
-        return $this->container['meta'];
+        return $this->container['phone_numbers'];
     }
 
     /**
-     * Sets meta
+     * Sets phone_numbers
      *
-     * @param \Verdigado\GrueneApiClient\models\FindProfileTagsResponseMeta $meta meta
+     * @param \Verdigado\GrueneApiClient\models\UpdatePhoneNumber[] $phone_numbers phone_numbers
      *
      * @return self
      */
-    public function setMeta($meta)
+    public function setPhoneNumbers($phone_numbers)
     {
-        if (is_null($meta)) {
-            throw new \InvalidArgumentException('non-nullable meta cannot be null');
+        if (is_null($phone_numbers)) {
+            throw new \InvalidArgumentException('non-nullable phone_numbers cannot be null');
         }
-        $this->container['meta'] = $meta;
+        $this->container['phone_numbers'] = $phone_numbers;
+
+        return $this;
+    }
+
+    /**
+     * Gets messengers
+     *
+     * @return \Verdigado\GrueneApiClient\models\UpdateMessengerEntry[]
+     */
+    public function getMessengers()
+    {
+        return $this->container['messengers'];
+    }
+
+    /**
+     * Sets messengers
+     *
+     * @param \Verdigado\GrueneApiClient\models\UpdateMessengerEntry[] $messengers messengers
+     *
+     * @return self
+     */
+    public function setMessengers($messengers)
+    {
+        if (is_null($messengers)) {
+            throw new \InvalidArgumentException('non-nullable messengers cannot be null');
+        }
+        $this->container['messengers'] = $messengers;
+
+        return $this;
+    }
+
+    /**
+     * Gets social_media
+     *
+     * @return \Verdigado\GrueneApiClient\models\UpdateSocialMediaEntry[]
+     */
+    public function getSocialMedia()
+    {
+        return $this->container['social_media'];
+    }
+
+    /**
+     * Sets social_media
+     *
+     * @param \Verdigado\GrueneApiClient\models\UpdateSocialMediaEntry[] $social_media social_media
+     *
+     * @return self
+     */
+    public function setSocialMedia($social_media)
+    {
+        if (is_null($social_media)) {
+            throw new \InvalidArgumentException('non-nullable social_media cannot be null');
+        }
+        $this->container['social_media'] = $social_media;
+
+        return $this;
+    }
+
+    /**
+     * Gets tags
+     *
+     * @return string[]
+     */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+     * Sets tags
+     *
+     * @param string[] $tags List of tag ids
+     *
+     * @return self
+     */
+    public function setTags($tags)
+    {
+        if (is_null($tags)) {
+            throw new \InvalidArgumentException('non-nullable tags cannot be null');
+        }
+        $this->container['tags'] = $tags;
+
+        return $this;
+    }
+
+    /**
+     * Gets privacy
+     *
+     * @return \Verdigado\GrueneApiClient\models\ProfilePrivacySettings
+     */
+    public function getPrivacy()
+    {
+        return $this->container['privacy'];
+    }
+
+    /**
+     * Sets privacy
+     *
+     * @param \Verdigado\GrueneApiClient\models\ProfilePrivacySettings $privacy privacy
+     *
+     * @return self
+     */
+    public function setPrivacy($privacy)
+    {
+        if (is_null($privacy)) {
+            throw new \InvalidArgumentException('non-nullable privacy cannot be null');
+        }
+        $this->container['privacy'] = $privacy;
 
         return $this;
     }

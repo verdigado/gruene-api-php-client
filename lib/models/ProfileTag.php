@@ -1,6 +1,6 @@
 <?php
 /**
- * FindDivisionsResponse
+ * ProfileTag
  *
  * PHP version 7.4
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Verdigado\GrueneApiClient\ObjectSerializer;
 
 /**
- * FindDivisionsResponse Class Doc Comment
+ * ProfileTag Class Doc Comment
  *
  * @category Class
  * @package  Verdigado\GrueneApiClient
@@ -40,7 +40,7 @@ use \Verdigado\GrueneApiClient\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSerializable
+class ProfileTag implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       *
       * @var string
       */
-    protected static $openAPIModelName = 'FindDivisionsResponse';
+    protected static $openAPIModelName = 'ProfileTag';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,10 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Verdigado\GrueneApiClient\models\Division[]',
-        'meta' => '\Verdigado\GrueneApiClient\models\FindProfileTagsResponseMeta'
+        'id' => 'string',
+        'type' => 'string',
+        'label' => 'string',
+        'external_id' => 'string'
     ];
 
     /**
@@ -69,8 +71,10 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'data' => null,
-        'meta' => null
+        'id' => null,
+        'type' => null,
+        'label' => null,
+        'external_id' => null
     ];
 
     /**
@@ -79,8 +83,10 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'data' => false,
-		'meta' => false
+        'id' => false,
+		'type' => false,
+		'label' => false,
+		'external_id' => false
     ];
 
     /**
@@ -169,8 +175,10 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $attributeMap = [
-        'data' => 'data',
-        'meta' => 'meta'
+        'id' => 'id',
+        'type' => 'type',
+        'label' => 'label',
+        'external_id' => 'externalId'
     ];
 
     /**
@@ -179,8 +187,10 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $setters = [
-        'data' => 'setData',
-        'meta' => 'setMeta'
+        'id' => 'setId',
+        'type' => 'setType',
+        'label' => 'setLabel',
+        'external_id' => 'setExternalId'
     ];
 
     /**
@@ -189,8 +199,10 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $getters = [
-        'data' => 'getData',
-        'meta' => 'getMeta'
+        'id' => 'getId',
+        'type' => 'getType',
+        'label' => 'getLabel',
+        'external_id' => 'getExternalId'
     ];
 
     /**
@@ -234,6 +246,21 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
         return self::$openAPIModelName;
     }
 
+    public const TYPE_SKILL = 'skill';
+    public const TYPE_INTEREST = 'interest';
+
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_SKILL,
+            self::TYPE_INTEREST,
+        ];
+    }
 
     /**
      * Associative array for storing property values
@@ -250,8 +277,10 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('data', $data ?? [], null);
-        $this->setIfExists('meta', $data ?? [], null);
+        $this->setIfExists('id', $data ?? [], null);
+        $this->setIfExists('type', $data ?? [], null);
+        $this->setIfExists('label', $data ?? [], null);
+        $this->setIfExists('external_id', $data ?? [], null);
     }
 
     /**
@@ -281,11 +310,23 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     {
         $invalidProperties = [];
 
-        if ($this->container['data'] === null) {
-            $invalidProperties[] = "'data' can't be null";
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
         }
-        if ($this->container['meta'] === null) {
-            $invalidProperties[] = "'meta' can't be null";
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
+        }
+        $allowedValues = $this->getTypeAllowableValues();
+        if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value '%s' for 'type', must be one of '%s'",
+                $this->container['type'],
+                implode("', '", $allowedValues)
+            );
+        }
+
+        if ($this->container['label'] === null) {
+            $invalidProperties[] = "'label' can't be null";
         }
         return $invalidProperties;
     }
@@ -303,55 +344,119 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
 
 
     /**
-     * Gets data
+     * Gets id
      *
-     * @return \Verdigado\GrueneApiClient\models\Division[]
+     * @return string
      */
-    public function getData()
+    public function getId()
     {
-        return $this->container['data'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets data
+     * Sets id
      *
-     * @param \Verdigado\GrueneApiClient\models\Division[] $data data
+     * @param string $id Tag id
      *
      * @return self
      */
-    public function setData($data)
+    public function setId($id)
     {
-        if (is_null($data)) {
-            throw new \InvalidArgumentException('non-nullable data cannot be null');
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
         }
-        $this->container['data'] = $data;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets meta
+     * Gets type
      *
-     * @return \Verdigado\GrueneApiClient\models\FindProfileTagsResponseMeta
+     * @return string
      */
-    public function getMeta()
+    public function getType()
     {
-        return $this->container['meta'];
+        return $this->container['type'];
     }
 
     /**
-     * Sets meta
+     * Sets type
      *
-     * @param \Verdigado\GrueneApiClient\models\FindProfileTagsResponseMeta $meta meta
+     * @param string $type Tag type
      *
      * @return self
      */
-    public function setMeta($meta)
+    public function setType($type)
     {
-        if (is_null($meta)) {
-            throw new \InvalidArgumentException('non-nullable meta cannot be null');
+        if (is_null($type)) {
+            throw new \InvalidArgumentException('non-nullable type cannot be null');
         }
-        $this->container['meta'] = $meta;
+        $allowedValues = $this->getTypeAllowableValues();
+        if (!in_array($type, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value '%s' for 'type', must be one of '%s'",
+                    $type,
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['type'] = $type;
+
+        return $this;
+    }
+
+    /**
+     * Gets label
+     *
+     * @return string
+     */
+    public function getLabel()
+    {
+        return $this->container['label'];
+    }
+
+    /**
+     * Sets label
+     *
+     * @param string $label Tag label
+     *
+     * @return self
+     */
+    public function setLabel($label)
+    {
+        if (is_null($label)) {
+            throw new \InvalidArgumentException('non-nullable label cannot be null');
+        }
+        $this->container['label'] = $label;
+
+        return $this;
+    }
+
+    /**
+     * Gets external_id
+     *
+     * @return string|null
+     */
+    public function getExternalId()
+    {
+        return $this->container['external_id'];
+    }
+
+    /**
+     * Sets external_id
+     *
+     * @param string|null $external_id External id
+     *
+     * @return self
+     */
+    public function setExternalId($external_id)
+    {
+        if (is_null($external_id)) {
+            throw new \InvalidArgumentException('non-nullable external_id cannot be null');
+        }
+        $this->container['external_id'] = $external_id;
 
         return $this;
     }

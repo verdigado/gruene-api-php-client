@@ -1,6 +1,6 @@
 <?php
 /**
- * FindDivisionsResponse
+ * DivisionMembership
  *
  * PHP version 7.4
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Verdigado\GrueneApiClient\ObjectSerializer;
 
 /**
- * FindDivisionsResponse Class Doc Comment
+ * DivisionMembership Class Doc Comment
  *
  * @category Class
  * @package  Verdigado\GrueneApiClient
@@ -40,7 +40,7 @@ use \Verdigado\GrueneApiClient\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSerializable
+class DivisionMembership implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       *
       * @var string
       */
-    protected static $openAPIModelName = 'FindDivisionsResponse';
+    protected static $openAPIModelName = 'DivisionMembership';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,8 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Verdigado\GrueneApiClient\models\Division[]',
-        'meta' => '\Verdigado\GrueneApiClient\models\FindProfileTagsResponseMeta'
+        'division' => '\Verdigado\GrueneApiClient\models\Division',
+        'joined_at' => '\DateTime'
     ];
 
     /**
@@ -69,8 +69,8 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'data' => null,
-        'meta' => null
+        'division' => null,
+        'joined_at' => 'date-time'
     ];
 
     /**
@@ -79,8 +79,8 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'data' => false,
-		'meta' => false
+        'division' => false,
+		'joined_at' => false
     ];
 
     /**
@@ -169,8 +169,8 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $attributeMap = [
-        'data' => 'data',
-        'meta' => 'meta'
+        'division' => 'division',
+        'joined_at' => 'joinedAt'
     ];
 
     /**
@@ -179,8 +179,8 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $setters = [
-        'data' => 'setData',
-        'meta' => 'setMeta'
+        'division' => 'setDivision',
+        'joined_at' => 'setJoinedAt'
     ];
 
     /**
@@ -189,8 +189,8 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $getters = [
-        'data' => 'getData',
-        'meta' => 'getMeta'
+        'division' => 'getDivision',
+        'joined_at' => 'getJoinedAt'
     ];
 
     /**
@@ -250,8 +250,8 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('data', $data ?? [], null);
-        $this->setIfExists('meta', $data ?? [], null);
+        $this->setIfExists('division', $data ?? [], null);
+        $this->setIfExists('joined_at', $data ?? [], null);
     }
 
     /**
@@ -281,11 +281,11 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     {
         $invalidProperties = [];
 
-        if ($this->container['data'] === null) {
-            $invalidProperties[] = "'data' can't be null";
+        if ($this->container['division'] === null) {
+            $invalidProperties[] = "'division' can't be null";
         }
-        if ($this->container['meta'] === null) {
-            $invalidProperties[] = "'meta' can't be null";
+        if ($this->container['joined_at'] === null) {
+            $invalidProperties[] = "'joined_at' can't be null";
         }
         return $invalidProperties;
     }
@@ -303,55 +303,55 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
 
 
     /**
-     * Gets data
+     * Gets division
      *
-     * @return \Verdigado\GrueneApiClient\models\Division[]
+     * @return \Verdigado\GrueneApiClient\models\Division
      */
-    public function getData()
+    public function getDivision()
     {
-        return $this->container['data'];
+        return $this->container['division'];
     }
 
     /**
-     * Sets data
+     * Sets division
      *
-     * @param \Verdigado\GrueneApiClient\models\Division[] $data data
+     * @param \Verdigado\GrueneApiClient\models\Division $division division
      *
      * @return self
      */
-    public function setData($data)
+    public function setDivision($division)
     {
-        if (is_null($data)) {
-            throw new \InvalidArgumentException('non-nullable data cannot be null');
+        if (is_null($division)) {
+            throw new \InvalidArgumentException('non-nullable division cannot be null');
         }
-        $this->container['data'] = $data;
+        $this->container['division'] = $division;
 
         return $this;
     }
 
     /**
-     * Gets meta
+     * Gets joined_at
      *
-     * @return \Verdigado\GrueneApiClient\models\FindProfileTagsResponseMeta
+     * @return \DateTime
      */
-    public function getMeta()
+    public function getJoinedAt()
     {
-        return $this->container['meta'];
+        return $this->container['joined_at'];
     }
 
     /**
-     * Sets meta
+     * Sets joined_at
      *
-     * @param \Verdigado\GrueneApiClient\models\FindProfileTagsResponseMeta $meta meta
+     * @param \DateTime $joined_at joined_at
      *
      * @return self
      */
-    public function setMeta($meta)
+    public function setJoinedAt($joined_at)
     {
-        if (is_null($meta)) {
-            throw new \InvalidArgumentException('non-nullable meta cannot be null');
+        if (is_null($joined_at)) {
+            throw new \InvalidArgumentException('non-nullable joined_at cannot be null');
         }
-        $this->container['meta'] = $meta;
+        $this->container['joined_at'] = $joined_at;
 
         return $this;
     }

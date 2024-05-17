@@ -1,6 +1,6 @@
 <?php
 /**
- * FindDivisionsResponse
+ * ProfilePrivacySettings
  *
  * PHP version 7.4
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Verdigado\GrueneApiClient\ObjectSerializer;
 
 /**
- * FindDivisionsResponse Class Doc Comment
+ * ProfilePrivacySettings Class Doc Comment
  *
  * @category Class
  * @package  Verdigado\GrueneApiClient
@@ -40,7 +40,7 @@ use \Verdigado\GrueneApiClient\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSerializable
+class ProfilePrivacySettings implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       *
       * @var string
       */
-    protected static $openAPIModelName = 'FindDivisionsResponse';
+    protected static $openAPIModelName = 'ProfilePrivacySettings';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,9 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Verdigado\GrueneApiClient\models\Division[]',
-        'meta' => '\Verdigado\GrueneApiClient\models\FindProfileTagsResponseMeta'
+        'overall' => 'string',
+        'email' => 'string',
+        'chatbegruenung' => 'string'
     ];
 
     /**
@@ -69,8 +70,9 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'data' => null,
-        'meta' => null
+        'overall' => null,
+        'email' => null,
+        'chatbegruenung' => null
     ];
 
     /**
@@ -79,8 +81,9 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'data' => false,
-		'meta' => false
+        'overall' => false,
+		'email' => false,
+		'chatbegruenung' => false
     ];
 
     /**
@@ -169,8 +172,9 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $attributeMap = [
-        'data' => 'data',
-        'meta' => 'meta'
+        'overall' => 'overall',
+        'email' => 'email',
+        'chatbegruenung' => 'chatbegruenung'
     ];
 
     /**
@@ -179,8 +183,9 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $setters = [
-        'data' => 'setData',
-        'meta' => 'setMeta'
+        'overall' => 'setOverall',
+        'email' => 'setEmail',
+        'chatbegruenung' => 'setChatbegruenung'
     ];
 
     /**
@@ -189,8 +194,9 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $getters = [
-        'data' => 'getData',
-        'meta' => 'getMeta'
+        'overall' => 'getOverall',
+        'email' => 'getEmail',
+        'chatbegruenung' => 'getChatbegruenung'
     ];
 
     /**
@@ -234,6 +240,69 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
         return self::$openAPIModelName;
     }
 
+    public const OVERALL__PRIVATE = 'PRIVATE';
+    public const OVERALL__PUBLIC = 'PUBLIC';
+    public const OVERALL_BV_WIDE = 'BV_WIDE';
+    public const OVERALL_LV_WIDE = 'LV_WIDE';
+    public const OVERALL_OV_WIDE = 'OV_WIDE';
+    public const EMAIL__PRIVATE = 'PRIVATE';
+    public const EMAIL__PUBLIC = 'PUBLIC';
+    public const EMAIL_BV_WIDE = 'BV_WIDE';
+    public const EMAIL_LV_WIDE = 'LV_WIDE';
+    public const EMAIL_OV_WIDE = 'OV_WIDE';
+    public const CHATBEGRUENUNG__PRIVATE = 'PRIVATE';
+    public const CHATBEGRUENUNG__PUBLIC = 'PUBLIC';
+    public const CHATBEGRUENUNG_BV_WIDE = 'BV_WIDE';
+    public const CHATBEGRUENUNG_LV_WIDE = 'LV_WIDE';
+    public const CHATBEGRUENUNG_OV_WIDE = 'OV_WIDE';
+
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getOverallAllowableValues()
+    {
+        return [
+            self::OVERALL__PRIVATE,
+            self::OVERALL__PUBLIC,
+            self::OVERALL_BV_WIDE,
+            self::OVERALL_LV_WIDE,
+            self::OVERALL_OV_WIDE,
+        ];
+    }
+
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getEmailAllowableValues()
+    {
+        return [
+            self::EMAIL__PRIVATE,
+            self::EMAIL__PUBLIC,
+            self::EMAIL_BV_WIDE,
+            self::EMAIL_LV_WIDE,
+            self::EMAIL_OV_WIDE,
+        ];
+    }
+
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getChatbegruenungAllowableValues()
+    {
+        return [
+            self::CHATBEGRUENUNG__PRIVATE,
+            self::CHATBEGRUENUNG__PUBLIC,
+            self::CHATBEGRUENUNG_BV_WIDE,
+            self::CHATBEGRUENUNG_LV_WIDE,
+            self::CHATBEGRUENUNG_OV_WIDE,
+        ];
+    }
 
     /**
      * Associative array for storing property values
@@ -250,8 +319,9 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('data', $data ?? [], null);
-        $this->setIfExists('meta', $data ?? [], null);
+        $this->setIfExists('overall', $data ?? [], null);
+        $this->setIfExists('email', $data ?? [], null);
+        $this->setIfExists('chatbegruenung', $data ?? [], null);
     }
 
     /**
@@ -281,12 +351,33 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     {
         $invalidProperties = [];
 
-        if ($this->container['data'] === null) {
-            $invalidProperties[] = "'data' can't be null";
+        $allowedValues = $this->getOverallAllowableValues();
+        if (!is_null($this->container['overall']) && !in_array($this->container['overall'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value '%s' for 'overall', must be one of '%s'",
+                $this->container['overall'],
+                implode("', '", $allowedValues)
+            );
         }
-        if ($this->container['meta'] === null) {
-            $invalidProperties[] = "'meta' can't be null";
+
+        $allowedValues = $this->getEmailAllowableValues();
+        if (!is_null($this->container['email']) && !in_array($this->container['email'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value '%s' for 'email', must be one of '%s'",
+                $this->container['email'],
+                implode("', '", $allowedValues)
+            );
         }
+
+        $allowedValues = $this->getChatbegruenungAllowableValues();
+        if (!is_null($this->container['chatbegruenung']) && !in_array($this->container['chatbegruenung'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value '%s' for 'chatbegruenung', must be one of '%s'",
+                $this->container['chatbegruenung'],
+                implode("', '", $allowedValues)
+            );
+        }
+
         return $invalidProperties;
     }
 
@@ -303,55 +394,112 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
 
 
     /**
-     * Gets data
+     * Gets overall
      *
-     * @return \Verdigado\GrueneApiClient\models\Division[]
+     * @return string|null
      */
-    public function getData()
+    public function getOverall()
     {
-        return $this->container['data'];
+        return $this->container['overall'];
     }
 
     /**
-     * Sets data
+     * Sets overall
      *
-     * @param \Verdigado\GrueneApiClient\models\Division[] $data data
+     * @param string|null $overall overall
      *
      * @return self
      */
-    public function setData($data)
+    public function setOverall($overall)
     {
-        if (is_null($data)) {
-            throw new \InvalidArgumentException('non-nullable data cannot be null');
+        if (is_null($overall)) {
+            throw new \InvalidArgumentException('non-nullable overall cannot be null');
         }
-        $this->container['data'] = $data;
+        $allowedValues = $this->getOverallAllowableValues();
+        if (!in_array($overall, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value '%s' for 'overall', must be one of '%s'",
+                    $overall,
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['overall'] = $overall;
 
         return $this;
     }
 
     /**
-     * Gets meta
+     * Gets email
      *
-     * @return \Verdigado\GrueneApiClient\models\FindProfileTagsResponseMeta
+     * @return string|null
      */
-    public function getMeta()
+    public function getEmail()
     {
-        return $this->container['meta'];
+        return $this->container['email'];
     }
 
     /**
-     * Sets meta
+     * Sets email
      *
-     * @param \Verdigado\GrueneApiClient\models\FindProfileTagsResponseMeta $meta meta
+     * @param string|null $email email
      *
      * @return self
      */
-    public function setMeta($meta)
+    public function setEmail($email)
     {
-        if (is_null($meta)) {
-            throw new \InvalidArgumentException('non-nullable meta cannot be null');
+        if (is_null($email)) {
+            throw new \InvalidArgumentException('non-nullable email cannot be null');
         }
-        $this->container['meta'] = $meta;
+        $allowedValues = $this->getEmailAllowableValues();
+        if (!in_array($email, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value '%s' for 'email', must be one of '%s'",
+                    $email,
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['email'] = $email;
+
+        return $this;
+    }
+
+    /**
+     * Gets chatbegruenung
+     *
+     * @return string|null
+     */
+    public function getChatbegruenung()
+    {
+        return $this->container['chatbegruenung'];
+    }
+
+    /**
+     * Sets chatbegruenung
+     *
+     * @param string|null $chatbegruenung chatbegruenung
+     *
+     * @return self
+     */
+    public function setChatbegruenung($chatbegruenung)
+    {
+        if (is_null($chatbegruenung)) {
+            throw new \InvalidArgumentException('non-nullable chatbegruenung cannot be null');
+        }
+        $allowedValues = $this->getChatbegruenungAllowableValues();
+        if (!in_array($chatbegruenung, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value '%s' for 'chatbegruenung', must be one of '%s'",
+                    $chatbegruenung,
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['chatbegruenung'] = $chatbegruenung;
 
         return $this;
     }

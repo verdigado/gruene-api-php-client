@@ -1,10 +1,11 @@
-# # FindDivisionsResponse
+# # SocialMediaEntry
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**\Verdigado\GrueneApiClient\models\Division[]**](Division.md) |  |
-**meta** | [**\Verdigado\GrueneApiClient\models\FindProfileTagsResponseMeta**](FindProfileTagsResponseMeta.md) |  |
+**id** | **string** |  |
+**type** | **string** | Type of social media entry |
+**url** | **string** | Url to the platform account |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

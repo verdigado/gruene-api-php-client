@@ -1,6 +1,6 @@
 <?php
 /**
- * FindDivisionsResponse
+ * UpdateSocialMediaEntry
  *
  * PHP version 7.4
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Verdigado\GrueneApiClient\ObjectSerializer;
 
 /**
- * FindDivisionsResponse Class Doc Comment
+ * UpdateSocialMediaEntry Class Doc Comment
  *
  * @category Class
  * @package  Verdigado\GrueneApiClient
@@ -40,7 +40,7 @@ use \Verdigado\GrueneApiClient\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSerializable
+class UpdateSocialMediaEntry implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       *
       * @var string
       */
-    protected static $openAPIModelName = 'FindDivisionsResponse';
+    protected static $openAPIModelName = 'UpdateSocialMediaEntry';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,9 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Verdigado\GrueneApiClient\models\Division[]',
-        'meta' => '\Verdigado\GrueneApiClient\models\FindProfileTagsResponseMeta'
+        'type' => 'string',
+        'url' => 'string',
+        'id' => 'string'
     ];
 
     /**
@@ -69,8 +70,9 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'data' => null,
-        'meta' => null
+        'type' => null,
+        'url' => null,
+        'id' => null
     ];
 
     /**
@@ -79,8 +81,9 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'data' => false,
-		'meta' => false
+        'type' => false,
+		'url' => false,
+		'id' => false
     ];
 
     /**
@@ -169,8 +172,9 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $attributeMap = [
-        'data' => 'data',
-        'meta' => 'meta'
+        'type' => 'type',
+        'url' => 'url',
+        'id' => 'id'
     ];
 
     /**
@@ -179,8 +183,9 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $setters = [
-        'data' => 'setData',
-        'meta' => 'setMeta'
+        'type' => 'setType',
+        'url' => 'setUrl',
+        'id' => 'setId'
     ];
 
     /**
@@ -189,8 +194,9 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $getters = [
-        'data' => 'getData',
-        'meta' => 'getMeta'
+        'type' => 'getType',
+        'url' => 'getUrl',
+        'id' => 'getId'
     ];
 
     /**
@@ -234,6 +240,27 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
         return self::$openAPIModelName;
     }
 
+    public const TYPE_FACEBOOK = 'facebook';
+    public const TYPE_INSTAGRAM = 'instagram';
+    public const TYPE_MASTODON = 'mastodon';
+    public const TYPE_TWITTER = 'twitter';
+    public const TYPE_CHATBEGRUENUNG = 'chatbegruenung';
+
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_FACEBOOK,
+            self::TYPE_INSTAGRAM,
+            self::TYPE_MASTODON,
+            self::TYPE_TWITTER,
+            self::TYPE_CHATBEGRUENUNG,
+        ];
+    }
 
     /**
      * Associative array for storing property values
@@ -250,8 +277,9 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('data', $data ?? [], null);
-        $this->setIfExists('meta', $data ?? [], null);
+        $this->setIfExists('type', $data ?? [], null);
+        $this->setIfExists('url', $data ?? [], null);
+        $this->setIfExists('id', $data ?? [], null);
     }
 
     /**
@@ -281,11 +309,20 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     {
         $invalidProperties = [];
 
-        if ($this->container['data'] === null) {
-            $invalidProperties[] = "'data' can't be null";
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
         }
-        if ($this->container['meta'] === null) {
-            $invalidProperties[] = "'meta' can't be null";
+        $allowedValues = $this->getTypeAllowableValues();
+        if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value '%s' for 'type', must be one of '%s'",
+                $this->container['type'],
+                implode("', '", $allowedValues)
+            );
+        }
+
+        if ($this->container['url'] === null) {
+            $invalidProperties[] = "'url' can't be null";
         }
         return $invalidProperties;
     }
@@ -303,55 +340,92 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
 
 
     /**
-     * Gets data
+     * Gets type
      *
-     * @return \Verdigado\GrueneApiClient\models\Division[]
+     * @return string
      */
-    public function getData()
+    public function getType()
     {
-        return $this->container['data'];
+        return $this->container['type'];
     }
 
     /**
-     * Sets data
+     * Sets type
      *
-     * @param \Verdigado\GrueneApiClient\models\Division[] $data data
+     * @param string $type Type of social media entry
      *
      * @return self
      */
-    public function setData($data)
+    public function setType($type)
     {
-        if (is_null($data)) {
-            throw new \InvalidArgumentException('non-nullable data cannot be null');
+        if (is_null($type)) {
+            throw new \InvalidArgumentException('non-nullable type cannot be null');
         }
-        $this->container['data'] = $data;
+        $allowedValues = $this->getTypeAllowableValues();
+        if (!in_array($type, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value '%s' for 'type', must be one of '%s'",
+                    $type,
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['type'] = $type;
 
         return $this;
     }
 
     /**
-     * Gets meta
+     * Gets url
      *
-     * @return \Verdigado\GrueneApiClient\models\FindProfileTagsResponseMeta
+     * @return string
      */
-    public function getMeta()
+    public function getUrl()
     {
-        return $this->container['meta'];
+        return $this->container['url'];
     }
 
     /**
-     * Sets meta
+     * Sets url
      *
-     * @param \Verdigado\GrueneApiClient\models\FindProfileTagsResponseMeta $meta meta
+     * @param string $url Url to the platform account
      *
      * @return self
      */
-    public function setMeta($meta)
+    public function setUrl($url)
     {
-        if (is_null($meta)) {
-            throw new \InvalidArgumentException('non-nullable meta cannot be null');
+        if (is_null($url)) {
+            throw new \InvalidArgumentException('non-nullable url cannot be null');
         }
-        $this->container['meta'] = $meta;
+        $this->container['url'] = $url;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id id
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
 
         return $this;
     }

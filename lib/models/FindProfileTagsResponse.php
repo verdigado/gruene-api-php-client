@@ -1,6 +1,6 @@
 <?php
 /**
- * FindDivisionsResponse
+ * FindProfileTagsResponse
  *
  * PHP version 7.4
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Verdigado\GrueneApiClient\ObjectSerializer;
 
 /**
- * FindDivisionsResponse Class Doc Comment
+ * FindProfileTagsResponse Class Doc Comment
  *
  * @category Class
  * @package  Verdigado\GrueneApiClient
@@ -40,7 +40,7 @@ use \Verdigado\GrueneApiClient\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSerializable
+class FindProfileTagsResponse implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       *
       * @var string
       */
-    protected static $openAPIModelName = 'FindDivisionsResponse';
+    protected static $openAPIModelName = 'FindProfileTagsResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,7 +57,7 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Verdigado\GrueneApiClient\models\Division[]',
+        'data' => '\Verdigado\GrueneApiClient\models\ProfileTag[]',
         'meta' => '\Verdigado\GrueneApiClient\models\FindProfileTagsResponseMeta'
     ];
 
@@ -305,7 +305,7 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets data
      *
-     * @return \Verdigado\GrueneApiClient\models\Division[]
+     * @return \Verdigado\GrueneApiClient\models\ProfileTag[]
      */
     public function getData()
     {
@@ -315,7 +315,7 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets data
      *
-     * @param \Verdigado\GrueneApiClient\models\Division[] $data data
+     * @param \Verdigado\GrueneApiClient\models\ProfileTag[] $data data
      *
      * @return self
      */

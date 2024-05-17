@@ -1,6 +1,6 @@
 <?php
 /**
- * FindDivisionsResponse
+ * UpdatePhoneNumber
  *
  * PHP version 7.4
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Verdigado\GrueneApiClient\ObjectSerializer;
 
 /**
- * FindDivisionsResponse Class Doc Comment
+ * UpdatePhoneNumber Class Doc Comment
  *
  * @category Class
  * @package  Verdigado\GrueneApiClient
@@ -40,7 +40,7 @@ use \Verdigado\GrueneApiClient\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSerializable
+class UpdatePhoneNumber implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       *
       * @var string
       */
-    protected static $openAPIModelName = 'FindDivisionsResponse';
+    protected static $openAPIModelName = 'UpdatePhoneNumber';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,9 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Verdigado\GrueneApiClient\models\Division[]',
-        'meta' => '\Verdigado\GrueneApiClient\models\FindProfileTagsResponseMeta'
+        'country' => 'string',
+        'number' => 'string',
+        'id' => 'string'
     ];
 
     /**
@@ -69,8 +70,9 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'data' => null,
-        'meta' => null
+        'country' => null,
+        'number' => null,
+        'id' => null
     ];
 
     /**
@@ -79,8 +81,9 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'data' => false,
-		'meta' => false
+        'country' => false,
+		'number' => false,
+		'id' => false
     ];
 
     /**
@@ -169,8 +172,9 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $attributeMap = [
-        'data' => 'data',
-        'meta' => 'meta'
+        'country' => 'country',
+        'number' => 'number',
+        'id' => 'id'
     ];
 
     /**
@@ -179,8 +183,9 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $setters = [
-        'data' => 'setData',
-        'meta' => 'setMeta'
+        'country' => 'setCountry',
+        'number' => 'setNumber',
+        'id' => 'setId'
     ];
 
     /**
@@ -189,8 +194,9 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $getters = [
-        'data' => 'getData',
-        'meta' => 'getMeta'
+        'country' => 'getCountry',
+        'number' => 'getNumber',
+        'id' => 'getId'
     ];
 
     /**
@@ -250,8 +256,9 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('data', $data ?? [], null);
-        $this->setIfExists('meta', $data ?? [], null);
+        $this->setIfExists('country', $data ?? [], null);
+        $this->setIfExists('number', $data ?? [], null);
+        $this->setIfExists('id', $data ?? [], null);
     }
 
     /**
@@ -281,11 +288,11 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     {
         $invalidProperties = [];
 
-        if ($this->container['data'] === null) {
-            $invalidProperties[] = "'data' can't be null";
+        if ($this->container['country'] === null) {
+            $invalidProperties[] = "'country' can't be null";
         }
-        if ($this->container['meta'] === null) {
-            $invalidProperties[] = "'meta' can't be null";
+        if ($this->container['number'] === null) {
+            $invalidProperties[] = "'number' can't be null";
         }
         return $invalidProperties;
     }
@@ -303,55 +310,82 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
 
 
     /**
-     * Gets data
+     * Gets country
      *
-     * @return \Verdigado\GrueneApiClient\models\Division[]
+     * @return string
      */
-    public function getData()
+    public function getCountry()
     {
-        return $this->container['data'];
+        return $this->container['country'];
     }
 
     /**
-     * Sets data
+     * Sets country
      *
-     * @param \Verdigado\GrueneApiClient\models\Division[] $data data
+     * @param string $country country prefix
      *
      * @return self
      */
-    public function setData($data)
+    public function setCountry($country)
     {
-        if (is_null($data)) {
-            throw new \InvalidArgumentException('non-nullable data cannot be null');
+        if (is_null($country)) {
+            throw new \InvalidArgumentException('non-nullable country cannot be null');
         }
-        $this->container['data'] = $data;
+        $this->container['country'] = $country;
 
         return $this;
     }
 
     /**
-     * Gets meta
+     * Gets number
      *
-     * @return \Verdigado\GrueneApiClient\models\FindProfileTagsResponseMeta
+     * @return string
      */
-    public function getMeta()
+    public function getNumber()
     {
-        return $this->container['meta'];
+        return $this->container['number'];
     }
 
     /**
-     * Sets meta
+     * Sets number
      *
-     * @param \Verdigado\GrueneApiClient\models\FindProfileTagsResponseMeta $meta meta
+     * @param string $number Phone number
      *
      * @return self
      */
-    public function setMeta($meta)
+    public function setNumber($number)
     {
-        if (is_null($meta)) {
-            throw new \InvalidArgumentException('non-nullable meta cannot be null');
+        if (is_null($number)) {
+            throw new \InvalidArgumentException('non-nullable number cannot be null');
         }
-        $this->container['meta'] = $meta;
+        $this->container['number'] = $number;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id id
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
 
         return $this;
     }

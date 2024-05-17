@@ -1,6 +1,6 @@
 <?php
 /**
- * FindDivisionsResponse
+ * ImageLink
  *
  * PHP version 7.4
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Verdigado\GrueneApiClient\ObjectSerializer;
 
 /**
- * FindDivisionsResponse Class Doc Comment
+ * ImageLink Class Doc Comment
  *
  * @category Class
  * @package  Verdigado\GrueneApiClient
@@ -40,7 +40,7 @@ use \Verdigado\GrueneApiClient\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSerializable
+class ImageLink implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       *
       * @var string
       */
-    protected static $openAPIModelName = 'FindDivisionsResponse';
+    protected static $openAPIModelName = 'ImageLink';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,10 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Verdigado\GrueneApiClient\models\Division[]',
-        'meta' => '\Verdigado\GrueneApiClient\models\FindProfileTagsResponseMeta'
+        'url' => 'string',
+        'mimetype' => 'string',
+        'width' => 'float',
+        'height' => 'float'
     ];
 
     /**
@@ -69,8 +71,10 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'data' => null,
-        'meta' => null
+        'url' => null,
+        'mimetype' => null,
+        'width' => null,
+        'height' => null
     ];
 
     /**
@@ -79,8 +83,10 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'data' => false,
-		'meta' => false
+        'url' => false,
+		'mimetype' => false,
+		'width' => false,
+		'height' => false
     ];
 
     /**
@@ -169,8 +175,10 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $attributeMap = [
-        'data' => 'data',
-        'meta' => 'meta'
+        'url' => 'url',
+        'mimetype' => 'mimetype',
+        'width' => 'width',
+        'height' => 'height'
     ];
 
     /**
@@ -179,8 +187,10 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $setters = [
-        'data' => 'setData',
-        'meta' => 'setMeta'
+        'url' => 'setUrl',
+        'mimetype' => 'setMimetype',
+        'width' => 'setWidth',
+        'height' => 'setHeight'
     ];
 
     /**
@@ -189,8 +199,10 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $getters = [
-        'data' => 'getData',
-        'meta' => 'getMeta'
+        'url' => 'getUrl',
+        'mimetype' => 'getMimetype',
+        'width' => 'getWidth',
+        'height' => 'getHeight'
     ];
 
     /**
@@ -250,8 +262,10 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('data', $data ?? [], null);
-        $this->setIfExists('meta', $data ?? [], null);
+        $this->setIfExists('url', $data ?? [], null);
+        $this->setIfExists('mimetype', $data ?? [], null);
+        $this->setIfExists('width', $data ?? [], null);
+        $this->setIfExists('height', $data ?? [], null);
     }
 
     /**
@@ -281,12 +295,26 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     {
         $invalidProperties = [];
 
-        if ($this->container['data'] === null) {
-            $invalidProperties[] = "'data' can't be null";
+        if ($this->container['url'] === null) {
+            $invalidProperties[] = "'url' can't be null";
         }
-        if ($this->container['meta'] === null) {
-            $invalidProperties[] = "'meta' can't be null";
+        if ($this->container['mimetype'] === null) {
+            $invalidProperties[] = "'mimetype' can't be null";
         }
+        if ($this->container['width'] === null) {
+            $invalidProperties[] = "'width' can't be null";
+        }
+        if (($this->container['width'] < 0)) {
+            $invalidProperties[] = "invalid value for 'width', must be bigger than or equal to 0.";
+        }
+
+        if ($this->container['height'] === null) {
+            $invalidProperties[] = "'height' can't be null";
+        }
+        if (($this->container['height'] < 0)) {
+            $invalidProperties[] = "invalid value for 'height', must be bigger than or equal to 0.";
+        }
+
         return $invalidProperties;
     }
 
@@ -303,55 +331,119 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
 
 
     /**
-     * Gets data
+     * Gets url
      *
-     * @return \Verdigado\GrueneApiClient\models\Division[]
+     * @return string
      */
-    public function getData()
+    public function getUrl()
     {
-        return $this->container['data'];
+        return $this->container['url'];
     }
 
     /**
-     * Sets data
+     * Sets url
      *
-     * @param \Verdigado\GrueneApiClient\models\Division[] $data data
+     * @param string $url Image url
      *
      * @return self
      */
-    public function setData($data)
+    public function setUrl($url)
     {
-        if (is_null($data)) {
-            throw new \InvalidArgumentException('non-nullable data cannot be null');
+        if (is_null($url)) {
+            throw new \InvalidArgumentException('non-nullable url cannot be null');
         }
-        $this->container['data'] = $data;
+        $this->container['url'] = $url;
 
         return $this;
     }
 
     /**
-     * Gets meta
+     * Gets mimetype
      *
-     * @return \Verdigado\GrueneApiClient\models\FindProfileTagsResponseMeta
+     * @return string
      */
-    public function getMeta()
+    public function getMimetype()
     {
-        return $this->container['meta'];
+        return $this->container['mimetype'];
     }
 
     /**
-     * Sets meta
+     * Sets mimetype
      *
-     * @param \Verdigado\GrueneApiClient\models\FindProfileTagsResponseMeta $meta meta
+     * @param string $mimetype Image mimetype
      *
      * @return self
      */
-    public function setMeta($meta)
+    public function setMimetype($mimetype)
     {
-        if (is_null($meta)) {
-            throw new \InvalidArgumentException('non-nullable meta cannot be null');
+        if (is_null($mimetype)) {
+            throw new \InvalidArgumentException('non-nullable mimetype cannot be null');
         }
-        $this->container['meta'] = $meta;
+        $this->container['mimetype'] = $mimetype;
+
+        return $this;
+    }
+
+    /**
+     * Gets width
+     *
+     * @return float
+     */
+    public function getWidth()
+    {
+        return $this->container['width'];
+    }
+
+    /**
+     * Sets width
+     *
+     * @param float $width Width in pixels
+     *
+     * @return self
+     */
+    public function setWidth($width)
+    {
+        if (is_null($width)) {
+            throw new \InvalidArgumentException('non-nullable width cannot be null');
+        }
+
+        if (($width < 0)) {
+            throw new \InvalidArgumentException('invalid value for $width when calling ImageLink., must be bigger than or equal to 0.');
+        }
+
+        $this->container['width'] = $width;
+
+        return $this;
+    }
+
+    /**
+     * Gets height
+     *
+     * @return float
+     */
+    public function getHeight()
+    {
+        return $this->container['height'];
+    }
+
+    /**
+     * Sets height
+     *
+     * @param float $height Height in pixels
+     *
+     * @return self
+     */
+    public function setHeight($height)
+    {
+        if (is_null($height)) {
+            throw new \InvalidArgumentException('non-nullable height cannot be null');
+        }
+
+        if (($height < 0)) {
+            throw new \InvalidArgumentException('invalid value for $height when calling ImageLink., must be bigger than or equal to 0.');
+        }
+
+        $this->container['height'] = $height;
 
         return $this;
     }

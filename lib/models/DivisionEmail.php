@@ -57,8 +57,8 @@ class DivisionEmail implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'address' => 'string',
-        'tags' => 'string[]'
+        'tags' => 'string[]',
+        'address' => 'string'
     ];
 
     /**
@@ -69,8 +69,8 @@ class DivisionEmail implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'address' => null,
-        'tags' => null
+        'tags' => null,
+        'address' => null
     ];
 
     /**
@@ -79,8 +79,8 @@ class DivisionEmail implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'address' => false,
-		'tags' => false
+        'tags' => false,
+		'address' => false
     ];
 
     /**
@@ -169,8 +169,8 @@ class DivisionEmail implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'address' => 'address',
-        'tags' => 'tags'
+        'tags' => 'tags',
+        'address' => 'address'
     ];
 
     /**
@@ -179,8 +179,8 @@ class DivisionEmail implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'address' => 'setAddress',
-        'tags' => 'setTags'
+        'tags' => 'setTags',
+        'address' => 'setAddress'
     ];
 
     /**
@@ -189,8 +189,8 @@ class DivisionEmail implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'address' => 'getAddress',
-        'tags' => 'getTags'
+        'tags' => 'getTags',
+        'address' => 'getAddress'
     ];
 
     /**
@@ -250,8 +250,8 @@ class DivisionEmail implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('address', $data ?? [], null);
         $this->setIfExists('tags', $data ?? [], null);
+        $this->setIfExists('address', $data ?? [], null);
     }
 
     /**
@@ -281,11 +281,11 @@ class DivisionEmail implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['address'] === null) {
-            $invalidProperties[] = "'address' can't be null";
-        }
         if ($this->container['tags'] === null) {
             $invalidProperties[] = "'tags' can't be null";
+        }
+        if ($this->container['address'] === null) {
+            $invalidProperties[] = "'address' can't be null";
         }
         return $invalidProperties;
     }
@@ -301,6 +301,33 @@ class DivisionEmail implements ModelInterface, ArrayAccess, \JsonSerializable
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets tags
+     *
+     * @return string[]
+     */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+     * Sets tags
+     *
+     * @param string[] $tags Tags associated with email as string values
+     *
+     * @return self
+     */
+    public function setTags($tags)
+    {
+        if (is_null($tags)) {
+            throw new \InvalidArgumentException('non-nullable tags cannot be null');
+        }
+        $this->container['tags'] = $tags;
+
+        return $this;
+    }
 
     /**
      * Gets address
@@ -325,33 +352,6 @@ class DivisionEmail implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable address cannot be null');
         }
         $this->container['address'] = $address;
-
-        return $this;
-    }
-
-    /**
-     * Gets tags
-     *
-     * @return string[]
-     */
-    public function getTags()
-    {
-        return $this->container['tags'];
-    }
-
-    /**
-     * Sets tags
-     *
-     * @param string[] $tags Tags
-     *
-     * @return self
-     */
-    public function setTags($tags)
-    {
-        if (is_null($tags)) {
-            throw new \InvalidArgumentException('non-nullable tags cannot be null');
-        }
-        $this->container['tags'] = $tags;
 
         return $this;
     }

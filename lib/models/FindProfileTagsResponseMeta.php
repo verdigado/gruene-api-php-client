@@ -1,6 +1,6 @@
 <?php
 /**
- * FindDivisionsResponse
+ * FindProfileTagsResponseMeta
  *
  * PHP version 7.4
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Verdigado\GrueneApiClient\ObjectSerializer;
 
 /**
- * FindDivisionsResponse Class Doc Comment
+ * FindProfileTagsResponseMeta Class Doc Comment
  *
  * @category Class
  * @package  Verdigado\GrueneApiClient
@@ -40,7 +40,7 @@ use \Verdigado\GrueneApiClient\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSerializable
+class FindProfileTagsResponseMeta implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       *
       * @var string
       */
-    protected static $openAPIModelName = 'FindDivisionsResponse';
+    protected static $openAPIModelName = 'FindProfileTagsResponse_meta';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,10 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Verdigado\GrueneApiClient\models\Division[]',
-        'meta' => '\Verdigado\GrueneApiClient\models\FindProfileTagsResponseMeta'
+        'count' => 'float',
+        'total' => 'float',
+        'offset' => 'float',
+        'limit' => 'float'
     ];
 
     /**
@@ -69,8 +71,10 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'data' => null,
-        'meta' => null
+        'count' => null,
+        'total' => null,
+        'offset' => null,
+        'limit' => null
     ];
 
     /**
@@ -79,8 +83,10 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'data' => false,
-		'meta' => false
+        'count' => false,
+		'total' => false,
+		'offset' => false,
+		'limit' => false
     ];
 
     /**
@@ -169,8 +175,10 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $attributeMap = [
-        'data' => 'data',
-        'meta' => 'meta'
+        'count' => 'count',
+        'total' => 'total',
+        'offset' => 'offset',
+        'limit' => 'limit'
     ];
 
     /**
@@ -179,8 +187,10 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $setters = [
-        'data' => 'setData',
-        'meta' => 'setMeta'
+        'count' => 'setCount',
+        'total' => 'setTotal',
+        'offset' => 'setOffset',
+        'limit' => 'setLimit'
     ];
 
     /**
@@ -189,8 +199,10 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $getters = [
-        'data' => 'getData',
-        'meta' => 'getMeta'
+        'count' => 'getCount',
+        'total' => 'getTotal',
+        'offset' => 'getOffset',
+        'limit' => 'getLimit'
     ];
 
     /**
@@ -250,8 +262,10 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('data', $data ?? [], null);
-        $this->setIfExists('meta', $data ?? [], null);
+        $this->setIfExists('count', $data ?? [], null);
+        $this->setIfExists('total', $data ?? [], null);
+        $this->setIfExists('offset', $data ?? [], null);
+        $this->setIfExists('limit', $data ?? [], null);
     }
 
     /**
@@ -281,12 +295,6 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     {
         $invalidProperties = [];
 
-        if ($this->container['data'] === null) {
-            $invalidProperties[] = "'data' can't be null";
-        }
-        if ($this->container['meta'] === null) {
-            $invalidProperties[] = "'meta' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -303,55 +311,109 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
 
 
     /**
-     * Gets data
+     * Gets count
      *
-     * @return \Verdigado\GrueneApiClient\models\Division[]
+     * @return float|null
      */
-    public function getData()
+    public function getCount()
     {
-        return $this->container['data'];
+        return $this->container['count'];
     }
 
     /**
-     * Sets data
+     * Sets count
      *
-     * @param \Verdigado\GrueneApiClient\models\Division[] $data data
+     * @param float|null $count count
      *
      * @return self
      */
-    public function setData($data)
+    public function setCount($count)
     {
-        if (is_null($data)) {
-            throw new \InvalidArgumentException('non-nullable data cannot be null');
+        if (is_null($count)) {
+            throw new \InvalidArgumentException('non-nullable count cannot be null');
         }
-        $this->container['data'] = $data;
+        $this->container['count'] = $count;
 
         return $this;
     }
 
     /**
-     * Gets meta
+     * Gets total
      *
-     * @return \Verdigado\GrueneApiClient\models\FindProfileTagsResponseMeta
+     * @return float|null
      */
-    public function getMeta()
+    public function getTotal()
     {
-        return $this->container['meta'];
+        return $this->container['total'];
     }
 
     /**
-     * Sets meta
+     * Sets total
      *
-     * @param \Verdigado\GrueneApiClient\models\FindProfileTagsResponseMeta $meta meta
+     * @param float|null $total total
      *
      * @return self
      */
-    public function setMeta($meta)
+    public function setTotal($total)
     {
-        if (is_null($meta)) {
-            throw new \InvalidArgumentException('non-nullable meta cannot be null');
+        if (is_null($total)) {
+            throw new \InvalidArgumentException('non-nullable total cannot be null');
         }
-        $this->container['meta'] = $meta;
+        $this->container['total'] = $total;
+
+        return $this;
+    }
+
+    /**
+     * Gets offset
+     *
+     * @return float|null
+     */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+     * Sets offset
+     *
+     * @param float|null $offset offset
+     *
+     * @return self
+     */
+    public function setOffset($offset)
+    {
+        if (is_null($offset)) {
+            throw new \InvalidArgumentException('non-nullable offset cannot be null');
+        }
+        $this->container['offset'] = $offset;
+
+        return $this;
+    }
+
+    /**
+     * Gets limit
+     *
+     * @return float|null
+     */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+     * Sets limit
+     *
+     * @param float|null $limit limit
+     *
+     * @return self
+     */
+    public function setLimit($limit)
+    {
+        if (is_null($limit)) {
+            throw new \InvalidArgumentException('non-nullable limit cannot be null');
+        }
+        $this->container['limit'] = $limit;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * FindDivisionsResponse
+ * ProfileImage
  *
  * PHP version 7.4
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Verdigado\GrueneApiClient\ObjectSerializer;
 
 /**
- * FindDivisionsResponse Class Doc Comment
+ * ProfileImage Class Doc Comment
  *
  * @category Class
  * @package  Verdigado\GrueneApiClient
@@ -40,7 +40,7 @@ use \Verdigado\GrueneApiClient\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSerializable
+class ProfileImage implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       *
       * @var string
       */
-    protected static $openAPIModelName = 'FindDivisionsResponse';
+    protected static $openAPIModelName = 'ProfileImage';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,8 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Verdigado\GrueneApiClient\models\Division[]',
-        'meta' => '\Verdigado\GrueneApiClient\models\FindProfileTagsResponseMeta'
+        'thumbnail' => '\Verdigado\GrueneApiClient\models\ImageLink',
+        'large' => '\Verdigado\GrueneApiClient\models\ImageLink'
     ];
 
     /**
@@ -69,8 +69,8 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'data' => null,
-        'meta' => null
+        'thumbnail' => null,
+        'large' => null
     ];
 
     /**
@@ -79,8 +79,8 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'data' => false,
-		'meta' => false
+        'thumbnail' => false,
+		'large' => false
     ];
 
     /**
@@ -169,8 +169,8 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $attributeMap = [
-        'data' => 'data',
-        'meta' => 'meta'
+        'thumbnail' => 'thumbnail',
+        'large' => 'large'
     ];
 
     /**
@@ -179,8 +179,8 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $setters = [
-        'data' => 'setData',
-        'meta' => 'setMeta'
+        'thumbnail' => 'setThumbnail',
+        'large' => 'setLarge'
     ];
 
     /**
@@ -189,8 +189,8 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $getters = [
-        'data' => 'getData',
-        'meta' => 'getMeta'
+        'thumbnail' => 'getThumbnail',
+        'large' => 'getLarge'
     ];
 
     /**
@@ -250,8 +250,8 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('data', $data ?? [], null);
-        $this->setIfExists('meta', $data ?? [], null);
+        $this->setIfExists('thumbnail', $data ?? [], null);
+        $this->setIfExists('large', $data ?? [], null);
     }
 
     /**
@@ -281,11 +281,11 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     {
         $invalidProperties = [];
 
-        if ($this->container['data'] === null) {
-            $invalidProperties[] = "'data' can't be null";
+        if ($this->container['thumbnail'] === null) {
+            $invalidProperties[] = "'thumbnail' can't be null";
         }
-        if ($this->container['meta'] === null) {
-            $invalidProperties[] = "'meta' can't be null";
+        if ($this->container['large'] === null) {
+            $invalidProperties[] = "'large' can't be null";
         }
         return $invalidProperties;
     }
@@ -303,55 +303,55 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
 
 
     /**
-     * Gets data
+     * Gets thumbnail
      *
-     * @return \Verdigado\GrueneApiClient\models\Division[]
+     * @return \Verdigado\GrueneApiClient\models\ImageLink
      */
-    public function getData()
+    public function getThumbnail()
     {
-        return $this->container['data'];
+        return $this->container['thumbnail'];
     }
 
     /**
-     * Sets data
+     * Sets thumbnail
      *
-     * @param \Verdigado\GrueneApiClient\models\Division[] $data data
+     * @param \Verdigado\GrueneApiClient\models\ImageLink $thumbnail thumbnail
      *
      * @return self
      */
-    public function setData($data)
+    public function setThumbnail($thumbnail)
     {
-        if (is_null($data)) {
-            throw new \InvalidArgumentException('non-nullable data cannot be null');
+        if (is_null($thumbnail)) {
+            throw new \InvalidArgumentException('non-nullable thumbnail cannot be null');
         }
-        $this->container['data'] = $data;
+        $this->container['thumbnail'] = $thumbnail;
 
         return $this;
     }
 
     /**
-     * Gets meta
+     * Gets large
      *
-     * @return \Verdigado\GrueneApiClient\models\FindProfileTagsResponseMeta
+     * @return \Verdigado\GrueneApiClient\models\ImageLink
      */
-    public function getMeta()
+    public function getLarge()
     {
-        return $this->container['meta'];
+        return $this->container['large'];
     }
 
     /**
-     * Sets meta
+     * Sets large
      *
-     * @param \Verdigado\GrueneApiClient\models\FindProfileTagsResponseMeta $meta meta
+     * @param \Verdigado\GrueneApiClient\models\ImageLink $large large
      *
      * @return self
      */
-    public function setMeta($meta)
+    public function setLarge($large)
     {
-        if (is_null($meta)) {
-            throw new \InvalidArgumentException('non-nullable meta cannot be null');
+        if (is_null($large)) {
+            throw new \InvalidArgumentException('non-nullable large cannot be null');
         }
-        $this->container['meta'] = $meta;
+        $this->container['large'] = $large;
 
         return $this;
     }

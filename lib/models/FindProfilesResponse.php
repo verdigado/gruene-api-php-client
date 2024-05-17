@@ -1,6 +1,6 @@
 <?php
 /**
- * FindDivisionsResponse
+ * FindProfilesResponse
  *
  * PHP version 7.4
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Verdigado\GrueneApiClient\ObjectSerializer;
 
 /**
- * FindDivisionsResponse Class Doc Comment
+ * FindProfilesResponse Class Doc Comment
  *
  * @category Class
  * @package  Verdigado\GrueneApiClient
@@ -40,7 +40,7 @@ use \Verdigado\GrueneApiClient\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSerializable
+class FindProfilesResponse implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       *
       * @var string
       */
-    protected static $openAPIModelName = 'FindDivisionsResponse';
+    protected static $openAPIModelName = 'FindProfilesResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,7 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Verdigado\GrueneApiClient\models\Division[]',
-        'meta' => '\Verdigado\GrueneApiClient\models\FindProfileTagsResponseMeta'
+        'data' => '\Verdigado\GrueneApiClient\models\PublicProfile[]'
     ];
 
     /**
@@ -69,8 +68,7 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'data' => null,
-        'meta' => null
+        'data' => null
     ];
 
     /**
@@ -79,8 +77,7 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'data' => false,
-		'meta' => false
+        'data' => false
     ];
 
     /**
@@ -169,8 +166,7 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $attributeMap = [
-        'data' => 'data',
-        'meta' => 'meta'
+        'data' => 'data'
     ];
 
     /**
@@ -179,8 +175,7 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $setters = [
-        'data' => 'setData',
-        'meta' => 'setMeta'
+        'data' => 'setData'
     ];
 
     /**
@@ -189,8 +184,7 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $getters = [
-        'data' => 'getData',
-        'meta' => 'getMeta'
+        'data' => 'getData'
     ];
 
     /**
@@ -251,7 +245,6 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     public function __construct(array $data = null)
     {
         $this->setIfExists('data', $data ?? [], null);
-        $this->setIfExists('meta', $data ?? [], null);
     }
 
     /**
@@ -284,9 +277,6 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
         if ($this->container['data'] === null) {
             $invalidProperties[] = "'data' can't be null";
         }
-        if ($this->container['meta'] === null) {
-            $invalidProperties[] = "'meta' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -305,7 +295,7 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets data
      *
-     * @return \Verdigado\GrueneApiClient\models\Division[]
+     * @return \Verdigado\GrueneApiClient\models\PublicProfile[]
      */
     public function getData()
     {
@@ -315,7 +305,7 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets data
      *
-     * @param \Verdigado\GrueneApiClient\models\Division[] $data data
+     * @param \Verdigado\GrueneApiClient\models\PublicProfile[] $data data
      *
      * @return self
      */
@@ -325,33 +315,6 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
             throw new \InvalidArgumentException('non-nullable data cannot be null');
         }
         $this->container['data'] = $data;
-
-        return $this;
-    }
-
-    /**
-     * Gets meta
-     *
-     * @return \Verdigado\GrueneApiClient\models\FindProfileTagsResponseMeta
-     */
-    public function getMeta()
-    {
-        return $this->container['meta'];
-    }
-
-    /**
-     * Sets meta
-     *
-     * @param \Verdigado\GrueneApiClient\models\FindProfileTagsResponseMeta $meta meta
-     *
-     * @return self
-     */
-    public function setMeta($meta)
-    {
-        if (is_null($meta)) {
-            throw new \InvalidArgumentException('non-nullable meta cannot be null');
-        }
-        $this->container['meta'] = $meta;
 
         return $this;
     }
