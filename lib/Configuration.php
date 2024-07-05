@@ -93,14 +93,14 @@ class Configuration
      *
      * @var string
      */
-    protected $host = 'http://127.0.0.1:5000';
+    protected $host = 'http://0.0.0.0:5000';
 
     /**
      * User agent of the HTTP request, set to "OpenAPI-Generator/{version}/PHP" by default
      *
      * @var string
      */
-    protected $userAgent = 'OpenAPI-Generator/0.4.0/PHP';
+    protected $userAgent = 'OpenAPI-Generator/0.5.0/PHP';
 
     /**
      * Debug switch (default set to false)
@@ -433,7 +433,7 @@ class Configuration
         $report .= '    OS: ' . php_uname() . PHP_EOL;
         $report .= '    PHP Version: ' . PHP_VERSION . PHP_EOL;
         $report .= '    The version of the OpenAPI document: 0.1.0' . PHP_EOL;
-        $report .= '    SDK Package Version: 0.4.0' . PHP_EOL;
+        $report .= '    SDK Package Version: 0.5.0' . PHP_EOL;
         $report .= '    Temp Folder Path: ' . self::getDefaultConfiguration()->getTempFolderPath() . PHP_EOL;
 
         return $report;
@@ -473,7 +473,7 @@ class Configuration
     {
         return [
             [
-                "url" => "http://127.0.0.1:5000",
+                "url" => "http://0.0.0.0:5000",
                 "description" => "localhost",
             ],
             [

@@ -1,6 +1,6 @@
 # Verdigado\GrueneApiClient\OffboardingApi
 
-All URIs are relative to http://127.0.0.1:5000, except if the operation defines another base path.
+All URIs are relative to http://0.0.0.0:5000, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
