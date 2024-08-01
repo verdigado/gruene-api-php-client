@@ -16,6 +16,3 @@ composer.phar
 .openapi-generator
 .openapi-generator-ignore
 git_push.sh
-.openapi-generator
-.openapi-generator-ignore
-git_push.sh

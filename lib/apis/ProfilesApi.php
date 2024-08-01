@@ -686,11 +686,12 @@ class ProfilesApi
      *
      * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return void
+     * @return \Verdigado\GrueneApiClient\models\Profile
      */
     public function deleteProfileImage($profile_id, string $contentType = self::contentTypes['deleteProfileImage'][0])
     {
-        $this->deleteProfileImageWithHttpInfo($profile_id, $contentType);
+        list($response) = $this->deleteProfileImageWithHttpInfo($profile_id, $contentType);
+        return $response;
     }
 
     /**
@@ -703,7 +704,7 @@ class ProfilesApi
      *
      * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\Profile, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteProfileImageWithHttpInfo($profile_id, string $contentType = self::contentTypes['deleteProfileImage'][0])
     {
@@ -744,10 +745,50 @@ class ProfilesApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            switch($statusCode) {
+                case 200:
+                    if ('\Verdigado\GrueneApiClient\models\Profile' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Verdigado\GrueneApiClient\models\Profile' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\Profile', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Verdigado\GrueneApiClient\models\Profile';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Verdigado\GrueneApiClient\models\Profile',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
             }
             throw $e;
         }
@@ -787,14 +828,27 @@ class ProfilesApi
      */
     public function deleteProfileImageAsyncWithHttpInfo($profile_id, string $contentType = self::contentTypes['deleteProfileImage'][0])
     {
-        $returnType = '';
+        $returnType = '\Verdigado\GrueneApiClient\models\Profile';
         $request = $this->deleteProfileImageRequest($profile_id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -853,7 +907,7 @@ class ProfilesApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            [],
+            ['application/json', ],
             $contentType,
             $multipart
         );
@@ -1143,7 +1197,7 @@ class ProfilesApi
 
 
 
-        $resourcePath = '/v1/profiles-tags';
+        $resourcePath = '/v1/profile-tags';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2129,11 +2183,12 @@ class ProfilesApi
      *
      * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return void
+     * @return \Verdigado\GrueneApiClient\models\Profile
      */
     public function updateProfile($profile_id, $update_profile, string $contentType = self::contentTypes['updateProfile'][0])
     {
-        $this->updateProfileWithHttpInfo($profile_id, $update_profile, $contentType);
+        list($response) = $this->updateProfileWithHttpInfo($profile_id, $update_profile, $contentType);
+        return $response;
     }
 
     /**
@@ -2147,7 +2202,7 @@ class ProfilesApi
      *
      * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\Profile, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateProfileWithHttpInfo($profile_id, $update_profile, string $contentType = self::contentTypes['updateProfile'][0])
     {
@@ -2188,10 +2243,50 @@ class ProfilesApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            switch($statusCode) {
+                case 200:
+                    if ('\Verdigado\GrueneApiClient\models\Profile' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Verdigado\GrueneApiClient\models\Profile' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\Profile', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Verdigado\GrueneApiClient\models\Profile';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Verdigado\GrueneApiClient\models\Profile',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
             }
             throw $e;
         }
@@ -2233,14 +2328,27 @@ class ProfilesApi
      */
     public function updateProfileAsyncWithHttpInfo($profile_id, $update_profile, string $contentType = self::contentTypes['updateProfile'][0])
     {
-        $returnType = '';
+        $returnType = '\Verdigado\GrueneApiClient\models\Profile';
         $request = $this->updateProfileRequest($profile_id, $update_profile, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -2307,7 +2415,7 @@ class ProfilesApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            [],
+            ['application/json', ],
             $contentType,
             $multipart
         );

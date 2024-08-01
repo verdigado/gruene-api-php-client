@@ -351,6 +351,9 @@ class ProfilePrivacySettings implements ModelInterface, ArrayAccess, \JsonSerial
     {
         $invalidProperties = [];
 
+        if ($this->container['overall'] === null) {
+            $invalidProperties[] = "'overall' can't be null";
+        }
         $allowedValues = $this->getOverallAllowableValues();
         if (!is_null($this->container['overall']) && !in_array($this->container['overall'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
@@ -360,6 +363,9 @@ class ProfilePrivacySettings implements ModelInterface, ArrayAccess, \JsonSerial
             );
         }
 
+        if ($this->container['email'] === null) {
+            $invalidProperties[] = "'email' can't be null";
+        }
         $allowedValues = $this->getEmailAllowableValues();
         if (!is_null($this->container['email']) && !in_array($this->container['email'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
@@ -369,6 +375,9 @@ class ProfilePrivacySettings implements ModelInterface, ArrayAccess, \JsonSerial
             );
         }
 
+        if ($this->container['chatbegruenung'] === null) {
+            $invalidProperties[] = "'chatbegruenung' can't be null";
+        }
         $allowedValues = $this->getChatbegruenungAllowableValues();
         if (!is_null($this->container['chatbegruenung']) && !in_array($this->container['chatbegruenung'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
@@ -396,7 +405,7 @@ class ProfilePrivacySettings implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets overall
      *
-     * @return string|null
+     * @return string
      */
     public function getOverall()
     {
@@ -406,7 +415,7 @@ class ProfilePrivacySettings implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets overall
      *
-     * @param string|null $overall overall
+     * @param string $overall overall
      *
      * @return self
      */
@@ -433,7 +442,7 @@ class ProfilePrivacySettings implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets email
      *
-     * @return string|null
+     * @return string
      */
     public function getEmail()
     {
@@ -443,7 +452,7 @@ class ProfilePrivacySettings implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets email
      *
-     * @param string|null $email email
+     * @param string $email email
      *
      * @return self
      */
@@ -470,7 +479,7 @@ class ProfilePrivacySettings implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets chatbegruenung
      *
-     * @return string|null
+     * @return string
      */
     public function getChatbegruenung()
     {
@@ -480,7 +489,7 @@ class ProfilePrivacySettings implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets chatbegruenung
      *
-     * @param string|null $chatbegruenung chatbegruenung
+     * @param string $chatbegruenung chatbegruenung
      *
      * @return self
      */

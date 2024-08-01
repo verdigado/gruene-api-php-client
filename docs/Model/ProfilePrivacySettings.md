@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**overall** | **string** |  | [optional]
-**email** | **string** |  | [optional]
-**chatbegruenung** | **string** |  | [optional]
+**overall** | **string** |  |
+**email** | **string** |  |
+**chatbegruenung** | **string** |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

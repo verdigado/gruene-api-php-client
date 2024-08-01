@@ -1,13 +1,13 @@
 # Verdigado\GrueneApiClient\ProfilesApi
 
-All URIs are relative to http://0.0.0.0:5000, except if the operation defines another base path.
+All URIs are relative to https://api.gruene.de, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**createProfile()**](ProfilesApi.md#createProfile) | **POST** /v1/profiles | Create user profile |
 | [**deleteProfile()**](ProfilesApi.md#deleteProfile) | **DELETE** /v1/profiles/{profileId} | Delete user profile |
 | [**deleteProfileImage()**](ProfilesApi.md#deleteProfileImage) | **DELETE** /v1/profiles/{profileId}/image | Delete user profile image |
-| [**findProfileTags()**](ProfilesApi.md#findProfileTags) | **GET** /v1/profiles-tags | List profile tags |
+| [**findProfileTags()**](ProfilesApi.md#findProfileTags) | **GET** /v1/profile-tags | List profile tags |
 | [**findProfiles()**](ProfilesApi.md#findProfiles) | **GET** /v1/profiles | Find user profiles |
 | [**getOwnProfile()**](ProfilesApi.md#getOwnProfile) | **GET** /v1/profiles/self | Get the authenticated user&#39;s profile |
 | [**getProfile()**](ProfilesApi.md#getProfile) | **GET** /v1/profiles/{profileId} | Get a user profile |
@@ -143,7 +143,7 @@ void (empty response body)
 ## `deleteProfileImage()`
 
 ```php
-deleteProfileImage($profile_id)
+deleteProfileImage($profile_id): \Verdigado\GrueneApiClient\models\Profile
 ```
 
 Delete user profile image
@@ -173,7 +173,8 @@ $apiInstance = new Verdigado\GrueneApiClient\Api\ProfilesApi(
 $profile_id = 'profile_id_example'; // string
 
 try {
-    $apiInstance->deleteProfileImage($profile_id);
+    $result = $apiInstance->deleteProfileImage($profile_id);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProfilesApi->deleteProfileImage: ', $e->getMessage(), PHP_EOL;
 }
@@ -187,7 +188,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\Verdigado\GrueneApiClient\models\Profile**](../Model/Profile.md)
 
 ### Authorization
 
@@ -196,7 +197,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -462,7 +463,7 @@ try {
 ## `updateProfile()`
 
 ```php
-updateProfile($profile_id, $update_profile)
+updateProfile($profile_id, $update_profile): \Verdigado\GrueneApiClient\models\Profile
 ```
 
 Update user profile
@@ -495,7 +496,8 @@ $profile_id = 'profile_id_example'; // string
 $update_profile = new \Verdigado\GrueneApiClient\models\UpdateProfile(); // \Verdigado\GrueneApiClient\models\UpdateProfile
 
 try {
-    $apiInstance->updateProfile($profile_id, $update_profile);
+    $result = $apiInstance->updateProfile($profile_id, $update_profile);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProfilesApi->updateProfile: ', $e->getMessage(), PHP_EOL;
 }
@@ -510,7 +512,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\Verdigado\GrueneApiClient\models\Profile**](../Model/Profile.md)
 
 ### Authorization
 
@@ -519,7 +521,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: `application/json`
-- **Accept**: Not defined
+- **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)

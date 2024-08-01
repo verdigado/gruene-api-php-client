@@ -463,7 +463,7 @@ class UpdateProfile implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets tags
      *
-     * @param string[] $tags List of tag ids
+     * @param string[] $tags List of external tag ids
      *
      * @return self
      */
