@@ -57,6 +57,7 @@ class Division implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
+        'urls' => 'string[]',
         'id' => 'string',
         'division_key' => 'string',
         'name1' => 'string',
@@ -76,6 +77,7 @@ class Division implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'urls' => null,
         'id' => null,
         'division_key' => null,
         'name1' => null,
@@ -93,14 +95,15 @@ class Division implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'id' => false,
+        'urls' => false,
+		'id' => false,
 		'division_key' => false,
 		'name1' => false,
 		'name2' => false,
 		'short_name' => false,
 		'hierarchy' => false,
 		'level' => false,
-		'office_address' => false,
+		'office_address' => true,
 		'emails' => false
     ];
 
@@ -190,6 +193,7 @@ class Division implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
+        'urls' => 'urls',
         'id' => 'id',
         'division_key' => 'divisionKey',
         'name1' => 'name1',
@@ -207,6 +211,7 @@ class Division implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
+        'urls' => 'setUrls',
         'id' => 'setId',
         'division_key' => 'setDivisionKey',
         'name1' => 'setName1',
@@ -224,6 +229,7 @@ class Division implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
+        'urls' => 'getUrls',
         'id' => 'getId',
         'division_key' => 'getDivisionKey',
         'name1' => 'getName1',
@@ -311,6 +317,7 @@ class Division implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
+        $this->setIfExists('urls', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('division_key', $data ?? [], null);
         $this->setIfExists('name1', $data ?? [], null);
@@ -349,6 +356,9 @@ class Division implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
+        if ($this->container['urls'] === null) {
+            $invalidProperties[] = "'urls' can't be null";
+        }
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
         }
@@ -399,6 +409,33 @@ class Division implements ModelInterface, ArrayAccess, \JsonSerializable
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets urls
+     *
+     * @return string[]
+     */
+    public function getUrls()
+    {
+        return $this->container['urls'];
+    }
+
+    /**
+     * Sets urls
+     *
+     * @param string[] $urls List of internet presences
+     *
+     * @return self
+     */
+    public function setUrls($urls)
+    {
+        if (is_null($urls)) {
+            throw new \InvalidArgumentException('non-nullable urls cannot be null');
+        }
+        $this->container['urls'] = $urls;
+
+        return $this;
+    }
 
     /**
      * Gets id
@@ -619,7 +656,14 @@ class Division implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setOfficeAddress($office_address)
     {
         if (is_null($office_address)) {
-            throw new \InvalidArgumentException('non-nullable office_address cannot be null');
+            array_push($this->openAPINullablesSetToNull, 'office_address');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('office_address', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
         $this->container['office_address'] = $office_address;
 

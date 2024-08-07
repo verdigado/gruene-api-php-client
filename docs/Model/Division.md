@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**urls** | **string[]** | List of internet presences |
 **id** | **string** | The division id |
 **division_key** | **string** | The division key |
 **name1** | **string** |  |

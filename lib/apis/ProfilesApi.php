@@ -97,7 +97,6 @@ class ProfilesApi
         ],
         'updateProfileImage' => [
             'multipart/form-data',
-            'application/json',
         ],
     ];
 

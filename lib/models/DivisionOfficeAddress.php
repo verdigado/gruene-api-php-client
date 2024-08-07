@@ -58,7 +58,9 @@ class DivisionOfficeAddress implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'zip' => 'string'
+        'city' => 'string',
+        'zip' => 'string',
+        'line1' => 'string'
     ];
 
     /**
@@ -69,7 +71,9 @@ class DivisionOfficeAddress implements ModelInterface, ArrayAccess, \JsonSeriali
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'zip' => null
+        'city' => null,
+        'zip' => null,
+        'line1' => null
     ];
 
     /**
@@ -78,7 +82,9 @@ class DivisionOfficeAddress implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'zip' => false
+        'city' => false,
+		'zip' => false,
+		'line1' => false
     ];
 
     /**
@@ -167,7 +173,9 @@ class DivisionOfficeAddress implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $attributeMap = [
-        'zip' => 'zip'
+        'city' => 'city',
+        'zip' => 'zip',
+        'line1' => 'line1'
     ];
 
     /**
@@ -176,7 +184,9 @@ class DivisionOfficeAddress implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $setters = [
-        'zip' => 'setZip'
+        'city' => 'setCity',
+        'zip' => 'setZip',
+        'line1' => 'setLine1'
     ];
 
     /**
@@ -185,7 +195,9 @@ class DivisionOfficeAddress implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $getters = [
-        'zip' => 'getZip'
+        'city' => 'getCity',
+        'zip' => 'getZip',
+        'line1' => 'getLine1'
     ];
 
     /**
@@ -245,7 +257,9 @@ class DivisionOfficeAddress implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function __construct(array $data = null)
     {
+        $this->setIfExists('city', $data ?? [], null);
         $this->setIfExists('zip', $data ?? [], null);
+        $this->setIfExists('line1', $data ?? [], null);
     }
 
     /**
@@ -275,8 +289,14 @@ class DivisionOfficeAddress implements ModelInterface, ArrayAccess, \JsonSeriali
     {
         $invalidProperties = [];
 
+        if ($this->container['city'] === null) {
+            $invalidProperties[] = "'city' can't be null";
+        }
         if ($this->container['zip'] === null) {
             $invalidProperties[] = "'zip' can't be null";
+        }
+        if ($this->container['line1'] === null) {
+            $invalidProperties[] = "'line1' can't be null";
         }
         return $invalidProperties;
     }
@@ -292,6 +312,33 @@ class DivisionOfficeAddress implements ModelInterface, ArrayAccess, \JsonSeriali
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets city
+     *
+     * @return string
+     */
+    public function getCity()
+    {
+        return $this->container['city'];
+    }
+
+    /**
+     * Sets city
+     *
+     * @param string $city Location city
+     *
+     * @return self
+     */
+    public function setCity($city)
+    {
+        if (is_null($city)) {
+            throw new \InvalidArgumentException('non-nullable city cannot be null');
+        }
+        $this->container['city'] = $city;
+
+        return $this;
+    }
 
     /**
      * Gets zip
@@ -316,6 +363,33 @@ class DivisionOfficeAddress implements ModelInterface, ArrayAccess, \JsonSeriali
             throw new \InvalidArgumentException('non-nullable zip cannot be null');
         }
         $this->container['zip'] = $zip;
+
+        return $this;
+    }
+
+    /**
+     * Gets line1
+     *
+     * @return string
+     */
+    public function getLine1()
+    {
+        return $this->container['line1'];
+    }
+
+    /**
+     * Sets line1
+     *
+     * @param string $line1 First address line for street and house number
+     *
+     * @return self
+     */
+    public function setLine1($line1)
+    {
+        if (is_null($line1)) {
+            throw new \InvalidArgumentException('non-nullable line1 cannot be null');
+        }
+        $this->container['line1'] = $line1;
 
         return $this;
     }

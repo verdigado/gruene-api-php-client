@@ -58,7 +58,9 @@ class DivisionEmail implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'tags' => 'string[]',
-        'address' => 'string'
+        'purposes' => 'string[]',
+        'address' => 'string',
+        'is_favorite' => 'bool'
     ];
 
     /**
@@ -70,7 +72,9 @@ class DivisionEmail implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'tags' => null,
-        'address' => null
+        'purposes' => null,
+        'address' => null,
+        'is_favorite' => null
     ];
 
     /**
@@ -80,7 +84,9 @@ class DivisionEmail implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'tags' => false,
-		'address' => false
+		'purposes' => false,
+		'address' => false,
+		'is_favorite' => false
     ];
 
     /**
@@ -170,7 +176,9 @@ class DivisionEmail implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'tags' => 'tags',
-        'address' => 'address'
+        'purposes' => 'purposes',
+        'address' => 'address',
+        'is_favorite' => 'isFavorite'
     ];
 
     /**
@@ -180,7 +188,9 @@ class DivisionEmail implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'tags' => 'setTags',
-        'address' => 'setAddress'
+        'purposes' => 'setPurposes',
+        'address' => 'setAddress',
+        'is_favorite' => 'setIsFavorite'
     ];
 
     /**
@@ -190,7 +200,9 @@ class DivisionEmail implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'tags' => 'getTags',
-        'address' => 'getAddress'
+        'purposes' => 'getPurposes',
+        'address' => 'getAddress',
+        'is_favorite' => 'getIsFavorite'
     ];
 
     /**
@@ -251,7 +263,9 @@ class DivisionEmail implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->setIfExists('tags', $data ?? [], null);
+        $this->setIfExists('purposes', $data ?? [], null);
         $this->setIfExists('address', $data ?? [], null);
+        $this->setIfExists('is_favorite', $data ?? [], null);
     }
 
     /**
@@ -284,8 +298,14 @@ class DivisionEmail implements ModelInterface, ArrayAccess, \JsonSerializable
         if ($this->container['tags'] === null) {
             $invalidProperties[] = "'tags' can't be null";
         }
+        if ($this->container['purposes'] === null) {
+            $invalidProperties[] = "'purposes' can't be null";
+        }
         if ($this->container['address'] === null) {
             $invalidProperties[] = "'address' can't be null";
+        }
+        if ($this->container['is_favorite'] === null) {
+            $invalidProperties[] = "'is_favorite' can't be null";
         }
         return $invalidProperties;
     }
@@ -330,6 +350,33 @@ class DivisionEmail implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
+     * Gets purposes
+     *
+     * @return string[]
+     */
+    public function getPurposes()
+    {
+        return $this->container['purposes'];
+    }
+
+    /**
+     * Sets purposes
+     *
+     * @param string[] $purposes Purposes associated with email
+     *
+     * @return self
+     */
+    public function setPurposes($purposes)
+    {
+        if (is_null($purposes)) {
+            throw new \InvalidArgumentException('non-nullable purposes cannot be null');
+        }
+        $this->container['purposes'] = $purposes;
+
+        return $this;
+    }
+
+    /**
      * Gets address
      *
      * @return string
@@ -352,6 +399,33 @@ class DivisionEmail implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable address cannot be null');
         }
         $this->container['address'] = $address;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_favorite
+     *
+     * @return bool
+     */
+    public function getIsFavorite()
+    {
+        return $this->container['is_favorite'];
+    }
+
+    /**
+     * Sets is_favorite
+     *
+     * @param bool $is_favorite Indicate if this email is preferred for general inquiries
+     *
+     * @return self
+     */
+    public function setIsFavorite($is_favorite)
+    {
+        if (is_null($is_favorite)) {
+            throw new \InvalidArgumentException('non-nullable is_favorite cannot be null');
+        }
+        $this->container['is_favorite'] = $is_favorite;
 
         return $this;
     }

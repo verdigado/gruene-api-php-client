@@ -1,6 +1,6 @@
 # Verdigado\GrueneApiClient\ProfilesApi
 
-All URIs are relative to https://api.gruene.de, except if the operation defines another base path.
+All URIs are relative to http://0.0.0.0:5000, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
@@ -585,7 +585,7 @@ try {
 
 ### HTTP request headers
 
-- **Content-Type**: `multipart/form-data`, `application/json`
+- **Content-Type**: `multipart/form-data`
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
