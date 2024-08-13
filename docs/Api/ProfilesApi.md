@@ -81,7 +81,7 @@ try {
 ## `deleteProfile()`
 
 ```php
-deleteProfile($profile_id)
+deleteProfile($profile_id): \Verdigado\GrueneApiClient\models\Profile
 ```
 
 Delete user profile
@@ -111,7 +111,8 @@ $apiInstance = new Verdigado\GrueneApiClient\Api\ProfilesApi(
 $profile_id = 'profile_id_example'; // string
 
 try {
-    $apiInstance->deleteProfile($profile_id);
+    $result = $apiInstance->deleteProfile($profile_id);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProfilesApi->deleteProfile: ', $e->getMessage(), PHP_EOL;
 }
@@ -125,7 +126,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\Verdigado\GrueneApiClient\models\Profile**](../Model/Profile.md)
 
 ### Authorization
 
@@ -134,7 +135,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -275,7 +276,7 @@ try {
 ## `findProfiles()`
 
 ```php
-findProfiles($tags, $search): \Verdigado\GrueneApiClient\models\FindProfilesResponse
+findProfiles($limit, $tags, $offset, $search, $division): \Verdigado\GrueneApiClient\models\FindProfilesResponse
 ```
 
 Find user profiles
@@ -302,11 +303,14 @@ $apiInstance = new Verdigado\GrueneApiClient\Api\ProfilesApi(
     new GuzzleHttp\Client(),
     $config
 );
+$limit = 20; // float
 $tags = array('tags_example'); // string[] | Filter by profile tag ids
-$search = 'search_example'; // string | Search term to look for in firstName, lastName, email, username.
+$offset = 3.4; // float
+$search = 'search_example'; // string | Search term to look for in firstName, lastName and username
+$division = 'division_example'; // string | Division key to filter profiles. Only include profiles that are member of given division.
 
 try {
-    $result = $apiInstance->findProfiles($tags, $search);
+    $result = $apiInstance->findProfiles($limit, $tags, $offset, $search, $division);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProfilesApi->findProfiles: ', $e->getMessage(), PHP_EOL;
@@ -317,8 +321,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **limit** | **float**|  | [optional] [default to 20] |
 | **tags** | [**string[]**](../Model/string.md)| Filter by profile tag ids | [optional] |
-| **search** | **string**| Search term to look for in firstName, lastName, email, username. | [optional] |
+| **offset** | **float**|  | [optional] |
+| **search** | **string**| Search term to look for in firstName, lastName and username | [optional] |
+| **division** | **string**| Division key to filter profiles. Only include profiles that are member of given division. | [optional] |
 
 ### Return type
 

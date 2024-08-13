@@ -57,7 +57,8 @@ class FindProfilesResponse implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Verdigado\GrueneApiClient\models\PublicProfile[]'
+        'data' => '\Verdigado\GrueneApiClient\models\PublicProfile[]',
+        'meta' => '\Verdigado\GrueneApiClient\models\FindProfilesResponseMeta'
     ];
 
     /**
@@ -68,7 +69,8 @@ class FindProfilesResponse implements ModelInterface, ArrayAccess, \JsonSerializ
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'data' => null
+        'data' => null,
+        'meta' => null
     ];
 
     /**
@@ -77,7 +79,8 @@ class FindProfilesResponse implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'data' => false
+        'data' => false,
+		'meta' => false
     ];
 
     /**
@@ -166,7 +169,8 @@ class FindProfilesResponse implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $attributeMap = [
-        'data' => 'data'
+        'data' => 'data',
+        'meta' => 'meta'
     ];
 
     /**
@@ -175,7 +179,8 @@ class FindProfilesResponse implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $setters = [
-        'data' => 'setData'
+        'data' => 'setData',
+        'meta' => 'setMeta'
     ];
 
     /**
@@ -184,7 +189,8 @@ class FindProfilesResponse implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $getters = [
-        'data' => 'getData'
+        'data' => 'getData',
+        'meta' => 'getMeta'
     ];
 
     /**
@@ -245,6 +251,7 @@ class FindProfilesResponse implements ModelInterface, ArrayAccess, \JsonSerializ
     public function __construct(array $data = null)
     {
         $this->setIfExists('data', $data ?? [], null);
+        $this->setIfExists('meta', $data ?? [], null);
     }
 
     /**
@@ -276,6 +283,9 @@ class FindProfilesResponse implements ModelInterface, ArrayAccess, \JsonSerializ
 
         if ($this->container['data'] === null) {
             $invalidProperties[] = "'data' can't be null";
+        }
+        if ($this->container['meta'] === null) {
+            $invalidProperties[] = "'meta' can't be null";
         }
         return $invalidProperties;
     }
@@ -315,6 +325,33 @@ class FindProfilesResponse implements ModelInterface, ArrayAccess, \JsonSerializ
             throw new \InvalidArgumentException('non-nullable data cannot be null');
         }
         $this->container['data'] = $data;
+
+        return $this;
+    }
+
+    /**
+     * Gets meta
+     *
+     * @return \Verdigado\GrueneApiClient\models\FindProfilesResponseMeta
+     */
+    public function getMeta()
+    {
+        return $this->container['meta'];
+    }
+
+    /**
+     * Sets meta
+     *
+     * @param \Verdigado\GrueneApiClient\models\FindProfilesResponseMeta $meta meta
+     *
+     * @return self
+     */
+    public function setMeta($meta)
+    {
+        if (is_null($meta)) {
+            throw new \InvalidArgumentException('non-nullable meta cannot be null');
+        }
+        $this->container['meta'] = $meta;
 
         return $this;
     }

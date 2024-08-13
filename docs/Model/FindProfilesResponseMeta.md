@@ -1,10 +1,12 @@
-# # FindProfilesResponse
+# # FindProfilesResponseMeta
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**\Verdigado\GrueneApiClient\models\PublicProfile[]**](PublicProfile.md) |  |
-**meta** | [**\Verdigado\GrueneApiClient\models\FindProfilesResponseMeta**](FindProfilesResponseMeta.md) |  |
+**count** | **float** |  | [optional]
+**offset** | **float** |  | [optional]
+**limit** | **float** |  | [optional]
+**has_next** | **bool** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

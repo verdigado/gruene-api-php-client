@@ -1,6 +1,6 @@
 <?php
 /**
- * ProfilePrivacySettings
+ * FindProfilesResponseMeta
  *
  * PHP version 7.4
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Verdigado\GrueneApiClient\ObjectSerializer;
 
 /**
- * ProfilePrivacySettings Class Doc Comment
+ * FindProfilesResponseMeta Class Doc Comment
  *
  * @category Class
  * @package  Verdigado\GrueneApiClient
@@ -40,7 +40,7 @@ use \Verdigado\GrueneApiClient\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ProfilePrivacySettings implements ModelInterface, ArrayAccess, \JsonSerializable
+class FindProfilesResponseMeta implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ProfilePrivacySettings implements ModelInterface, ArrayAccess, \JsonSerial
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ProfilePrivacySettings';
+    protected static $openAPIModelName = 'FindProfilesResponse_meta';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,9 +57,10 @@ class ProfilePrivacySettings implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'overall' => 'string',
-        'email' => 'string',
-        'chatbegruenung' => 'string'
+        'count' => 'float',
+        'offset' => 'float',
+        'limit' => 'float',
+        'has_next' => 'bool'
     ];
 
     /**
@@ -70,9 +71,10 @@ class ProfilePrivacySettings implements ModelInterface, ArrayAccess, \JsonSerial
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'overall' => null,
-        'email' => null,
-        'chatbegruenung' => null
+        'count' => null,
+        'offset' => null,
+        'limit' => null,
+        'has_next' => null
     ];
 
     /**
@@ -81,9 +83,10 @@ class ProfilePrivacySettings implements ModelInterface, ArrayAccess, \JsonSerial
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'overall' => false,
-		'email' => false,
-		'chatbegruenung' => false
+        'count' => false,
+		'offset' => false,
+		'limit' => false,
+		'has_next' => false
     ];
 
     /**
@@ -172,9 +175,10 @@ class ProfilePrivacySettings implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $attributeMap = [
-        'overall' => 'overall',
-        'email' => 'email',
-        'chatbegruenung' => 'chatbegruenung'
+        'count' => 'count',
+        'offset' => 'offset',
+        'limit' => 'limit',
+        'has_next' => 'hasNext'
     ];
 
     /**
@@ -183,9 +187,10 @@ class ProfilePrivacySettings implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $setters = [
-        'overall' => 'setOverall',
-        'email' => 'setEmail',
-        'chatbegruenung' => 'setChatbegruenung'
+        'count' => 'setCount',
+        'offset' => 'setOffset',
+        'limit' => 'setLimit',
+        'has_next' => 'setHasNext'
     ];
 
     /**
@@ -194,9 +199,10 @@ class ProfilePrivacySettings implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $getters = [
-        'overall' => 'getOverall',
-        'email' => 'getEmail',
-        'chatbegruenung' => 'getChatbegruenung'
+        'count' => 'getCount',
+        'offset' => 'getOffset',
+        'limit' => 'getLimit',
+        'has_next' => 'getHasNext'
     ];
 
     /**
@@ -240,69 +246,6 @@ class ProfilePrivacySettings implements ModelInterface, ArrayAccess, \JsonSerial
         return self::$openAPIModelName;
     }
 
-    public const OVERALL__PRIVATE = 'PRIVATE';
-    public const OVERALL__PUBLIC = 'PUBLIC';
-    public const OVERALL_BV_WIDE = 'BV_WIDE';
-    public const OVERALL_LV_WIDE = 'LV_WIDE';
-    public const OVERALL_KV_WIDE = 'KV_WIDE';
-    public const EMAIL__PRIVATE = 'PRIVATE';
-    public const EMAIL__PUBLIC = 'PUBLIC';
-    public const EMAIL_BV_WIDE = 'BV_WIDE';
-    public const EMAIL_LV_WIDE = 'LV_WIDE';
-    public const EMAIL_KV_WIDE = 'KV_WIDE';
-    public const CHATBEGRUENUNG__PRIVATE = 'PRIVATE';
-    public const CHATBEGRUENUNG__PUBLIC = 'PUBLIC';
-    public const CHATBEGRUENUNG_BV_WIDE = 'BV_WIDE';
-    public const CHATBEGRUENUNG_LV_WIDE = 'LV_WIDE';
-    public const CHATBEGRUENUNG_KV_WIDE = 'KV_WIDE';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getOverallAllowableValues()
-    {
-        return [
-            self::OVERALL__PRIVATE,
-            self::OVERALL__PUBLIC,
-            self::OVERALL_BV_WIDE,
-            self::OVERALL_LV_WIDE,
-            self::OVERALL_KV_WIDE,
-        ];
-    }
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getEmailAllowableValues()
-    {
-        return [
-            self::EMAIL__PRIVATE,
-            self::EMAIL__PUBLIC,
-            self::EMAIL_BV_WIDE,
-            self::EMAIL_LV_WIDE,
-            self::EMAIL_KV_WIDE,
-        ];
-    }
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getChatbegruenungAllowableValues()
-    {
-        return [
-            self::CHATBEGRUENUNG__PRIVATE,
-            self::CHATBEGRUENUNG__PUBLIC,
-            self::CHATBEGRUENUNG_BV_WIDE,
-            self::CHATBEGRUENUNG_LV_WIDE,
-            self::CHATBEGRUENUNG_KV_WIDE,
-        ];
-    }
 
     /**
      * Associative array for storing property values
@@ -319,9 +262,10 @@ class ProfilePrivacySettings implements ModelInterface, ArrayAccess, \JsonSerial
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('overall', $data ?? [], null);
-        $this->setIfExists('email', $data ?? [], null);
-        $this->setIfExists('chatbegruenung', $data ?? [], null);
+        $this->setIfExists('count', $data ?? [], null);
+        $this->setIfExists('offset', $data ?? [], null);
+        $this->setIfExists('limit', $data ?? [], null);
+        $this->setIfExists('has_next', $data ?? [], null);
     }
 
     /**
@@ -351,42 +295,6 @@ class ProfilePrivacySettings implements ModelInterface, ArrayAccess, \JsonSerial
     {
         $invalidProperties = [];
 
-        if ($this->container['overall'] === null) {
-            $invalidProperties[] = "'overall' can't be null";
-        }
-        $allowedValues = $this->getOverallAllowableValues();
-        if (!is_null($this->container['overall']) && !in_array($this->container['overall'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'overall', must be one of '%s'",
-                $this->container['overall'],
-                implode("', '", $allowedValues)
-            );
-        }
-
-        if ($this->container['email'] === null) {
-            $invalidProperties[] = "'email' can't be null";
-        }
-        $allowedValues = $this->getEmailAllowableValues();
-        if (!is_null($this->container['email']) && !in_array($this->container['email'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'email', must be one of '%s'",
-                $this->container['email'],
-                implode("', '", $allowedValues)
-            );
-        }
-
-        if ($this->container['chatbegruenung'] === null) {
-            $invalidProperties[] = "'chatbegruenung' can't be null";
-        }
-        $allowedValues = $this->getChatbegruenungAllowableValues();
-        if (!is_null($this->container['chatbegruenung']) && !in_array($this->container['chatbegruenung'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'chatbegruenung', must be one of '%s'",
-                $this->container['chatbegruenung'],
-                implode("', '", $allowedValues)
-            );
-        }
-
         return $invalidProperties;
     }
 
@@ -403,112 +311,109 @@ class ProfilePrivacySettings implements ModelInterface, ArrayAccess, \JsonSerial
 
 
     /**
-     * Gets overall
+     * Gets count
      *
-     * @return string
+     * @return float|null
      */
-    public function getOverall()
+    public function getCount()
     {
-        return $this->container['overall'];
+        return $this->container['count'];
     }
 
     /**
-     * Sets overall
+     * Sets count
      *
-     * @param string $overall overall
+     * @param float|null $count count
      *
      * @return self
      */
-    public function setOverall($overall)
+    public function setCount($count)
     {
-        if (is_null($overall)) {
-            throw new \InvalidArgumentException('non-nullable overall cannot be null');
+        if (is_null($count)) {
+            throw new \InvalidArgumentException('non-nullable count cannot be null');
         }
-        $allowedValues = $this->getOverallAllowableValues();
-        if (!in_array($overall, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'overall', must be one of '%s'",
-                    $overall,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['overall'] = $overall;
+        $this->container['count'] = $count;
 
         return $this;
     }
 
     /**
-     * Gets email
+     * Gets offset
      *
-     * @return string
+     * @return float|null
      */
-    public function getEmail()
+    public function getOffset()
     {
-        return $this->container['email'];
+        return $this->container['offset'];
     }
 
     /**
-     * Sets email
+     * Sets offset
      *
-     * @param string $email email
+     * @param float|null $offset offset
      *
      * @return self
      */
-    public function setEmail($email)
+    public function setOffset($offset)
     {
-        if (is_null($email)) {
-            throw new \InvalidArgumentException('non-nullable email cannot be null');
+        if (is_null($offset)) {
+            throw new \InvalidArgumentException('non-nullable offset cannot be null');
         }
-        $allowedValues = $this->getEmailAllowableValues();
-        if (!in_array($email, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'email', must be one of '%s'",
-                    $email,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['email'] = $email;
+        $this->container['offset'] = $offset;
 
         return $this;
     }
 
     /**
-     * Gets chatbegruenung
+     * Gets limit
      *
-     * @return string
+     * @return float|null
      */
-    public function getChatbegruenung()
+    public function getLimit()
     {
-        return $this->container['chatbegruenung'];
+        return $this->container['limit'];
     }
 
     /**
-     * Sets chatbegruenung
+     * Sets limit
      *
-     * @param string $chatbegruenung chatbegruenung
+     * @param float|null $limit limit
      *
      * @return self
      */
-    public function setChatbegruenung($chatbegruenung)
+    public function setLimit($limit)
     {
-        if (is_null($chatbegruenung)) {
-            throw new \InvalidArgumentException('non-nullable chatbegruenung cannot be null');
+        if (is_null($limit)) {
+            throw new \InvalidArgumentException('non-nullable limit cannot be null');
         }
-        $allowedValues = $this->getChatbegruenungAllowableValues();
-        if (!in_array($chatbegruenung, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'chatbegruenung', must be one of '%s'",
-                    $chatbegruenung,
-                    implode("', '", $allowedValues)
-                )
-            );
+        $this->container['limit'] = $limit;
+
+        return $this;
+    }
+
+    /**
+     * Gets has_next
+     *
+     * @return bool|null
+     */
+    public function getHasNext()
+    {
+        return $this->container['has_next'];
+    }
+
+    /**
+     * Sets has_next
+     *
+     * @param bool|null $has_next has_next
+     *
+     * @return self
+     */
+    public function setHasNext($has_next)
+    {
+        if (is_null($has_next)) {
+            throw new \InvalidArgumentException('non-nullable has_next cannot be null');
         }
-        $this->container['chatbegruenung'] = $chatbegruenung;
+        $this->container['has_next'] = $has_next;
 
         return $this;
     }

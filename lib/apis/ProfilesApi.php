@@ -447,11 +447,12 @@ class ProfilesApi
      *
      * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return void
+     * @return \Verdigado\GrueneApiClient\models\Profile
      */
     public function deleteProfile($profile_id, string $contentType = self::contentTypes['deleteProfile'][0])
     {
-        $this->deleteProfileWithHttpInfo($profile_id, $contentType);
+        list($response) = $this->deleteProfileWithHttpInfo($profile_id, $contentType);
+        return $response;
     }
 
     /**
@@ -464,7 +465,7 @@ class ProfilesApi
      *
      * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\Profile, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteProfileWithHttpInfo($profile_id, string $contentType = self::contentTypes['deleteProfile'][0])
     {
@@ -505,10 +506,50 @@ class ProfilesApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            switch($statusCode) {
+                case 200:
+                    if ('\Verdigado\GrueneApiClient\models\Profile' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Verdigado\GrueneApiClient\models\Profile' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\Profile', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Verdigado\GrueneApiClient\models\Profile';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Verdigado\GrueneApiClient\models\Profile',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
             }
             throw $e;
         }
@@ -548,14 +589,27 @@ class ProfilesApi
      */
     public function deleteProfileAsyncWithHttpInfo($profile_id, string $contentType = self::contentTypes['deleteProfile'][0])
     {
-        $returnType = '';
+        $returnType = '\Verdigado\GrueneApiClient\models\Profile';
         $request = $this->deleteProfileRequest($profile_id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -614,7 +668,7 @@ class ProfilesApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            [],
+            ['application/json', ],
             $contentType,
             $multipart
         );
@@ -1310,17 +1364,20 @@ class ProfilesApi
      *
      * Find user profiles
      *
+     * @param  float $limit limit (optional, default to 20)
      * @param  string[] $tags Filter by profile tag ids (optional)
-     * @param  string $search Search term to look for in firstName, lastName, email, username. (optional)
+     * @param  float $offset offset (optional)
+     * @param  string $search Search term to look for in firstName, lastName and username (optional)
+     * @param  string $division Division key to filter profiles. Only include profiles that are member of given division. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findProfiles'] to see the possible values for this operation
      *
      * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Verdigado\GrueneApiClient\models\FindProfilesResponse
      */
-    public function findProfiles($tags = null, $search = null, string $contentType = self::contentTypes['findProfiles'][0])
+    public function findProfiles($limit = 20, $tags = null, $offset = null, $search = null, $division = null, string $contentType = self::contentTypes['findProfiles'][0])
     {
-        list($response) = $this->findProfilesWithHttpInfo($tags, $search, $contentType);
+        list($response) = $this->findProfilesWithHttpInfo($limit, $tags, $offset, $search, $division, $contentType);
         return $response;
     }
 
@@ -1329,17 +1386,20 @@ class ProfilesApi
      *
      * Find user profiles
      *
+     * @param  float $limit (optional, default to 20)
      * @param  string[] $tags Filter by profile tag ids (optional)
-     * @param  string $search Search term to look for in firstName, lastName, email, username. (optional)
+     * @param  float $offset (optional)
+     * @param  string $search Search term to look for in firstName, lastName and username (optional)
+     * @param  string $division Division key to filter profiles. Only include profiles that are member of given division. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findProfiles'] to see the possible values for this operation
      *
      * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Verdigado\GrueneApiClient\models\FindProfilesResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function findProfilesWithHttpInfo($tags = null, $search = null, string $contentType = self::contentTypes['findProfiles'][0])
+    public function findProfilesWithHttpInfo($limit = 20, $tags = null, $offset = null, $search = null, $division = null, string $contentType = self::contentTypes['findProfiles'][0])
     {
-        $request = $this->findProfilesRequest($tags, $search, $contentType);
+        $request = $this->findProfilesRequest($limit, $tags, $offset, $search, $division, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1430,16 +1490,19 @@ class ProfilesApi
      *
      * Find user profiles
      *
+     * @param  float $limit (optional, default to 20)
      * @param  string[] $tags Filter by profile tag ids (optional)
-     * @param  string $search Search term to look for in firstName, lastName, email, username. (optional)
+     * @param  float $offset (optional)
+     * @param  string $search Search term to look for in firstName, lastName and username (optional)
+     * @param  string $division Division key to filter profiles. Only include profiles that are member of given division. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findProfiles'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findProfilesAsync($tags = null, $search = null, string $contentType = self::contentTypes['findProfiles'][0])
+    public function findProfilesAsync($limit = 20, $tags = null, $offset = null, $search = null, $division = null, string $contentType = self::contentTypes['findProfiles'][0])
     {
-        return $this->findProfilesAsyncWithHttpInfo($tags, $search, $contentType)
+        return $this->findProfilesAsyncWithHttpInfo($limit, $tags, $offset, $search, $division, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1452,17 +1515,20 @@ class ProfilesApi
      *
      * Find user profiles
      *
+     * @param  float $limit (optional, default to 20)
      * @param  string[] $tags Filter by profile tag ids (optional)
-     * @param  string $search Search term to look for in firstName, lastName, email, username. (optional)
+     * @param  float $offset (optional)
+     * @param  string $search Search term to look for in firstName, lastName and username (optional)
+     * @param  string $division Division key to filter profiles. Only include profiles that are member of given division. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findProfiles'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function findProfilesAsyncWithHttpInfo($tags = null, $search = null, string $contentType = self::contentTypes['findProfiles'][0])
+    public function findProfilesAsyncWithHttpInfo($limit = 20, $tags = null, $offset = null, $search = null, $division = null, string $contentType = self::contentTypes['findProfiles'][0])
     {
         $returnType = '\Verdigado\GrueneApiClient\models\FindProfilesResponse';
-        $request = $this->findProfilesRequest($tags, $search, $contentType);
+        $request = $this->findProfilesRequest($limit, $tags, $offset, $search, $division, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1503,16 +1569,28 @@ class ProfilesApi
     /**
      * Create request for operation 'findProfiles'
      *
+     * @param  float $limit (optional, default to 20)
      * @param  string[] $tags Filter by profile tag ids (optional)
-     * @param  string $search Search term to look for in firstName, lastName, email, username. (optional)
+     * @param  float $offset (optional)
+     * @param  string $search Search term to look for in firstName, lastName and username (optional)
+     * @param  string $division Division key to filter profiles. Only include profiles that are member of given division. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findProfiles'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function findProfilesRequest($tags = null, $search = null, string $contentType = self::contentTypes['findProfiles'][0])
+    public function findProfilesRequest($limit = 20, $tags = null, $offset = null, $search = null, $division = null, string $contentType = self::contentTypes['findProfiles'][0])
     {
 
+        if ($limit !== null && $limit < 1) {
+            throw new \InvalidArgumentException('invalid value for "$limit" when calling ProfilesApi.findProfiles, must be bigger than or equal to 1.');
+        }
+        
+
+        if ($offset !== null && $offset < 0) {
+            throw new \InvalidArgumentException('invalid value for "$offset" when calling ProfilesApi.findProfiles, must be bigger than or equal to 0.');
+        }
+        
 
 
 
@@ -1525,6 +1603,15 @@ class ProfilesApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $limit,
+            'limit', // param base name
+            'number', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
             $tags,
             'tags', // param base name
             'array', // openApiType
@@ -1534,8 +1621,26 @@ class ProfilesApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $offset,
+            'offset', // param base name
+            'number', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
             $search,
             'search', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $division,
+            'division', // param base name
             'string', // openApiType
             'form', // style
             true, // explode
