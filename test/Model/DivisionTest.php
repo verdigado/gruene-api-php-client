@@ -80,6 +80,15 @@ class DivisionTest extends TestCase
     }
 
     /**
+     * Test attribute "urls"
+     */
+    public function testPropertyUrls()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "id"
      */
     public function testPropertyId()
@@ -146,6 +155,15 @@ class DivisionTest extends TestCase
      * Test attribute "office_address"
      */
     public function testPropertyOfficeAddress()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "emails"
+     */
+    public function testPropertyEmails()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

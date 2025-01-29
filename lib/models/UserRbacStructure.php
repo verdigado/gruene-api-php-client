@@ -325,7 +325,7 @@ class UserRbacStructure implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets user_id
      *
-     * @param string $user_id User id
+     * @param string $user_id User id @example: '1234'
      *
      * @return self
      */

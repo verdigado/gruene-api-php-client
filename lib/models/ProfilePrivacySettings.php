@@ -245,16 +245,19 @@ class ProfilePrivacySettings implements ModelInterface, ArrayAccess, \JsonSerial
     public const OVERALL_BV_WIDE = 'BV_WIDE';
     public const OVERALL_LV_WIDE = 'LV_WIDE';
     public const OVERALL_KV_WIDE = 'KV_WIDE';
+    public const OVERALL_OV_WIDE = 'OV_WIDE';
     public const EMAIL__PRIVATE = 'PRIVATE';
     public const EMAIL__PUBLIC = 'PUBLIC';
     public const EMAIL_BV_WIDE = 'BV_WIDE';
     public const EMAIL_LV_WIDE = 'LV_WIDE';
     public const EMAIL_KV_WIDE = 'KV_WIDE';
+    public const EMAIL_OV_WIDE = 'OV_WIDE';
     public const CHATBEGRUENUNG__PRIVATE = 'PRIVATE';
     public const CHATBEGRUENUNG__PUBLIC = 'PUBLIC';
     public const CHATBEGRUENUNG_BV_WIDE = 'BV_WIDE';
     public const CHATBEGRUENUNG_LV_WIDE = 'LV_WIDE';
     public const CHATBEGRUENUNG_KV_WIDE = 'KV_WIDE';
+    public const CHATBEGRUENUNG_OV_WIDE = 'OV_WIDE';
 
     /**
      * Gets allowable values of the enum
@@ -269,6 +272,7 @@ class ProfilePrivacySettings implements ModelInterface, ArrayAccess, \JsonSerial
             self::OVERALL_BV_WIDE,
             self::OVERALL_LV_WIDE,
             self::OVERALL_KV_WIDE,
+            self::OVERALL_OV_WIDE,
         ];
     }
 
@@ -285,6 +289,7 @@ class ProfilePrivacySettings implements ModelInterface, ArrayAccess, \JsonSerial
             self::EMAIL_BV_WIDE,
             self::EMAIL_LV_WIDE,
             self::EMAIL_KV_WIDE,
+            self::EMAIL_OV_WIDE,
         ];
     }
 
@@ -301,6 +306,7 @@ class ProfilePrivacySettings implements ModelInterface, ArrayAccess, \JsonSerial
             self::CHATBEGRUENUNG_BV_WIDE,
             self::CHATBEGRUENUNG_LV_WIDE,
             self::CHATBEGRUENUNG_KV_WIDE,
+            self::CHATBEGRUENUNG_OV_WIDE,
         ];
     }
 

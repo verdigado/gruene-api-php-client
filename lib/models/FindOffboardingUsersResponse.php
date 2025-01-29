@@ -58,7 +58,7 @@ class FindOffboardingUsersResponse implements ModelInterface, ArrayAccess, \Json
       */
     protected static $openAPITypes = [
         'data' => '\Verdigado\GrueneApiClient\models\OffboardingUserInfo[]',
-        'meta' => '\Verdigado\GrueneApiClient\models\FindOffboardingUsersResponseMeta'
+        'meta' => '\Verdigado\GrueneApiClient\models\KeysetPaginationMeta'
     ];
 
     /**
@@ -332,7 +332,7 @@ class FindOffboardingUsersResponse implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets meta
      *
-     * @return \Verdigado\GrueneApiClient\models\FindOffboardingUsersResponseMeta
+     * @return \Verdigado\GrueneApiClient\models\KeysetPaginationMeta
      */
     public function getMeta()
     {
@@ -342,7 +342,7 @@ class FindOffboardingUsersResponse implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets meta
      *
-     * @param \Verdigado\GrueneApiClient\models\FindOffboardingUsersResponseMeta $meta meta
+     * @param \Verdigado\GrueneApiClient\models\KeysetPaginationMeta $meta meta
      *
      * @return self
      */

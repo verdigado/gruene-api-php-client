@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**country** | **string** | country prefix |
+**country** | **string** | Country code in german format |
 **number** | **string** | Phone number |
 **id** | **string** |  | [optional]
 

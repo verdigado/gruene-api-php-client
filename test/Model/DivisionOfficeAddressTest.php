@@ -80,9 +80,27 @@ class DivisionOfficeAddressTest extends TestCase
     }
 
     /**
+     * Test attribute "city"
+     */
+    public function testPropertyCity()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "zip"
      */
     public function testPropertyZip()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "line1"
+     */
+    public function testPropertyLine1()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

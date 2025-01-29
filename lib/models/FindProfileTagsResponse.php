@@ -58,7 +58,7 @@ class FindProfileTagsResponse implements ModelInterface, ArrayAccess, \JsonSeria
       */
     protected static $openAPITypes = [
         'data' => '\Verdigado\GrueneApiClient\models\ProfileTag[]',
-        'meta' => '\Verdigado\GrueneApiClient\models\FindProfileTagsResponseMeta'
+        'meta' => '\Verdigado\GrueneApiClient\models\OffsetPaginationMeta'
     ];
 
     /**
@@ -332,7 +332,7 @@ class FindProfileTagsResponse implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets meta
      *
-     * @return \Verdigado\GrueneApiClient\models\FindProfileTagsResponseMeta
+     * @return \Verdigado\GrueneApiClient\models\OffsetPaginationMeta
      */
     public function getMeta()
     {
@@ -342,7 +342,7 @@ class FindProfileTagsResponse implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets meta
      *
-     * @param \Verdigado\GrueneApiClient\models\FindProfileTagsResponseMeta $meta meta
+     * @param \Verdigado\GrueneApiClient\models\OffsetPaginationMeta $meta meta
      *
      * @return self
      */

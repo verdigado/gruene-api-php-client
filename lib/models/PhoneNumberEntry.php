@@ -352,7 +352,7 @@ class PhoneNumberEntry implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets country
      *
-     * @param string $country country prefix
+     * @param string $country Country code in german format
      *
      * @return self
      */

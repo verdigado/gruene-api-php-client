@@ -2830,7 +2830,15 @@ class ProfilesApi
 
         // form params
         if ($profile_image !== null) {
-            $formParams['profileImage'] = ObjectSerializer::toFormValue($profile_image);
+            $multipart = true;
+            $formParams['profileImage'] = [];
+            $paramFiles = is_array($profile_image) ? $profile_image : [$profile_image];
+            foreach ($paramFiles as $paramFile) {
+                $formParams['profileImage'][] = \GuzzleHttp\Psr7\Utils::tryFopen(
+                    ObjectSerializer::toFormValue($paramFile),
+                    'rb'
+                );
+            }
         }
 
         $headers = $this->headerSelector->selectHeaders(

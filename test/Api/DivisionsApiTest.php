@@ -82,4 +82,16 @@ class DivisionsApiTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test case for getDivision
+     *
+     * Get division by id.
+     *
+     */
+    public function testGetDivision()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

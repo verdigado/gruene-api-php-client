@@ -517,7 +517,7 @@ class UserRbacGroup implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets implicit
      *
-     * @param bool $implicit Indicate if user has a direct or indirect membership in the division.
+     * @param bool $implicit Indicate if user has a direct or indirect membership in the division. A indrect membership can be inherited, eg user is member if a KV so the user is also member of the LV/KV, or if the user has a role of a division he is not part of.
      *
      * @return self
      */

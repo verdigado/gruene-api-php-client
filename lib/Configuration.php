@@ -93,14 +93,14 @@ class Configuration
      *
      * @var string
      */
-    protected $host = 'http://0.0.0.0:5000';
+    protected $host = 'https://api.gruene.de';
 
     /**
      * User agent of the HTTP request, set to "OpenAPI-Generator/{version}/PHP" by default
      *
      * @var string
      */
-    protected $userAgent = 'OpenAPI-Generator/0.8.0/PHP';
+    protected $userAgent = 'OpenAPI-Generator/0.9.0-dev/PHP';
 
     /**
      * Debug switch (default set to false)
@@ -433,7 +433,7 @@ class Configuration
         $report .= '    OS: ' . php_uname() . PHP_EOL;
         $report .= '    PHP Version: ' . PHP_VERSION . PHP_EOL;
         $report .= '    The version of the OpenAPI document: 0.1.0' . PHP_EOL;
-        $report .= '    SDK Package Version: 0.8.0' . PHP_EOL;
+        $report .= '    SDK Package Version: 0.9.0-dev' . PHP_EOL;
         $report .= '    Temp Folder Path: ' . self::getDefaultConfiguration()->getTempFolderPath() . PHP_EOL;
 
         return $report;
@@ -472,10 +472,6 @@ class Configuration
     public function getHostSettings()
     {
         return [
-            [
-                "url" => "http://0.0.0.0:5000",
-                "description" => "localhost",
-            ],
             [
                 "url" => "https://api.gruene.de",
                 "description" => "Production",

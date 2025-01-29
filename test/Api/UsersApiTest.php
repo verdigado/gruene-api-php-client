@@ -74,7 +74,7 @@ class UsersApiTest extends TestCase
     /**
      * Test case for findUsers
      *
-     * Find users in ldap.
+     * Find users.
      *
      */
     public function testFindUsers()

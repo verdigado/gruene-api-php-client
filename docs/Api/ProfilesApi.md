@@ -1,6 +1,6 @@
 # Verdigado\GrueneApiClient\ProfilesApi
 
-All URIs are relative to http://0.0.0.0:5000, except if the operation defines another base path.
+All URIs are relative to https://api.gruene.de, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
@@ -580,7 +580,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **profile_id** | **string**|  | |
-| **profile_image** | [**\SplFileObject**](../Model/\SplFileObject.md)|  | |
+| **profile_image** | **\SplFileObject****\SplFileObject**|  | |
 
 ### Return type
 

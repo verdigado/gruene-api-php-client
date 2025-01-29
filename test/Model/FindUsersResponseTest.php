@@ -80,18 +80,9 @@ class FindUsersResponseTest extends TestCase
     }
 
     /**
-     * Test attribute "items"
+     * Test attribute "data"
      */
-    public function testPropertyItems()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "page_info"
-     */
-    public function testPropertyPageInfo()
+    public function testPropertyData()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

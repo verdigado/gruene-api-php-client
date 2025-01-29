@@ -80,6 +80,24 @@ class DivisionEmailTest extends TestCase
     }
 
     /**
+     * Test attribute "tags"
+     */
+    public function testPropertyTags()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "purposes"
+     */
+    public function testPropertyPurposes()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "address"
      */
     public function testPropertyAddress()
@@ -89,9 +107,9 @@ class DivisionEmailTest extends TestCase
     }
 
     /**
-     * Test attribute "tags"
+     * Test attribute "is_favorite"
      */
-    public function testPropertyTags()
+    public function testPropertyIsFavorite()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

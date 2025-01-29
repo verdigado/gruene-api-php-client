@@ -1,6 +1,6 @@
 # Verdigado\GrueneApiClient\UsersApi
 
-All URIs are relative to http://0.0.0.0:5000, except if the operation defines another base path.
+All URIs are relative to https://api.gruene.de, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |

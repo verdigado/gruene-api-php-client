@@ -322,7 +322,7 @@ class UpdatePhoneNumber implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets country
      *
-     * @param string $country country prefix
+     * @param string $country Country code in german format
      *
      * @return self
      */
