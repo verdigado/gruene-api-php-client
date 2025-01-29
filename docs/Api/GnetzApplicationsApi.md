@@ -4,16 +4,16 @@ All URIs are relative to https://api.gruene.de, except if the operation defines 
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**gnetzApplicationsControllerFind()**](GnetzApplicationsApi.md#gnetzApplicationsControllerFind) | **GET** /v1/gnetz-applications |  |
+| [**findGnetzApplications()**](GnetzApplicationsApi.md#findGnetzApplications) | **GET** /v1/gnetz-applications | Find GNetz Applications |
 
 
-## `gnetzApplicationsControllerFind()`
+## `findGnetzApplications()`
 
 ```php
-gnetzApplicationsControllerFind(): \Verdigado\GrueneApiClient\models\FindGnetzApplicationsResponse
+findGnetzApplications(): \Verdigado\GrueneApiClient\models\FindGnetzApplicationsResponse
 ```
 
-
+Find GNetz Applications
 
 ### Example
 
@@ -30,10 +30,10 @@ $apiInstance = new Verdigado\GrueneApiClient\Api\GnetzApplicationsApi(
 );
 
 try {
-    $result = $apiInstance->gnetzApplicationsControllerFind();
+    $result = $apiInstance->findGnetzApplications();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GnetzApplicationsApi->gnetzApplicationsControllerFind: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling GnetzApplicationsApi->findGnetzApplications: ', $e->getMessage(), PHP_EOL;
 }
 ```
 

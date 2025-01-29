@@ -71,7 +71,7 @@ class GnetzApplicationsApi
 
     /** @var string[] $contentTypes **/
     public const contentTypes = [
-        'gnetzApplicationsControllerFind' => [
+        'findGnetzApplications' => [
             'application/json',
         ],
     ];
@@ -123,32 +123,36 @@ class GnetzApplicationsApi
     }
 
     /**
-     * Operation gnetzApplicationsControllerFind
+     * Operation findGnetzApplications
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['gnetzApplicationsControllerFind'] to see the possible values for this operation
+     * Find GNetz Applications
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findGnetzApplications'] to see the possible values for this operation
      *
      * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Verdigado\GrueneApiClient\models\FindGnetzApplicationsResponse
      */
-    public function gnetzApplicationsControllerFind(string $contentType = self::contentTypes['gnetzApplicationsControllerFind'][0])
+    public function findGnetzApplications(string $contentType = self::contentTypes['findGnetzApplications'][0])
     {
-        list($response) = $this->gnetzApplicationsControllerFindWithHttpInfo($contentType);
+        list($response) = $this->findGnetzApplicationsWithHttpInfo($contentType);
         return $response;
     }
 
     /**
-     * Operation gnetzApplicationsControllerFindWithHttpInfo
+     * Operation findGnetzApplicationsWithHttpInfo
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['gnetzApplicationsControllerFind'] to see the possible values for this operation
+     * Find GNetz Applications
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findGnetzApplications'] to see the possible values for this operation
      *
      * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Verdigado\GrueneApiClient\models\FindGnetzApplicationsResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function gnetzApplicationsControllerFindWithHttpInfo(string $contentType = self::contentTypes['gnetzApplicationsControllerFind'][0])
+    public function findGnetzApplicationsWithHttpInfo(string $contentType = self::contentTypes['findGnetzApplications'][0])
     {
-        $request = $this->gnetzApplicationsControllerFindRequest($contentType);
+        $request = $this->findGnetzApplicationsRequest($contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -235,16 +239,18 @@ class GnetzApplicationsApi
     }
 
     /**
-     * Operation gnetzApplicationsControllerFindAsync
+     * Operation findGnetzApplicationsAsync
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['gnetzApplicationsControllerFind'] to see the possible values for this operation
+     * Find GNetz Applications
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findGnetzApplications'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function gnetzApplicationsControllerFindAsync(string $contentType = self::contentTypes['gnetzApplicationsControllerFind'][0])
+    public function findGnetzApplicationsAsync(string $contentType = self::contentTypes['findGnetzApplications'][0])
     {
-        return $this->gnetzApplicationsControllerFindAsyncWithHttpInfo($contentType)
+        return $this->findGnetzApplicationsAsyncWithHttpInfo($contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -253,17 +259,19 @@ class GnetzApplicationsApi
     }
 
     /**
-     * Operation gnetzApplicationsControllerFindAsyncWithHttpInfo
+     * Operation findGnetzApplicationsAsyncWithHttpInfo
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['gnetzApplicationsControllerFind'] to see the possible values for this operation
+     * Find GNetz Applications
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findGnetzApplications'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function gnetzApplicationsControllerFindAsyncWithHttpInfo(string $contentType = self::contentTypes['gnetzApplicationsControllerFind'][0])
+    public function findGnetzApplicationsAsyncWithHttpInfo(string $contentType = self::contentTypes['findGnetzApplications'][0])
     {
         $returnType = '\Verdigado\GrueneApiClient\models\FindGnetzApplicationsResponse';
-        $request = $this->gnetzApplicationsControllerFindRequest($contentType);
+        $request = $this->findGnetzApplicationsRequest($contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -302,14 +310,14 @@ class GnetzApplicationsApi
     }
 
     /**
-     * Create request for operation 'gnetzApplicationsControllerFind'
+     * Create request for operation 'findGnetzApplications'
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['gnetzApplicationsControllerFind'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findGnetzApplications'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function gnetzApplicationsControllerFindRequest(string $contentType = self::contentTypes['gnetzApplicationsControllerFind'][0])
+    public function findGnetzApplicationsRequest(string $contentType = self::contentTypes['findGnetzApplications'][0])
     {
 
 

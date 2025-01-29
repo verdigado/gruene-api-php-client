@@ -362,7 +362,7 @@ class DivisionEmail implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets purposes
      *
-     * @param string[] $purposes Purposes associated with email
+     * @param string[] $purposes Purposes associated with email Occuring values:  - privat  - grüne  - dienstlich  - Postanschrift  - Rechnungsanschrift  - Lieferanschrift
      *
      * @return self
      */
