@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Verdigado\Gruen eApiClient
+ * @package  Verdigado\GrueneApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Verdigado\Gruen eApiClient\apis;
+namespace Verdigado\GrueneApiClient\apis;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Verdigado\Gruen eApiClient\ApiException;
-use Verdigado\Gruen eApiClient\Configuration;
-use Verdigado\Gruen eApiClient\HeaderSelector;
-use Verdigado\Gruen eApiClient\ObjectSerializer;
+use Verdigado\GrueneApiClient\ApiException;
+use Verdigado\GrueneApiClient\Configuration;
+use Verdigado\GrueneApiClient\HeaderSelector;
+use Verdigado\GrueneApiClient\ObjectSerializer;
 
 /**
  * UsersApi Class Doc Comment
  *
  * @category Class
- * @package  Verdigado\Gruen eApiClient
+ * @package  Verdigado\GrueneApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -141,9 +141,9 @@ class UsersApi
      * @param  float $limit limit (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findUsers'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\Gruen eApiClient\models\FindUsersResponse
+     * @return \Verdigado\GrueneApiClient\models\FindUsersResponse
      */
     public function findUsers($search = null, $user_ids = null, $limit = null, string $contentType = self::contentTypes['findUsers'][0])
     {
@@ -161,9 +161,9 @@ class UsersApi
      * @param  float $limit (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findUsers'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\Gruen eApiClient\models\FindUsersResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\FindUsersResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function findUsersWithHttpInfo($search = null, $user_ids = null, $limit = null, string $contentType = self::contentTypes['findUsers'][0])
     {
@@ -206,23 +206,23 @@ class UsersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\Gruen eApiClient\models\FindUsersResponse' === '\SplFileObject') {
+                    if ('\Verdigado\GrueneApiClient\models\FindUsersResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\Gruen eApiClient\models\FindUsersResponse' !== 'string') {
+                        if ('\Verdigado\GrueneApiClient\models\FindUsersResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\FindUsersResponse', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\FindUsersResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\Gruen eApiClient\models\FindUsersResponse';
+            $returnType = '\Verdigado\GrueneApiClient\models\FindUsersResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -243,7 +243,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\Gruen eApiClient\models\FindUsersResponse',
+                        '\Verdigado\GrueneApiClient\models\FindUsersResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -291,7 +291,7 @@ class UsersApi
      */
     public function findUsersAsyncWithHttpInfo($search = null, $user_ids = null, $limit = null, string $contentType = self::contentTypes['findUsers'][0])
     {
-        $returnType = '\Verdigado\Gruen eApiClient\models\FindUsersResponse';
+        $returnType = '\Verdigado\GrueneApiClient\models\FindUsersResponse';
         $request = $this->findUsersRequest($search, $user_ids, $limit, $contentType);
 
         return $this->client
@@ -465,9 +465,9 @@ class UsersApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSelf'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\Gruen eApiClient\models\User
+     * @return \Verdigado\GrueneApiClient\models\User
      */
     public function getSelf(string $contentType = self::contentTypes['getSelf'][0])
     {
@@ -482,9 +482,9 @@ class UsersApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSelf'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\Gruen eApiClient\models\User, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\User, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSelfWithHttpInfo(string $contentType = self::contentTypes['getSelf'][0])
     {
@@ -527,23 +527,23 @@ class UsersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\Gruen eApiClient\models\User' === '\SplFileObject') {
+                    if ('\Verdigado\GrueneApiClient\models\User' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\Gruen eApiClient\models\User' !== 'string') {
+                        if ('\Verdigado\GrueneApiClient\models\User' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\User', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\User', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\Gruen eApiClient\models\User';
+            $returnType = '\Verdigado\GrueneApiClient\models\User';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -564,7 +564,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\Gruen eApiClient\models\User',
+                        '\Verdigado\GrueneApiClient\models\User',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -606,7 +606,7 @@ class UsersApi
      */
     public function getSelfAsyncWithHttpInfo(string $contentType = self::contentTypes['getSelf'][0])
     {
-        $returnType = '\Verdigado\Gruen eApiClient\models\User';
+        $returnType = '\Verdigado\GrueneApiClient\models\User';
         $request = $this->getSelfRequest($contentType);
 
         return $this->client
@@ -742,9 +742,9 @@ class UsersApi
      * @param  string $user_id user_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getUser'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\Gruen eApiClient\models\User
+     * @return \Verdigado\GrueneApiClient\models\User
      */
     public function getUser($user_id, string $contentType = self::contentTypes['getUser'][0])
     {
@@ -760,9 +760,9 @@ class UsersApi
      * @param  string $user_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getUser'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\Gruen eApiClient\models\User, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\User, HTTP status code, HTTP response headers (array of strings)
      */
     public function getUserWithHttpInfo($user_id, string $contentType = self::contentTypes['getUser'][0])
     {
@@ -805,23 +805,23 @@ class UsersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\Gruen eApiClient\models\User' === '\SplFileObject') {
+                    if ('\Verdigado\GrueneApiClient\models\User' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\Gruen eApiClient\models\User' !== 'string') {
+                        if ('\Verdigado\GrueneApiClient\models\User' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\User', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\User', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\Gruen eApiClient\models\User';
+            $returnType = '\Verdigado\GrueneApiClient\models\User';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -842,7 +842,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\Gruen eApiClient\models\User',
+                        '\Verdigado\GrueneApiClient\models\User',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -886,7 +886,7 @@ class UsersApi
      */
     public function getUserAsyncWithHttpInfo($user_id, string $contentType = self::contentTypes['getUser'][0])
     {
-        $returnType = '\Verdigado\Gruen eApiClient\models\User';
+        $returnType = '\Verdigado\GrueneApiClient\models\User';
         $request = $this->getUserRequest($user_id, $contentType);
 
         return $this->client
@@ -1038,9 +1038,9 @@ class UsersApi
      * @param  string $user_id user_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getUserRbacStructure'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\Gruen eApiClient\models\UserRbacStructure
+     * @return \Verdigado\GrueneApiClient\models\UserRbacStructure
      */
     public function getUserRbacStructure($user_id, string $contentType = self::contentTypes['getUserRbacStructure'][0])
     {
@@ -1056,9 +1056,9 @@ class UsersApi
      * @param  string $user_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getUserRbacStructure'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\Gruen eApiClient\models\UserRbacStructure, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\UserRbacStructure, HTTP status code, HTTP response headers (array of strings)
      */
     public function getUserRbacStructureWithHttpInfo($user_id, string $contentType = self::contentTypes['getUserRbacStructure'][0])
     {
@@ -1101,23 +1101,23 @@ class UsersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\Gruen eApiClient\models\UserRbacStructure' === '\SplFileObject') {
+                    if ('\Verdigado\GrueneApiClient\models\UserRbacStructure' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\Gruen eApiClient\models\UserRbacStructure' !== 'string') {
+                        if ('\Verdigado\GrueneApiClient\models\UserRbacStructure' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\UserRbacStructure', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\UserRbacStructure', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\Gruen eApiClient\models\UserRbacStructure';
+            $returnType = '\Verdigado\GrueneApiClient\models\UserRbacStructure';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1138,7 +1138,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\Gruen eApiClient\models\UserRbacStructure',
+                        '\Verdigado\GrueneApiClient\models\UserRbacStructure',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1182,7 +1182,7 @@ class UsersApi
      */
     public function getUserRbacStructureAsyncWithHttpInfo($user_id, string $contentType = self::contentTypes['getUserRbacStructure'][0])
     {
-        $returnType = '\Verdigado\Gruen eApiClient\models\UserRbacStructure';
+        $returnType = '\Verdigado\GrueneApiClient\models\UserRbacStructure';
         $request = $this->getUserRbacStructureRequest($user_id, $contentType);
 
         return $this->client

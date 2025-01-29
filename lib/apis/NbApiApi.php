@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Verdigado\Gruen eApiClient
+ * @package  Verdigado\GrueneApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Verdigado\Gruen eApiClient\apis;
+namespace Verdigado\GrueneApiClient\apis;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Verdigado\Gruen eApiClient\ApiException;
-use Verdigado\Gruen eApiClient\Configuration;
-use Verdigado\Gruen eApiClient\HeaderSelector;
-use Verdigado\Gruen eApiClient\ObjectSerializer;
+use Verdigado\GrueneApiClient\ApiException;
+use Verdigado\GrueneApiClient\Configuration;
+use Verdigado\GrueneApiClient\HeaderSelector;
+use Verdigado\GrueneApiClient\ObjectSerializer;
 
 /**
  * NbApiApi Class Doc Comment
  *
  * @category Class
- * @package  Verdigado\Gruen eApiClient
+ * @package  Verdigado\GrueneApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -143,9 +143,9 @@ class NbApiApi
      * @param  string $filter_slug Filter by role slug (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findGroups'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\Gruen eApiClient\models\FindNbGroupsResponse
+     * @return \Verdigado\GrueneApiClient\models\FindNbGroupsResponse
      */
     public function findGroups($filter_external_refs_type = null, $filter_external_refs_key = null, $filter_level = null, $filter_type = null, $filter_slug = null, string $contentType = self::contentTypes['findGroups'][0])
     {
@@ -165,9 +165,9 @@ class NbApiApi
      * @param  string $filter_slug Filter by role slug (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findGroups'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\Gruen eApiClient\models\FindNbGroupsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\FindNbGroupsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function findGroupsWithHttpInfo($filter_external_refs_type = null, $filter_external_refs_key = null, $filter_level = null, $filter_type = null, $filter_slug = null, string $contentType = self::contentTypes['findGroups'][0])
     {
@@ -210,23 +210,23 @@ class NbApiApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\Gruen eApiClient\models\FindNbGroupsResponse' === '\SplFileObject') {
+                    if ('\Verdigado\GrueneApiClient\models\FindNbGroupsResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\Gruen eApiClient\models\FindNbGroupsResponse' !== 'string') {
+                        if ('\Verdigado\GrueneApiClient\models\FindNbGroupsResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\FindNbGroupsResponse', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\FindNbGroupsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\Gruen eApiClient\models\FindNbGroupsResponse';
+            $returnType = '\Verdigado\GrueneApiClient\models\FindNbGroupsResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -247,7 +247,7 @@ class NbApiApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\Gruen eApiClient\models\FindNbGroupsResponse',
+                        '\Verdigado\GrueneApiClient\models\FindNbGroupsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -299,7 +299,7 @@ class NbApiApi
      */
     public function findGroupsAsyncWithHttpInfo($filter_external_refs_type = null, $filter_external_refs_key = null, $filter_level = null, $filter_type = null, $filter_slug = null, string $contentType = self::contentTypes['findGroups'][0])
     {
-        $returnType = '\Verdigado\Gruen eApiClient\models\FindNbGroupsResponse';
+        $returnType = '\Verdigado\GrueneApiClient\models\FindNbGroupsResponse';
         $request = $this->findGroupsRequest($filter_external_refs_type, $filter_external_refs_key, $filter_level, $filter_type, $filter_slug, $contentType);
 
         return $this->client
@@ -485,9 +485,9 @@ class NbApiApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findOrganizations'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\Gruen eApiClient\models\FindNbOrganizationsResponse
+     * @return \Verdigado\GrueneApiClient\models\FindNbOrganizationsResponse
      */
     public function findOrganizations(string $contentType = self::contentTypes['findOrganizations'][0])
     {
@@ -502,9 +502,9 @@ class NbApiApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findOrganizations'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\Gruen eApiClient\models\FindNbOrganizationsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\FindNbOrganizationsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function findOrganizationsWithHttpInfo(string $contentType = self::contentTypes['findOrganizations'][0])
     {
@@ -547,23 +547,23 @@ class NbApiApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\Gruen eApiClient\models\FindNbOrganizationsResponse' === '\SplFileObject') {
+                    if ('\Verdigado\GrueneApiClient\models\FindNbOrganizationsResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\Gruen eApiClient\models\FindNbOrganizationsResponse' !== 'string') {
+                        if ('\Verdigado\GrueneApiClient\models\FindNbOrganizationsResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\FindNbOrganizationsResponse', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\FindNbOrganizationsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\Gruen eApiClient\models\FindNbOrganizationsResponse';
+            $returnType = '\Verdigado\GrueneApiClient\models\FindNbOrganizationsResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -584,7 +584,7 @@ class NbApiApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\Gruen eApiClient\models\FindNbOrganizationsResponse',
+                        '\Verdigado\GrueneApiClient\models\FindNbOrganizationsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -626,7 +626,7 @@ class NbApiApi
      */
     public function findOrganizationsAsyncWithHttpInfo(string $contentType = self::contentTypes['findOrganizations'][0])
     {
-        $returnType = '\Verdigado\Gruen eApiClient\models\FindNbOrganizationsResponse';
+        $returnType = '\Verdigado\GrueneApiClient\models\FindNbOrganizationsResponse';
         $request = $this->findOrganizationsRequest($contentType);
 
         return $this->client
@@ -762,9 +762,9 @@ class NbApiApi
      * @param  string $filter_type Filter by type (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findRegionalChapters'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\Gruen eApiClient\models\FindNbRegionalChaptersResponse
+     * @return \Verdigado\GrueneApiClient\models\FindNbRegionalChaptersResponse
      */
     public function findRegionalChapters($limit = null, $offset = null, $filter_query = null, $filter_id_prefix = null, $filter_type = null, string $contentType = self::contentTypes['findRegionalChapters'][0])
     {
@@ -784,9 +784,9 @@ class NbApiApi
      * @param  string $filter_type Filter by type (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findRegionalChapters'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\Gruen eApiClient\models\FindNbRegionalChaptersResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\FindNbRegionalChaptersResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function findRegionalChaptersWithHttpInfo($limit = null, $offset = null, $filter_query = null, $filter_id_prefix = null, $filter_type = null, string $contentType = self::contentTypes['findRegionalChapters'][0])
     {
@@ -829,23 +829,23 @@ class NbApiApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\Gruen eApiClient\models\FindNbRegionalChaptersResponse' === '\SplFileObject') {
+                    if ('\Verdigado\GrueneApiClient\models\FindNbRegionalChaptersResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\Gruen eApiClient\models\FindNbRegionalChaptersResponse' !== 'string') {
+                        if ('\Verdigado\GrueneApiClient\models\FindNbRegionalChaptersResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\FindNbRegionalChaptersResponse', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\FindNbRegionalChaptersResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\Gruen eApiClient\models\FindNbRegionalChaptersResponse';
+            $returnType = '\Verdigado\GrueneApiClient\models\FindNbRegionalChaptersResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -866,7 +866,7 @@ class NbApiApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\Gruen eApiClient\models\FindNbRegionalChaptersResponse',
+                        '\Verdigado\GrueneApiClient\models\FindNbRegionalChaptersResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -918,7 +918,7 @@ class NbApiApi
      */
     public function findRegionalChaptersAsyncWithHttpInfo($limit = null, $offset = null, $filter_query = null, $filter_id_prefix = null, $filter_type = null, string $contentType = self::contentTypes['findRegionalChapters'][0])
     {
-        $returnType = '\Verdigado\Gruen eApiClient\models\FindNbRegionalChaptersResponse';
+        $returnType = '\Verdigado\GrueneApiClient\models\FindNbRegionalChaptersResponse';
         $request = $this->findRegionalChaptersRequest($limit, $offset, $filter_query, $filter_id_prefix, $filter_type, $contentType);
 
         return $this->client
@@ -1114,9 +1114,9 @@ class NbApiApi
      * @param  string $division_key division_key (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getRegionalChapter'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\Gruen eApiClient\models\NbRegionalChapter
+     * @return \Verdigado\GrueneApiClient\models\NbRegionalChapter
      */
     public function getRegionalChapter($division_key, string $contentType = self::contentTypes['getRegionalChapter'][0])
     {
@@ -1132,9 +1132,9 @@ class NbApiApi
      * @param  string $division_key (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getRegionalChapter'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\Gruen eApiClient\models\NbRegionalChapter, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\NbRegionalChapter, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRegionalChapterWithHttpInfo($division_key, string $contentType = self::contentTypes['getRegionalChapter'][0])
     {
@@ -1177,23 +1177,23 @@ class NbApiApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\Gruen eApiClient\models\NbRegionalChapter' === '\SplFileObject') {
+                    if ('\Verdigado\GrueneApiClient\models\NbRegionalChapter' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\Gruen eApiClient\models\NbRegionalChapter' !== 'string') {
+                        if ('\Verdigado\GrueneApiClient\models\NbRegionalChapter' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\NbRegionalChapter', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\NbRegionalChapter', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\Gruen eApiClient\models\NbRegionalChapter';
+            $returnType = '\Verdigado\GrueneApiClient\models\NbRegionalChapter';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1214,7 +1214,7 @@ class NbApiApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\Gruen eApiClient\models\NbRegionalChapter',
+                        '\Verdigado\GrueneApiClient\models\NbRegionalChapter',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1258,7 +1258,7 @@ class NbApiApi
      */
     public function getRegionalChapterAsyncWithHttpInfo($division_key, string $contentType = self::contentTypes['getRegionalChapter'][0])
     {
-        $returnType = '\Verdigado\Gruen eApiClient\models\NbRegionalChapter';
+        $returnType = '\Verdigado\GrueneApiClient\models\NbRegionalChapter';
         $request = $this->getRegionalChapterRequest($division_key, $contentType);
 
         return $this->client

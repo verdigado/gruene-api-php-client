@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Verdigado\Gruen eApiClient
+ * @package  Verdigado\GrueneApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Verdigado\Gruen eApiClient\models;
+namespace Verdigado\GrueneApiClient\models;
 
 use \ArrayAccess;
-use \Verdigado\Gruen eApiClient\ObjectSerializer;
+use \Verdigado\GrueneApiClient\ObjectSerializer;
 
 /**
  * FindFocusAreasResponse Class Doc Comment
  *
  * @category Class
- * @package  Verdigado\Gruen eApiClient
+ * @package  Verdigado\GrueneApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class FindFocusAreasResponse implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Verdigado\Gruen eApiClient\models\FocusArea[]'
+        'data' => '\Verdigado\GrueneApiClient\models\FocusArea[]'
     ];
 
     /**
@@ -295,7 +295,7 @@ class FindFocusAreasResponse implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets data
      *
-     * @return \Verdigado\Gruen eApiClient\models\FocusArea[]
+     * @return \Verdigado\GrueneApiClient\models\FocusArea[]
      */
     public function getData()
     {
@@ -305,7 +305,7 @@ class FindFocusAreasResponse implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets data
      *
-     * @param \Verdigado\Gruen eApiClient\models\FocusArea[] $data data
+     * @param \Verdigado\GrueneApiClient\models\FocusArea[] $data data
      *
      * @return self
      */

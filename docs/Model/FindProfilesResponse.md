@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**\Verdigado\Gruen eApiClient\models\PublicProfile[]**](PublicProfile.md) |  |
-**meta** | [**\Verdigado\Gruen eApiClient\models\OffsetPaginationMeta**](OffsetPaginationMeta.md) |  |
+**data** | [**\Verdigado\GrueneApiClient\models\PublicProfile[]**](PublicProfile.md) |  |
+**meta** | [**\Verdigado\GrueneApiClient\models\OffsetPaginationMeta**](OffsetPaginationMeta.md) |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

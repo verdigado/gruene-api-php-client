@@ -11,8 +11,8 @@ Name | Type | Description | Notes
 **min_age** | **float** | Role min age |
 **max_age** | **float** | Role max age |
 **level** | **string** | Hierarchy level this role applies to |
-**categories** | [**\Verdigado\Gruen eApiClient\models\RoleCategory[]**](RoleCategory.md) | Role categories |
-**tags** | [**\Verdigado\Gruen eApiClient\models\RoleTag[]**](RoleTag.md) | Role tags |
-**aliases** | [**\Verdigado\Gruen eApiClient\models\RoleAlias[]**](RoleAlias.md) | Role Aliases |
+**categories** | [**\Verdigado\GrueneApiClient\models\RoleCategory[]**](RoleCategory.md) | Role categories |
+**tags** | [**\Verdigado\GrueneApiClient\models\RoleTag[]**](RoleTag.md) | Role tags |
+**aliases** | [**\Verdigado\GrueneApiClient\models\RoleAlias[]**](RoleAlias.md) | Role Aliases |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -1,4 +1,4 @@
-# Verdigado\Gruen eApiClient\HealthApi
+# Verdigado\GrueneApiClient\HealthApi
 
 All URIs are relative to https://api.gruene.de, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to https://api.gruene.de, except if the operation defines 
 ## `healthGet()`
 
 ```php
-healthGet(): \Verdigado\Gruen eApiClient\models\HealthCheckResponse
+healthGet(): \Verdigado\GrueneApiClient\models\HealthCheckResponse
 ```
 
 
@@ -25,7 +25,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new Verdigado\Gruen eApiClient\Api\HealthApi(
+$apiInstance = new Verdigado\GrueneApiClient\Api\HealthApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -45,7 +45,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Verdigado\Gruen eApiClient\models\HealthCheckResponse**](../Model/HealthCheckResponse.md)
+[**\Verdigado\GrueneApiClient\models\HealthCheckResponse**](../Model/HealthCheckResponse.md)
 
 ### Authorization
 

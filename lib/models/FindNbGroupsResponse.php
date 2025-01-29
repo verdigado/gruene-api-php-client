@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Verdigado\Gruen eApiClient
+ * @package  Verdigado\GrueneApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Verdigado\Gruen eApiClient\models;
+namespace Verdigado\GrueneApiClient\models;
 
 use \ArrayAccess;
-use \Verdigado\Gruen eApiClient\ObjectSerializer;
+use \Verdigado\GrueneApiClient\ObjectSerializer;
 
 /**
  * FindNbGroupsResponse Class Doc Comment
  *
  * @category Class
- * @package  Verdigado\Gruen eApiClient
+ * @package  Verdigado\GrueneApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class FindNbGroupsResponse implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'items' => '\Verdigado\Gruen eApiClient\models\NbGroup[]'
+        'items' => '\Verdigado\GrueneApiClient\models\NbGroup[]'
     ];
 
     /**
@@ -295,7 +295,7 @@ class FindNbGroupsResponse implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets items
      *
-     * @return \Verdigado\Gruen eApiClient\models\NbGroup[]
+     * @return \Verdigado\GrueneApiClient\models\NbGroup[]
      */
     public function getItems()
     {
@@ -305,7 +305,7 @@ class FindNbGroupsResponse implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets items
      *
-     * @param \Verdigado\Gruen eApiClient\models\NbGroup[] $items items
+     * @param \Verdigado\GrueneApiClient\models\NbGroup[] $items items
      *
      * @return self
      */

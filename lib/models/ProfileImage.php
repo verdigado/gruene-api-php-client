@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Verdigado\Gruen eApiClient
+ * @package  Verdigado\GrueneApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Verdigado\Gruen eApiClient\models;
+namespace Verdigado\GrueneApiClient\models;
 
 use \ArrayAccess;
-use \Verdigado\Gruen eApiClient\ObjectSerializer;
+use \Verdigado\GrueneApiClient\ObjectSerializer;
 
 /**
  * ProfileImage Class Doc Comment
  *
  * @category Class
- * @package  Verdigado\Gruen eApiClient
+ * @package  Verdigado\GrueneApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class ProfileImage implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'thumbnail' => '\Verdigado\Gruen eApiClient\models\ImageLink',
-        'large' => '\Verdigado\Gruen eApiClient\models\ImageLink'
+        'thumbnail' => '\Verdigado\GrueneApiClient\models\ImageLink',
+        'large' => '\Verdigado\GrueneApiClient\models\ImageLink'
     ];
 
     /**
@@ -305,7 +305,7 @@ class ProfileImage implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets thumbnail
      *
-     * @return \Verdigado\Gruen eApiClient\models\ImageLink
+     * @return \Verdigado\GrueneApiClient\models\ImageLink
      */
     public function getThumbnail()
     {
@@ -315,7 +315,7 @@ class ProfileImage implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets thumbnail
      *
-     * @param \Verdigado\Gruen eApiClient\models\ImageLink $thumbnail thumbnail
+     * @param \Verdigado\GrueneApiClient\models\ImageLink $thumbnail thumbnail
      *
      * @return self
      */
@@ -332,7 +332,7 @@ class ProfileImage implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets large
      *
-     * @return \Verdigado\Gruen eApiClient\models\ImageLink
+     * @return \Verdigado\GrueneApiClient\models\ImageLink
      */
     public function getLarge()
     {
@@ -342,7 +342,7 @@ class ProfileImage implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets large
      *
-     * @param \Verdigado\Gruen eApiClient\models\ImageLink $large large
+     * @param \Verdigado\GrueneApiClient\models\ImageLink $large large
      *
      * @return self
      */

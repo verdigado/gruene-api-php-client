@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Verdigado\Gruen eApiClient
+ * @package  Verdigado\GrueneApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Verdigado\Gruen eApiClient\apis;
+namespace Verdigado\GrueneApiClient\apis;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Verdigado\Gruen eApiClient\ApiException;
-use Verdigado\Gruen eApiClient\Configuration;
-use Verdigado\Gruen eApiClient\HeaderSelector;
-use Verdigado\Gruen eApiClient\ObjectSerializer;
+use Verdigado\GrueneApiClient\ApiException;
+use Verdigado\GrueneApiClient\Configuration;
+use Verdigado\GrueneApiClient\HeaderSelector;
+use Verdigado\GrueneApiClient\ObjectSerializer;
 
 /**
  * NewsApi Class Doc Comment
  *
  * @category Class
- * @package  Verdigado\Gruen eApiClient
+ * @package  Verdigado\GrueneApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -137,9 +137,9 @@ class NewsApi
      * @param  string[] $category Filter by category id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findNews'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\Gruen eApiClient\models\FindNewsResponse
+     * @return \Verdigado\GrueneApiClient\models\FindNewsResponse
      */
     public function findNews($limit = 20, $offset = null, $division_key = null, $search = null, $category = null, string $contentType = self::contentTypes['findNews'][0])
     {
@@ -159,9 +159,9 @@ class NewsApi
      * @param  string[] $category Filter by category id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findNews'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\Gruen eApiClient\models\FindNewsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\FindNewsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function findNewsWithHttpInfo($limit = 20, $offset = null, $division_key = null, $search = null, $category = null, string $contentType = self::contentTypes['findNews'][0])
     {
@@ -204,23 +204,23 @@ class NewsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\Gruen eApiClient\models\FindNewsResponse' === '\SplFileObject') {
+                    if ('\Verdigado\GrueneApiClient\models\FindNewsResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\Gruen eApiClient\models\FindNewsResponse' !== 'string') {
+                        if ('\Verdigado\GrueneApiClient\models\FindNewsResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\FindNewsResponse', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\FindNewsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\Gruen eApiClient\models\FindNewsResponse';
+            $returnType = '\Verdigado\GrueneApiClient\models\FindNewsResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -241,7 +241,7 @@ class NewsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\Gruen eApiClient\models\FindNewsResponse',
+                        '\Verdigado\GrueneApiClient\models\FindNewsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -293,7 +293,7 @@ class NewsApi
      */
     public function findNewsAsyncWithHttpInfo($limit = 20, $offset = null, $division_key = null, $search = null, $category = null, string $contentType = self::contentTypes['findNews'][0])
     {
-        $returnType = '\Verdigado\Gruen eApiClient\models\FindNewsResponse';
+        $returnType = '\Verdigado\GrueneApiClient\models\FindNewsResponse';
         $request = $this->findNewsRequest($limit, $offset, $division_key, $search, $category, $contentType);
 
         return $this->client
@@ -481,9 +481,9 @@ class NewsApi
      * @param  string $news_id news_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getNews'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\Gruen eApiClient\models\News
+     * @return \Verdigado\GrueneApiClient\models\News
      */
     public function getNews($news_id, string $contentType = self::contentTypes['getNews'][0])
     {
@@ -499,9 +499,9 @@ class NewsApi
      * @param  string $news_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getNews'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\Gruen eApiClient\models\News, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\News, HTTP status code, HTTP response headers (array of strings)
      */
     public function getNewsWithHttpInfo($news_id, string $contentType = self::contentTypes['getNews'][0])
     {
@@ -544,23 +544,23 @@ class NewsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\Gruen eApiClient\models\News' === '\SplFileObject') {
+                    if ('\Verdigado\GrueneApiClient\models\News' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\Gruen eApiClient\models\News' !== 'string') {
+                        if ('\Verdigado\GrueneApiClient\models\News' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\News', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\News', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\Gruen eApiClient\models\News';
+            $returnType = '\Verdigado\GrueneApiClient\models\News';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -581,7 +581,7 @@ class NewsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\Gruen eApiClient\models\News',
+                        '\Verdigado\GrueneApiClient\models\News',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -625,7 +625,7 @@ class NewsApi
      */
     public function getNewsAsyncWithHttpInfo($news_id, string $contentType = self::contentTypes['getNews'][0])
     {
-        $returnType = '\Verdigado\Gruen eApiClient\models\News';
+        $returnType = '\Verdigado\GrueneApiClient\models\News';
         $request = $this->getNewsRequest($news_id, $contentType);
 
         return $this->client

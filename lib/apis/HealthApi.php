@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Verdigado\Gruen eApiClient
+ * @package  Verdigado\GrueneApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Verdigado\Gruen eApiClient\apis;
+namespace Verdigado\GrueneApiClient\apis;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Verdigado\Gruen eApiClient\ApiException;
-use Verdigado\Gruen eApiClient\Configuration;
-use Verdigado\Gruen eApiClient\HeaderSelector;
-use Verdigado\Gruen eApiClient\ObjectSerializer;
+use Verdigado\GrueneApiClient\ApiException;
+use Verdigado\GrueneApiClient\Configuration;
+use Verdigado\GrueneApiClient\HeaderSelector;
+use Verdigado\GrueneApiClient\ObjectSerializer;
 
 /**
  * HealthApi Class Doc Comment
  *
  * @category Class
- * @package  Verdigado\Gruen eApiClient
+ * @package  Verdigado\GrueneApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -127,9 +127,9 @@ class HealthApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['healthGet'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\Gruen eApiClient\models\HealthCheckResponse
+     * @return \Verdigado\GrueneApiClient\models\HealthCheckResponse
      */
     public function healthGet(string $contentType = self::contentTypes['healthGet'][0])
     {
@@ -142,9 +142,9 @@ class HealthApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['healthGet'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\Gruen eApiClient\models\HealthCheckResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\HealthCheckResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function healthGetWithHttpInfo(string $contentType = self::contentTypes['healthGet'][0])
     {
@@ -187,23 +187,23 @@ class HealthApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\Gruen eApiClient\models\HealthCheckResponse' === '\SplFileObject') {
+                    if ('\Verdigado\GrueneApiClient\models\HealthCheckResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\Gruen eApiClient\models\HealthCheckResponse' !== 'string') {
+                        if ('\Verdigado\GrueneApiClient\models\HealthCheckResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\HealthCheckResponse', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\HealthCheckResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\Gruen eApiClient\models\HealthCheckResponse';
+            $returnType = '\Verdigado\GrueneApiClient\models\HealthCheckResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -224,7 +224,7 @@ class HealthApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\Gruen eApiClient\models\HealthCheckResponse',
+                        '\Verdigado\GrueneApiClient\models\HealthCheckResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -262,7 +262,7 @@ class HealthApi
      */
     public function healthGetAsyncWithHttpInfo(string $contentType = self::contentTypes['healthGet'][0])
     {
-        $returnType = '\Verdigado\Gruen eApiClient\models\HealthCheckResponse';
+        $returnType = '\Verdigado\GrueneApiClient\models\HealthCheckResponse';
         $request = $this->healthGetRequest($contentType);
 
         return $this->client

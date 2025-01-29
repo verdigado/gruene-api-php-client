@@ -1,6 +1,6 @@
 {
     "name": "verdigado/gruene-api-client",
-    "version": "0.9.0",
+    "version": "0.9.1",
     "description": "## OpenAPI Endpoints <a href=\"/api-json\">OpenAPI Spec in JSON</a><br> <a href=\"/api-yaml\">OpenAPI Spec in YAML</a><br>  ### Offboarding Every service conntected to Grünes Netz needs to remove users when they are removed from `saml.gruene.de`. Connected services need to pull a list of users waiting for removal at least once a week. api.gruene.de needs to be informed whether the user did not exist or was removed. API tokens can be obtained from `technik@verdigado.com`.",
     "keywords": [
         "openapitools",
@@ -32,9 +32,9 @@
         "friendsofphp/php-cs-fixer": "^3.5"
     },
     "autoload": {
-        "psr-4": { "Verdigado\\Gruen eApiClient\\" : "lib/" }
+        "psr-4": { "Verdigado\\GrueneApiClient\\" : "lib/" }
     },
     "autoload-dev": {
-        "psr-4": { "Verdigado\\Gruen eApiClient\\Test\\" : "test/" }
+        "psr-4": { "Verdigado\\GrueneApiClient\\Test\\" : "test/" }
     }
 }

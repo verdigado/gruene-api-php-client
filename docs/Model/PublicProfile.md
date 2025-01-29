@@ -10,14 +10,14 @@ Name | Type | Description | Notes
 **username** | **string** |  |
 **first_name** | **string** |  |
 **last_name** | **string** |  |
-**image** | [**\Verdigado\Gruen eApiClient\models\ProfileImage**](ProfileImage.md) |  | [optional]
-**phone_numbers** | [**\Verdigado\Gruen eApiClient\models\PhoneNumberEntry[]**](PhoneNumberEntry.md) |  |
-**messengers** | [**\Verdigado\Gruen eApiClient\models\MessengerEntry[]**](MessengerEntry.md) |  |
-**social_media** | [**\Verdigado\Gruen eApiClient\models\SocialMediaEntry[]**](SocialMediaEntry.md) |  |
-**tags** | [**\Verdigado\Gruen eApiClient\models\ProfileTag[]**](ProfileTag.md) |  |
+**image** | [**\Verdigado\GrueneApiClient\models\ProfileImage**](ProfileImage.md) |  | [optional]
+**phone_numbers** | [**\Verdigado\GrueneApiClient\models\PhoneNumberEntry[]**](PhoneNumberEntry.md) |  |
+**messengers** | [**\Verdigado\GrueneApiClient\models\MessengerEntry[]**](MessengerEntry.md) |  |
+**social_media** | [**\Verdigado\GrueneApiClient\models\SocialMediaEntry[]**](SocialMediaEntry.md) |  |
+**tags** | [**\Verdigado\GrueneApiClient\models\ProfileTag[]**](ProfileTag.md) |  |
 **joined_at** | **\DateTime** | First entry date in the BV | [optional]
-**memberships** | [**\Verdigado\Gruen eApiClient\models\DivisionMembership[]**](DivisionMembership.md) |  | [optional]
-**roles** | [**\Verdigado\Gruen eApiClient\models\ProfileRole[]**](ProfileRole.md) |  |
+**memberships** | [**\Verdigado\GrueneApiClient\models\DivisionMembership[]**](DivisionMembership.md) |  | [optional]
+**roles** | [**\Verdigado\GrueneApiClient\models\ProfileRole[]**](ProfileRole.md) |  |
 **achievements** | **string[]** |  |
 **email** | **string** |  | [optional]
 

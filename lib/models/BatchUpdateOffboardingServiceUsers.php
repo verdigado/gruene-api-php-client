@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Verdigado\Gruen eApiClient
+ * @package  Verdigado\GrueneApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Verdigado\Gruen eApiClient\models;
+namespace Verdigado\GrueneApiClient\models;
 
 use \ArrayAccess;
-use \Verdigado\Gruen eApiClient\ObjectSerializer;
+use \Verdigado\GrueneApiClient\ObjectSerializer;
 
 /**
  * BatchUpdateOffboardingServiceUsers Class Doc Comment
  *
  * @category Class
- * @package  Verdigado\Gruen eApiClient
+ * @package  Verdigado\GrueneApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class BatchUpdateOffboardingServiceUsers implements ModelInterface, ArrayAccess,
       * @var string[]
       */
     protected static $openAPITypes = [
-        'upsert' => '\Verdigado\Gruen eApiClient\models\UpsertOffboardingServiceUser[]'
+        'upsert' => '\Verdigado\GrueneApiClient\models\UpsertOffboardingServiceUser[]'
     ];
 
     /**
@@ -292,7 +292,7 @@ class BatchUpdateOffboardingServiceUsers implements ModelInterface, ArrayAccess,
     /**
      * Gets upsert
      *
-     * @return \Verdigado\Gruen eApiClient\models\UpsertOffboardingServiceUser[]|null
+     * @return \Verdigado\GrueneApiClient\models\UpsertOffboardingServiceUser[]|null
      */
     public function getUpsert()
     {
@@ -302,7 +302,7 @@ class BatchUpdateOffboardingServiceUsers implements ModelInterface, ArrayAccess,
     /**
      * Sets upsert
      *
-     * @param \Verdigado\Gruen eApiClient\models\UpsertOffboardingServiceUser[]|null $upsert upsert
+     * @param \Verdigado\GrueneApiClient\models\UpsertOffboardingServiceUser[]|null $upsert upsert
      *
      * @return self
      */

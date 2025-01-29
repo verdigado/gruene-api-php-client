@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Verdigado\Gruen eApiClient
+ * @package  Verdigado\GrueneApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Verdigado\Gruen eApiClient\models;
+namespace Verdigado\GrueneApiClient\models;
 
 use \ArrayAccess;
-use \Verdigado\Gruen eApiClient\ObjectSerializer;
+use \Verdigado\GrueneApiClient\ObjectSerializer;
 
 /**
  * FindProfileTagsResponse Class Doc Comment
  *
  * @category Class
- * @package  Verdigado\Gruen eApiClient
+ * @package  Verdigado\GrueneApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class FindProfileTagsResponse implements ModelInterface, ArrayAccess, \JsonSeria
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Verdigado\Gruen eApiClient\models\ProfileTag[]',
-        'meta' => '\Verdigado\Gruen eApiClient\models\OffsetPaginationMeta'
+        'data' => '\Verdigado\GrueneApiClient\models\ProfileTag[]',
+        'meta' => '\Verdigado\GrueneApiClient\models\OffsetPaginationMeta'
     ];
 
     /**
@@ -305,7 +305,7 @@ class FindProfileTagsResponse implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets data
      *
-     * @return \Verdigado\Gruen eApiClient\models\ProfileTag[]
+     * @return \Verdigado\GrueneApiClient\models\ProfileTag[]
      */
     public function getData()
     {
@@ -315,7 +315,7 @@ class FindProfileTagsResponse implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets data
      *
-     * @param \Verdigado\Gruen eApiClient\models\ProfileTag[] $data data
+     * @param \Verdigado\GrueneApiClient\models\ProfileTag[] $data data
      *
      * @return self
      */
@@ -332,7 +332,7 @@ class FindProfileTagsResponse implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets meta
      *
-     * @return \Verdigado\Gruen eApiClient\models\OffsetPaginationMeta
+     * @return \Verdigado\GrueneApiClient\models\OffsetPaginationMeta
      */
     public function getMeta()
     {
@@ -342,7 +342,7 @@ class FindProfileTagsResponse implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets meta
      *
-     * @param \Verdigado\Gruen eApiClient\models\OffsetPaginationMeta $meta meta
+     * @param \Verdigado\GrueneApiClient\models\OffsetPaginationMeta $meta meta
      *
      * @return self
      */

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Verdigado\Gruen eApiClient
+ * @package  Verdigado\GrueneApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Verdigado\Gruen eApiClient\apis;
+namespace Verdigado\GrueneApiClient\apis;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Verdigado\Gruen eApiClient\ApiException;
-use Verdigado\Gruen eApiClient\Configuration;
-use Verdigado\Gruen eApiClient\HeaderSelector;
-use Verdigado\Gruen eApiClient\ObjectSerializer;
+use Verdigado\GrueneApiClient\ApiException;
+use Verdigado\GrueneApiClient\Configuration;
+use Verdigado\GrueneApiClient\HeaderSelector;
+use Verdigado\GrueneApiClient\ObjectSerializer;
 
 /**
  * OffboardingApi Class Doc Comment
  *
  * @category Class
- * @package  Verdigado\Gruen eApiClient
+ * @package  Verdigado\GrueneApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -130,10 +130,10 @@ class OffboardingApi
      *
      * Batch update offboarding users for the authenticated service.
      *
-     * @param  \Verdigado\Gruen eApiClient\models\BatchUpdateOffboardingServiceUsers $batch_update_offboarding_service_users batch_update_offboarding_service_users (required)
+     * @param  \Verdigado\GrueneApiClient\models\BatchUpdateOffboardingServiceUsers $batch_update_offboarding_service_users batch_update_offboarding_service_users (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['batchUpdateOffboardingServiceUsers'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -147,10 +147,10 @@ class OffboardingApi
      *
      * Batch update offboarding users for the authenticated service.
      *
-     * @param  \Verdigado\Gruen eApiClient\models\BatchUpdateOffboardingServiceUsers $batch_update_offboarding_service_users (required)
+     * @param  \Verdigado\GrueneApiClient\models\BatchUpdateOffboardingServiceUsers $batch_update_offboarding_service_users (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['batchUpdateOffboardingServiceUsers'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -207,7 +207,7 @@ class OffboardingApi
      *
      * Batch update offboarding users for the authenticated service.
      *
-     * @param  \Verdigado\Gruen eApiClient\models\BatchUpdateOffboardingServiceUsers $batch_update_offboarding_service_users (required)
+     * @param  \Verdigado\GrueneApiClient\models\BatchUpdateOffboardingServiceUsers $batch_update_offboarding_service_users (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['batchUpdateOffboardingServiceUsers'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -228,7 +228,7 @@ class OffboardingApi
      *
      * Batch update offboarding users for the authenticated service.
      *
-     * @param  \Verdigado\Gruen eApiClient\models\BatchUpdateOffboardingServiceUsers $batch_update_offboarding_service_users (required)
+     * @param  \Verdigado\GrueneApiClient\models\BatchUpdateOffboardingServiceUsers $batch_update_offboarding_service_users (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['batchUpdateOffboardingServiceUsers'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -265,7 +265,7 @@ class OffboardingApi
     /**
      * Create request for operation 'batchUpdateOffboardingServiceUsers'
      *
-     * @param  \Verdigado\Gruen eApiClient\models\BatchUpdateOffboardingServiceUsers $batch_update_offboarding_service_users (required)
+     * @param  \Verdigado\GrueneApiClient\models\BatchUpdateOffboardingServiceUsers $batch_update_offboarding_service_users (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['batchUpdateOffboardingServiceUsers'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -366,9 +366,9 @@ class OffboardingApi
      * @param  string $after Cursor for the next result set. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findUsersToOffboard'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\Gruen eApiClient\models\FindOffboardingUsersResponse
+     * @return \Verdigado\GrueneApiClient\models\FindOffboardingUsersResponse
      */
     public function findUsersToOffboard($limit = 200, $after = null, string $contentType = self::contentTypes['findUsersToOffboard'][0])
     {
@@ -385,9 +385,9 @@ class OffboardingApi
      * @param  string $after Cursor for the next result set. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findUsersToOffboard'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\Gruen eApiClient\models\FindOffboardingUsersResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\FindOffboardingUsersResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function findUsersToOffboardWithHttpInfo($limit = 200, $after = null, string $contentType = self::contentTypes['findUsersToOffboard'][0])
     {
@@ -430,23 +430,23 @@ class OffboardingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\Gruen eApiClient\models\FindOffboardingUsersResponse' === '\SplFileObject') {
+                    if ('\Verdigado\GrueneApiClient\models\FindOffboardingUsersResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\Gruen eApiClient\models\FindOffboardingUsersResponse' !== 'string') {
+                        if ('\Verdigado\GrueneApiClient\models\FindOffboardingUsersResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\FindOffboardingUsersResponse', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\FindOffboardingUsersResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\Gruen eApiClient\models\FindOffboardingUsersResponse';
+            $returnType = '\Verdigado\GrueneApiClient\models\FindOffboardingUsersResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -467,7 +467,7 @@ class OffboardingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\Gruen eApiClient\models\FindOffboardingUsersResponse',
+                        '\Verdigado\GrueneApiClient\models\FindOffboardingUsersResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -513,7 +513,7 @@ class OffboardingApi
      */
     public function findUsersToOffboardAsyncWithHttpInfo($limit = 200, $after = null, string $contentType = self::contentTypes['findUsersToOffboard'][0])
     {
-        $returnType = '\Verdigado\Gruen eApiClient\models\FindOffboardingUsersResponse';
+        $returnType = '\Verdigado\GrueneApiClient\models\FindOffboardingUsersResponse';
         $request = $this->findUsersToOffboardRequest($limit, $after, $contentType);
 
         return $this->client

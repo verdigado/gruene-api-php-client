@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Verdigado\Gruen eApiClient
+ * @package  Verdigado\GrueneApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Verdigado\Gruen eApiClient\models;
+namespace Verdigado\GrueneApiClient\models;
 
 use \ArrayAccess;
-use \Verdigado\Gruen eApiClient\ObjectSerializer;
+use \Verdigado\GrueneApiClient\ObjectSerializer;
 
 /**
  * NbRegionalChapter Class Doc Comment
  *
  * @category Class
- * @package  Verdigado\Gruen eApiClient
+ * @package  Verdigado\GrueneApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class NbRegionalChapter implements ModelInterface, ArrayAccess, \JsonSerializabl
         'id' => 'string',
         'name' => 'string',
         'type' => 'string',
-        'organization' => '\Verdigado\Gruen eApiClient\models\NbOrganization',
+        'organization' => '\Verdigado\GrueneApiClient\models\NbOrganization',
         'zip_code' => 'string'
     ];
 
@@ -454,7 +454,7 @@ class NbRegionalChapter implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets organization
      *
-     * @return \Verdigado\Gruen eApiClient\models\NbOrganization
+     * @return \Verdigado\GrueneApiClient\models\NbOrganization
      */
     public function getOrganization()
     {
@@ -464,7 +464,7 @@ class NbRegionalChapter implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets organization
      *
-     * @param \Verdigado\Gruen eApiClient\models\NbOrganization $organization organization
+     * @param \Verdigado\GrueneApiClient\models\NbOrganization $organization organization
      *
      * @return self
      */

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Verdigado\Gruen eApiClient
+ * @package  Verdigado\GrueneApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Verdigado\Gruen eApiClient\models;
+namespace Verdigado\GrueneApiClient\models;
 
 use \ArrayAccess;
-use \Verdigado\Gruen eApiClient\ObjectSerializer;
+use \Verdigado\GrueneApiClient\ObjectSerializer;
 
 /**
  * FindExperienceAreasResponse Class Doc Comment
  *
  * @category Class
- * @package  Verdigado\Gruen eApiClient
+ * @package  Verdigado\GrueneApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class FindExperienceAreasResponse implements ModelInterface, ArrayAccess, \JsonS
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Verdigado\Gruen eApiClient\models\ExperienceArea[]'
+        'data' => '\Verdigado\GrueneApiClient\models\ExperienceArea[]'
     ];
 
     /**
@@ -295,7 +295,7 @@ class FindExperienceAreasResponse implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets data
      *
-     * @return \Verdigado\Gruen eApiClient\models\ExperienceArea[]
+     * @return \Verdigado\GrueneApiClient\models\ExperienceArea[]
      */
     public function getData()
     {
@@ -305,7 +305,7 @@ class FindExperienceAreasResponse implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets data
      *
-     * @param \Verdigado\Gruen eApiClient\models\ExperienceArea[] $data data
+     * @param \Verdigado\GrueneApiClient\models\ExperienceArea[] $data data
      *
      * @return self
      */

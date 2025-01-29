@@ -1,4 +1,4 @@
-# Verdigado\Gruen eApiClient\NewsApi
+# Verdigado\GrueneApiClient\NewsApi
 
 All URIs are relative to https://api.gruene.de, except if the operation defines another base path.
 
@@ -11,7 +11,7 @@ All URIs are relative to https://api.gruene.de, except if the operation defines 
 ## `findNews()`
 
 ```php
-findNews($limit, $offset, $division_key, $search, $category): \Verdigado\Gruen eApiClient\models\FindNewsResponse
+findNews($limit, $offset, $division_key, $search, $category): \Verdigado\GrueneApiClient\models\FindNewsResponse
 ```
 
 Find news
@@ -24,10 +24,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Verdigado\Gruen eApiClient\Api\NewsApi(
+$apiInstance = new Verdigado\GrueneApiClient\Api\NewsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -59,7 +59,7 @@ try {
 
 ### Return type
 
-[**\Verdigado\Gruen eApiClient\models\FindNewsResponse**](../Model/FindNewsResponse.md)
+[**\Verdigado\GrueneApiClient\models\FindNewsResponse**](../Model/FindNewsResponse.md)
 
 ### Authorization
 
@@ -77,7 +77,7 @@ try {
 ## `getNews()`
 
 ```php
-getNews($news_id): \Verdigado\Gruen eApiClient\models\News
+getNews($news_id): \Verdigado\GrueneApiClient\models\News
 ```
 
 Get a news post
@@ -90,10 +90,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Verdigado\Gruen eApiClient\Api\NewsApi(
+$apiInstance = new Verdigado\GrueneApiClient\Api\NewsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -117,7 +117,7 @@ try {
 
 ### Return type
 
-[**\Verdigado\Gruen eApiClient\models\News**](../Model/News.md)
+[**\Verdigado\GrueneApiClient\models\News**](../Model/News.md)
 
 ### Authorization
 

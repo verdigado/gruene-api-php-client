@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Verdigado\Gruen eApiClient
+ * @package  Verdigado\GrueneApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Verdigado\Gruen eApiClient\models;
+namespace Verdigado\GrueneApiClient\models;
 
 use \ArrayAccess;
-use \Verdigado\Gruen eApiClient\ObjectSerializer;
+use \Verdigado\GrueneApiClient\ObjectSerializer;
 
 /**
  * RoleCategory Class Doc Comment
  *
  * @category Class
- * @package  Verdigado\Gruen eApiClient
+ * @package  Verdigado\GrueneApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class RoleCategory implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'id' => 'string',
         'label' => 'string',
-        'aliases' => '\Verdigado\Gruen eApiClient\models\RoleAlias[]'
+        'aliases' => '\Verdigado\GrueneApiClient\models\RoleAlias[]'
     ];
 
     /**
@@ -369,7 +369,7 @@ class RoleCategory implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets aliases
      *
-     * @return \Verdigado\Gruen eApiClient\models\RoleAlias[]
+     * @return \Verdigado\GrueneApiClient\models\RoleAlias[]
      */
     public function getAliases()
     {
@@ -379,7 +379,7 @@ class RoleCategory implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets aliases
      *
-     * @param \Verdigado\Gruen eApiClient\models\RoleAlias[] $aliases Role category aliases
+     * @param \Verdigado\GrueneApiClient\models\RoleAlias[] $aliases Role category aliases
      *
      * @return self
      */

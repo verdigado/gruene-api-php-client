@@ -1,4 +1,4 @@
-# Verdigado\Gruen eApiClient\RolesApi
+# Verdigado\GrueneApiClient\RolesApi
 
 All URIs are relative to https://api.gruene.de, except if the operation defines another base path.
 
@@ -13,7 +13,7 @@ All URIs are relative to https://api.gruene.de, except if the operation defines 
 ## `findRoleCategories()`
 
 ```php
-findRoleCategories($limit, $offset, $search): \Verdigado\Gruen eApiClient\models\FindRoleCategoriesResponse
+findRoleCategories($limit, $offset, $search): \Verdigado\GrueneApiClient\models\FindRoleCategoriesResponse
 ```
 
 Find role categories
@@ -26,20 +26,20 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: api_key
-$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 // Configure HTTP basic authorization: basic
-$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()
+$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Verdigado\Gruen eApiClient\Api\RolesApi(
+$apiInstance = new Verdigado\GrueneApiClient\Api\RolesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -67,7 +67,7 @@ try {
 
 ### Return type
 
-[**\Verdigado\Gruen eApiClient\models\FindRoleCategoriesResponse**](../Model/FindRoleCategoriesResponse.md)
+[**\Verdigado\GrueneApiClient\models\FindRoleCategoriesResponse**](../Model/FindRoleCategoriesResponse.md)
 
 ### Authorization
 
@@ -85,7 +85,7 @@ try {
 ## `findRoleTags()`
 
 ```php
-findRoleTags($limit, $offset, $search): \Verdigado\Gruen eApiClient\models\FindRoleTagsResponse
+findRoleTags($limit, $offset, $search): \Verdigado\GrueneApiClient\models\FindRoleTagsResponse
 ```
 
 Find role tags
@@ -98,20 +98,20 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: api_key
-$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 // Configure HTTP basic authorization: basic
-$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()
+$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Verdigado\Gruen eApiClient\Api\RolesApi(
+$apiInstance = new Verdigado\GrueneApiClient\Api\RolesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -139,7 +139,7 @@ try {
 
 ### Return type
 
-[**\Verdigado\Gruen eApiClient\models\FindRoleTagsResponse**](../Model/FindRoleTagsResponse.md)
+[**\Verdigado\GrueneApiClient\models\FindRoleTagsResponse**](../Model/FindRoleTagsResponse.md)
 
 ### Authorization
 
@@ -157,7 +157,7 @@ try {
 ## `findRoles()`
 
 ```php
-findRoles($limit, $offset, $search, $category, $tag): \Verdigado\Gruen eApiClient\models\FindRolesResponse
+findRoles($limit, $offset, $search, $category, $tag): \Verdigado\GrueneApiClient\models\FindRolesResponse
 ```
 
 Find roles
@@ -170,20 +170,20 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: api_key
-$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 // Configure HTTP basic authorization: basic
-$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()
+$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Verdigado\Gruen eApiClient\Api\RolesApi(
+$apiInstance = new Verdigado\GrueneApiClient\Api\RolesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -215,7 +215,7 @@ try {
 
 ### Return type
 
-[**\Verdigado\Gruen eApiClient\models\FindRolesResponse**](../Model/FindRolesResponse.md)
+[**\Verdigado\GrueneApiClient\models\FindRolesResponse**](../Model/FindRolesResponse.md)
 
 ### Authorization
 
@@ -233,7 +233,7 @@ try {
 ## `getRole()`
 
 ```php
-getRole($role_id): \Verdigado\Gruen eApiClient\models\Role
+getRole($role_id): \Verdigado\GrueneApiClient\models\Role
 ```
 
 Get role by id
@@ -246,20 +246,20 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: api_key
-$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 // Configure HTTP basic authorization: basic
-$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()
+$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Verdigado\Gruen eApiClient\Api\RolesApi(
+$apiInstance = new Verdigado\GrueneApiClient\Api\RolesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -283,7 +283,7 @@ try {
 
 ### Return type
 
-[**\Verdigado\Gruen eApiClient\models\Role**](../Model/Role.md)
+[**\Verdigado\GrueneApiClient\models\Role**](../Model/Role.md)
 
 ### Authorization
 

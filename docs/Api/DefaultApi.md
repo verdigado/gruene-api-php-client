@@ -1,4 +1,4 @@
-# Verdigado\Gruen eApiClient\DefaultApi
+# Verdigado\GrueneApiClient\DefaultApi
 
 All URIs are relative to https://api.gruene.de, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to https://api.gruene.de, except if the operation defines 
 ## `clientInfoControllerGetClientInfo()`
 
 ```php
-clientInfoControllerGetClientInfo(): \Verdigado\Gruen eApiClient\models\ClientInfo
+clientInfoControllerGetClientInfo(): \Verdigado\GrueneApiClient\models\ClientInfo
 ```
 
 
@@ -23,7 +23,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new Verdigado\Gruen eApiClient\Api\DefaultApi(
+$apiInstance = new Verdigado\GrueneApiClient\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -43,7 +43,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Verdigado\Gruen eApiClient\models\ClientInfo**](../Model/ClientInfo.md)
+[**\Verdigado\GrueneApiClient\models\ClientInfo**](../Model/ClientInfo.md)
 
 ### Authorization
 

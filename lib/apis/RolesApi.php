@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Verdigado\Gruen eApiClient
+ * @package  Verdigado\GrueneApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Verdigado\Gruen eApiClient\apis;
+namespace Verdigado\GrueneApiClient\apis;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Verdigado\Gruen eApiClient\ApiException;
-use Verdigado\Gruen eApiClient\Configuration;
-use Verdigado\Gruen eApiClient\HeaderSelector;
-use Verdigado\Gruen eApiClient\ObjectSerializer;
+use Verdigado\GrueneApiClient\ApiException;
+use Verdigado\GrueneApiClient\Configuration;
+use Verdigado\GrueneApiClient\HeaderSelector;
+use Verdigado\GrueneApiClient\ObjectSerializer;
 
 /**
  * RolesApi Class Doc Comment
  *
  * @category Class
- * @package  Verdigado\Gruen eApiClient
+ * @package  Verdigado\GrueneApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -141,9 +141,9 @@ class RolesApi
      * @param  string $search Search name attribute for substring (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findRoleCategories'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\Gruen eApiClient\models\FindRoleCategoriesResponse
+     * @return \Verdigado\GrueneApiClient\models\FindRoleCategoriesResponse
      */
     public function findRoleCategories($limit = 20, $offset = null, $search = null, string $contentType = self::contentTypes['findRoleCategories'][0])
     {
@@ -161,9 +161,9 @@ class RolesApi
      * @param  string $search Search name attribute for substring (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findRoleCategories'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\Gruen eApiClient\models\FindRoleCategoriesResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\FindRoleCategoriesResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function findRoleCategoriesWithHttpInfo($limit = 20, $offset = null, $search = null, string $contentType = self::contentTypes['findRoleCategories'][0])
     {
@@ -206,23 +206,23 @@ class RolesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\Gruen eApiClient\models\FindRoleCategoriesResponse' === '\SplFileObject') {
+                    if ('\Verdigado\GrueneApiClient\models\FindRoleCategoriesResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\Gruen eApiClient\models\FindRoleCategoriesResponse' !== 'string') {
+                        if ('\Verdigado\GrueneApiClient\models\FindRoleCategoriesResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\FindRoleCategoriesResponse', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\FindRoleCategoriesResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\Gruen eApiClient\models\FindRoleCategoriesResponse';
+            $returnType = '\Verdigado\GrueneApiClient\models\FindRoleCategoriesResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -243,7 +243,7 @@ class RolesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\Gruen eApiClient\models\FindRoleCategoriesResponse',
+                        '\Verdigado\GrueneApiClient\models\FindRoleCategoriesResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -291,7 +291,7 @@ class RolesApi
      */
     public function findRoleCategoriesAsyncWithHttpInfo($limit = 20, $offset = null, $search = null, string $contentType = self::contentTypes['findRoleCategories'][0])
     {
-        $returnType = '\Verdigado\Gruen eApiClient\models\FindRoleCategoriesResponse';
+        $returnType = '\Verdigado\GrueneApiClient\models\FindRoleCategoriesResponse';
         $request = $this->findRoleCategoriesRequest($limit, $offset, $search, $contentType);
 
         return $this->client
@@ -468,9 +468,9 @@ class RolesApi
      * @param  string $search Search name attribute for substring (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findRoleTags'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\Gruen eApiClient\models\FindRoleTagsResponse
+     * @return \Verdigado\GrueneApiClient\models\FindRoleTagsResponse
      */
     public function findRoleTags($limit = 20, $offset = null, $search = null, string $contentType = self::contentTypes['findRoleTags'][0])
     {
@@ -488,9 +488,9 @@ class RolesApi
      * @param  string $search Search name attribute for substring (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findRoleTags'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\Gruen eApiClient\models\FindRoleTagsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\FindRoleTagsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function findRoleTagsWithHttpInfo($limit = 20, $offset = null, $search = null, string $contentType = self::contentTypes['findRoleTags'][0])
     {
@@ -533,23 +533,23 @@ class RolesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\Gruen eApiClient\models\FindRoleTagsResponse' === '\SplFileObject') {
+                    if ('\Verdigado\GrueneApiClient\models\FindRoleTagsResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\Gruen eApiClient\models\FindRoleTagsResponse' !== 'string') {
+                        if ('\Verdigado\GrueneApiClient\models\FindRoleTagsResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\FindRoleTagsResponse', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\FindRoleTagsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\Gruen eApiClient\models\FindRoleTagsResponse';
+            $returnType = '\Verdigado\GrueneApiClient\models\FindRoleTagsResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -570,7 +570,7 @@ class RolesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\Gruen eApiClient\models\FindRoleTagsResponse',
+                        '\Verdigado\GrueneApiClient\models\FindRoleTagsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -618,7 +618,7 @@ class RolesApi
      */
     public function findRoleTagsAsyncWithHttpInfo($limit = 20, $offset = null, $search = null, string $contentType = self::contentTypes['findRoleTags'][0])
     {
-        $returnType = '\Verdigado\Gruen eApiClient\models\FindRoleTagsResponse';
+        $returnType = '\Verdigado\GrueneApiClient\models\FindRoleTagsResponse';
         $request = $this->findRoleTagsRequest($limit, $offset, $search, $contentType);
 
         return $this->client
@@ -797,9 +797,9 @@ class RolesApi
      * @param  string[] $tag Filter by tag id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findRoles'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\Gruen eApiClient\models\FindRolesResponse
+     * @return \Verdigado\GrueneApiClient\models\FindRolesResponse
      */
     public function findRoles($limit = 20, $offset = null, $search = null, $category = null, $tag = null, string $contentType = self::contentTypes['findRoles'][0])
     {
@@ -819,9 +819,9 @@ class RolesApi
      * @param  string[] $tag Filter by tag id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findRoles'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\Gruen eApiClient\models\FindRolesResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\FindRolesResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function findRolesWithHttpInfo($limit = 20, $offset = null, $search = null, $category = null, $tag = null, string $contentType = self::contentTypes['findRoles'][0])
     {
@@ -864,23 +864,23 @@ class RolesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\Gruen eApiClient\models\FindRolesResponse' === '\SplFileObject') {
+                    if ('\Verdigado\GrueneApiClient\models\FindRolesResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\Gruen eApiClient\models\FindRolesResponse' !== 'string') {
+                        if ('\Verdigado\GrueneApiClient\models\FindRolesResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\FindRolesResponse', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\FindRolesResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\Gruen eApiClient\models\FindRolesResponse';
+            $returnType = '\Verdigado\GrueneApiClient\models\FindRolesResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -901,7 +901,7 @@ class RolesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\Gruen eApiClient\models\FindRolesResponse',
+                        '\Verdigado\GrueneApiClient\models\FindRolesResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -953,7 +953,7 @@ class RolesApi
      */
     public function findRolesAsyncWithHttpInfo($limit = 20, $offset = null, $search = null, $category = null, $tag = null, string $contentType = self::contentTypes['findRoles'][0])
     {
-        $returnType = '\Verdigado\Gruen eApiClient\models\FindRolesResponse';
+        $returnType = '\Verdigado\GrueneApiClient\models\FindRolesResponse';
         $request = $this->findRolesRequest($limit, $offset, $search, $category, $tag, $contentType);
 
         return $this->client
@@ -1150,9 +1150,9 @@ class RolesApi
      * @param  string $role_id role_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getRole'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\Gruen eApiClient\models\Role
+     * @return \Verdigado\GrueneApiClient\models\Role
      */
     public function getRole($role_id, string $contentType = self::contentTypes['getRole'][0])
     {
@@ -1168,9 +1168,9 @@ class RolesApi
      * @param  string $role_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getRole'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\Gruen eApiClient\models\Role, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\Role, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRoleWithHttpInfo($role_id, string $contentType = self::contentTypes['getRole'][0])
     {
@@ -1213,23 +1213,23 @@ class RolesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\Gruen eApiClient\models\Role' === '\SplFileObject') {
+                    if ('\Verdigado\GrueneApiClient\models\Role' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\Gruen eApiClient\models\Role' !== 'string') {
+                        if ('\Verdigado\GrueneApiClient\models\Role' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\Role', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\Role', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\Gruen eApiClient\models\Role';
+            $returnType = '\Verdigado\GrueneApiClient\models\Role';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1250,7 +1250,7 @@ class RolesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\Gruen eApiClient\models\Role',
+                        '\Verdigado\GrueneApiClient\models\Role',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1294,7 +1294,7 @@ class RolesApi
      */
     public function getRoleAsyncWithHttpInfo($role_id, string $contentType = self::contentTypes['getRole'][0])
     {
-        $returnType = '\Verdigado\Gruen eApiClient\models\Role';
+        $returnType = '\Verdigado\GrueneApiClient\models\Role';
         $request = $this->getRoleRequest($role_id, $contentType);
 
         return $this->client

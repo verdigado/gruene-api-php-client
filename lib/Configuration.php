@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Verdigado\Gruen eApiClient
+ * @package  Verdigado\GrueneApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,14 +25,14 @@
  * Do not edit the class manually.
  */
 
-namespace Verdigado\Gruen eApiClient;
+namespace Verdigado\GrueneApiClient;
 
 /**
  * Configuration Class Doc Comment
  * PHP version 7.4
  *
  * @category Class
- * @package  Verdigado\Gruen eApiClient
+ * @package  Verdigado\GrueneApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -100,7 +100,7 @@ class Configuration
      *
      * @var string
      */
-    protected $userAgent = 'OpenAPI-Generator/0.9.0/PHP';
+    protected $userAgent = 'OpenAPI-Generator/0.9.1/PHP';
 
     /**
      * Debug switch (default set to false)
@@ -429,11 +429,11 @@ class Configuration
      */
     public static function toDebugReport()
     {
-        $report  = 'PHP SDK (Verdigado\Gruen eApiClient) Debug Report:' . PHP_EOL;
+        $report  = 'PHP SDK (Verdigado\GrueneApiClient) Debug Report:' . PHP_EOL;
         $report .= '    OS: ' . php_uname() . PHP_EOL;
         $report .= '    PHP Version: ' . PHP_VERSION . PHP_EOL;
         $report .= '    The version of the OpenAPI document: 0.1.0' . PHP_EOL;
-        $report .= '    SDK Package Version: 0.9.0' . PHP_EOL;
+        $report .= '    SDK Package Version: 0.9.1' . PHP_EOL;
         $report .= '    Temp Folder Path: ' . self::getDefaultConfiguration()->getTempFolderPath() . PHP_EOL;
 
         return $report;

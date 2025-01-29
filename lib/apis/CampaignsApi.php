@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Verdigado\Gruen eApiClient
+ * @package  Verdigado\GrueneApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Verdigado\Gruen eApiClient\apis;
+namespace Verdigado\GrueneApiClient\apis;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Verdigado\Gruen eApiClient\ApiException;
-use Verdigado\Gruen eApiClient\Configuration;
-use Verdigado\Gruen eApiClient\HeaderSelector;
-use Verdigado\Gruen eApiClient\ObjectSerializer;
+use Verdigado\GrueneApiClient\ApiException;
+use Verdigado\GrueneApiClient\Configuration;
+use Verdigado\GrueneApiClient\HeaderSelector;
+use Verdigado\GrueneApiClient\ObjectSerializer;
 
 /**
  * CampaignsApi Class Doc Comment
  *
  * @category Class
- * @package  Verdigado\Gruen eApiClient
+ * @package  Verdigado\GrueneApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -200,9 +200,9 @@ class CampaignsApi
      * @param  \SplFileObject $image image (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addPoiPhoto'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\Gruen eApiClient\models\Poi
+     * @return \Verdigado\GrueneApiClient\models\Poi
      */
     public function addPoiPhoto($poi_id, $image, string $contentType = self::contentTypes['addPoiPhoto'][0])
     {
@@ -219,9 +219,9 @@ class CampaignsApi
      * @param  \SplFileObject $image (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addPoiPhoto'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\Gruen eApiClient\models\Poi, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\Poi, HTTP status code, HTTP response headers (array of strings)
      */
     public function addPoiPhotoWithHttpInfo($poi_id, $image, string $contentType = self::contentTypes['addPoiPhoto'][0])
     {
@@ -264,23 +264,23 @@ class CampaignsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Verdigado\Gruen eApiClient\models\Poi' === '\SplFileObject') {
+                    if ('\Verdigado\GrueneApiClient\models\Poi' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\Gruen eApiClient\models\Poi' !== 'string') {
+                        if ('\Verdigado\GrueneApiClient\models\Poi' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\Poi', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\Poi', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\Gruen eApiClient\models\Poi';
+            $returnType = '\Verdigado\GrueneApiClient\models\Poi';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -301,7 +301,7 @@ class CampaignsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\Gruen eApiClient\models\Poi',
+                        '\Verdigado\GrueneApiClient\models\Poi',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -347,7 +347,7 @@ class CampaignsApi
      */
     public function addPoiPhotoAsyncWithHttpInfo($poi_id, $image, string $contentType = self::contentTypes['addPoiPhoto'][0])
     {
-        $returnType = '\Verdigado\Gruen eApiClient\models\Poi';
+        $returnType = '\Verdigado\GrueneApiClient\models\Poi';
         $request = $this->addPoiPhotoRequest($poi_id, $image, $contentType);
 
         return $this->client
@@ -507,12 +507,12 @@ class CampaignsApi
      *
      * Create a new Area
      *
-     * @param  \Verdigado\Gruen eApiClient\models\CreateArea $create_area create_area (required)
+     * @param  \Verdigado\GrueneApiClient\models\CreateArea $create_area create_area (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createArea'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\Gruen eApiClient\models\Area
+     * @return \Verdigado\GrueneApiClient\models\Area
      */
     public function createArea($create_area, string $contentType = self::contentTypes['createArea'][0])
     {
@@ -525,12 +525,12 @@ class CampaignsApi
      *
      * Create a new Area
      *
-     * @param  \Verdigado\Gruen eApiClient\models\CreateArea $create_area (required)
+     * @param  \Verdigado\GrueneApiClient\models\CreateArea $create_area (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createArea'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\Gruen eApiClient\models\Area, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\Area, HTTP status code, HTTP response headers (array of strings)
      */
     public function createAreaWithHttpInfo($create_area, string $contentType = self::contentTypes['createArea'][0])
     {
@@ -573,23 +573,23 @@ class CampaignsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Verdigado\Gruen eApiClient\models\Area' === '\SplFileObject') {
+                    if ('\Verdigado\GrueneApiClient\models\Area' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\Gruen eApiClient\models\Area' !== 'string') {
+                        if ('\Verdigado\GrueneApiClient\models\Area' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\Area', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\Area', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\Gruen eApiClient\models\Area';
+            $returnType = '\Verdigado\GrueneApiClient\models\Area';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -610,7 +610,7 @@ class CampaignsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\Gruen eApiClient\models\Area',
+                        '\Verdigado\GrueneApiClient\models\Area',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -625,7 +625,7 @@ class CampaignsApi
      *
      * Create a new Area
      *
-     * @param  \Verdigado\Gruen eApiClient\models\CreateArea $create_area (required)
+     * @param  \Verdigado\GrueneApiClient\models\CreateArea $create_area (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createArea'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -646,7 +646,7 @@ class CampaignsApi
      *
      * Create a new Area
      *
-     * @param  \Verdigado\Gruen eApiClient\models\CreateArea $create_area (required)
+     * @param  \Verdigado\GrueneApiClient\models\CreateArea $create_area (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createArea'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -654,7 +654,7 @@ class CampaignsApi
      */
     public function createAreaAsyncWithHttpInfo($create_area, string $contentType = self::contentTypes['createArea'][0])
     {
-        $returnType = '\Verdigado\Gruen eApiClient\models\Area';
+        $returnType = '\Verdigado\GrueneApiClient\models\Area';
         $request = $this->createAreaRequest($create_area, $contentType);
 
         return $this->client
@@ -696,7 +696,7 @@ class CampaignsApi
     /**
      * Create request for operation 'createArea'
      *
-     * @param  \Verdigado\Gruen eApiClient\models\CreateArea $create_area (required)
+     * @param  \Verdigado\GrueneApiClient\models\CreateArea $create_area (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createArea'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -793,12 +793,12 @@ class CampaignsApi
      *
      * Create a new ExperienceArea
      *
-     * @param  \Verdigado\Gruen eApiClient\models\CreateExperienceArea $create_experience_area create_experience_area (required)
+     * @param  \Verdigado\GrueneApiClient\models\CreateExperienceArea $create_experience_area create_experience_area (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createExperienceArea'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\Gruen eApiClient\models\ExperienceArea
+     * @return \Verdigado\GrueneApiClient\models\ExperienceArea
      */
     public function createExperienceArea($create_experience_area, string $contentType = self::contentTypes['createExperienceArea'][0])
     {
@@ -811,12 +811,12 @@ class CampaignsApi
      *
      * Create a new ExperienceArea
      *
-     * @param  \Verdigado\Gruen eApiClient\models\CreateExperienceArea $create_experience_area (required)
+     * @param  \Verdigado\GrueneApiClient\models\CreateExperienceArea $create_experience_area (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createExperienceArea'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\Gruen eApiClient\models\ExperienceArea, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\ExperienceArea, HTTP status code, HTTP response headers (array of strings)
      */
     public function createExperienceAreaWithHttpInfo($create_experience_area, string $contentType = self::contentTypes['createExperienceArea'][0])
     {
@@ -859,23 +859,23 @@ class CampaignsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Verdigado\Gruen eApiClient\models\ExperienceArea' === '\SplFileObject') {
+                    if ('\Verdigado\GrueneApiClient\models\ExperienceArea' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\Gruen eApiClient\models\ExperienceArea' !== 'string') {
+                        if ('\Verdigado\GrueneApiClient\models\ExperienceArea' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\ExperienceArea', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\ExperienceArea', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\Gruen eApiClient\models\ExperienceArea';
+            $returnType = '\Verdigado\GrueneApiClient\models\ExperienceArea';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -896,7 +896,7 @@ class CampaignsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\Gruen eApiClient\models\ExperienceArea',
+                        '\Verdigado\GrueneApiClient\models\ExperienceArea',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -911,7 +911,7 @@ class CampaignsApi
      *
      * Create a new ExperienceArea
      *
-     * @param  \Verdigado\Gruen eApiClient\models\CreateExperienceArea $create_experience_area (required)
+     * @param  \Verdigado\GrueneApiClient\models\CreateExperienceArea $create_experience_area (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createExperienceArea'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -932,7 +932,7 @@ class CampaignsApi
      *
      * Create a new ExperienceArea
      *
-     * @param  \Verdigado\Gruen eApiClient\models\CreateExperienceArea $create_experience_area (required)
+     * @param  \Verdigado\GrueneApiClient\models\CreateExperienceArea $create_experience_area (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createExperienceArea'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -940,7 +940,7 @@ class CampaignsApi
      */
     public function createExperienceAreaAsyncWithHttpInfo($create_experience_area, string $contentType = self::contentTypes['createExperienceArea'][0])
     {
-        $returnType = '\Verdigado\Gruen eApiClient\models\ExperienceArea';
+        $returnType = '\Verdigado\GrueneApiClient\models\ExperienceArea';
         $request = $this->createExperienceAreaRequest($create_experience_area, $contentType);
 
         return $this->client
@@ -982,7 +982,7 @@ class CampaignsApi
     /**
      * Create request for operation 'createExperienceArea'
      *
-     * @param  \Verdigado\Gruen eApiClient\models\CreateExperienceArea $create_experience_area (required)
+     * @param  \Verdigado\GrueneApiClient\models\CreateExperienceArea $create_experience_area (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createExperienceArea'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1079,12 +1079,12 @@ class CampaignsApi
      *
      * Create a new FocusArea
      *
-     * @param  \Verdigado\Gruen eApiClient\models\CreateFocusArea $create_focus_area create_focus_area (required)
+     * @param  \Verdigado\GrueneApiClient\models\CreateFocusArea $create_focus_area create_focus_area (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFocusArea'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\Gruen eApiClient\models\FocusArea
+     * @return \Verdigado\GrueneApiClient\models\FocusArea
      */
     public function createFocusArea($create_focus_area, string $contentType = self::contentTypes['createFocusArea'][0])
     {
@@ -1097,12 +1097,12 @@ class CampaignsApi
      *
      * Create a new FocusArea
      *
-     * @param  \Verdigado\Gruen eApiClient\models\CreateFocusArea $create_focus_area (required)
+     * @param  \Verdigado\GrueneApiClient\models\CreateFocusArea $create_focus_area (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFocusArea'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\Gruen eApiClient\models\FocusArea, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\FocusArea, HTTP status code, HTTP response headers (array of strings)
      */
     public function createFocusAreaWithHttpInfo($create_focus_area, string $contentType = self::contentTypes['createFocusArea'][0])
     {
@@ -1145,23 +1145,23 @@ class CampaignsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Verdigado\Gruen eApiClient\models\FocusArea' === '\SplFileObject') {
+                    if ('\Verdigado\GrueneApiClient\models\FocusArea' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\Gruen eApiClient\models\FocusArea' !== 'string') {
+                        if ('\Verdigado\GrueneApiClient\models\FocusArea' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\FocusArea', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\FocusArea', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\Gruen eApiClient\models\FocusArea';
+            $returnType = '\Verdigado\GrueneApiClient\models\FocusArea';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1182,7 +1182,7 @@ class CampaignsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\Gruen eApiClient\models\FocusArea',
+                        '\Verdigado\GrueneApiClient\models\FocusArea',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1197,7 +1197,7 @@ class CampaignsApi
      *
      * Create a new FocusArea
      *
-     * @param  \Verdigado\Gruen eApiClient\models\CreateFocusArea $create_focus_area (required)
+     * @param  \Verdigado\GrueneApiClient\models\CreateFocusArea $create_focus_area (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFocusArea'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1218,7 +1218,7 @@ class CampaignsApi
      *
      * Create a new FocusArea
      *
-     * @param  \Verdigado\Gruen eApiClient\models\CreateFocusArea $create_focus_area (required)
+     * @param  \Verdigado\GrueneApiClient\models\CreateFocusArea $create_focus_area (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFocusArea'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1226,7 +1226,7 @@ class CampaignsApi
      */
     public function createFocusAreaAsyncWithHttpInfo($create_focus_area, string $contentType = self::contentTypes['createFocusArea'][0])
     {
-        $returnType = '\Verdigado\Gruen eApiClient\models\FocusArea';
+        $returnType = '\Verdigado\GrueneApiClient\models\FocusArea';
         $request = $this->createFocusAreaRequest($create_focus_area, $contentType);
 
         return $this->client
@@ -1268,7 +1268,7 @@ class CampaignsApi
     /**
      * Create request for operation 'createFocusArea'
      *
-     * @param  \Verdigado\Gruen eApiClient\models\CreateFocusArea $create_focus_area (required)
+     * @param  \Verdigado\GrueneApiClient\models\CreateFocusArea $create_focus_area (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createFocusArea'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1365,12 +1365,12 @@ class CampaignsApi
      *
      * Create a new POI
      *
-     * @param  \Verdigado\Gruen eApiClient\models\CreatePoi $create_poi create_poi (required)
+     * @param  \Verdigado\GrueneApiClient\models\CreatePoi $create_poi create_poi (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPoi'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\Gruen eApiClient\models\Poi
+     * @return \Verdigado\GrueneApiClient\models\Poi
      */
     public function createPoi($create_poi, string $contentType = self::contentTypes['createPoi'][0])
     {
@@ -1383,12 +1383,12 @@ class CampaignsApi
      *
      * Create a new POI
      *
-     * @param  \Verdigado\Gruen eApiClient\models\CreatePoi $create_poi (required)
+     * @param  \Verdigado\GrueneApiClient\models\CreatePoi $create_poi (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPoi'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\Gruen eApiClient\models\Poi, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\Poi, HTTP status code, HTTP response headers (array of strings)
      */
     public function createPoiWithHttpInfo($create_poi, string $contentType = self::contentTypes['createPoi'][0])
     {
@@ -1431,23 +1431,23 @@ class CampaignsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Verdigado\Gruen eApiClient\models\Poi' === '\SplFileObject') {
+                    if ('\Verdigado\GrueneApiClient\models\Poi' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\Gruen eApiClient\models\Poi' !== 'string') {
+                        if ('\Verdigado\GrueneApiClient\models\Poi' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\Poi', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\Poi', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\Gruen eApiClient\models\Poi';
+            $returnType = '\Verdigado\GrueneApiClient\models\Poi';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1468,7 +1468,7 @@ class CampaignsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\Gruen eApiClient\models\Poi',
+                        '\Verdigado\GrueneApiClient\models\Poi',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1483,7 +1483,7 @@ class CampaignsApi
      *
      * Create a new POI
      *
-     * @param  \Verdigado\Gruen eApiClient\models\CreatePoi $create_poi (required)
+     * @param  \Verdigado\GrueneApiClient\models\CreatePoi $create_poi (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPoi'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1504,7 +1504,7 @@ class CampaignsApi
      *
      * Create a new POI
      *
-     * @param  \Verdigado\Gruen eApiClient\models\CreatePoi $create_poi (required)
+     * @param  \Verdigado\GrueneApiClient\models\CreatePoi $create_poi (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPoi'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1512,7 +1512,7 @@ class CampaignsApi
      */
     public function createPoiAsyncWithHttpInfo($create_poi, string $contentType = self::contentTypes['createPoi'][0])
     {
-        $returnType = '\Verdigado\Gruen eApiClient\models\Poi';
+        $returnType = '\Verdigado\GrueneApiClient\models\Poi';
         $request = $this->createPoiRequest($create_poi, $contentType);
 
         return $this->client
@@ -1554,7 +1554,7 @@ class CampaignsApi
     /**
      * Create request for operation 'createPoi'
      *
-     * @param  \Verdigado\Gruen eApiClient\models\CreatePoi $create_poi (required)
+     * @param  \Verdigado\GrueneApiClient\models\CreatePoi $create_poi (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPoi'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1654,9 +1654,9 @@ class CampaignsApi
      * @param  string $area_id area_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteArea'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\Gruen eApiClient\models\Area
+     * @return \Verdigado\GrueneApiClient\models\Area
      */
     public function deleteArea($area_id, string $contentType = self::contentTypes['deleteArea'][0])
     {
@@ -1672,9 +1672,9 @@ class CampaignsApi
      * @param  string $area_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteArea'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\Gruen eApiClient\models\Area, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\Area, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteAreaWithHttpInfo($area_id, string $contentType = self::contentTypes['deleteArea'][0])
     {
@@ -1717,23 +1717,23 @@ class CampaignsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\Gruen eApiClient\models\Area' === '\SplFileObject') {
+                    if ('\Verdigado\GrueneApiClient\models\Area' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\Gruen eApiClient\models\Area' !== 'string') {
+                        if ('\Verdigado\GrueneApiClient\models\Area' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\Area', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\Area', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\Gruen eApiClient\models\Area';
+            $returnType = '\Verdigado\GrueneApiClient\models\Area';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1754,7 +1754,7 @@ class CampaignsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\Gruen eApiClient\models\Area',
+                        '\Verdigado\GrueneApiClient\models\Area',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1798,7 +1798,7 @@ class CampaignsApi
      */
     public function deleteAreaAsyncWithHttpInfo($area_id, string $contentType = self::contentTypes['deleteArea'][0])
     {
-        $returnType = '\Verdigado\Gruen eApiClient\models\Area';
+        $returnType = '\Verdigado\GrueneApiClient\models\Area';
         $request = $this->deleteAreaRequest($area_id, $contentType);
 
         return $this->client
@@ -1941,9 +1941,9 @@ class CampaignsApi
      * @param  string $experience_area_id experience_area_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteExperienceArea'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\Gruen eApiClient\models\ExperienceArea
+     * @return \Verdigado\GrueneApiClient\models\ExperienceArea
      */
     public function deleteExperienceArea($experience_area_id, string $contentType = self::contentTypes['deleteExperienceArea'][0])
     {
@@ -1959,9 +1959,9 @@ class CampaignsApi
      * @param  string $experience_area_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteExperienceArea'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\Gruen eApiClient\models\ExperienceArea, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\ExperienceArea, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteExperienceAreaWithHttpInfo($experience_area_id, string $contentType = self::contentTypes['deleteExperienceArea'][0])
     {
@@ -2004,23 +2004,23 @@ class CampaignsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\Gruen eApiClient\models\ExperienceArea' === '\SplFileObject') {
+                    if ('\Verdigado\GrueneApiClient\models\ExperienceArea' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\Gruen eApiClient\models\ExperienceArea' !== 'string') {
+                        if ('\Verdigado\GrueneApiClient\models\ExperienceArea' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\ExperienceArea', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\ExperienceArea', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\Gruen eApiClient\models\ExperienceArea';
+            $returnType = '\Verdigado\GrueneApiClient\models\ExperienceArea';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2041,7 +2041,7 @@ class CampaignsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\Gruen eApiClient\models\ExperienceArea',
+                        '\Verdigado\GrueneApiClient\models\ExperienceArea',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2085,7 +2085,7 @@ class CampaignsApi
      */
     public function deleteExperienceAreaAsyncWithHttpInfo($experience_area_id, string $contentType = self::contentTypes['deleteExperienceArea'][0])
     {
-        $returnType = '\Verdigado\Gruen eApiClient\models\ExperienceArea';
+        $returnType = '\Verdigado\GrueneApiClient\models\ExperienceArea';
         $request = $this->deleteExperienceAreaRequest($experience_area_id, $contentType);
 
         return $this->client
@@ -2228,9 +2228,9 @@ class CampaignsApi
      * @param  string $focus_area_id focus_area_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteFocusArea'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\Gruen eApiClient\models\FocusArea
+     * @return \Verdigado\GrueneApiClient\models\FocusArea
      */
     public function deleteFocusArea($focus_area_id, string $contentType = self::contentTypes['deleteFocusArea'][0])
     {
@@ -2246,9 +2246,9 @@ class CampaignsApi
      * @param  string $focus_area_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteFocusArea'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\Gruen eApiClient\models\FocusArea, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\FocusArea, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteFocusAreaWithHttpInfo($focus_area_id, string $contentType = self::contentTypes['deleteFocusArea'][0])
     {
@@ -2291,23 +2291,23 @@ class CampaignsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\Gruen eApiClient\models\FocusArea' === '\SplFileObject') {
+                    if ('\Verdigado\GrueneApiClient\models\FocusArea' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\Gruen eApiClient\models\FocusArea' !== 'string') {
+                        if ('\Verdigado\GrueneApiClient\models\FocusArea' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\FocusArea', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\FocusArea', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\Gruen eApiClient\models\FocusArea';
+            $returnType = '\Verdigado\GrueneApiClient\models\FocusArea';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2328,7 +2328,7 @@ class CampaignsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\Gruen eApiClient\models\FocusArea',
+                        '\Verdigado\GrueneApiClient\models\FocusArea',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2372,7 +2372,7 @@ class CampaignsApi
      */
     public function deleteFocusAreaAsyncWithHttpInfo($focus_area_id, string $contentType = self::contentTypes['deleteFocusArea'][0])
     {
-        $returnType = '\Verdigado\Gruen eApiClient\models\FocusArea';
+        $returnType = '\Verdigado\GrueneApiClient\models\FocusArea';
         $request = $this->deleteFocusAreaRequest($focus_area_id, $contentType);
 
         return $this->client
@@ -2515,9 +2515,9 @@ class CampaignsApi
      * @param  string $poi_id poi_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletePoi'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\Gruen eApiClient\models\Poi
+     * @return \Verdigado\GrueneApiClient\models\Poi
      */
     public function deletePoi($poi_id, string $contentType = self::contentTypes['deletePoi'][0])
     {
@@ -2533,9 +2533,9 @@ class CampaignsApi
      * @param  string $poi_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletePoi'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\Gruen eApiClient\models\Poi, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\Poi, HTTP status code, HTTP response headers (array of strings)
      */
     public function deletePoiWithHttpInfo($poi_id, string $contentType = self::contentTypes['deletePoi'][0])
     {
@@ -2578,23 +2578,23 @@ class CampaignsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\Gruen eApiClient\models\Poi' === '\SplFileObject') {
+                    if ('\Verdigado\GrueneApiClient\models\Poi' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\Gruen eApiClient\models\Poi' !== 'string') {
+                        if ('\Verdigado\GrueneApiClient\models\Poi' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\Poi', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\Poi', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\Gruen eApiClient\models\Poi';
+            $returnType = '\Verdigado\GrueneApiClient\models\Poi';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2615,7 +2615,7 @@ class CampaignsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\Gruen eApiClient\models\Poi',
+                        '\Verdigado\GrueneApiClient\models\Poi',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2659,7 +2659,7 @@ class CampaignsApi
      */
     public function deletePoiAsyncWithHttpInfo($poi_id, string $contentType = self::contentTypes['deletePoi'][0])
     {
-        $returnType = '\Verdigado\Gruen eApiClient\models\Poi';
+        $returnType = '\Verdigado\GrueneApiClient\models\Poi';
         $request = $this->deletePoiRequest($poi_id, $contentType);
 
         return $this->client
@@ -2803,9 +2803,9 @@ class CampaignsApi
      * @param  string $photo_id photo_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletePoiPhoto'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\Gruen eApiClient\models\Poi
+     * @return \Verdigado\GrueneApiClient\models\Poi
      */
     public function deletePoiPhoto($poi_id, $photo_id, string $contentType = self::contentTypes['deletePoiPhoto'][0])
     {
@@ -2822,9 +2822,9 @@ class CampaignsApi
      * @param  string $photo_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletePoiPhoto'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\Gruen eApiClient\models\Poi, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\Poi, HTTP status code, HTTP response headers (array of strings)
      */
     public function deletePoiPhotoWithHttpInfo($poi_id, $photo_id, string $contentType = self::contentTypes['deletePoiPhoto'][0])
     {
@@ -2867,23 +2867,23 @@ class CampaignsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\Gruen eApiClient\models\Poi' === '\SplFileObject') {
+                    if ('\Verdigado\GrueneApiClient\models\Poi' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\Gruen eApiClient\models\Poi' !== 'string') {
+                        if ('\Verdigado\GrueneApiClient\models\Poi' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\Poi', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\Poi', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\Gruen eApiClient\models\Poi';
+            $returnType = '\Verdigado\GrueneApiClient\models\Poi';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2904,7 +2904,7 @@ class CampaignsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\Gruen eApiClient\models\Poi',
+                        '\Verdigado\GrueneApiClient\models\Poi',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2950,7 +2950,7 @@ class CampaignsApi
      */
     public function deletePoiPhotoAsyncWithHttpInfo($poi_id, $photo_id, string $contentType = self::contentTypes['deletePoiPhoto'][0])
     {
-        $returnType = '\Verdigado\Gruen eApiClient\models\Poi';
+        $returnType = '\Verdigado\GrueneApiClient\models\Poi';
         $request = $this->deletePoiPhotoRequest($poi_id, $photo_id, $contentType);
 
         return $this->client
@@ -3109,9 +3109,9 @@ class CampaignsApi
      * @param  string $bbox bbox (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findAreas'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\Gruen eApiClient\models\FindAreasResponse
+     * @return \Verdigado\GrueneApiClient\models\FindAreasResponse
      */
     public function findAreas($bbox = null, string $contentType = self::contentTypes['findAreas'][0])
     {
@@ -3127,9 +3127,9 @@ class CampaignsApi
      * @param  string $bbox (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findAreas'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\Gruen eApiClient\models\FindAreasResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\FindAreasResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function findAreasWithHttpInfo($bbox = null, string $contentType = self::contentTypes['findAreas'][0])
     {
@@ -3172,23 +3172,23 @@ class CampaignsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\Gruen eApiClient\models\FindAreasResponse' === '\SplFileObject') {
+                    if ('\Verdigado\GrueneApiClient\models\FindAreasResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\Gruen eApiClient\models\FindAreasResponse' !== 'string') {
+                        if ('\Verdigado\GrueneApiClient\models\FindAreasResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\FindAreasResponse', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\FindAreasResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\Gruen eApiClient\models\FindAreasResponse';
+            $returnType = '\Verdigado\GrueneApiClient\models\FindAreasResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3209,7 +3209,7 @@ class CampaignsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\Gruen eApiClient\models\FindAreasResponse',
+                        '\Verdigado\GrueneApiClient\models\FindAreasResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3253,7 +3253,7 @@ class CampaignsApi
      */
     public function findAreasAsyncWithHttpInfo($bbox = null, string $contentType = self::contentTypes['findAreas'][0])
     {
-        $returnType = '\Verdigado\Gruen eApiClient\models\FindAreasResponse';
+        $returnType = '\Verdigado\GrueneApiClient\models\FindAreasResponse';
         $request = $this->findAreasRequest($bbox, $contentType);
 
         return $this->client
@@ -3391,9 +3391,9 @@ class CampaignsApi
      * @param  string $bbox bbox (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findExperienceAreas'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\Gruen eApiClient\models\FindExperienceAreasResponse
+     * @return \Verdigado\GrueneApiClient\models\FindExperienceAreasResponse
      */
     public function findExperienceAreas($bbox = null, string $contentType = self::contentTypes['findExperienceAreas'][0])
     {
@@ -3409,9 +3409,9 @@ class CampaignsApi
      * @param  string $bbox (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findExperienceAreas'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\Gruen eApiClient\models\FindExperienceAreasResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\FindExperienceAreasResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function findExperienceAreasWithHttpInfo($bbox = null, string $contentType = self::contentTypes['findExperienceAreas'][0])
     {
@@ -3454,23 +3454,23 @@ class CampaignsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\Gruen eApiClient\models\FindExperienceAreasResponse' === '\SplFileObject') {
+                    if ('\Verdigado\GrueneApiClient\models\FindExperienceAreasResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\Gruen eApiClient\models\FindExperienceAreasResponse' !== 'string') {
+                        if ('\Verdigado\GrueneApiClient\models\FindExperienceAreasResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\FindExperienceAreasResponse', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\FindExperienceAreasResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\Gruen eApiClient\models\FindExperienceAreasResponse';
+            $returnType = '\Verdigado\GrueneApiClient\models\FindExperienceAreasResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3491,7 +3491,7 @@ class CampaignsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\Gruen eApiClient\models\FindExperienceAreasResponse',
+                        '\Verdigado\GrueneApiClient\models\FindExperienceAreasResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3535,7 +3535,7 @@ class CampaignsApi
      */
     public function findExperienceAreasAsyncWithHttpInfo($bbox = null, string $contentType = self::contentTypes['findExperienceAreas'][0])
     {
-        $returnType = '\Verdigado\Gruen eApiClient\models\FindExperienceAreasResponse';
+        $returnType = '\Verdigado\GrueneApiClient\models\FindExperienceAreasResponse';
         $request = $this->findExperienceAreasRequest($bbox, $contentType);
 
         return $this->client
@@ -3673,9 +3673,9 @@ class CampaignsApi
      * @param  string $bbox bbox (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findFocusAreas'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\Gruen eApiClient\models\FindFocusAreasResponse
+     * @return \Verdigado\GrueneApiClient\models\FindFocusAreasResponse
      */
     public function findFocusAreas($bbox = null, string $contentType = self::contentTypes['findFocusAreas'][0])
     {
@@ -3691,9 +3691,9 @@ class CampaignsApi
      * @param  string $bbox (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findFocusAreas'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\Gruen eApiClient\models\FindFocusAreasResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\FindFocusAreasResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function findFocusAreasWithHttpInfo($bbox = null, string $contentType = self::contentTypes['findFocusAreas'][0])
     {
@@ -3736,23 +3736,23 @@ class CampaignsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\Gruen eApiClient\models\FindFocusAreasResponse' === '\SplFileObject') {
+                    if ('\Verdigado\GrueneApiClient\models\FindFocusAreasResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\Gruen eApiClient\models\FindFocusAreasResponse' !== 'string') {
+                        if ('\Verdigado\GrueneApiClient\models\FindFocusAreasResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\FindFocusAreasResponse', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\FindFocusAreasResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\Gruen eApiClient\models\FindFocusAreasResponse';
+            $returnType = '\Verdigado\GrueneApiClient\models\FindFocusAreasResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3773,7 +3773,7 @@ class CampaignsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\Gruen eApiClient\models\FindFocusAreasResponse',
+                        '\Verdigado\GrueneApiClient\models\FindFocusAreasResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3817,7 +3817,7 @@ class CampaignsApi
      */
     public function findFocusAreasAsyncWithHttpInfo($bbox = null, string $contentType = self::contentTypes['findFocusAreas'][0])
     {
-        $returnType = '\Verdigado\Gruen eApiClient\models\FindFocusAreasResponse';
+        $returnType = '\Verdigado\GrueneApiClient\models\FindFocusAreasResponse';
         $request = $this->findFocusAreasRequest($bbox, $contentType);
 
         return $this->client
@@ -3955,9 +3955,9 @@ class CampaignsApi
      * @param  string $bbox bbox (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findOwnAreas'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\Gruen eApiClient\models\FindAreasResponse
+     * @return \Verdigado\GrueneApiClient\models\FindAreasResponse
      */
     public function findOwnAreas($bbox = null, string $contentType = self::contentTypes['findOwnAreas'][0])
     {
@@ -3973,9 +3973,9 @@ class CampaignsApi
      * @param  string $bbox (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findOwnAreas'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\Gruen eApiClient\models\FindAreasResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\FindAreasResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function findOwnAreasWithHttpInfo($bbox = null, string $contentType = self::contentTypes['findOwnAreas'][0])
     {
@@ -4018,23 +4018,23 @@ class CampaignsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\Gruen eApiClient\models\FindAreasResponse' === '\SplFileObject') {
+                    if ('\Verdigado\GrueneApiClient\models\FindAreasResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\Gruen eApiClient\models\FindAreasResponse' !== 'string') {
+                        if ('\Verdigado\GrueneApiClient\models\FindAreasResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\FindAreasResponse', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\FindAreasResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\Gruen eApiClient\models\FindAreasResponse';
+            $returnType = '\Verdigado\GrueneApiClient\models\FindAreasResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4055,7 +4055,7 @@ class CampaignsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\Gruen eApiClient\models\FindAreasResponse',
+                        '\Verdigado\GrueneApiClient\models\FindAreasResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4099,7 +4099,7 @@ class CampaignsApi
      */
     public function findOwnAreasAsyncWithHttpInfo($bbox = null, string $contentType = self::contentTypes['findOwnAreas'][0])
     {
-        $returnType = '\Verdigado\Gruen eApiClient\models\FindAreasResponse';
+        $returnType = '\Verdigado\GrueneApiClient\models\FindAreasResponse';
         $request = $this->findOwnAreasRequest($bbox, $contentType);
 
         return $this->client
@@ -4238,9 +4238,9 @@ class CampaignsApi
      * @param  string $bbox bbox (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findOwnPois'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\Gruen eApiClient\models\FindPoisResponse
+     * @return \Verdigado\GrueneApiClient\models\FindPoisResponse
      */
     public function findOwnPois($type = null, $bbox = null, string $contentType = self::contentTypes['findOwnPois'][0])
     {
@@ -4257,9 +4257,9 @@ class CampaignsApi
      * @param  string $bbox (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findOwnPois'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\Gruen eApiClient\models\FindPoisResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\FindPoisResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function findOwnPoisWithHttpInfo($type = null, $bbox = null, string $contentType = self::contentTypes['findOwnPois'][0])
     {
@@ -4302,23 +4302,23 @@ class CampaignsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\Gruen eApiClient\models\FindPoisResponse' === '\SplFileObject') {
+                    if ('\Verdigado\GrueneApiClient\models\FindPoisResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\Gruen eApiClient\models\FindPoisResponse' !== 'string') {
+                        if ('\Verdigado\GrueneApiClient\models\FindPoisResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\FindPoisResponse', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\FindPoisResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\Gruen eApiClient\models\FindPoisResponse';
+            $returnType = '\Verdigado\GrueneApiClient\models\FindPoisResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4339,7 +4339,7 @@ class CampaignsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\Gruen eApiClient\models\FindPoisResponse',
+                        '\Verdigado\GrueneApiClient\models\FindPoisResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4385,7 +4385,7 @@ class CampaignsApi
      */
     public function findOwnPoisAsyncWithHttpInfo($type = null, $bbox = null, string $contentType = self::contentTypes['findOwnPois'][0])
     {
-        $returnType = '\Verdigado\Gruen eApiClient\models\FindPoisResponse';
+        $returnType = '\Verdigado\GrueneApiClient\models\FindPoisResponse';
         $request = $this->findOwnPoisRequest($type, $bbox, $contentType);
 
         return $this->client
@@ -4535,9 +4535,9 @@ class CampaignsApi
      * @param  string $bbox bbox (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findPois'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\Gruen eApiClient\models\FindPoisResponse
+     * @return \Verdigado\GrueneApiClient\models\FindPoisResponse
      */
     public function findPois($type = null, $bbox = null, string $contentType = self::contentTypes['findPois'][0])
     {
@@ -4554,9 +4554,9 @@ class CampaignsApi
      * @param  string $bbox (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findPois'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\Gruen eApiClient\models\FindPoisResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\FindPoisResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function findPoisWithHttpInfo($type = null, $bbox = null, string $contentType = self::contentTypes['findPois'][0])
     {
@@ -4599,23 +4599,23 @@ class CampaignsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\Gruen eApiClient\models\FindPoisResponse' === '\SplFileObject') {
+                    if ('\Verdigado\GrueneApiClient\models\FindPoisResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\Gruen eApiClient\models\FindPoisResponse' !== 'string') {
+                        if ('\Verdigado\GrueneApiClient\models\FindPoisResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\FindPoisResponse', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\FindPoisResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\Gruen eApiClient\models\FindPoisResponse';
+            $returnType = '\Verdigado\GrueneApiClient\models\FindPoisResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4636,7 +4636,7 @@ class CampaignsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\Gruen eApiClient\models\FindPoisResponse',
+                        '\Verdigado\GrueneApiClient\models\FindPoisResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4682,7 +4682,7 @@ class CampaignsApi
      */
     public function findPoisAsyncWithHttpInfo($type = null, $bbox = null, string $contentType = self::contentTypes['findPois'][0])
     {
-        $returnType = '\Verdigado\Gruen eApiClient\models\FindPoisResponse';
+        $returnType = '\Verdigado\GrueneApiClient\models\FindPoisResponse';
         $request = $this->findPoisRequest($type, $bbox, $contentType);
 
         return $this->client
@@ -4831,9 +4831,9 @@ class CampaignsApi
      * @param  string $area_id area_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getArea'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\Gruen eApiClient\models\Area
+     * @return \Verdigado\GrueneApiClient\models\Area
      */
     public function getArea($area_id, string $contentType = self::contentTypes['getArea'][0])
     {
@@ -4849,9 +4849,9 @@ class CampaignsApi
      * @param  string $area_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getArea'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\Gruen eApiClient\models\Area, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\Area, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAreaWithHttpInfo($area_id, string $contentType = self::contentTypes['getArea'][0])
     {
@@ -4894,23 +4894,23 @@ class CampaignsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\Gruen eApiClient\models\Area' === '\SplFileObject') {
+                    if ('\Verdigado\GrueneApiClient\models\Area' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\Gruen eApiClient\models\Area' !== 'string') {
+                        if ('\Verdigado\GrueneApiClient\models\Area' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\Area', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\Area', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\Gruen eApiClient\models\Area';
+            $returnType = '\Verdigado\GrueneApiClient\models\Area';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4931,7 +4931,7 @@ class CampaignsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\Gruen eApiClient\models\Area',
+                        '\Verdigado\GrueneApiClient\models\Area',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4975,7 +4975,7 @@ class CampaignsApi
      */
     public function getAreaAsyncWithHttpInfo($area_id, string $contentType = self::contentTypes['getArea'][0])
     {
-        $returnType = '\Verdigado\Gruen eApiClient\models\Area';
+        $returnType = '\Verdigado\GrueneApiClient\models\Area';
         $request = $this->getAreaRequest($area_id, $contentType);
 
         return $this->client
@@ -5118,9 +5118,9 @@ class CampaignsApi
      * @param  string $experience_area_id experience_area_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getExperienceArea'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\Gruen eApiClient\models\ExperienceArea
+     * @return \Verdigado\GrueneApiClient\models\ExperienceArea
      */
     public function getExperienceArea($experience_area_id, string $contentType = self::contentTypes['getExperienceArea'][0])
     {
@@ -5136,9 +5136,9 @@ class CampaignsApi
      * @param  string $experience_area_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getExperienceArea'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\Gruen eApiClient\models\ExperienceArea, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\ExperienceArea, HTTP status code, HTTP response headers (array of strings)
      */
     public function getExperienceAreaWithHttpInfo($experience_area_id, string $contentType = self::contentTypes['getExperienceArea'][0])
     {
@@ -5181,23 +5181,23 @@ class CampaignsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\Gruen eApiClient\models\ExperienceArea' === '\SplFileObject') {
+                    if ('\Verdigado\GrueneApiClient\models\ExperienceArea' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\Gruen eApiClient\models\ExperienceArea' !== 'string') {
+                        if ('\Verdigado\GrueneApiClient\models\ExperienceArea' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\ExperienceArea', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\ExperienceArea', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\Gruen eApiClient\models\ExperienceArea';
+            $returnType = '\Verdigado\GrueneApiClient\models\ExperienceArea';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5218,7 +5218,7 @@ class CampaignsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\Gruen eApiClient\models\ExperienceArea',
+                        '\Verdigado\GrueneApiClient\models\ExperienceArea',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5262,7 +5262,7 @@ class CampaignsApi
      */
     public function getExperienceAreaAsyncWithHttpInfo($experience_area_id, string $contentType = self::contentTypes['getExperienceArea'][0])
     {
-        $returnType = '\Verdigado\Gruen eApiClient\models\ExperienceArea';
+        $returnType = '\Verdigado\GrueneApiClient\models\ExperienceArea';
         $request = $this->getExperienceAreaRequest($experience_area_id, $contentType);
 
         return $this->client
@@ -5405,9 +5405,9 @@ class CampaignsApi
      * @param  string $focus_area_id focus_area_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFocusArea'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\Gruen eApiClient\models\FocusArea
+     * @return \Verdigado\GrueneApiClient\models\FocusArea
      */
     public function getFocusArea($focus_area_id, string $contentType = self::contentTypes['getFocusArea'][0])
     {
@@ -5423,9 +5423,9 @@ class CampaignsApi
      * @param  string $focus_area_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getFocusArea'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\Gruen eApiClient\models\FocusArea, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\FocusArea, HTTP status code, HTTP response headers (array of strings)
      */
     public function getFocusAreaWithHttpInfo($focus_area_id, string $contentType = self::contentTypes['getFocusArea'][0])
     {
@@ -5468,23 +5468,23 @@ class CampaignsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\Gruen eApiClient\models\FocusArea' === '\SplFileObject') {
+                    if ('\Verdigado\GrueneApiClient\models\FocusArea' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\Gruen eApiClient\models\FocusArea' !== 'string') {
+                        if ('\Verdigado\GrueneApiClient\models\FocusArea' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\FocusArea', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\FocusArea', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\Gruen eApiClient\models\FocusArea';
+            $returnType = '\Verdigado\GrueneApiClient\models\FocusArea';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5505,7 +5505,7 @@ class CampaignsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\Gruen eApiClient\models\FocusArea',
+                        '\Verdigado\GrueneApiClient\models\FocusArea',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5549,7 +5549,7 @@ class CampaignsApi
      */
     public function getFocusAreaAsyncWithHttpInfo($focus_area_id, string $contentType = self::contentTypes['getFocusArea'][0])
     {
-        $returnType = '\Verdigado\Gruen eApiClient\models\FocusArea';
+        $returnType = '\Verdigado\GrueneApiClient\models\FocusArea';
         $request = $this->getFocusAreaRequest($focus_area_id, $contentType);
 
         return $this->client
@@ -5692,9 +5692,9 @@ class CampaignsApi
      * @param  string $poi_id poi_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPoi'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\Gruen eApiClient\models\Poi
+     * @return \Verdigado\GrueneApiClient\models\Poi
      */
     public function getPoi($poi_id, string $contentType = self::contentTypes['getPoi'][0])
     {
@@ -5710,9 +5710,9 @@ class CampaignsApi
      * @param  string $poi_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPoi'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\Gruen eApiClient\models\Poi, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\Poi, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPoiWithHttpInfo($poi_id, string $contentType = self::contentTypes['getPoi'][0])
     {
@@ -5755,23 +5755,23 @@ class CampaignsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\Gruen eApiClient\models\Poi' === '\SplFileObject') {
+                    if ('\Verdigado\GrueneApiClient\models\Poi' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\Gruen eApiClient\models\Poi' !== 'string') {
+                        if ('\Verdigado\GrueneApiClient\models\Poi' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\Poi', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\Poi', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\Gruen eApiClient\models\Poi';
+            $returnType = '\Verdigado\GrueneApiClient\models\Poi';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5792,7 +5792,7 @@ class CampaignsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\Gruen eApiClient\models\Poi',
+                        '\Verdigado\GrueneApiClient\models\Poi',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5836,7 +5836,7 @@ class CampaignsApi
      */
     public function getPoiAsyncWithHttpInfo($poi_id, string $contentType = self::contentTypes['getPoi'][0])
     {
-        $returnType = '\Verdigado\Gruen eApiClient\models\Poi';
+        $returnType = '\Verdigado\GrueneApiClient\models\Poi';
         $request = $this->getPoiRequest($poi_id, $contentType);
 
         return $this->client
@@ -5977,12 +5977,12 @@ class CampaignsApi
      * Update an Area
      *
      * @param  string $area_id area_id (required)
-     * @param  \Verdigado\Gruen eApiClient\models\UpdateArea $update_area update_area (required)
+     * @param  \Verdigado\GrueneApiClient\models\UpdateArea $update_area update_area (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateArea'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\Gruen eApiClient\models\Area
+     * @return \Verdigado\GrueneApiClient\models\Area
      */
     public function updateArea($area_id, $update_area, string $contentType = self::contentTypes['updateArea'][0])
     {
@@ -5996,12 +5996,12 @@ class CampaignsApi
      * Update an Area
      *
      * @param  string $area_id (required)
-     * @param  \Verdigado\Gruen eApiClient\models\UpdateArea $update_area (required)
+     * @param  \Verdigado\GrueneApiClient\models\UpdateArea $update_area (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateArea'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\Gruen eApiClient\models\Area, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\Area, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateAreaWithHttpInfo($area_id, $update_area, string $contentType = self::contentTypes['updateArea'][0])
     {
@@ -6044,23 +6044,23 @@ class CampaignsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\Gruen eApiClient\models\Area' === '\SplFileObject') {
+                    if ('\Verdigado\GrueneApiClient\models\Area' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\Gruen eApiClient\models\Area' !== 'string') {
+                        if ('\Verdigado\GrueneApiClient\models\Area' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\Area', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\Area', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\Gruen eApiClient\models\Area';
+            $returnType = '\Verdigado\GrueneApiClient\models\Area';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6081,7 +6081,7 @@ class CampaignsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\Gruen eApiClient\models\Area',
+                        '\Verdigado\GrueneApiClient\models\Area',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6097,7 +6097,7 @@ class CampaignsApi
      * Update an Area
      *
      * @param  string $area_id (required)
-     * @param  \Verdigado\Gruen eApiClient\models\UpdateArea $update_area (required)
+     * @param  \Verdigado\GrueneApiClient\models\UpdateArea $update_area (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateArea'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -6119,7 +6119,7 @@ class CampaignsApi
      * Update an Area
      *
      * @param  string $area_id (required)
-     * @param  \Verdigado\Gruen eApiClient\models\UpdateArea $update_area (required)
+     * @param  \Verdigado\GrueneApiClient\models\UpdateArea $update_area (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateArea'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -6127,7 +6127,7 @@ class CampaignsApi
      */
     public function updateAreaAsyncWithHttpInfo($area_id, $update_area, string $contentType = self::contentTypes['updateArea'][0])
     {
-        $returnType = '\Verdigado\Gruen eApiClient\models\Area';
+        $returnType = '\Verdigado\GrueneApiClient\models\Area';
         $request = $this->updateAreaRequest($area_id, $update_area, $contentType);
 
         return $this->client
@@ -6170,7 +6170,7 @@ class CampaignsApi
      * Create request for operation 'updateArea'
      *
      * @param  string $area_id (required)
-     * @param  \Verdigado\Gruen eApiClient\models\UpdateArea $update_area (required)
+     * @param  \Verdigado\GrueneApiClient\models\UpdateArea $update_area (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateArea'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -6283,12 +6283,12 @@ class CampaignsApi
      * Update a ExperienceArea
      *
      * @param  string $experience_area_id experience_area_id (required)
-     * @param  \Verdigado\Gruen eApiClient\models\UpdateExperienceArea $update_experience_area update_experience_area (required)
+     * @param  \Verdigado\GrueneApiClient\models\UpdateExperienceArea $update_experience_area update_experience_area (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateExperienceArea'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\Gruen eApiClient\models\ExperienceArea
+     * @return \Verdigado\GrueneApiClient\models\ExperienceArea
      */
     public function updateExperienceArea($experience_area_id, $update_experience_area, string $contentType = self::contentTypes['updateExperienceArea'][0])
     {
@@ -6302,12 +6302,12 @@ class CampaignsApi
      * Update a ExperienceArea
      *
      * @param  string $experience_area_id (required)
-     * @param  \Verdigado\Gruen eApiClient\models\UpdateExperienceArea $update_experience_area (required)
+     * @param  \Verdigado\GrueneApiClient\models\UpdateExperienceArea $update_experience_area (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateExperienceArea'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\Gruen eApiClient\models\ExperienceArea, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\ExperienceArea, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateExperienceAreaWithHttpInfo($experience_area_id, $update_experience_area, string $contentType = self::contentTypes['updateExperienceArea'][0])
     {
@@ -6350,23 +6350,23 @@ class CampaignsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\Gruen eApiClient\models\ExperienceArea' === '\SplFileObject') {
+                    if ('\Verdigado\GrueneApiClient\models\ExperienceArea' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\Gruen eApiClient\models\ExperienceArea' !== 'string') {
+                        if ('\Verdigado\GrueneApiClient\models\ExperienceArea' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\ExperienceArea', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\ExperienceArea', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\Gruen eApiClient\models\ExperienceArea';
+            $returnType = '\Verdigado\GrueneApiClient\models\ExperienceArea';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6387,7 +6387,7 @@ class CampaignsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\Gruen eApiClient\models\ExperienceArea',
+                        '\Verdigado\GrueneApiClient\models\ExperienceArea',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6403,7 +6403,7 @@ class CampaignsApi
      * Update a ExperienceArea
      *
      * @param  string $experience_area_id (required)
-     * @param  \Verdigado\Gruen eApiClient\models\UpdateExperienceArea $update_experience_area (required)
+     * @param  \Verdigado\GrueneApiClient\models\UpdateExperienceArea $update_experience_area (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateExperienceArea'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -6425,7 +6425,7 @@ class CampaignsApi
      * Update a ExperienceArea
      *
      * @param  string $experience_area_id (required)
-     * @param  \Verdigado\Gruen eApiClient\models\UpdateExperienceArea $update_experience_area (required)
+     * @param  \Verdigado\GrueneApiClient\models\UpdateExperienceArea $update_experience_area (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateExperienceArea'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -6433,7 +6433,7 @@ class CampaignsApi
      */
     public function updateExperienceAreaAsyncWithHttpInfo($experience_area_id, $update_experience_area, string $contentType = self::contentTypes['updateExperienceArea'][0])
     {
-        $returnType = '\Verdigado\Gruen eApiClient\models\ExperienceArea';
+        $returnType = '\Verdigado\GrueneApiClient\models\ExperienceArea';
         $request = $this->updateExperienceAreaRequest($experience_area_id, $update_experience_area, $contentType);
 
         return $this->client
@@ -6476,7 +6476,7 @@ class CampaignsApi
      * Create request for operation 'updateExperienceArea'
      *
      * @param  string $experience_area_id (required)
-     * @param  \Verdigado\Gruen eApiClient\models\UpdateExperienceArea $update_experience_area (required)
+     * @param  \Verdigado\GrueneApiClient\models\UpdateExperienceArea $update_experience_area (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateExperienceArea'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -6589,12 +6589,12 @@ class CampaignsApi
      * Update a FocusArea
      *
      * @param  string $focus_area_id focus_area_id (required)
-     * @param  \Verdigado\Gruen eApiClient\models\UpdateFocusArea $update_focus_area update_focus_area (required)
+     * @param  \Verdigado\GrueneApiClient\models\UpdateFocusArea $update_focus_area update_focus_area (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateFocusArea'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\Gruen eApiClient\models\FocusArea
+     * @return \Verdigado\GrueneApiClient\models\FocusArea
      */
     public function updateFocusArea($focus_area_id, $update_focus_area, string $contentType = self::contentTypes['updateFocusArea'][0])
     {
@@ -6608,12 +6608,12 @@ class CampaignsApi
      * Update a FocusArea
      *
      * @param  string $focus_area_id (required)
-     * @param  \Verdigado\Gruen eApiClient\models\UpdateFocusArea $update_focus_area (required)
+     * @param  \Verdigado\GrueneApiClient\models\UpdateFocusArea $update_focus_area (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateFocusArea'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\Gruen eApiClient\models\FocusArea, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\FocusArea, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateFocusAreaWithHttpInfo($focus_area_id, $update_focus_area, string $contentType = self::contentTypes['updateFocusArea'][0])
     {
@@ -6656,23 +6656,23 @@ class CampaignsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\Gruen eApiClient\models\FocusArea' === '\SplFileObject') {
+                    if ('\Verdigado\GrueneApiClient\models\FocusArea' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\Gruen eApiClient\models\FocusArea' !== 'string') {
+                        if ('\Verdigado\GrueneApiClient\models\FocusArea' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\FocusArea', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\FocusArea', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\Gruen eApiClient\models\FocusArea';
+            $returnType = '\Verdigado\GrueneApiClient\models\FocusArea';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6693,7 +6693,7 @@ class CampaignsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\Gruen eApiClient\models\FocusArea',
+                        '\Verdigado\GrueneApiClient\models\FocusArea',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6709,7 +6709,7 @@ class CampaignsApi
      * Update a FocusArea
      *
      * @param  string $focus_area_id (required)
-     * @param  \Verdigado\Gruen eApiClient\models\UpdateFocusArea $update_focus_area (required)
+     * @param  \Verdigado\GrueneApiClient\models\UpdateFocusArea $update_focus_area (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateFocusArea'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -6731,7 +6731,7 @@ class CampaignsApi
      * Update a FocusArea
      *
      * @param  string $focus_area_id (required)
-     * @param  \Verdigado\Gruen eApiClient\models\UpdateFocusArea $update_focus_area (required)
+     * @param  \Verdigado\GrueneApiClient\models\UpdateFocusArea $update_focus_area (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateFocusArea'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -6739,7 +6739,7 @@ class CampaignsApi
      */
     public function updateFocusAreaAsyncWithHttpInfo($focus_area_id, $update_focus_area, string $contentType = self::contentTypes['updateFocusArea'][0])
     {
-        $returnType = '\Verdigado\Gruen eApiClient\models\FocusArea';
+        $returnType = '\Verdigado\GrueneApiClient\models\FocusArea';
         $request = $this->updateFocusAreaRequest($focus_area_id, $update_focus_area, $contentType);
 
         return $this->client
@@ -6782,7 +6782,7 @@ class CampaignsApi
      * Create request for operation 'updateFocusArea'
      *
      * @param  string $focus_area_id (required)
-     * @param  \Verdigado\Gruen eApiClient\models\UpdateFocusArea $update_focus_area (required)
+     * @param  \Verdigado\GrueneApiClient\models\UpdateFocusArea $update_focus_area (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateFocusArea'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -6895,12 +6895,12 @@ class CampaignsApi
      * Update a POI
      *
      * @param  string $poi_id poi_id (required)
-     * @param  \Verdigado\Gruen eApiClient\models\UpdatePoi $update_poi update_poi (required)
+     * @param  \Verdigado\GrueneApiClient\models\UpdatePoi $update_poi update_poi (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePoi'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\Gruen eApiClient\models\Poi
+     * @return \Verdigado\GrueneApiClient\models\Poi
      */
     public function updatePoi($poi_id, $update_poi, string $contentType = self::contentTypes['updatePoi'][0])
     {
@@ -6914,12 +6914,12 @@ class CampaignsApi
      * Update a POI
      *
      * @param  string $poi_id (required)
-     * @param  \Verdigado\Gruen eApiClient\models\UpdatePoi $update_poi (required)
+     * @param  \Verdigado\GrueneApiClient\models\UpdatePoi $update_poi (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePoi'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\Gruen eApiClient\models\Poi, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\Poi, HTTP status code, HTTP response headers (array of strings)
      */
     public function updatePoiWithHttpInfo($poi_id, $update_poi, string $contentType = self::contentTypes['updatePoi'][0])
     {
@@ -6962,23 +6962,23 @@ class CampaignsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\Gruen eApiClient\models\Poi' === '\SplFileObject') {
+                    if ('\Verdigado\GrueneApiClient\models\Poi' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\Gruen eApiClient\models\Poi' !== 'string') {
+                        if ('\Verdigado\GrueneApiClient\models\Poi' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\Poi', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\Poi', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\Gruen eApiClient\models\Poi';
+            $returnType = '\Verdigado\GrueneApiClient\models\Poi';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6999,7 +6999,7 @@ class CampaignsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\Gruen eApiClient\models\Poi',
+                        '\Verdigado\GrueneApiClient\models\Poi',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7015,7 +7015,7 @@ class CampaignsApi
      * Update a POI
      *
      * @param  string $poi_id (required)
-     * @param  \Verdigado\Gruen eApiClient\models\UpdatePoi $update_poi (required)
+     * @param  \Verdigado\GrueneApiClient\models\UpdatePoi $update_poi (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePoi'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -7037,7 +7037,7 @@ class CampaignsApi
      * Update a POI
      *
      * @param  string $poi_id (required)
-     * @param  \Verdigado\Gruen eApiClient\models\UpdatePoi $update_poi (required)
+     * @param  \Verdigado\GrueneApiClient\models\UpdatePoi $update_poi (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePoi'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -7045,7 +7045,7 @@ class CampaignsApi
      */
     public function updatePoiAsyncWithHttpInfo($poi_id, $update_poi, string $contentType = self::contentTypes['updatePoi'][0])
     {
-        $returnType = '\Verdigado\Gruen eApiClient\models\Poi';
+        $returnType = '\Verdigado\GrueneApiClient\models\Poi';
         $request = $this->updatePoiRequest($poi_id, $update_poi, $contentType);
 
         return $this->client
@@ -7088,7 +7088,7 @@ class CampaignsApi
      * Create request for operation 'updatePoi'
      *
      * @param  string $poi_id (required)
-     * @param  \Verdigado\Gruen eApiClient\models\UpdatePoi $update_poi (required)
+     * @param  \Verdigado\GrueneApiClient\models\UpdatePoi $update_poi (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePoi'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

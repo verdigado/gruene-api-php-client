@@ -1,4 +1,4 @@
-# Verdigado\Gruen eApiClient\GnetzApplicationsApi
+# Verdigado\GrueneApiClient\GnetzApplicationsApi
 
 All URIs are relative to https://api.gruene.de, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to https://api.gruene.de, except if the operation defines 
 ## `gnetzApplicationsControllerFind()`
 
 ```php
-gnetzApplicationsControllerFind(): \Verdigado\Gruen eApiClient\models\FindGnetzApplicationsResponse
+gnetzApplicationsControllerFind(): \Verdigado\GrueneApiClient\models\FindGnetzApplicationsResponse
 ```
 
 
@@ -23,7 +23,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new Verdigado\Gruen eApiClient\Api\GnetzApplicationsApi(
+$apiInstance = new Verdigado\GrueneApiClient\Api\GnetzApplicationsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -43,7 +43,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Verdigado\Gruen eApiClient\models\FindGnetzApplicationsResponse**](../Model/FindGnetzApplicationsResponse.md)
+[**\Verdigado\GrueneApiClient\models\FindGnetzApplicationsResponse**](../Model/FindGnetzApplicationsResponse.md)
 
 ### Authorization
 

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Verdigado\Gruen eApiClient
+ * @package  Verdigado\GrueneApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Verdigado\Gruen eApiClient\models;
+namespace Verdigado\GrueneApiClient\models;
 
 use \ArrayAccess;
-use \Verdigado\Gruen eApiClient\ObjectSerializer;
+use \Verdigado\GrueneApiClient\ObjectSerializer;
 
 /**
  * ImageSrcSet Class Doc Comment
  *
  * @category Class
- * @package  Verdigado\Gruen eApiClient
+ * @package  Verdigado\GrueneApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,8 +58,8 @@ class ImageSrcSet implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'string',
-        'original' => '\Verdigado\Gruen eApiClient\models\Image',
-        'srcset' => '\Verdigado\Gruen eApiClient\models\Image[]'
+        'original' => '\Verdigado\GrueneApiClient\models\Image',
+        'srcset' => '\Verdigado\GrueneApiClient\models\Image[]'
     ];
 
     /**
@@ -342,7 +342,7 @@ class ImageSrcSet implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets original
      *
-     * @return \Verdigado\Gruen eApiClient\models\Image
+     * @return \Verdigado\GrueneApiClient\models\Image
      */
     public function getOriginal()
     {
@@ -352,7 +352,7 @@ class ImageSrcSet implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets original
      *
-     * @param \Verdigado\Gruen eApiClient\models\Image $original original
+     * @param \Verdigado\GrueneApiClient\models\Image $original original
      *
      * @return self
      */
@@ -369,7 +369,7 @@ class ImageSrcSet implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets srcset
      *
-     * @return \Verdigado\Gruen eApiClient\models\Image[]
+     * @return \Verdigado\GrueneApiClient\models\Image[]
      */
     public function getSrcset()
     {
@@ -379,7 +379,7 @@ class ImageSrcSet implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets srcset
      *
-     * @param \Verdigado\Gruen eApiClient\models\Image[] $srcset srcset
+     * @param \Verdigado\GrueneApiClient\models\Image[] $srcset srcset
      *
      * @return self
      */

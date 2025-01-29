@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Verdigado\Gruen eApiClient
+ * @package  Verdigado\GrueneApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Verdigado\Gruen eApiClient\apis;
+namespace Verdigado\GrueneApiClient\apis;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Verdigado\Gruen eApiClient\ApiException;
-use Verdigado\Gruen eApiClient\Configuration;
-use Verdigado\Gruen eApiClient\HeaderSelector;
-use Verdigado\Gruen eApiClient\ObjectSerializer;
+use Verdigado\GrueneApiClient\ApiException;
+use Verdigado\GrueneApiClient\Configuration;
+use Verdigado\GrueneApiClient\HeaderSelector;
+use Verdigado\GrueneApiClient\ObjectSerializer;
 
 /**
  * DefaultApi Class Doc Comment
  *
  * @category Class
- * @package  Verdigado\Gruen eApiClient
+ * @package  Verdigado\GrueneApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -127,9 +127,9 @@ class DefaultApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['clientInfoControllerGetClientInfo'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\Gruen eApiClient\models\ClientInfo
+     * @return \Verdigado\GrueneApiClient\models\ClientInfo
      */
     public function clientInfoControllerGetClientInfo(string $contentType = self::contentTypes['clientInfoControllerGetClientInfo'][0])
     {
@@ -142,9 +142,9 @@ class DefaultApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['clientInfoControllerGetClientInfo'] to see the possible values for this operation
      *
-     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\Gruen eApiClient\models\ClientInfo, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\GrueneApiClient\models\ClientInfo, HTTP status code, HTTP response headers (array of strings)
      */
     public function clientInfoControllerGetClientInfoWithHttpInfo(string $contentType = self::contentTypes['clientInfoControllerGetClientInfo'][0])
     {
@@ -187,23 +187,23 @@ class DefaultApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\Gruen eApiClient\models\ClientInfo' === '\SplFileObject') {
+                    if ('\Verdigado\GrueneApiClient\models\ClientInfo' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\Gruen eApiClient\models\ClientInfo' !== 'string') {
+                        if ('\Verdigado\GrueneApiClient\models\ClientInfo' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\ClientInfo', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\ClientInfo', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\Gruen eApiClient\models\ClientInfo';
+            $returnType = '\Verdigado\GrueneApiClient\models\ClientInfo';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -224,7 +224,7 @@ class DefaultApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\Gruen eApiClient\models\ClientInfo',
+                        '\Verdigado\GrueneApiClient\models\ClientInfo',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -262,7 +262,7 @@ class DefaultApi
      */
     public function clientInfoControllerGetClientInfoAsyncWithHttpInfo(string $contentType = self::contentTypes['clientInfoControllerGetClientInfo'][0])
     {
-        $returnType = '\Verdigado\Gruen eApiClient\models\ClientInfo';
+        $returnType = '\Verdigado\GrueneApiClient\models\ClientInfo';
         $request = $this->clientInfoControllerGetClientInfoRequest($contentType);
 
         return $this->client

@@ -1,4 +1,4 @@
-# Verdigado\Gruen eApiClient\OffboardingApi
+# Verdigado\GrueneApiClient\OffboardingApi
 
 All URIs are relative to https://api.gruene.de, except if the operation defines another base path.
 
@@ -24,18 +24,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basic
-$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()
+$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Verdigado\Gruen eApiClient\Api\OffboardingApi(
+$apiInstance = new Verdigado\GrueneApiClient\Api\OffboardingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$batch_update_offboarding_service_users = new \Verdigado\Gruen eApiClient\models\BatchUpdateOffboardingServiceUsers(); // \Verdigado\Gruen eApiClient\models\BatchUpdateOffboardingServiceUsers
+$batch_update_offboarding_service_users = new \Verdigado\GrueneApiClient\models\BatchUpdateOffboardingServiceUsers(); // \Verdigado\GrueneApiClient\models\BatchUpdateOffboardingServiceUsers
 
 try {
     $apiInstance->batchUpdateOffboardingServiceUsers($batch_update_offboarding_service_users);
@@ -48,7 +48,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **batch_update_offboarding_service_users** | [**\Verdigado\Gruen eApiClient\models\BatchUpdateOffboardingServiceUsers**](../Model/BatchUpdateOffboardingServiceUsers.md)|  | |
+| **batch_update_offboarding_service_users** | [**\Verdigado\GrueneApiClient\models\BatchUpdateOffboardingServiceUsers**](../Model/BatchUpdateOffboardingServiceUsers.md)|  | |
 
 ### Return type
 
@@ -70,7 +70,7 @@ void (empty response body)
 ## `findUsersToOffboard()`
 
 ```php
-findUsersToOffboard($limit, $after): \Verdigado\Gruen eApiClient\models\FindOffboardingUsersResponse
+findUsersToOffboard($limit, $after): \Verdigado\GrueneApiClient\models\FindOffboardingUsersResponse
 ```
 
 Find users to offboard for the service associated with the used credentials
@@ -83,12 +83,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure HTTP basic authorization: basic
-$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()
+$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Verdigado\Gruen eApiClient\Api\OffboardingApi(
+$apiInstance = new Verdigado\GrueneApiClient\Api\OffboardingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -114,7 +114,7 @@ try {
 
 ### Return type
 
-[**\Verdigado\Gruen eApiClient\models\FindOffboardingUsersResponse**](../Model/FindOffboardingUsersResponse.md)
+[**\Verdigado\GrueneApiClient\models\FindOffboardingUsersResponse**](../Model/FindOffboardingUsersResponse.md)
 
 ### Authorization
 

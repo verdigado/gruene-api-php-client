@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Verdigado\Gruen eApiClient
+ * @package  Verdigado\GrueneApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Verdigado\Gruen eApiClient\models;
+namespace Verdigado\GrueneApiClient\models;
 
 use \ArrayAccess;
-use \Verdigado\Gruen eApiClient\ObjectSerializer;
+use \Verdigado\GrueneApiClient\ObjectSerializer;
 
 /**
  * FindNbOrganizationsResponse Class Doc Comment
  *
  * @category Class
- * @package  Verdigado\Gruen eApiClient
+ * @package  Verdigado\GrueneApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class FindNbOrganizationsResponse implements ModelInterface, ArrayAccess, \JsonS
       * @var string[]
       */
     protected static $openAPITypes = [
-        'items' => '\Verdigado\Gruen eApiClient\models\NbOrganization[]',
+        'items' => '\Verdigado\GrueneApiClient\models\NbOrganization[]',
         'count' => 'float'
     ];
 
@@ -305,7 +305,7 @@ class FindNbOrganizationsResponse implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets items
      *
-     * @return \Verdigado\Gruen eApiClient\models\NbOrganization[]
+     * @return \Verdigado\GrueneApiClient\models\NbOrganization[]
      */
     public function getItems()
     {
@@ -315,7 +315,7 @@ class FindNbOrganizationsResponse implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets items
      *
-     * @param \Verdigado\Gruen eApiClient\models\NbOrganization[] $items items
+     * @param \Verdigado\GrueneApiClient\models\NbOrganization[] $items items
      *
      * @return self
      */
