@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Verdigado\GrueneApiClient
+ * @package  Verdigado\Gruen eApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Verdigado\GrueneApiClient\models;
+namespace Verdigado\Gruen eApiClient\models;
 
 use \ArrayAccess;
-use \Verdigado\GrueneApiClient\ObjectSerializer;
+use \Verdigado\Gruen eApiClient\ObjectSerializer;
 
 /**
  * NbGroup Class Doc Comment
  *
  * @category Class
- * @package  Verdigado\GrueneApiClient
+ * @package  Verdigado\Gruen eApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -62,8 +62,8 @@ class NbGroup implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'string',
         'active' => 'bool',
         'level' => 'string',
-        'organization' => '\Verdigado\GrueneApiClient\models\NbOrganization',
-        'external_refs' => '\Verdigado\GrueneApiClient\models\NbExternalRef[]'
+        'organization' => '\Verdigado\Gruen eApiClient\models\NbOrganization',
+        'external_refs' => '\Verdigado\Gruen eApiClient\models\NbExternalRef[]'
     ];
 
     /**
@@ -490,7 +490,7 @@ class NbGroup implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets organization
      *
-     * @return \Verdigado\GrueneApiClient\models\NbOrganization
+     * @return \Verdigado\Gruen eApiClient\models\NbOrganization
      */
     public function getOrganization()
     {
@@ -500,7 +500,7 @@ class NbGroup implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets organization
      *
-     * @param \Verdigado\GrueneApiClient\models\NbOrganization $organization organization
+     * @param \Verdigado\Gruen eApiClient\models\NbOrganization $organization organization
      *
      * @return self
      */
@@ -517,7 +517,7 @@ class NbGroup implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets external_refs
      *
-     * @return \Verdigado\GrueneApiClient\models\NbExternalRef[]
+     * @return \Verdigado\Gruen eApiClient\models\NbExternalRef[]
      */
     public function getExternalRefs()
     {
@@ -527,7 +527,7 @@ class NbGroup implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets external_refs
      *
-     * @param \Verdigado\GrueneApiClient\models\NbExternalRef[] $external_refs external_refs
+     * @param \Verdigado\Gruen eApiClient\models\NbExternalRef[] $external_refs external_refs
      *
      * @return self
      */

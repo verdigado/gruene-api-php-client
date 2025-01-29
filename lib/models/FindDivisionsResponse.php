@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Verdigado\GrueneApiClient
+ * @package  Verdigado\Gruen eApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Verdigado\GrueneApiClient\models;
+namespace Verdigado\Gruen eApiClient\models;
 
 use \ArrayAccess;
-use \Verdigado\GrueneApiClient\ObjectSerializer;
+use \Verdigado\Gruen eApiClient\ObjectSerializer;
 
 /**
  * FindDivisionsResponse Class Doc Comment
  *
  * @category Class
- * @package  Verdigado\GrueneApiClient
+ * @package  Verdigado\Gruen eApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Verdigado\GrueneApiClient\models\Division[]',
-        'meta' => '\Verdigado\GrueneApiClient\models\OffsetPaginationMeta'
+        'data' => '\Verdigado\Gruen eApiClient\models\Division[]',
+        'meta' => '\Verdigado\Gruen eApiClient\models\OffsetPaginationMeta'
     ];
 
     /**
@@ -305,7 +305,7 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets data
      *
-     * @return \Verdigado\GrueneApiClient\models\Division[]
+     * @return \Verdigado\Gruen eApiClient\models\Division[]
      */
     public function getData()
     {
@@ -315,7 +315,7 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets data
      *
-     * @param \Verdigado\GrueneApiClient\models\Division[] $data data
+     * @param \Verdigado\Gruen eApiClient\models\Division[] $data data
      *
      * @return self
      */
@@ -332,7 +332,7 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets meta
      *
-     * @return \Verdigado\GrueneApiClient\models\OffsetPaginationMeta
+     * @return \Verdigado\Gruen eApiClient\models\OffsetPaginationMeta
      */
     public function getMeta()
     {
@@ -342,7 +342,7 @@ class FindDivisionsResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets meta
      *
-     * @param \Verdigado\GrueneApiClient\models\OffsetPaginationMeta $meta meta
+     * @param \Verdigado\Gruen eApiClient\models\OffsetPaginationMeta $meta meta
      *
      * @return self
      */

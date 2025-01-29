@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Verdigado\GrueneApiClient
+ * @package  Verdigado\Gruen eApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Verdigado\GrueneApiClient\models;
+namespace Verdigado\Gruen eApiClient\models;
 
 use \ArrayAccess;
-use \Verdigado\GrueneApiClient\ObjectSerializer;
+use \Verdigado\Gruen eApiClient\ObjectSerializer;
 
 /**
  * FindNbRegionalChaptersResponse Class Doc Comment
  *
  * @category Class
- * @package  Verdigado\GrueneApiClient
+ * @package  Verdigado\Gruen eApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class FindNbRegionalChaptersResponse implements ModelInterface, ArrayAccess, \Js
       */
     protected static $openAPITypes = [
         'count' => 'float',
-        'items' => '\Verdigado\GrueneApiClient\models\NbRegionalChapter[]'
+        'items' => '\Verdigado\Gruen eApiClient\models\NbRegionalChapter[]'
     ];
 
     /**
@@ -332,7 +332,7 @@ class FindNbRegionalChaptersResponse implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets items
      *
-     * @return \Verdigado\GrueneApiClient\models\NbRegionalChapter[]
+     * @return \Verdigado\Gruen eApiClient\models\NbRegionalChapter[]
      */
     public function getItems()
     {
@@ -342,7 +342,7 @@ class FindNbRegionalChaptersResponse implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets items
      *
-     * @param \Verdigado\GrueneApiClient\models\NbRegionalChapter[] $items items
+     * @param \Verdigado\Gruen eApiClient\models\NbRegionalChapter[] $items items
      *
      * @return self
      */

@@ -1,4 +1,4 @@
-# Verdigado\GrueneApiClient\ProfilesApi
+# Verdigado\Gruen eApiClient\ProfilesApi
 
 All URIs are relative to https://api.gruene.de, except if the operation defines another base path.
 
@@ -18,7 +18,7 @@ All URIs are relative to https://api.gruene.de, except if the operation defines 
 ## `createProfile()`
 
 ```php
-createProfile($create_profile): \Verdigado\GrueneApiClient\models\Profile
+createProfile($create_profile): \Verdigado\Gruen eApiClient\models\Profile
 ```
 
 Create user profile
@@ -31,21 +31,21 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: api_key
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Verdigado\GrueneApiClient\Api\ProfilesApi(
+$apiInstance = new Verdigado\Gruen eApiClient\Api\ProfilesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$create_profile = new \Verdigado\GrueneApiClient\models\CreateProfile(); // \Verdigado\GrueneApiClient\models\CreateProfile
+$create_profile = new \Verdigado\Gruen eApiClient\models\CreateProfile(); // \Verdigado\Gruen eApiClient\models\CreateProfile
 
 try {
     $result = $apiInstance->createProfile($create_profile);
@@ -59,11 +59,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_profile** | [**\Verdigado\GrueneApiClient\models\CreateProfile**](../Model/CreateProfile.md)|  | |
+| **create_profile** | [**\Verdigado\Gruen eApiClient\models\CreateProfile**](../Model/CreateProfile.md)|  | |
 
 ### Return type
 
-[**\Verdigado\GrueneApiClient\models\Profile**](../Model/Profile.md)
+[**\Verdigado\Gruen eApiClient\models\Profile**](../Model/Profile.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ try {
 ## `deleteProfile()`
 
 ```php
-deleteProfile($profile_id): \Verdigado\GrueneApiClient\models\Profile
+deleteProfile($profile_id): \Verdigado\Gruen eApiClient\models\Profile
 ```
 
 Delete user profile
@@ -94,15 +94,15 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: api_key
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Verdigado\GrueneApiClient\Api\ProfilesApi(
+$apiInstance = new Verdigado\Gruen eApiClient\Api\ProfilesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -126,7 +126,7 @@ try {
 
 ### Return type
 
-[**\Verdigado\GrueneApiClient\models\Profile**](../Model/Profile.md)
+[**\Verdigado\Gruen eApiClient\models\Profile**](../Model/Profile.md)
 
 ### Authorization
 
@@ -144,7 +144,7 @@ try {
 ## `deleteProfileImage()`
 
 ```php
-deleteProfileImage($profile_id): \Verdigado\GrueneApiClient\models\Profile
+deleteProfileImage($profile_id): \Verdigado\Gruen eApiClient\models\Profile
 ```
 
 Delete user profile image
@@ -157,15 +157,15 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: api_key
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Verdigado\GrueneApiClient\Api\ProfilesApi(
+$apiInstance = new Verdigado\Gruen eApiClient\Api\ProfilesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -189,7 +189,7 @@ try {
 
 ### Return type
 
-[**\Verdigado\GrueneApiClient\models\Profile**](../Model/Profile.md)
+[**\Verdigado\Gruen eApiClient\models\Profile**](../Model/Profile.md)
 
 ### Authorization
 
@@ -207,7 +207,7 @@ try {
 ## `findProfileTags()`
 
 ```php
-findProfileTags($limit, $offset, $search, $type): \Verdigado\GrueneApiClient\models\FindProfileTagsResponse
+findProfileTags($limit, $offset, $search, $type): \Verdigado\Gruen eApiClient\models\FindProfileTagsResponse
 ```
 
 List profile tags
@@ -220,15 +220,15 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: api_key
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Verdigado\GrueneApiClient\Api\ProfilesApi(
+$apiInstance = new Verdigado\Gruen eApiClient\Api\ProfilesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -258,7 +258,7 @@ try {
 
 ### Return type
 
-[**\Verdigado\GrueneApiClient\models\FindProfileTagsResponse**](../Model/FindProfileTagsResponse.md)
+[**\Verdigado\Gruen eApiClient\models\FindProfileTagsResponse**](../Model/FindProfileTagsResponse.md)
 
 ### Authorization
 
@@ -276,7 +276,7 @@ try {
 ## `findProfiles()`
 
 ```php
-findProfiles($limit, $tags, $offset, $search, $division): \Verdigado\GrueneApiClient\models\FindProfilesResponse
+findProfiles($limit, $tags, $offset, $search, $division): \Verdigado\Gruen eApiClient\models\FindProfilesResponse
 ```
 
 Find user profiles
@@ -289,15 +289,15 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: api_key
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Verdigado\GrueneApiClient\Api\ProfilesApi(
+$apiInstance = new Verdigado\Gruen eApiClient\Api\ProfilesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -329,7 +329,7 @@ try {
 
 ### Return type
 
-[**\Verdigado\GrueneApiClient\models\FindProfilesResponse**](../Model/FindProfilesResponse.md)
+[**\Verdigado\Gruen eApiClient\models\FindProfilesResponse**](../Model/FindProfilesResponse.md)
 
 ### Authorization
 
@@ -347,7 +347,7 @@ try {
 ## `getOwnProfile()`
 
 ```php
-getOwnProfile(): \Verdigado\GrueneApiClient\models\Profile
+getOwnProfile(): \Verdigado\Gruen eApiClient\models\Profile
 ```
 
 Get the authenticated user's profile
@@ -360,15 +360,15 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: api_key
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Verdigado\GrueneApiClient\Api\ProfilesApi(
+$apiInstance = new Verdigado\Gruen eApiClient\Api\ProfilesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -389,7 +389,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Verdigado\GrueneApiClient\models\Profile**](../Model/Profile.md)
+[**\Verdigado\Gruen eApiClient\models\Profile**](../Model/Profile.md)
 
 ### Authorization
 
@@ -407,7 +407,7 @@ This endpoint does not need any parameter.
 ## `getProfile()`
 
 ```php
-getProfile($profile_id): \Verdigado\GrueneApiClient\models\PublicProfile
+getProfile($profile_id): \Verdigado\Gruen eApiClient\models\PublicProfile
 ```
 
 Get a user profile
@@ -420,15 +420,15 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: api_key
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Verdigado\GrueneApiClient\Api\ProfilesApi(
+$apiInstance = new Verdigado\Gruen eApiClient\Api\ProfilesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -452,7 +452,7 @@ try {
 
 ### Return type
 
-[**\Verdigado\GrueneApiClient\models\PublicProfile**](../Model/PublicProfile.md)
+[**\Verdigado\Gruen eApiClient\models\PublicProfile**](../Model/PublicProfile.md)
 
 ### Authorization
 
@@ -470,7 +470,7 @@ try {
 ## `updateProfile()`
 
 ```php
-updateProfile($profile_id, $update_profile): \Verdigado\GrueneApiClient\models\Profile
+updateProfile($profile_id, $update_profile): \Verdigado\Gruen eApiClient\models\Profile
 ```
 
 Update user profile
@@ -485,22 +485,22 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: api_key
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Verdigado\GrueneApiClient\Api\ProfilesApi(
+$apiInstance = new Verdigado\Gruen eApiClient\Api\ProfilesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $profile_id = 'profile_id_example'; // string
-$update_profile = new \Verdigado\GrueneApiClient\models\UpdateProfile(); // \Verdigado\GrueneApiClient\models\UpdateProfile
+$update_profile = new \Verdigado\Gruen eApiClient\models\UpdateProfile(); // \Verdigado\Gruen eApiClient\models\UpdateProfile
 
 try {
     $result = $apiInstance->updateProfile($profile_id, $update_profile);
@@ -515,11 +515,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **profile_id** | **string**|  | |
-| **update_profile** | [**\Verdigado\GrueneApiClient\models\UpdateProfile**](../Model/UpdateProfile.md)|  | |
+| **update_profile** | [**\Verdigado\Gruen eApiClient\models\UpdateProfile**](../Model/UpdateProfile.md)|  | |
 
 ### Return type
 
-[**\Verdigado\GrueneApiClient\models\Profile**](../Model/Profile.md)
+[**\Verdigado\Gruen eApiClient\models\Profile**](../Model/Profile.md)
 
 ### Authorization
 
@@ -537,7 +537,7 @@ try {
 ## `updateProfileImage()`
 
 ```php
-updateProfileImage($profile_id, $profile_image): \Verdigado\GrueneApiClient\models\Profile
+updateProfileImage($profile_id, $profile_image): \Verdigado\Gruen eApiClient\models\Profile
 ```
 
 Update profile image
@@ -550,15 +550,15 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: api_key
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Verdigado\GrueneApiClient\Api\ProfilesApi(
+$apiInstance = new Verdigado\Gruen eApiClient\Api\ProfilesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -584,7 +584,7 @@ try {
 
 ### Return type
 
-[**\Verdigado\GrueneApiClient\models\Profile**](../Model/Profile.md)
+[**\Verdigado\Gruen eApiClient\models\Profile**](../Model/Profile.md)
 
 ### Authorization
 

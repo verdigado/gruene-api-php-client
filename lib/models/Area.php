@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Verdigado\GrueneApiClient
+ * @package  Verdigado\Gruen eApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Verdigado\GrueneApiClient\models;
+namespace Verdigado\Gruen eApiClient\models;
 
 use \ArrayAccess;
-use \Verdigado\GrueneApiClient\ObjectSerializer;
+use \Verdigado\Gruen eApiClient\ObjectSerializer;
 
 /**
  * Area Class Doc Comment
  *
  * @category Class
- * @package  Verdigado\GrueneApiClient
+ * @package  Verdigado\Gruen eApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,9 +61,9 @@ class Area implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'string',
         'created_at' => '\DateTime',
         'comment' => 'string',
-        'flyer_spot' => '\Verdigado\GrueneApiClient\models\AreaFlyerSpot',
-        'house' => '\Verdigado\GrueneApiClient\models\AreaHouse',
-        'polygon' => '\Verdigado\GrueneApiClient\models\Polygon'
+        'flyer_spot' => '\Verdigado\Gruen eApiClient\models\AreaFlyerSpot',
+        'house' => '\Verdigado\Gruen eApiClient\models\AreaHouse',
+        'polygon' => '\Verdigado\Gruen eApiClient\models\Polygon'
     ];
 
     /**
@@ -498,7 +498,7 @@ class Area implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets flyer_spot
      *
-     * @return \Verdigado\GrueneApiClient\models\AreaFlyerSpot|null
+     * @return \Verdigado\Gruen eApiClient\models\AreaFlyerSpot|null
      */
     public function getFlyerSpot()
     {
@@ -508,7 +508,7 @@ class Area implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets flyer_spot
      *
-     * @param \Verdigado\GrueneApiClient\models\AreaFlyerSpot|null $flyer_spot flyer_spot
+     * @param \Verdigado\Gruen eApiClient\models\AreaFlyerSpot|null $flyer_spot flyer_spot
      *
      * @return self
      */
@@ -525,7 +525,7 @@ class Area implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets house
      *
-     * @return \Verdigado\GrueneApiClient\models\AreaHouse|null
+     * @return \Verdigado\Gruen eApiClient\models\AreaHouse|null
      */
     public function getHouse()
     {
@@ -535,7 +535,7 @@ class Area implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets house
      *
-     * @param \Verdigado\GrueneApiClient\models\AreaHouse|null $house house
+     * @param \Verdigado\Gruen eApiClient\models\AreaHouse|null $house house
      *
      * @return self
      */
@@ -552,7 +552,7 @@ class Area implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets polygon
      *
-     * @return \Verdigado\GrueneApiClient\models\Polygon
+     * @return \Verdigado\Gruen eApiClient\models\Polygon
      */
     public function getPolygon()
     {
@@ -562,7 +562,7 @@ class Area implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets polygon
      *
-     * @param \Verdigado\GrueneApiClient\models\Polygon $polygon polygon
+     * @param \Verdigado\Gruen eApiClient\models\Polygon $polygon polygon
      *
      * @return self
      */

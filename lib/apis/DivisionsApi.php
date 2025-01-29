@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Verdigado\GrueneApiClient
+ * @package  Verdigado\Gruen eApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Verdigado\GrueneApiClient\apis;
+namespace Verdigado\Gruen eApiClient\apis;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Verdigado\GrueneApiClient\ApiException;
-use Verdigado\GrueneApiClient\Configuration;
-use Verdigado\GrueneApiClient\HeaderSelector;
-use Verdigado\GrueneApiClient\ObjectSerializer;
+use Verdigado\Gruen eApiClient\ApiException;
+use Verdigado\Gruen eApiClient\Configuration;
+use Verdigado\Gruen eApiClient\HeaderSelector;
+use Verdigado\Gruen eApiClient\ObjectSerializer;
 
 /**
  * DivisionsApi Class Doc Comment
  *
  * @category Class
- * @package  Verdigado\GrueneApiClient
+ * @package  Verdigado\Gruen eApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -138,9 +138,9 @@ class DivisionsApi
      * @param  string $search Search name attributes for substring (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findDivisions'] to see the possible values for this operation
      *
-     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\GrueneApiClient\models\FindDivisionsResponse
+     * @return \Verdigado\Gruen eApiClient\models\FindDivisionsResponse
      */
     public function findDivisions($limit = 20, $offset = null, $hierarchy = null, $level = null, $division_key = null, $search = null, string $contentType = self::contentTypes['findDivisions'][0])
     {
@@ -161,9 +161,9 @@ class DivisionsApi
      * @param  string $search Search name attributes for substring (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findDivisions'] to see the possible values for this operation
      *
-     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\GrueneApiClient\models\FindDivisionsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\Gruen eApiClient\models\FindDivisionsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function findDivisionsWithHttpInfo($limit = 20, $offset = null, $hierarchy = null, $level = null, $division_key = null, $search = null, string $contentType = self::contentTypes['findDivisions'][0])
     {
@@ -206,23 +206,23 @@ class DivisionsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\GrueneApiClient\models\FindDivisionsResponse' === '\SplFileObject') {
+                    if ('\Verdigado\Gruen eApiClient\models\FindDivisionsResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\GrueneApiClient\models\FindDivisionsResponse' !== 'string') {
+                        if ('\Verdigado\Gruen eApiClient\models\FindDivisionsResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\FindDivisionsResponse', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\FindDivisionsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\GrueneApiClient\models\FindDivisionsResponse';
+            $returnType = '\Verdigado\Gruen eApiClient\models\FindDivisionsResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -243,7 +243,7 @@ class DivisionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\GrueneApiClient\models\FindDivisionsResponse',
+                        '\Verdigado\Gruen eApiClient\models\FindDivisionsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -297,7 +297,7 @@ class DivisionsApi
      */
     public function findDivisionsAsyncWithHttpInfo($limit = 20, $offset = null, $hierarchy = null, $level = null, $division_key = null, $search = null, string $contentType = self::contentTypes['findDivisions'][0])
     {
-        $returnType = '\Verdigado\GrueneApiClient\models\FindDivisionsResponse';
+        $returnType = '\Verdigado\Gruen eApiClient\models\FindDivisionsResponse';
         $request = $this->findDivisionsRequest($limit, $offset, $hierarchy, $level, $division_key, $search, $contentType);
 
         return $this->client
@@ -505,9 +505,9 @@ class DivisionsApi
      * @param  string $division_id division_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDivision'] to see the possible values for this operation
      *
-     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\GrueneApiClient\models\Division
+     * @return \Verdigado\Gruen eApiClient\models\Division
      */
     public function getDivision($division_id, string $contentType = self::contentTypes['getDivision'][0])
     {
@@ -523,9 +523,9 @@ class DivisionsApi
      * @param  string $division_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDivision'] to see the possible values for this operation
      *
-     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\GrueneApiClient\models\Division, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\Gruen eApiClient\models\Division, HTTP status code, HTTP response headers (array of strings)
      */
     public function getDivisionWithHttpInfo($division_id, string $contentType = self::contentTypes['getDivision'][0])
     {
@@ -568,23 +568,23 @@ class DivisionsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\GrueneApiClient\models\Division' === '\SplFileObject') {
+                    if ('\Verdigado\Gruen eApiClient\models\Division' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\GrueneApiClient\models\Division' !== 'string') {
+                        if ('\Verdigado\Gruen eApiClient\models\Division' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\Division', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\Division', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\GrueneApiClient\models\Division';
+            $returnType = '\Verdigado\Gruen eApiClient\models\Division';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -605,7 +605,7 @@ class DivisionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\GrueneApiClient\models\Division',
+                        '\Verdigado\Gruen eApiClient\models\Division',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -649,7 +649,7 @@ class DivisionsApi
      */
     public function getDivisionAsyncWithHttpInfo($division_id, string $contentType = self::contentTypes['getDivision'][0])
     {
-        $returnType = '\Verdigado\GrueneApiClient\models\Division';
+        $returnType = '\Verdigado\Gruen eApiClient\models\Division';
         $request = $this->getDivisionRequest($division_id, $contentType);
 
         return $this->client

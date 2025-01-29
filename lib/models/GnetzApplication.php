@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Verdigado\GrueneApiClient
+ * @package  Verdigado\Gruen eApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Verdigado\GrueneApiClient\models;
+namespace Verdigado\Gruen eApiClient\models;
 
 use \ArrayAccess;
-use \Verdigado\GrueneApiClient\ObjectSerializer;
+use \Verdigado\Gruen eApiClient\ObjectSerializer;
 
 /**
  * GnetzApplication Class Doc Comment
  *
  * @category Class
- * @package  Verdigado\GrueneApiClient
+ * @package  Verdigado\Gruen eApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -67,7 +67,7 @@ class GnetzApplication implements ModelInterface, ArrayAccess, \JsonSerializable
         'apple_store' => 'string',
         'support_mail' => 'string',
         'icon' => 'string',
-        'categories' => '\Verdigado\GrueneApiClient\models\GnetzApplicationCategory[]'
+        'categories' => '\Verdigado\Gruen eApiClient\models\GnetzApplicationCategory[]'
     ];
 
     /**
@@ -707,7 +707,7 @@ class GnetzApplication implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets categories
      *
-     * @return \Verdigado\GrueneApiClient\models\GnetzApplicationCategory[]
+     * @return \Verdigado\Gruen eApiClient\models\GnetzApplicationCategory[]
      */
     public function getCategories()
     {
@@ -717,7 +717,7 @@ class GnetzApplication implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets categories
      *
-     * @param \Verdigado\GrueneApiClient\models\GnetzApplicationCategory[] $categories Application categories
+     * @param \Verdigado\Gruen eApiClient\models\GnetzApplicationCategory[] $categories Application categories
      *
      * @return self
      */

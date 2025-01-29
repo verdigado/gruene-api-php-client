@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Verdigado\GrueneApiClient
+ * @package  Verdigado\Gruen eApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Verdigado\GrueneApiClient\models;
+namespace Verdigado\Gruen eApiClient\models;
 
 use \ArrayAccess;
-use \Verdigado\GrueneApiClient\ObjectSerializer;
+use \Verdigado\Gruen eApiClient\ObjectSerializer;
 
 /**
  * Role Class Doc Comment
  *
  * @category Class
- * @package  Verdigado\GrueneApiClient
+ * @package  Verdigado\Gruen eApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -64,9 +64,9 @@ class Role implements ModelInterface, ArrayAccess, \JsonSerializable
         'min_age' => 'float',
         'max_age' => 'float',
         'level' => 'string',
-        'categories' => '\Verdigado\GrueneApiClient\models\RoleCategory[]',
-        'tags' => '\Verdigado\GrueneApiClient\models\RoleTag[]',
-        'aliases' => '\Verdigado\GrueneApiClient\models\RoleAlias[]'
+        'categories' => '\Verdigado\Gruen eApiClient\models\RoleCategory[]',
+        'tags' => '\Verdigado\Gruen eApiClient\models\RoleTag[]',
+        'aliases' => '\Verdigado\Gruen eApiClient\models\RoleAlias[]'
     ];
 
     /**
@@ -699,7 +699,7 @@ class Role implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets categories
      *
-     * @return \Verdigado\GrueneApiClient\models\RoleCategory[]
+     * @return \Verdigado\Gruen eApiClient\models\RoleCategory[]
      */
     public function getCategories()
     {
@@ -709,7 +709,7 @@ class Role implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets categories
      *
-     * @param \Verdigado\GrueneApiClient\models\RoleCategory[] $categories Role categories
+     * @param \Verdigado\Gruen eApiClient\models\RoleCategory[] $categories Role categories
      *
      * @return self
      */
@@ -726,7 +726,7 @@ class Role implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets tags
      *
-     * @return \Verdigado\GrueneApiClient\models\RoleTag[]
+     * @return \Verdigado\Gruen eApiClient\models\RoleTag[]
      */
     public function getTags()
     {
@@ -736,7 +736,7 @@ class Role implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets tags
      *
-     * @param \Verdigado\GrueneApiClient\models\RoleTag[] $tags Role tags
+     * @param \Verdigado\Gruen eApiClient\models\RoleTag[] $tags Role tags
      *
      * @return self
      */
@@ -753,7 +753,7 @@ class Role implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets aliases
      *
-     * @return \Verdigado\GrueneApiClient\models\RoleAlias[]
+     * @return \Verdigado\Gruen eApiClient\models\RoleAlias[]
      */
     public function getAliases()
     {
@@ -763,7 +763,7 @@ class Role implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets aliases
      *
-     * @param \Verdigado\GrueneApiClient\models\RoleAlias[] $aliases Role Aliases
+     * @param \Verdigado\Gruen eApiClient\models\RoleAlias[] $aliases Role Aliases
      *
      * @return self
      */

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Verdigado\GrueneApiClient
+ * @package  Verdigado\Gruen eApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Verdigado\GrueneApiClient\models;
+namespace Verdigado\Gruen eApiClient\models;
 
 use \ArrayAccess;
-use \Verdigado\GrueneApiClient\ObjectSerializer;
+use \Verdigado\Gruen eApiClient\ObjectSerializer;
 
 /**
  * News Class Doc Comment
  *
  * @category Class
- * @package  Verdigado\GrueneApiClient
+ * @package  Verdigado\Gruen eApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,10 +61,10 @@ class News implements ModelInterface, ArrayAccess, \JsonSerializable
         'title' => 'string',
         'created_at' => '\DateTime',
         'division' => 'Division',
-        'categories' => '\Verdigado\GrueneApiClient\models\NewsCategory[]',
+        'categories' => '\Verdigado\Gruen eApiClient\models\NewsCategory[]',
         'summary' => 'string',
         'featured_image' => 'ImageSrcSet',
-        'body' => '\Verdigado\GrueneApiClient\models\NewsBody'
+        'body' => '\Verdigado\Gruen eApiClient\models\NewsBody'
     ];
 
     /**
@@ -480,7 +480,7 @@ class News implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets categories
      *
-     * @return \Verdigado\GrueneApiClient\models\NewsCategory[]
+     * @return \Verdigado\Gruen eApiClient\models\NewsCategory[]
      */
     public function getCategories()
     {
@@ -490,7 +490,7 @@ class News implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets categories
      *
-     * @param \Verdigado\GrueneApiClient\models\NewsCategory[] $categories categories
+     * @param \Verdigado\Gruen eApiClient\models\NewsCategory[] $categories categories
      *
      * @return self
      */
@@ -575,7 +575,7 @@ class News implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets body
      *
-     * @return \Verdigado\GrueneApiClient\models\NewsBody
+     * @return \Verdigado\Gruen eApiClient\models\NewsBody
      */
     public function getBody()
     {
@@ -585,7 +585,7 @@ class News implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets body
      *
-     * @param \Verdigado\GrueneApiClient\models\NewsBody $body body
+     * @param \Verdigado\Gruen eApiClient\models\NewsBody $body body
      *
      * @return self
      */

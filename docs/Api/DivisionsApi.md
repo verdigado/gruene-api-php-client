@@ -1,4 +1,4 @@
-# Verdigado\GrueneApiClient\DivisionsApi
+# Verdigado\Gruen eApiClient\DivisionsApi
 
 All URIs are relative to https://api.gruene.de, except if the operation defines another base path.
 
@@ -11,7 +11,7 @@ All URIs are relative to https://api.gruene.de, except if the operation defines 
 ## `findDivisions()`
 
 ```php
-findDivisions($limit, $offset, $hierarchy, $level, $division_key, $search): \Verdigado\GrueneApiClient\models\FindDivisionsResponse
+findDivisions($limit, $offset, $hierarchy, $level, $division_key, $search): \Verdigado\Gruen eApiClient\models\FindDivisionsResponse
 ```
 
 Find divisions
@@ -24,20 +24,20 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: api_key
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 // Configure HTTP basic authorization: basic
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Verdigado\GrueneApiClient\Api\DivisionsApi(
+$apiInstance = new Verdigado\Gruen eApiClient\Api\DivisionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -71,7 +71,7 @@ try {
 
 ### Return type
 
-[**\Verdigado\GrueneApiClient\models\FindDivisionsResponse**](../Model/FindDivisionsResponse.md)
+[**\Verdigado\Gruen eApiClient\models\FindDivisionsResponse**](../Model/FindDivisionsResponse.md)
 
 ### Authorization
 
@@ -89,7 +89,7 @@ try {
 ## `getDivision()`
 
 ```php
-getDivision($division_id): \Verdigado\GrueneApiClient\models\Division
+getDivision($division_id): \Verdigado\Gruen eApiClient\models\Division
 ```
 
 Get division by id
@@ -102,20 +102,20 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: api_key
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 // Configure HTTP basic authorization: basic
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Verdigado\GrueneApiClient\Api\DivisionsApi(
+$apiInstance = new Verdigado\Gruen eApiClient\Api\DivisionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -139,7 +139,7 @@ try {
 
 ### Return type
 
-[**\Verdigado\GrueneApiClient\models\Division**](../Model/Division.md)
+[**\Verdigado\Gruen eApiClient\models\Division**](../Model/Division.md)
 
 ### Authorization
 

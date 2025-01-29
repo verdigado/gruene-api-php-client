@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Verdigado\GrueneApiClient
+ * @package  Verdigado\Gruen eApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Verdigado\GrueneApiClient\models;
+namespace Verdigado\Gruen eApiClient\models;
 
 use \ArrayAccess;
-use \Verdigado\GrueneApiClient\ObjectSerializer;
+use \Verdigado\Gruen eApiClient\ObjectSerializer;
 
 /**
  * Poi Class Doc Comment
  *
  * @category Class
- * @package  Verdigado\GrueneApiClient
+ * @package  Verdigado\Gruen eApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -63,12 +63,12 @@ class Poi implements ModelInterface, ArrayAccess, \JsonSerializable
         'division_key' => 'string',
         'created_at' => '\DateTime',
         'updated_at' => '\DateTime',
-        'photos' => '\Verdigado\GrueneApiClient\models\ImageSrcSet[]',
-        'address' => '\Verdigado\GrueneApiClient\models\PoiAddress',
+        'photos' => '\Verdigado\Gruen eApiClient\models\ImageSrcSet[]',
+        'address' => '\Verdigado\Gruen eApiClient\models\PoiAddress',
         'type' => 'string',
-        'poster' => '\Verdigado\GrueneApiClient\models\PoiPoster',
-        'flyer_spot' => '\Verdigado\GrueneApiClient\models\PoiFlyerSpot',
-        'house' => '\Verdigado\GrueneApiClient\models\PoiHouse'
+        'poster' => '\Verdigado\Gruen eApiClient\models\PoiPoster',
+        'flyer_spot' => '\Verdigado\Gruen eApiClient\models\PoiFlyerSpot',
+        'house' => '\Verdigado\Gruen eApiClient\models\PoiHouse'
     ];
 
     /**
@@ -599,7 +599,7 @@ class Poi implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets photos
      *
-     * @return \Verdigado\GrueneApiClient\models\ImageSrcSet[]
+     * @return \Verdigado\Gruen eApiClient\models\ImageSrcSet[]
      */
     public function getPhotos()
     {
@@ -609,7 +609,7 @@ class Poi implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets photos
      *
-     * @param \Verdigado\GrueneApiClient\models\ImageSrcSet[] $photos photos
+     * @param \Verdigado\Gruen eApiClient\models\ImageSrcSet[] $photos photos
      *
      * @return self
      */
@@ -626,7 +626,7 @@ class Poi implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets address
      *
-     * @return \Verdigado\GrueneApiClient\models\PoiAddress
+     * @return \Verdigado\Gruen eApiClient\models\PoiAddress
      */
     public function getAddress()
     {
@@ -636,7 +636,7 @@ class Poi implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets address
      *
-     * @param \Verdigado\GrueneApiClient\models\PoiAddress $address address
+     * @param \Verdigado\Gruen eApiClient\models\PoiAddress $address address
      *
      * @return self
      */
@@ -690,7 +690,7 @@ class Poi implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets poster
      *
-     * @return \Verdigado\GrueneApiClient\models\PoiPoster|null
+     * @return \Verdigado\Gruen eApiClient\models\PoiPoster|null
      */
     public function getPoster()
     {
@@ -700,7 +700,7 @@ class Poi implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets poster
      *
-     * @param \Verdigado\GrueneApiClient\models\PoiPoster|null $poster poster
+     * @param \Verdigado\Gruen eApiClient\models\PoiPoster|null $poster poster
      *
      * @return self
      */
@@ -717,7 +717,7 @@ class Poi implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets flyer_spot
      *
-     * @return \Verdigado\GrueneApiClient\models\PoiFlyerSpot|null
+     * @return \Verdigado\Gruen eApiClient\models\PoiFlyerSpot|null
      */
     public function getFlyerSpot()
     {
@@ -727,7 +727,7 @@ class Poi implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets flyer_spot
      *
-     * @param \Verdigado\GrueneApiClient\models\PoiFlyerSpot|null $flyer_spot flyer_spot
+     * @param \Verdigado\Gruen eApiClient\models\PoiFlyerSpot|null $flyer_spot flyer_spot
      *
      * @return self
      */
@@ -744,7 +744,7 @@ class Poi implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets house
      *
-     * @return \Verdigado\GrueneApiClient\models\PoiHouse|null
+     * @return \Verdigado\Gruen eApiClient\models\PoiHouse|null
      */
     public function getHouse()
     {
@@ -754,7 +754,7 @@ class Poi implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets house
      *
-     * @param \Verdigado\GrueneApiClient\models\PoiHouse|null $house house
+     * @param \Verdigado\Gruen eApiClient\models\PoiHouse|null $house house
      *
      * @return self
      */

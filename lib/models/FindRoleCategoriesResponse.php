@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Verdigado\GrueneApiClient
+ * @package  Verdigado\Gruen eApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Verdigado\GrueneApiClient\models;
+namespace Verdigado\Gruen eApiClient\models;
 
 use \ArrayAccess;
-use \Verdigado\GrueneApiClient\ObjectSerializer;
+use \Verdigado\Gruen eApiClient\ObjectSerializer;
 
 /**
  * FindRoleCategoriesResponse Class Doc Comment
  *
  * @category Class
- * @package  Verdigado\GrueneApiClient
+ * @package  Verdigado\Gruen eApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class FindRoleCategoriesResponse implements ModelInterface, ArrayAccess, \JsonSe
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Verdigado\GrueneApiClient\models\RoleCategory[]',
-        'meta' => '\Verdigado\GrueneApiClient\models\OffsetPaginationMeta'
+        'data' => '\Verdigado\Gruen eApiClient\models\RoleCategory[]',
+        'meta' => '\Verdigado\Gruen eApiClient\models\OffsetPaginationMeta'
     ];
 
     /**
@@ -305,7 +305,7 @@ class FindRoleCategoriesResponse implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets data
      *
-     * @return \Verdigado\GrueneApiClient\models\RoleCategory[]
+     * @return \Verdigado\Gruen eApiClient\models\RoleCategory[]
      */
     public function getData()
     {
@@ -315,7 +315,7 @@ class FindRoleCategoriesResponse implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets data
      *
-     * @param \Verdigado\GrueneApiClient\models\RoleCategory[] $data data
+     * @param \Verdigado\Gruen eApiClient\models\RoleCategory[] $data data
      *
      * @return self
      */
@@ -332,7 +332,7 @@ class FindRoleCategoriesResponse implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets meta
      *
-     * @return \Verdigado\GrueneApiClient\models\OffsetPaginationMeta
+     * @return \Verdigado\Gruen eApiClient\models\OffsetPaginationMeta
      */
     public function getMeta()
     {
@@ -342,7 +342,7 @@ class FindRoleCategoriesResponse implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets meta
      *
-     * @param \Verdigado\GrueneApiClient\models\OffsetPaginationMeta $meta meta
+     * @param \Verdigado\Gruen eApiClient\models\OffsetPaginationMeta $meta meta
      *
      * @return self
      */

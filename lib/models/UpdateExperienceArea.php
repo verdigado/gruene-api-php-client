@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Verdigado\GrueneApiClient
+ * @package  Verdigado\Gruen eApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Verdigado\GrueneApiClient\models;
+namespace Verdigado\Gruen eApiClient\models;
 
 use \ArrayAccess;
-use \Verdigado\GrueneApiClient\ObjectSerializer;
+use \Verdigado\Gruen eApiClient\ObjectSerializer;
 
 /**
  * UpdateExperienceArea Class Doc Comment
  *
  * @category Class
- * @package  Verdigado\GrueneApiClient
+ * @package  Verdigado\Gruen eApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class UpdateExperienceArea implements ModelInterface, ArrayAccess, \JsonSerializ
       */
     protected static $openAPITypes = [
         'description' => 'string',
-        'polygon' => '\Verdigado\GrueneApiClient\models\Polygon'
+        'polygon' => '\Verdigado\Gruen eApiClient\models\Polygon'
     ];
 
     /**
@@ -339,7 +339,7 @@ class UpdateExperienceArea implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets polygon
      *
-     * @return \Verdigado\GrueneApiClient\models\Polygon
+     * @return \Verdigado\Gruen eApiClient\models\Polygon
      */
     public function getPolygon()
     {
@@ -349,7 +349,7 @@ class UpdateExperienceArea implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets polygon
      *
-     * @param \Verdigado\GrueneApiClient\models\Polygon $polygon polygon
+     * @param \Verdigado\Gruen eApiClient\models\Polygon $polygon polygon
      *
      * @return self
      */

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**address** | [**\Verdigado\GrueneApiClient\models\PoiAddress**](PoiAddress.md) |  |
+**address** | [**\Verdigado\Gruen eApiClient\models\PoiAddress**](PoiAddress.md) |  |
 **poster** | [**PoiPoster**](PoiPoster.md) |  | [optional]
 **flyer_spot** | [**PoiFlyerSpot**](PoiFlyerSpot.md) |  | [optional]
 **house** | [**PoiHouse**](PoiHouse.md) |  | [optional]

@@ -1,4 +1,4 @@
-# Verdigado\GrueneApiClient\CampaignsApi
+# Verdigado\Gruen eApiClient\CampaignsApi
 
 All URIs are relative to https://api.gruene.de, except if the operation defines another base path.
 
@@ -33,7 +33,7 @@ All URIs are relative to https://api.gruene.de, except if the operation defines 
 ## `addPoiPhoto()`
 
 ```php
-addPoiPhoto($poi_id, $image): \Verdigado\GrueneApiClient\models\Poi
+addPoiPhoto($poi_id, $image): \Verdigado\Gruen eApiClient\models\Poi
 ```
 
 Add POI photo
@@ -46,10 +46,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Verdigado\GrueneApiClient\Api\CampaignsApi(
+$apiInstance = new Verdigado\Gruen eApiClient\Api\CampaignsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -75,7 +75,7 @@ try {
 
 ### Return type
 
-[**\Verdigado\GrueneApiClient\models\Poi**](../Model/Poi.md)
+[**\Verdigado\Gruen eApiClient\models\Poi**](../Model/Poi.md)
 
 ### Authorization
 
@@ -93,7 +93,7 @@ try {
 ## `createArea()`
 
 ```php
-createArea($create_area): \Verdigado\GrueneApiClient\models\Area
+createArea($create_area): \Verdigado\Gruen eApiClient\models\Area
 ```
 
 Create a new Area
@@ -106,16 +106,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Verdigado\GrueneApiClient\Api\CampaignsApi(
+$apiInstance = new Verdigado\Gruen eApiClient\Api\CampaignsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$create_area = new \Verdigado\GrueneApiClient\models\CreateArea(); // \Verdigado\GrueneApiClient\models\CreateArea
+$create_area = new \Verdigado\Gruen eApiClient\models\CreateArea(); // \Verdigado\Gruen eApiClient\models\CreateArea
 
 try {
     $result = $apiInstance->createArea($create_area);
@@ -129,11 +129,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_area** | [**\Verdigado\GrueneApiClient\models\CreateArea**](../Model/CreateArea.md)|  | |
+| **create_area** | [**\Verdigado\Gruen eApiClient\models\CreateArea**](../Model/CreateArea.md)|  | |
 
 ### Return type
 
-[**\Verdigado\GrueneApiClient\models\Area**](../Model/Area.md)
+[**\Verdigado\Gruen eApiClient\models\Area**](../Model/Area.md)
 
 ### Authorization
 
@@ -151,7 +151,7 @@ try {
 ## `createExperienceArea()`
 
 ```php
-createExperienceArea($create_experience_area): \Verdigado\GrueneApiClient\models\ExperienceArea
+createExperienceArea($create_experience_area): \Verdigado\Gruen eApiClient\models\ExperienceArea
 ```
 
 Create a new ExperienceArea
@@ -164,16 +164,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Verdigado\GrueneApiClient\Api\CampaignsApi(
+$apiInstance = new Verdigado\Gruen eApiClient\Api\CampaignsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$create_experience_area = new \Verdigado\GrueneApiClient\models\CreateExperienceArea(); // \Verdigado\GrueneApiClient\models\CreateExperienceArea
+$create_experience_area = new \Verdigado\Gruen eApiClient\models\CreateExperienceArea(); // \Verdigado\Gruen eApiClient\models\CreateExperienceArea
 
 try {
     $result = $apiInstance->createExperienceArea($create_experience_area);
@@ -187,11 +187,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_experience_area** | [**\Verdigado\GrueneApiClient\models\CreateExperienceArea**](../Model/CreateExperienceArea.md)|  | |
+| **create_experience_area** | [**\Verdigado\Gruen eApiClient\models\CreateExperienceArea**](../Model/CreateExperienceArea.md)|  | |
 
 ### Return type
 
-[**\Verdigado\GrueneApiClient\models\ExperienceArea**](../Model/ExperienceArea.md)
+[**\Verdigado\Gruen eApiClient\models\ExperienceArea**](../Model/ExperienceArea.md)
 
 ### Authorization
 
@@ -209,7 +209,7 @@ try {
 ## `createFocusArea()`
 
 ```php
-createFocusArea($create_focus_area): \Verdigado\GrueneApiClient\models\FocusArea
+createFocusArea($create_focus_area): \Verdigado\Gruen eApiClient\models\FocusArea
 ```
 
 Create a new FocusArea
@@ -222,16 +222,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Verdigado\GrueneApiClient\Api\CampaignsApi(
+$apiInstance = new Verdigado\Gruen eApiClient\Api\CampaignsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$create_focus_area = new \Verdigado\GrueneApiClient\models\CreateFocusArea(); // \Verdigado\GrueneApiClient\models\CreateFocusArea
+$create_focus_area = new \Verdigado\Gruen eApiClient\models\CreateFocusArea(); // \Verdigado\Gruen eApiClient\models\CreateFocusArea
 
 try {
     $result = $apiInstance->createFocusArea($create_focus_area);
@@ -245,11 +245,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_focus_area** | [**\Verdigado\GrueneApiClient\models\CreateFocusArea**](../Model/CreateFocusArea.md)|  | |
+| **create_focus_area** | [**\Verdigado\Gruen eApiClient\models\CreateFocusArea**](../Model/CreateFocusArea.md)|  | |
 
 ### Return type
 
-[**\Verdigado\GrueneApiClient\models\FocusArea**](../Model/FocusArea.md)
+[**\Verdigado\Gruen eApiClient\models\FocusArea**](../Model/FocusArea.md)
 
 ### Authorization
 
@@ -267,7 +267,7 @@ try {
 ## `createPoi()`
 
 ```php
-createPoi($create_poi): \Verdigado\GrueneApiClient\models\Poi
+createPoi($create_poi): \Verdigado\Gruen eApiClient\models\Poi
 ```
 
 Create a new POI
@@ -280,16 +280,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Verdigado\GrueneApiClient\Api\CampaignsApi(
+$apiInstance = new Verdigado\Gruen eApiClient\Api\CampaignsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$create_poi = new \Verdigado\GrueneApiClient\models\CreatePoi(); // \Verdigado\GrueneApiClient\models\CreatePoi
+$create_poi = new \Verdigado\Gruen eApiClient\models\CreatePoi(); // \Verdigado\Gruen eApiClient\models\CreatePoi
 
 try {
     $result = $apiInstance->createPoi($create_poi);
@@ -303,11 +303,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_poi** | [**\Verdigado\GrueneApiClient\models\CreatePoi**](../Model/CreatePoi.md)|  | |
+| **create_poi** | [**\Verdigado\Gruen eApiClient\models\CreatePoi**](../Model/CreatePoi.md)|  | |
 
 ### Return type
 
-[**\Verdigado\GrueneApiClient\models\Poi**](../Model/Poi.md)
+[**\Verdigado\Gruen eApiClient\models\Poi**](../Model/Poi.md)
 
 ### Authorization
 
@@ -325,7 +325,7 @@ try {
 ## `deleteArea()`
 
 ```php
-deleteArea($area_id): \Verdigado\GrueneApiClient\models\Area
+deleteArea($area_id): \Verdigado\Gruen eApiClient\models\Area
 ```
 
 Delete an Area
@@ -338,10 +338,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Verdigado\GrueneApiClient\Api\CampaignsApi(
+$apiInstance = new Verdigado\Gruen eApiClient\Api\CampaignsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -365,7 +365,7 @@ try {
 
 ### Return type
 
-[**\Verdigado\GrueneApiClient\models\Area**](../Model/Area.md)
+[**\Verdigado\Gruen eApiClient\models\Area**](../Model/Area.md)
 
 ### Authorization
 
@@ -383,7 +383,7 @@ try {
 ## `deleteExperienceArea()`
 
 ```php
-deleteExperienceArea($experience_area_id): \Verdigado\GrueneApiClient\models\ExperienceArea
+deleteExperienceArea($experience_area_id): \Verdigado\Gruen eApiClient\models\ExperienceArea
 ```
 
 Delete a ExperienceArea
@@ -396,10 +396,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Verdigado\GrueneApiClient\Api\CampaignsApi(
+$apiInstance = new Verdigado\Gruen eApiClient\Api\CampaignsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -423,7 +423,7 @@ try {
 
 ### Return type
 
-[**\Verdigado\GrueneApiClient\models\ExperienceArea**](../Model/ExperienceArea.md)
+[**\Verdigado\Gruen eApiClient\models\ExperienceArea**](../Model/ExperienceArea.md)
 
 ### Authorization
 
@@ -441,7 +441,7 @@ try {
 ## `deleteFocusArea()`
 
 ```php
-deleteFocusArea($focus_area_id): \Verdigado\GrueneApiClient\models\FocusArea
+deleteFocusArea($focus_area_id): \Verdigado\Gruen eApiClient\models\FocusArea
 ```
 
 Delete a FocusArea
@@ -454,10 +454,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Verdigado\GrueneApiClient\Api\CampaignsApi(
+$apiInstance = new Verdigado\Gruen eApiClient\Api\CampaignsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -481,7 +481,7 @@ try {
 
 ### Return type
 
-[**\Verdigado\GrueneApiClient\models\FocusArea**](../Model/FocusArea.md)
+[**\Verdigado\Gruen eApiClient\models\FocusArea**](../Model/FocusArea.md)
 
 ### Authorization
 
@@ -499,7 +499,7 @@ try {
 ## `deletePoi()`
 
 ```php
-deletePoi($poi_id): \Verdigado\GrueneApiClient\models\Poi
+deletePoi($poi_id): \Verdigado\Gruen eApiClient\models\Poi
 ```
 
 Delete a POI
@@ -512,10 +512,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Verdigado\GrueneApiClient\Api\CampaignsApi(
+$apiInstance = new Verdigado\Gruen eApiClient\Api\CampaignsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -539,7 +539,7 @@ try {
 
 ### Return type
 
-[**\Verdigado\GrueneApiClient\models\Poi**](../Model/Poi.md)
+[**\Verdigado\Gruen eApiClient\models\Poi**](../Model/Poi.md)
 
 ### Authorization
 
@@ -557,7 +557,7 @@ try {
 ## `deletePoiPhoto()`
 
 ```php
-deletePoiPhoto($poi_id, $photo_id): \Verdigado\GrueneApiClient\models\Poi
+deletePoiPhoto($poi_id, $photo_id): \Verdigado\Gruen eApiClient\models\Poi
 ```
 
 Delete a POI Photo
@@ -570,10 +570,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Verdigado\GrueneApiClient\Api\CampaignsApi(
+$apiInstance = new Verdigado\Gruen eApiClient\Api\CampaignsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -599,7 +599,7 @@ try {
 
 ### Return type
 
-[**\Verdigado\GrueneApiClient\models\Poi**](../Model/Poi.md)
+[**\Verdigado\Gruen eApiClient\models\Poi**](../Model/Poi.md)
 
 ### Authorization
 
@@ -617,7 +617,7 @@ try {
 ## `findAreas()`
 
 ```php
-findAreas($bbox): \Verdigado\GrueneApiClient\models\FindAreasResponse
+findAreas($bbox): \Verdigado\Gruen eApiClient\models\FindAreasResponse
 ```
 
 Find Areas
@@ -630,10 +630,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Verdigado\GrueneApiClient\Api\CampaignsApi(
+$apiInstance = new Verdigado\Gruen eApiClient\Api\CampaignsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -657,7 +657,7 @@ try {
 
 ### Return type
 
-[**\Verdigado\GrueneApiClient\models\FindAreasResponse**](../Model/FindAreasResponse.md)
+[**\Verdigado\Gruen eApiClient\models\FindAreasResponse**](../Model/FindAreasResponse.md)
 
 ### Authorization
 
@@ -675,7 +675,7 @@ try {
 ## `findExperienceAreas()`
 
 ```php
-findExperienceAreas($bbox): \Verdigado\GrueneApiClient\models\FindExperienceAreasResponse
+findExperienceAreas($bbox): \Verdigado\Gruen eApiClient\models\FindExperienceAreasResponse
 ```
 
 Find ExperienceAreas
@@ -688,10 +688,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Verdigado\GrueneApiClient\Api\CampaignsApi(
+$apiInstance = new Verdigado\Gruen eApiClient\Api\CampaignsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -715,7 +715,7 @@ try {
 
 ### Return type
 
-[**\Verdigado\GrueneApiClient\models\FindExperienceAreasResponse**](../Model/FindExperienceAreasResponse.md)
+[**\Verdigado\Gruen eApiClient\models\FindExperienceAreasResponse**](../Model/FindExperienceAreasResponse.md)
 
 ### Authorization
 
@@ -733,7 +733,7 @@ try {
 ## `findFocusAreas()`
 
 ```php
-findFocusAreas($bbox): \Verdigado\GrueneApiClient\models\FindFocusAreasResponse
+findFocusAreas($bbox): \Verdigado\Gruen eApiClient\models\FindFocusAreasResponse
 ```
 
 Find FocusAreas
@@ -746,10 +746,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Verdigado\GrueneApiClient\Api\CampaignsApi(
+$apiInstance = new Verdigado\Gruen eApiClient\Api\CampaignsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -773,7 +773,7 @@ try {
 
 ### Return type
 
-[**\Verdigado\GrueneApiClient\models\FindFocusAreasResponse**](../Model/FindFocusAreasResponse.md)
+[**\Verdigado\Gruen eApiClient\models\FindFocusAreasResponse**](../Model/FindFocusAreasResponse.md)
 
 ### Authorization
 
@@ -791,7 +791,7 @@ try {
 ## `findOwnAreas()`
 
 ```php
-findOwnAreas($bbox): \Verdigado\GrueneApiClient\models\FindAreasResponse
+findOwnAreas($bbox): \Verdigado\Gruen eApiClient\models\FindAreasResponse
 ```
 
 Find own Areas
@@ -804,10 +804,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Verdigado\GrueneApiClient\Api\CampaignsApi(
+$apiInstance = new Verdigado\Gruen eApiClient\Api\CampaignsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -831,7 +831,7 @@ try {
 
 ### Return type
 
-[**\Verdigado\GrueneApiClient\models\FindAreasResponse**](../Model/FindAreasResponse.md)
+[**\Verdigado\Gruen eApiClient\models\FindAreasResponse**](../Model/FindAreasResponse.md)
 
 ### Authorization
 
@@ -849,7 +849,7 @@ try {
 ## `findOwnPois()`
 
 ```php
-findOwnPois($type, $bbox): \Verdigado\GrueneApiClient\models\FindPoisResponse
+findOwnPois($type, $bbox): \Verdigado\Gruen eApiClient\models\FindPoisResponse
 ```
 
 Find own POIs
@@ -862,10 +862,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Verdigado\GrueneApiClient\Api\CampaignsApi(
+$apiInstance = new Verdigado\Gruen eApiClient\Api\CampaignsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -891,7 +891,7 @@ try {
 
 ### Return type
 
-[**\Verdigado\GrueneApiClient\models\FindPoisResponse**](../Model/FindPoisResponse.md)
+[**\Verdigado\Gruen eApiClient\models\FindPoisResponse**](../Model/FindPoisResponse.md)
 
 ### Authorization
 
@@ -909,7 +909,7 @@ try {
 ## `findPois()`
 
 ```php
-findPois($type, $bbox): \Verdigado\GrueneApiClient\models\FindPoisResponse
+findPois($type, $bbox): \Verdigado\Gruen eApiClient\models\FindPoisResponse
 ```
 
 Find POIs
@@ -922,10 +922,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Verdigado\GrueneApiClient\Api\CampaignsApi(
+$apiInstance = new Verdigado\Gruen eApiClient\Api\CampaignsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -951,7 +951,7 @@ try {
 
 ### Return type
 
-[**\Verdigado\GrueneApiClient\models\FindPoisResponse**](../Model/FindPoisResponse.md)
+[**\Verdigado\Gruen eApiClient\models\FindPoisResponse**](../Model/FindPoisResponse.md)
 
 ### Authorization
 
@@ -969,7 +969,7 @@ try {
 ## `getArea()`
 
 ```php
-getArea($area_id): \Verdigado\GrueneApiClient\models\Area
+getArea($area_id): \Verdigado\Gruen eApiClient\models\Area
 ```
 
 Get an Area
@@ -982,10 +982,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Verdigado\GrueneApiClient\Api\CampaignsApi(
+$apiInstance = new Verdigado\Gruen eApiClient\Api\CampaignsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1009,7 +1009,7 @@ try {
 
 ### Return type
 
-[**\Verdigado\GrueneApiClient\models\Area**](../Model/Area.md)
+[**\Verdigado\Gruen eApiClient\models\Area**](../Model/Area.md)
 
 ### Authorization
 
@@ -1027,7 +1027,7 @@ try {
 ## `getExperienceArea()`
 
 ```php
-getExperienceArea($experience_area_id): \Verdigado\GrueneApiClient\models\ExperienceArea
+getExperienceArea($experience_area_id): \Verdigado\Gruen eApiClient\models\ExperienceArea
 ```
 
 Get a ExperienceArea
@@ -1040,10 +1040,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Verdigado\GrueneApiClient\Api\CampaignsApi(
+$apiInstance = new Verdigado\Gruen eApiClient\Api\CampaignsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1067,7 +1067,7 @@ try {
 
 ### Return type
 
-[**\Verdigado\GrueneApiClient\models\ExperienceArea**](../Model/ExperienceArea.md)
+[**\Verdigado\Gruen eApiClient\models\ExperienceArea**](../Model/ExperienceArea.md)
 
 ### Authorization
 
@@ -1085,7 +1085,7 @@ try {
 ## `getFocusArea()`
 
 ```php
-getFocusArea($focus_area_id): \Verdigado\GrueneApiClient\models\FocusArea
+getFocusArea($focus_area_id): \Verdigado\Gruen eApiClient\models\FocusArea
 ```
 
 Get a FocusArea
@@ -1098,10 +1098,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Verdigado\GrueneApiClient\Api\CampaignsApi(
+$apiInstance = new Verdigado\Gruen eApiClient\Api\CampaignsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1125,7 +1125,7 @@ try {
 
 ### Return type
 
-[**\Verdigado\GrueneApiClient\models\FocusArea**](../Model/FocusArea.md)
+[**\Verdigado\Gruen eApiClient\models\FocusArea**](../Model/FocusArea.md)
 
 ### Authorization
 
@@ -1143,7 +1143,7 @@ try {
 ## `getPoi()`
 
 ```php
-getPoi($poi_id): \Verdigado\GrueneApiClient\models\Poi
+getPoi($poi_id): \Verdigado\Gruen eApiClient\models\Poi
 ```
 
 Get a POI
@@ -1156,10 +1156,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Verdigado\GrueneApiClient\Api\CampaignsApi(
+$apiInstance = new Verdigado\Gruen eApiClient\Api\CampaignsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1183,7 +1183,7 @@ try {
 
 ### Return type
 
-[**\Verdigado\GrueneApiClient\models\Poi**](../Model/Poi.md)
+[**\Verdigado\Gruen eApiClient\models\Poi**](../Model/Poi.md)
 
 ### Authorization
 
@@ -1201,7 +1201,7 @@ try {
 ## `updateArea()`
 
 ```php
-updateArea($area_id, $update_area): \Verdigado\GrueneApiClient\models\Area
+updateArea($area_id, $update_area): \Verdigado\Gruen eApiClient\models\Area
 ```
 
 Update an Area
@@ -1214,17 +1214,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Verdigado\GrueneApiClient\Api\CampaignsApi(
+$apiInstance = new Verdigado\Gruen eApiClient\Api\CampaignsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $area_id = 'area_id_example'; // string
-$update_area = new \Verdigado\GrueneApiClient\models\UpdateArea(); // \Verdigado\GrueneApiClient\models\UpdateArea
+$update_area = new \Verdigado\Gruen eApiClient\models\UpdateArea(); // \Verdigado\Gruen eApiClient\models\UpdateArea
 
 try {
     $result = $apiInstance->updateArea($area_id, $update_area);
@@ -1239,11 +1239,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **area_id** | **string**|  | |
-| **update_area** | [**\Verdigado\GrueneApiClient\models\UpdateArea**](../Model/UpdateArea.md)|  | |
+| **update_area** | [**\Verdigado\Gruen eApiClient\models\UpdateArea**](../Model/UpdateArea.md)|  | |
 
 ### Return type
 
-[**\Verdigado\GrueneApiClient\models\Area**](../Model/Area.md)
+[**\Verdigado\Gruen eApiClient\models\Area**](../Model/Area.md)
 
 ### Authorization
 
@@ -1261,7 +1261,7 @@ try {
 ## `updateExperienceArea()`
 
 ```php
-updateExperienceArea($experience_area_id, $update_experience_area): \Verdigado\GrueneApiClient\models\ExperienceArea
+updateExperienceArea($experience_area_id, $update_experience_area): \Verdigado\Gruen eApiClient\models\ExperienceArea
 ```
 
 Update a ExperienceArea
@@ -1274,17 +1274,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Verdigado\GrueneApiClient\Api\CampaignsApi(
+$apiInstance = new Verdigado\Gruen eApiClient\Api\CampaignsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $experience_area_id = 'experience_area_id_example'; // string
-$update_experience_area = new \Verdigado\GrueneApiClient\models\UpdateExperienceArea(); // \Verdigado\GrueneApiClient\models\UpdateExperienceArea
+$update_experience_area = new \Verdigado\Gruen eApiClient\models\UpdateExperienceArea(); // \Verdigado\Gruen eApiClient\models\UpdateExperienceArea
 
 try {
     $result = $apiInstance->updateExperienceArea($experience_area_id, $update_experience_area);
@@ -1299,11 +1299,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **experience_area_id** | **string**|  | |
-| **update_experience_area** | [**\Verdigado\GrueneApiClient\models\UpdateExperienceArea**](../Model/UpdateExperienceArea.md)|  | |
+| **update_experience_area** | [**\Verdigado\Gruen eApiClient\models\UpdateExperienceArea**](../Model/UpdateExperienceArea.md)|  | |
 
 ### Return type
 
-[**\Verdigado\GrueneApiClient\models\ExperienceArea**](../Model/ExperienceArea.md)
+[**\Verdigado\Gruen eApiClient\models\ExperienceArea**](../Model/ExperienceArea.md)
 
 ### Authorization
 
@@ -1321,7 +1321,7 @@ try {
 ## `updateFocusArea()`
 
 ```php
-updateFocusArea($focus_area_id, $update_focus_area): \Verdigado\GrueneApiClient\models\FocusArea
+updateFocusArea($focus_area_id, $update_focus_area): \Verdigado\Gruen eApiClient\models\FocusArea
 ```
 
 Update a FocusArea
@@ -1334,17 +1334,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Verdigado\GrueneApiClient\Api\CampaignsApi(
+$apiInstance = new Verdigado\Gruen eApiClient\Api\CampaignsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $focus_area_id = 'focus_area_id_example'; // string
-$update_focus_area = new \Verdigado\GrueneApiClient\models\UpdateFocusArea(); // \Verdigado\GrueneApiClient\models\UpdateFocusArea
+$update_focus_area = new \Verdigado\Gruen eApiClient\models\UpdateFocusArea(); // \Verdigado\Gruen eApiClient\models\UpdateFocusArea
 
 try {
     $result = $apiInstance->updateFocusArea($focus_area_id, $update_focus_area);
@@ -1359,11 +1359,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **focus_area_id** | **string**|  | |
-| **update_focus_area** | [**\Verdigado\GrueneApiClient\models\UpdateFocusArea**](../Model/UpdateFocusArea.md)|  | |
+| **update_focus_area** | [**\Verdigado\Gruen eApiClient\models\UpdateFocusArea**](../Model/UpdateFocusArea.md)|  | |
 
 ### Return type
 
-[**\Verdigado\GrueneApiClient\models\FocusArea**](../Model/FocusArea.md)
+[**\Verdigado\Gruen eApiClient\models\FocusArea**](../Model/FocusArea.md)
 
 ### Authorization
 
@@ -1381,7 +1381,7 @@ try {
 ## `updatePoi()`
 
 ```php
-updatePoi($poi_id, $update_poi): \Verdigado\GrueneApiClient\models\Poi
+updatePoi($poi_id, $update_poi): \Verdigado\Gruen eApiClient\models\Poi
 ```
 
 Update a POI
@@ -1394,17 +1394,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Verdigado\GrueneApiClient\Api\CampaignsApi(
+$apiInstance = new Verdigado\Gruen eApiClient\Api\CampaignsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $poi_id = 'poi_id_example'; // string
-$update_poi = new \Verdigado\GrueneApiClient\models\UpdatePoi(); // \Verdigado\GrueneApiClient\models\UpdatePoi
+$update_poi = new \Verdigado\Gruen eApiClient\models\UpdatePoi(); // \Verdigado\Gruen eApiClient\models\UpdatePoi
 
 try {
     $result = $apiInstance->updatePoi($poi_id, $update_poi);
@@ -1419,11 +1419,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **poi_id** | **string**|  | |
-| **update_poi** | [**\Verdigado\GrueneApiClient\models\UpdatePoi**](../Model/UpdatePoi.md)|  | |
+| **update_poi** | [**\Verdigado\Gruen eApiClient\models\UpdatePoi**](../Model/UpdatePoi.md)|  | |
 
 ### Return type
 
-[**\Verdigado\GrueneApiClient\models\Poi**](../Model/Poi.md)
+[**\Verdigado\Gruen eApiClient\models\Poi**](../Model/Poi.md)
 
 ### Authorization
 

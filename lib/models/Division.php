@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Verdigado\GrueneApiClient
+ * @package  Verdigado\Gruen eApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Verdigado\GrueneApiClient\models;
+namespace Verdigado\Gruen eApiClient\models;
 
 use \ArrayAccess;
-use \Verdigado\GrueneApiClient\ObjectSerializer;
+use \Verdigado\Gruen eApiClient\ObjectSerializer;
 
 /**
  * Division Class Doc Comment
  *
  * @category Class
- * @package  Verdigado\GrueneApiClient
+ * @package  Verdigado\Gruen eApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -65,8 +65,8 @@ class Division implements ModelInterface, ArrayAccess, \JsonSerializable
         'short_name' => 'string',
         'hierarchy' => 'object',
         'level' => 'string',
-        'office_address' => '\Verdigado\GrueneApiClient\models\DivisionOfficeAddress',
-        'emails' => '\Verdigado\GrueneApiClient\models\DivisionEmail[]'
+        'office_address' => '\Verdigado\Gruen eApiClient\models\DivisionOfficeAddress',
+        'emails' => '\Verdigado\Gruen eApiClient\models\DivisionEmail[]'
     ];
 
     /**
@@ -639,7 +639,7 @@ class Division implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets office_address
      *
-     * @return \Verdigado\GrueneApiClient\models\DivisionOfficeAddress
+     * @return \Verdigado\Gruen eApiClient\models\DivisionOfficeAddress
      */
     public function getOfficeAddress()
     {
@@ -649,7 +649,7 @@ class Division implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets office_address
      *
-     * @param \Verdigado\GrueneApiClient\models\DivisionOfficeAddress $office_address office_address
+     * @param \Verdigado\Gruen eApiClient\models\DivisionOfficeAddress $office_address office_address
      *
      * @return self
      */
@@ -673,7 +673,7 @@ class Division implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets emails
      *
-     * @return \Verdigado\GrueneApiClient\models\DivisionEmail[]
+     * @return \Verdigado\Gruen eApiClient\models\DivisionEmail[]
      */
     public function getEmails()
     {
@@ -683,7 +683,7 @@ class Division implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets emails
      *
-     * @param \Verdigado\GrueneApiClient\models\DivisionEmail[] $emails Email Addresses
+     * @param \Verdigado\Gruen eApiClient\models\DivisionEmail[] $emails Email Addresses
      *
      * @return self
      */

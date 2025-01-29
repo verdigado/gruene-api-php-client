@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Verdigado\GrueneApiClient
+ * @package  Verdigado\Gruen eApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Verdigado\GrueneApiClient\models;
+namespace Verdigado\Gruen eApiClient\models;
 
 use \ArrayAccess;
-use \Verdigado\GrueneApiClient\ObjectSerializer;
+use \Verdigado\Gruen eApiClient\ObjectSerializer;
 
 /**
  * UpdatePoi Class Doc Comment
  *
  * @category Class
- * @package  Verdigado\GrueneApiClient
+ * @package  Verdigado\Gruen eApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class UpdatePoi implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'address' => '\Verdigado\GrueneApiClient\models\PoiAddress',
+        'address' => '\Verdigado\Gruen eApiClient\models\PoiAddress',
         'poster' => 'PoiPoster',
         'flyer_spot' => 'PoiFlyerSpot',
         'house' => 'PoiHouse'
@@ -316,7 +316,7 @@ class UpdatePoi implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets address
      *
-     * @return \Verdigado\GrueneApiClient\models\PoiAddress
+     * @return \Verdigado\Gruen eApiClient\models\PoiAddress
      */
     public function getAddress()
     {
@@ -326,7 +326,7 @@ class UpdatePoi implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets address
      *
-     * @param \Verdigado\GrueneApiClient\models\PoiAddress $address address
+     * @param \Verdigado\Gruen eApiClient\models\PoiAddress $address address
      *
      * @return self
      */

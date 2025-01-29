@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Verdigado\GrueneApiClient
+ * @package  Verdigado\Gruen eApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Verdigado\GrueneApiClient\models;
+namespace Verdigado\Gruen eApiClient\models;
 
 use \ArrayAccess;
-use \Verdigado\GrueneApiClient\ObjectSerializer;
+use \Verdigado\Gruen eApiClient\ObjectSerializer;
 
 /**
  * UserRbacStructure Class Doc Comment
  *
  * @category Class
- * @package  Verdigado\GrueneApiClient
+ * @package  Verdigado\Gruen eApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,8 +58,8 @@ class UserRbacStructure implements ModelInterface, ArrayAccess, \JsonSerializabl
       */
     protected static $openAPITypes = [
         'user_id' => 'string',
-        'groups' => '\Verdigado\GrueneApiClient\models\UserRbacGroup[]',
-        'roles' => '\Verdigado\GrueneApiClient\models\UserRbacRole[]'
+        'groups' => '\Verdigado\Gruen eApiClient\models\UserRbacGroup[]',
+        'roles' => '\Verdigado\Gruen eApiClient\models\UserRbacRole[]'
     ];
 
     /**
@@ -342,7 +342,7 @@ class UserRbacStructure implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets groups
      *
-     * @return \Verdigado\GrueneApiClient\models\UserRbacGroup[]
+     * @return \Verdigado\Gruen eApiClient\models\UserRbacGroup[]
      */
     public function getGroups()
     {
@@ -352,7 +352,7 @@ class UserRbacStructure implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets groups
      *
-     * @param \Verdigado\GrueneApiClient\models\UserRbacGroup[] $groups List of RBAC groups
+     * @param \Verdigado\Gruen eApiClient\models\UserRbacGroup[] $groups List of RBAC groups
      *
      * @return self
      */
@@ -369,7 +369,7 @@ class UserRbacStructure implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets roles
      *
-     * @return \Verdigado\GrueneApiClient\models\UserRbacRole[]
+     * @return \Verdigado\Gruen eApiClient\models\UserRbacRole[]
      */
     public function getRoles()
     {
@@ -379,7 +379,7 @@ class UserRbacStructure implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets roles
      *
-     * @param \Verdigado\GrueneApiClient\models\UserRbacRole[] $roles List of RBAC roles
+     * @param \Verdigado\Gruen eApiClient\models\UserRbacRole[] $roles List of RBAC roles
      *
      * @return self
      */

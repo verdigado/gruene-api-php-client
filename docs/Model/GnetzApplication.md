@@ -14,6 +14,6 @@ Name | Type | Description | Notes
 **apple_store** | **string** | URL to apple store |
 **support_mail** | **string** | support email |
 **icon** | **string** | icon as svg |
-**categories** | [**\Verdigado\GrueneApiClient\models\GnetzApplicationCategory[]**](GnetzApplicationCategory.md) | Application categories |
+**categories** | [**\Verdigado\Gruen eApiClient\models\GnetzApplicationCategory[]**](GnetzApplicationCategory.md) | Application categories |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -8,6 +8,6 @@ Name | Type | Description | Notes
 **comment** | **string** |  |
 **flyer_spot** | [**AreaFlyerSpot**](AreaFlyerSpot.md) |  | [optional]
 **house** | [**AreaHouse**](AreaHouse.md) |  | [optional]
-**polygon** | [**\Verdigado\GrueneApiClient\models\Polygon**](Polygon.md) |  |
+**polygon** | [**\Verdigado\Gruen eApiClient\models\Polygon**](Polygon.md) |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

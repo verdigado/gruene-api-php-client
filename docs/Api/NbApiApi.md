@@ -1,4 +1,4 @@
-# Verdigado\GrueneApiClient\NbApiApi
+# Verdigado\Gruen eApiClient\NbApiApi
 
 All URIs are relative to https://api.gruene.de, except if the operation defines another base path.
 
@@ -13,7 +13,7 @@ All URIs are relative to https://api.gruene.de, except if the operation defines 
 ## `findGroups()`
 
 ```php
-findGroups($filter_external_refs_type, $filter_external_refs_key, $filter_level, $filter_type, $filter_slug): \Verdigado\GrueneApiClient\models\FindNbGroupsResponse
+findGroups($filter_external_refs_type, $filter_external_refs_key, $filter_level, $filter_type, $filter_slug): \Verdigado\Gruen eApiClient\models\FindNbGroupsResponse
 ```
 
 Find all groups
@@ -26,17 +26,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: api_key
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 // Configure HTTP basic authorization: basic
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Verdigado\GrueneApiClient\Api\NbApiApi(
+$apiInstance = new Verdigado\Gruen eApiClient\Api\NbApiApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -68,7 +68,7 @@ try {
 
 ### Return type
 
-[**\Verdigado\GrueneApiClient\models\FindNbGroupsResponse**](../Model/FindNbGroupsResponse.md)
+[**\Verdigado\Gruen eApiClient\models\FindNbGroupsResponse**](../Model/FindNbGroupsResponse.md)
 
 ### Authorization
 
@@ -86,7 +86,7 @@ try {
 ## `findOrganizations()`
 
 ```php
-findOrganizations(): \Verdigado\GrueneApiClient\models\FindNbOrganizationsResponse
+findOrganizations(): \Verdigado\Gruen eApiClient\models\FindNbOrganizationsResponse
 ```
 
 Find all organizations
@@ -99,17 +99,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: api_key
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 // Configure HTTP basic authorization: basic
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Verdigado\GrueneApiClient\Api\NbApiApi(
+$apiInstance = new Verdigado\Gruen eApiClient\Api\NbApiApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -130,7 +130,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Verdigado\GrueneApiClient\models\FindNbOrganizationsResponse**](../Model/FindNbOrganizationsResponse.md)
+[**\Verdigado\Gruen eApiClient\models\FindNbOrganizationsResponse**](../Model/FindNbOrganizationsResponse.md)
 
 ### Authorization
 
@@ -148,7 +148,7 @@ This endpoint does not need any parameter.
 ## `findRegionalChapters()`
 
 ```php
-findRegionalChapters($limit, $offset, $filter_query, $filter_id_prefix, $filter_type): \Verdigado\GrueneApiClient\models\FindNbRegionalChaptersResponse
+findRegionalChapters($limit, $offset, $filter_query, $filter_id_prefix, $filter_type): \Verdigado\Gruen eApiClient\models\FindNbRegionalChaptersResponse
 ```
 
 Find all regional chapters
@@ -161,17 +161,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: api_key
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 // Configure HTTP basic authorization: basic
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Verdigado\GrueneApiClient\Api\NbApiApi(
+$apiInstance = new Verdigado\Gruen eApiClient\Api\NbApiApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -203,7 +203,7 @@ try {
 
 ### Return type
 
-[**\Verdigado\GrueneApiClient\models\FindNbRegionalChaptersResponse**](../Model/FindNbRegionalChaptersResponse.md)
+[**\Verdigado\Gruen eApiClient\models\FindNbRegionalChaptersResponse**](../Model/FindNbRegionalChaptersResponse.md)
 
 ### Authorization
 
@@ -221,7 +221,7 @@ try {
 ## `getRegionalChapter()`
 
 ```php
-getRegionalChapter($division_key): \Verdigado\GrueneApiClient\models\NbRegionalChapter
+getRegionalChapter($division_key): \Verdigado\Gruen eApiClient\models\NbRegionalChapter
 ```
 
 Get regional chapter by division key
@@ -234,17 +234,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: api_key
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 // Configure HTTP basic authorization: basic
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Verdigado\GrueneApiClient\Api\NbApiApi(
+$apiInstance = new Verdigado\Gruen eApiClient\Api\NbApiApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -268,7 +268,7 @@ try {
 
 ### Return type
 
-[**\Verdigado\GrueneApiClient\models\NbRegionalChapter**](../Model/NbRegionalChapter.md)
+[**\Verdigado\Gruen eApiClient\models\NbRegionalChapter**](../Model/NbRegionalChapter.md)
 
 ### Authorization
 

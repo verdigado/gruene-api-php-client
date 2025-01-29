@@ -1,4 +1,4 @@
-# Verdigado\GrueneApiClient\UsersApi
+# Verdigado\Gruen eApiClient\UsersApi
 
 All URIs are relative to https://api.gruene.de, except if the operation defines another base path.
 
@@ -13,7 +13,7 @@ All URIs are relative to https://api.gruene.de, except if the operation defines 
 ## `findUsers()`
 
 ```php
-findUsers($search, $user_ids, $limit): \Verdigado\GrueneApiClient\models\FindUsersResponse
+findUsers($search, $user_ids, $limit): \Verdigado\Gruen eApiClient\models\FindUsersResponse
 ```
 
 Find users
@@ -26,20 +26,20 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: api_key
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 // Configure HTTP basic authorization: basic
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Verdigado\GrueneApiClient\Api\UsersApi(
+$apiInstance = new Verdigado\Gruen eApiClient\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -67,7 +67,7 @@ try {
 
 ### Return type
 
-[**\Verdigado\GrueneApiClient\models\FindUsersResponse**](../Model/FindUsersResponse.md)
+[**\Verdigado\Gruen eApiClient\models\FindUsersResponse**](../Model/FindUsersResponse.md)
 
 ### Authorization
 
@@ -85,7 +85,7 @@ try {
 ## `getSelf()`
 
 ```php
-getSelf(): \Verdigado\GrueneApiClient\models\User
+getSelf(): \Verdigado\Gruen eApiClient\models\User
 ```
 
 Get the authenticated user
@@ -98,20 +98,20 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: api_key
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 // Configure HTTP basic authorization: basic
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Verdigado\GrueneApiClient\Api\UsersApi(
+$apiInstance = new Verdigado\Gruen eApiClient\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -132,7 +132,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Verdigado\GrueneApiClient\models\User**](../Model/User.md)
+[**\Verdigado\Gruen eApiClient\models\User**](../Model/User.md)
 
 ### Authorization
 
@@ -150,7 +150,7 @@ This endpoint does not need any parameter.
 ## `getUser()`
 
 ```php
-getUser($user_id): \Verdigado\GrueneApiClient\models\User
+getUser($user_id): \Verdigado\Gruen eApiClient\models\User
 ```
 
 Get user by id
@@ -163,20 +163,20 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: api_key
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 // Configure HTTP basic authorization: basic
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Verdigado\GrueneApiClient\Api\UsersApi(
+$apiInstance = new Verdigado\Gruen eApiClient\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -200,7 +200,7 @@ try {
 
 ### Return type
 
-[**\Verdigado\GrueneApiClient\models\User**](../Model/User.md)
+[**\Verdigado\Gruen eApiClient\models\User**](../Model/User.md)
 
 ### Authorization
 
@@ -218,7 +218,7 @@ try {
 ## `getUserRbacStructure()`
 
 ```php
-getUserRbacStructure($user_id): \Verdigado\GrueneApiClient\models\UserRbacStructure
+getUserRbacStructure($user_id): \Verdigado\Gruen eApiClient\models\UserRbacStructure
 ```
 
 Get user RBAC structure
@@ -231,20 +231,20 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: api_key
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 // Configure Bearer (JWT) authorization: bearer
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 // Configure HTTP basic authorization: basic
-$config = Verdigado\GrueneApiClient\Configuration::getDefaultConfiguration()
+$config = Verdigado\Gruen eApiClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new Verdigado\GrueneApiClient\Api\UsersApi(
+$apiInstance = new Verdigado\Gruen eApiClient\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -268,7 +268,7 @@ try {
 
 ### Return type
 
-[**\Verdigado\GrueneApiClient\models\UserRbacStructure**](../Model/UserRbacStructure.md)
+[**\Verdigado\Gruen eApiClient\models\UserRbacStructure**](../Model/UserRbacStructure.md)
 
 ### Authorization
 

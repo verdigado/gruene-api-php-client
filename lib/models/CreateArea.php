@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Verdigado\GrueneApiClient
+ * @package  Verdigado\Gruen eApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Verdigado\GrueneApiClient\models;
+namespace Verdigado\Gruen eApiClient\models;
 
 use \ArrayAccess;
-use \Verdigado\GrueneApiClient\ObjectSerializer;
+use \Verdigado\Gruen eApiClient\ObjectSerializer;
 
 /**
  * CreateArea Class Doc Comment
  *
  * @category Class
- * @package  Verdigado\GrueneApiClient
+ * @package  Verdigado\Gruen eApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,7 +61,7 @@ class CreateArea implements ModelInterface, ArrayAccess, \JsonSerializable
         'comment' => 'string',
         'flyer_spot' => 'AreaFlyerSpot',
         'house' => 'AreaHouse',
-        'polygon' => '\Verdigado\GrueneApiClient\models\Polygon'
+        'polygon' => '\Verdigado\Gruen eApiClient\models\Polygon'
     ];
 
     /**
@@ -492,7 +492,7 @@ class CreateArea implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets polygon
      *
-     * @return \Verdigado\GrueneApiClient\models\Polygon
+     * @return \Verdigado\Gruen eApiClient\models\Polygon
      */
     public function getPolygon()
     {
@@ -502,7 +502,7 @@ class CreateArea implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets polygon
      *
-     * @param \Verdigado\GrueneApiClient\models\Polygon $polygon polygon
+     * @param \Verdigado\Gruen eApiClient\models\Polygon $polygon polygon
      *
      * @return self
      */

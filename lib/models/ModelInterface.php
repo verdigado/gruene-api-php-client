@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Verdigado\GrueneApiClient\models
+ * @package  Verdigado\Gruen eApiClient\models
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,12 +26,12 @@
  * Do not edit the class manually.
  */
 
-namespace Verdigado\GrueneApiClient\models;
+namespace Verdigado\Gruen eApiClient\models;
 
 /**
  * Interface abstracting model access.
  *
- * @package Verdigado\GrueneApiClient\models
+ * @package Verdigado\Gruen eApiClient\models
  * @author  OpenAPI Generator team
  */
 interface ModelInterface

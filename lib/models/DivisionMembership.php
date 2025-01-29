@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Verdigado\GrueneApiClient
+ * @package  Verdigado\Gruen eApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Verdigado\GrueneApiClient\models;
+namespace Verdigado\Gruen eApiClient\models;
 
 use \ArrayAccess;
-use \Verdigado\GrueneApiClient\ObjectSerializer;
+use \Verdigado\Gruen eApiClient\ObjectSerializer;
 
 /**
  * DivisionMembership Class Doc Comment
  *
  * @category Class
- * @package  Verdigado\GrueneApiClient
+ * @package  Verdigado\Gruen eApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class DivisionMembership implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'division' => '\Verdigado\GrueneApiClient\models\Division',
+        'division' => '\Verdigado\Gruen eApiClient\models\Division',
         'joined_at' => '\DateTime'
     ];
 
@@ -305,7 +305,7 @@ class DivisionMembership implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets division
      *
-     * @return \Verdigado\GrueneApiClient\models\Division
+     * @return \Verdigado\Gruen eApiClient\models\Division
      */
     public function getDivision()
     {
@@ -315,7 +315,7 @@ class DivisionMembership implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets division
      *
-     * @param \Verdigado\GrueneApiClient\models\Division $division division
+     * @param \Verdigado\Gruen eApiClient\models\Division $division division
      *
      * @return self
      */

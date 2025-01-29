@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Verdigado\GrueneApiClient
+ * @package  Verdigado\Gruen eApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Verdigado\GrueneApiClient\models;
+namespace Verdigado\Gruen eApiClient\models;
 
 use \ArrayAccess;
-use \Verdigado\GrueneApiClient\ObjectSerializer;
+use \Verdigado\Gruen eApiClient\ObjectSerializer;
 
 /**
  * UpdateProfile Class Doc Comment
  *
  * @category Class
- * @package  Verdigado\GrueneApiClient
+ * @package  Verdigado\Gruen eApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,11 +58,11 @@ class UpdateProfile implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'email' => 'string',
-        'phone_numbers' => '\Verdigado\GrueneApiClient\models\UpdatePhoneNumber[]',
-        'messengers' => '\Verdigado\GrueneApiClient\models\UpdateMessengerEntry[]',
-        'social_media' => '\Verdigado\GrueneApiClient\models\UpdateSocialMediaEntry[]',
+        'phone_numbers' => '\Verdigado\Gruen eApiClient\models\UpdatePhoneNumber[]',
+        'messengers' => '\Verdigado\Gruen eApiClient\models\UpdateMessengerEntry[]',
+        'social_media' => '\Verdigado\Gruen eApiClient\models\UpdateSocialMediaEntry[]',
         'tags' => 'string[]',
-        'privacy' => '\Verdigado\GrueneApiClient\models\ProfilePrivacySettings'
+        'privacy' => '\Verdigado\Gruen eApiClient\models\ProfilePrivacySettings'
     ];
 
     /**
@@ -372,7 +372,7 @@ class UpdateProfile implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets phone_numbers
      *
-     * @return \Verdigado\GrueneApiClient\models\UpdatePhoneNumber[]
+     * @return \Verdigado\Gruen eApiClient\models\UpdatePhoneNumber[]
      */
     public function getPhoneNumbers()
     {
@@ -382,7 +382,7 @@ class UpdateProfile implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets phone_numbers
      *
-     * @param \Verdigado\GrueneApiClient\models\UpdatePhoneNumber[] $phone_numbers phone_numbers
+     * @param \Verdigado\Gruen eApiClient\models\UpdatePhoneNumber[] $phone_numbers phone_numbers
      *
      * @return self
      */
@@ -399,7 +399,7 @@ class UpdateProfile implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets messengers
      *
-     * @return \Verdigado\GrueneApiClient\models\UpdateMessengerEntry[]
+     * @return \Verdigado\Gruen eApiClient\models\UpdateMessengerEntry[]
      */
     public function getMessengers()
     {
@@ -409,7 +409,7 @@ class UpdateProfile implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets messengers
      *
-     * @param \Verdigado\GrueneApiClient\models\UpdateMessengerEntry[] $messengers messengers
+     * @param \Verdigado\Gruen eApiClient\models\UpdateMessengerEntry[] $messengers messengers
      *
      * @return self
      */
@@ -426,7 +426,7 @@ class UpdateProfile implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets social_media
      *
-     * @return \Verdigado\GrueneApiClient\models\UpdateSocialMediaEntry[]
+     * @return \Verdigado\Gruen eApiClient\models\UpdateSocialMediaEntry[]
      */
     public function getSocialMedia()
     {
@@ -436,7 +436,7 @@ class UpdateProfile implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets social_media
      *
-     * @param \Verdigado\GrueneApiClient\models\UpdateSocialMediaEntry[] $social_media social_media
+     * @param \Verdigado\Gruen eApiClient\models\UpdateSocialMediaEntry[] $social_media social_media
      *
      * @return self
      */
@@ -480,7 +480,7 @@ class UpdateProfile implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets privacy
      *
-     * @return \Verdigado\GrueneApiClient\models\ProfilePrivacySettings
+     * @return \Verdigado\Gruen eApiClient\models\ProfilePrivacySettings
      */
     public function getPrivacy()
     {
@@ -490,7 +490,7 @@ class UpdateProfile implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets privacy
      *
-     * @param \Verdigado\GrueneApiClient\models\ProfilePrivacySettings $privacy privacy
+     * @param \Verdigado\Gruen eApiClient\models\ProfilePrivacySettings $privacy privacy
      *
      * @return self
      */

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Verdigado\GrueneApiClient
+ * @package  Verdigado\Gruen eApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Verdigado\GrueneApiClient\models;
+namespace Verdigado\Gruen eApiClient\models;
 
 use \ArrayAccess;
-use \Verdigado\GrueneApiClient\ObjectSerializer;
+use \Verdigado\Gruen eApiClient\ObjectSerializer;
 
 /**
  * FindRoleTagsResponse Class Doc Comment
  *
  * @category Class
- * @package  Verdigado\GrueneApiClient
+ * @package  Verdigado\Gruen eApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class FindRoleTagsResponse implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\Verdigado\GrueneApiClient\models\RoleTag[]',
-        'meta' => '\Verdigado\GrueneApiClient\models\OffsetPaginationMeta'
+        'data' => '\Verdigado\Gruen eApiClient\models\RoleTag[]',
+        'meta' => '\Verdigado\Gruen eApiClient\models\OffsetPaginationMeta'
     ];
 
     /**
@@ -305,7 +305,7 @@ class FindRoleTagsResponse implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets data
      *
-     * @return \Verdigado\GrueneApiClient\models\RoleTag[]
+     * @return \Verdigado\Gruen eApiClient\models\RoleTag[]
      */
     public function getData()
     {
@@ -315,7 +315,7 @@ class FindRoleTagsResponse implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets data
      *
-     * @param \Verdigado\GrueneApiClient\models\RoleTag[] $data data
+     * @param \Verdigado\Gruen eApiClient\models\RoleTag[] $data data
      *
      * @return self
      */
@@ -332,7 +332,7 @@ class FindRoleTagsResponse implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets meta
      *
-     * @return \Verdigado\GrueneApiClient\models\OffsetPaginationMeta
+     * @return \Verdigado\Gruen eApiClient\models\OffsetPaginationMeta
      */
     public function getMeta()
     {
@@ -342,7 +342,7 @@ class FindRoleTagsResponse implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets meta
      *
-     * @param \Verdigado\GrueneApiClient\models\OffsetPaginationMeta $meta meta
+     * @param \Verdigado\Gruen eApiClient\models\OffsetPaginationMeta $meta meta
      *
      * @return self
      */

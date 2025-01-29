@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Verdigado\GrueneApiClient
+ * @package  Verdigado\Gruen eApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Verdigado\GrueneApiClient\models;
+namespace Verdigado\Gruen eApiClient\models;
 
 use \ArrayAccess;
-use \Verdigado\GrueneApiClient\ObjectSerializer;
+use \Verdigado\Gruen eApiClient\ObjectSerializer;
 
 /**
  * Profile Class Doc Comment
  *
  * @category Class
- * @package  Verdigado\GrueneApiClient
+ * @package  Verdigado\Gruen eApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -64,16 +64,16 @@ class Profile implements ModelInterface, ArrayAccess, \JsonSerializable
         'first_name' => 'string',
         'last_name' => 'string',
         'email' => 'string',
-        'image' => '\Verdigado\GrueneApiClient\models\ProfileImage',
-        'phone_numbers' => '\Verdigado\GrueneApiClient\models\PhoneNumberEntry[]',
-        'messengers' => '\Verdigado\GrueneApiClient\models\MessengerEntry[]',
-        'social_media' => '\Verdigado\GrueneApiClient\models\SocialMediaEntry[]',
-        'tags' => '\Verdigado\GrueneApiClient\models\ProfileTag[]',
+        'image' => '\Verdigado\Gruen eApiClient\models\ProfileImage',
+        'phone_numbers' => '\Verdigado\Gruen eApiClient\models\PhoneNumberEntry[]',
+        'messengers' => '\Verdigado\Gruen eApiClient\models\MessengerEntry[]',
+        'social_media' => '\Verdigado\Gruen eApiClient\models\SocialMediaEntry[]',
+        'tags' => '\Verdigado\Gruen eApiClient\models\ProfileTag[]',
         'joined_at' => '\DateTime',
-        'memberships' => '\Verdigado\GrueneApiClient\models\DivisionMembership[]',
-        'roles' => '\Verdigado\GrueneApiClient\models\ProfileRole[]',
+        'memberships' => '\Verdigado\Gruen eApiClient\models\DivisionMembership[]',
+        'roles' => '\Verdigado\Gruen eApiClient\models\ProfileRole[]',
         'achievements' => 'string[]',
-        'privacy' => '\Verdigado\GrueneApiClient\models\ProfilePrivacySettings'
+        'privacy' => '\Verdigado\Gruen eApiClient\models\ProfilePrivacySettings'
     ];
 
     /**
@@ -635,7 +635,7 @@ class Profile implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets image
      *
-     * @return \Verdigado\GrueneApiClient\models\ProfileImage|null
+     * @return \Verdigado\Gruen eApiClient\models\ProfileImage|null
      */
     public function getImage()
     {
@@ -645,7 +645,7 @@ class Profile implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets image
      *
-     * @param \Verdigado\GrueneApiClient\models\ProfileImage|null $image image
+     * @param \Verdigado\Gruen eApiClient\models\ProfileImage|null $image image
      *
      * @return self
      */
@@ -662,7 +662,7 @@ class Profile implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets phone_numbers
      *
-     * @return \Verdigado\GrueneApiClient\models\PhoneNumberEntry[]
+     * @return \Verdigado\Gruen eApiClient\models\PhoneNumberEntry[]
      */
     public function getPhoneNumbers()
     {
@@ -672,7 +672,7 @@ class Profile implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets phone_numbers
      *
-     * @param \Verdigado\GrueneApiClient\models\PhoneNumberEntry[] $phone_numbers phone_numbers
+     * @param \Verdigado\Gruen eApiClient\models\PhoneNumberEntry[] $phone_numbers phone_numbers
      *
      * @return self
      */
@@ -689,7 +689,7 @@ class Profile implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets messengers
      *
-     * @return \Verdigado\GrueneApiClient\models\MessengerEntry[]
+     * @return \Verdigado\Gruen eApiClient\models\MessengerEntry[]
      */
     public function getMessengers()
     {
@@ -699,7 +699,7 @@ class Profile implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets messengers
      *
-     * @param \Verdigado\GrueneApiClient\models\MessengerEntry[] $messengers messengers
+     * @param \Verdigado\Gruen eApiClient\models\MessengerEntry[] $messengers messengers
      *
      * @return self
      */
@@ -716,7 +716,7 @@ class Profile implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets social_media
      *
-     * @return \Verdigado\GrueneApiClient\models\SocialMediaEntry[]
+     * @return \Verdigado\Gruen eApiClient\models\SocialMediaEntry[]
      */
     public function getSocialMedia()
     {
@@ -726,7 +726,7 @@ class Profile implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets social_media
      *
-     * @param \Verdigado\GrueneApiClient\models\SocialMediaEntry[] $social_media social_media
+     * @param \Verdigado\Gruen eApiClient\models\SocialMediaEntry[] $social_media social_media
      *
      * @return self
      */
@@ -743,7 +743,7 @@ class Profile implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets tags
      *
-     * @return \Verdigado\GrueneApiClient\models\ProfileTag[]
+     * @return \Verdigado\Gruen eApiClient\models\ProfileTag[]
      */
     public function getTags()
     {
@@ -753,7 +753,7 @@ class Profile implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets tags
      *
-     * @param \Verdigado\GrueneApiClient\models\ProfileTag[] $tags tags
+     * @param \Verdigado\Gruen eApiClient\models\ProfileTag[] $tags tags
      *
      * @return self
      */
@@ -797,7 +797,7 @@ class Profile implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets memberships
      *
-     * @return \Verdigado\GrueneApiClient\models\DivisionMembership[]|null
+     * @return \Verdigado\Gruen eApiClient\models\DivisionMembership[]|null
      */
     public function getMemberships()
     {
@@ -807,7 +807,7 @@ class Profile implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets memberships
      *
-     * @param \Verdigado\GrueneApiClient\models\DivisionMembership[]|null $memberships memberships
+     * @param \Verdigado\Gruen eApiClient\models\DivisionMembership[]|null $memberships memberships
      *
      * @return self
      */
@@ -824,7 +824,7 @@ class Profile implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets roles
      *
-     * @return \Verdigado\GrueneApiClient\models\ProfileRole[]
+     * @return \Verdigado\Gruen eApiClient\models\ProfileRole[]
      */
     public function getRoles()
     {
@@ -834,7 +834,7 @@ class Profile implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets roles
      *
-     * @param \Verdigado\GrueneApiClient\models\ProfileRole[] $roles roles
+     * @param \Verdigado\Gruen eApiClient\models\ProfileRole[] $roles roles
      *
      * @return self
      */
@@ -878,7 +878,7 @@ class Profile implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets privacy
      *
-     * @return \Verdigado\GrueneApiClient\models\ProfilePrivacySettings
+     * @return \Verdigado\Gruen eApiClient\models\ProfilePrivacySettings
      */
     public function getPrivacy()
     {
@@ -888,7 +888,7 @@ class Profile implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets privacy
      *
-     * @param \Verdigado\GrueneApiClient\models\ProfilePrivacySettings $privacy privacy
+     * @param \Verdigado\Gruen eApiClient\models\ProfilePrivacySettings $privacy privacy
      *
      * @return self
      */

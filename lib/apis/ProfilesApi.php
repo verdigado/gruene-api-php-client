@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Verdigado\GrueneApiClient
+ * @package  Verdigado\Gruen eApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Verdigado\GrueneApiClient\apis;
+namespace Verdigado\Gruen eApiClient\apis;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Verdigado\GrueneApiClient\ApiException;
-use Verdigado\GrueneApiClient\Configuration;
-use Verdigado\GrueneApiClient\HeaderSelector;
-use Verdigado\GrueneApiClient\ObjectSerializer;
+use Verdigado\Gruen eApiClient\ApiException;
+use Verdigado\Gruen eApiClient\Configuration;
+use Verdigado\Gruen eApiClient\HeaderSelector;
+use Verdigado\Gruen eApiClient\ObjectSerializer;
 
 /**
  * ProfilesApi Class Doc Comment
  *
  * @category Class
- * @package  Verdigado\GrueneApiClient
+ * @package  Verdigado\Gruen eApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -151,12 +151,12 @@ class ProfilesApi
      *
      * Create user profile
      *
-     * @param  \Verdigado\GrueneApiClient\models\CreateProfile $create_profile create_profile (required)
+     * @param  \Verdigado\Gruen eApiClient\models\CreateProfile $create_profile create_profile (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createProfile'] to see the possible values for this operation
      *
-     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\GrueneApiClient\models\Profile
+     * @return \Verdigado\Gruen eApiClient\models\Profile
      */
     public function createProfile($create_profile, string $contentType = self::contentTypes['createProfile'][0])
     {
@@ -169,12 +169,12 @@ class ProfilesApi
      *
      * Create user profile
      *
-     * @param  \Verdigado\GrueneApiClient\models\CreateProfile $create_profile (required)
+     * @param  \Verdigado\Gruen eApiClient\models\CreateProfile $create_profile (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createProfile'] to see the possible values for this operation
      *
-     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\GrueneApiClient\models\Profile, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\Gruen eApiClient\models\Profile, HTTP status code, HTTP response headers (array of strings)
      */
     public function createProfileWithHttpInfo($create_profile, string $contentType = self::contentTypes['createProfile'][0])
     {
@@ -217,23 +217,23 @@ class ProfilesApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\Verdigado\GrueneApiClient\models\Profile' === '\SplFileObject') {
+                    if ('\Verdigado\Gruen eApiClient\models\Profile' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\GrueneApiClient\models\Profile' !== 'string') {
+                        if ('\Verdigado\Gruen eApiClient\models\Profile' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\Profile', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\Profile', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\GrueneApiClient\models\Profile';
+            $returnType = '\Verdigado\Gruen eApiClient\models\Profile';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -254,7 +254,7 @@ class ProfilesApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\GrueneApiClient\models\Profile',
+                        '\Verdigado\Gruen eApiClient\models\Profile',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -269,7 +269,7 @@ class ProfilesApi
      *
      * Create user profile
      *
-     * @param  \Verdigado\GrueneApiClient\models\CreateProfile $create_profile (required)
+     * @param  \Verdigado\Gruen eApiClient\models\CreateProfile $create_profile (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createProfile'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -290,7 +290,7 @@ class ProfilesApi
      *
      * Create user profile
      *
-     * @param  \Verdigado\GrueneApiClient\models\CreateProfile $create_profile (required)
+     * @param  \Verdigado\Gruen eApiClient\models\CreateProfile $create_profile (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createProfile'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -298,7 +298,7 @@ class ProfilesApi
      */
     public function createProfileAsyncWithHttpInfo($create_profile, string $contentType = self::contentTypes['createProfile'][0])
     {
-        $returnType = '\Verdigado\GrueneApiClient\models\Profile';
+        $returnType = '\Verdigado\Gruen eApiClient\models\Profile';
         $request = $this->createProfileRequest($create_profile, $contentType);
 
         return $this->client
@@ -340,7 +340,7 @@ class ProfilesApi
     /**
      * Create request for operation 'createProfile'
      *
-     * @param  \Verdigado\GrueneApiClient\models\CreateProfile $create_profile (required)
+     * @param  \Verdigado\Gruen eApiClient\models\CreateProfile $create_profile (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createProfile'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -445,9 +445,9 @@ class ProfilesApi
      * @param  string $profile_id profile_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteProfile'] to see the possible values for this operation
      *
-     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\GrueneApiClient\models\Profile
+     * @return \Verdigado\Gruen eApiClient\models\Profile
      */
     public function deleteProfile($profile_id, string $contentType = self::contentTypes['deleteProfile'][0])
     {
@@ -463,9 +463,9 @@ class ProfilesApi
      * @param  string $profile_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteProfile'] to see the possible values for this operation
      *
-     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\GrueneApiClient\models\Profile, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\Gruen eApiClient\models\Profile, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteProfileWithHttpInfo($profile_id, string $contentType = self::contentTypes['deleteProfile'][0])
     {
@@ -508,23 +508,23 @@ class ProfilesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\GrueneApiClient\models\Profile' === '\SplFileObject') {
+                    if ('\Verdigado\Gruen eApiClient\models\Profile' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\GrueneApiClient\models\Profile' !== 'string') {
+                        if ('\Verdigado\Gruen eApiClient\models\Profile' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\Profile', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\Profile', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\GrueneApiClient\models\Profile';
+            $returnType = '\Verdigado\Gruen eApiClient\models\Profile';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -545,7 +545,7 @@ class ProfilesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\GrueneApiClient\models\Profile',
+                        '\Verdigado\Gruen eApiClient\models\Profile',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -589,7 +589,7 @@ class ProfilesApi
      */
     public function deleteProfileAsyncWithHttpInfo($profile_id, string $contentType = self::contentTypes['deleteProfile'][0])
     {
-        $returnType = '\Verdigado\GrueneApiClient\models\Profile';
+        $returnType = '\Verdigado\Gruen eApiClient\models\Profile';
         $request = $this->deleteProfileRequest($profile_id, $contentType);
 
         return $this->client
@@ -737,9 +737,9 @@ class ProfilesApi
      * @param  string $profile_id profile_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteProfileImage'] to see the possible values for this operation
      *
-     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\GrueneApiClient\models\Profile
+     * @return \Verdigado\Gruen eApiClient\models\Profile
      */
     public function deleteProfileImage($profile_id, string $contentType = self::contentTypes['deleteProfileImage'][0])
     {
@@ -755,9 +755,9 @@ class ProfilesApi
      * @param  string $profile_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteProfileImage'] to see the possible values for this operation
      *
-     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\GrueneApiClient\models\Profile, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\Gruen eApiClient\models\Profile, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteProfileImageWithHttpInfo($profile_id, string $contentType = self::contentTypes['deleteProfileImage'][0])
     {
@@ -800,23 +800,23 @@ class ProfilesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\GrueneApiClient\models\Profile' === '\SplFileObject') {
+                    if ('\Verdigado\Gruen eApiClient\models\Profile' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\GrueneApiClient\models\Profile' !== 'string') {
+                        if ('\Verdigado\Gruen eApiClient\models\Profile' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\Profile', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\Profile', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\GrueneApiClient\models\Profile';
+            $returnType = '\Verdigado\Gruen eApiClient\models\Profile';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -837,7 +837,7 @@ class ProfilesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\GrueneApiClient\models\Profile',
+                        '\Verdigado\Gruen eApiClient\models\Profile',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -881,7 +881,7 @@ class ProfilesApi
      */
     public function deleteProfileImageAsyncWithHttpInfo($profile_id, string $contentType = self::contentTypes['deleteProfileImage'][0])
     {
-        $returnType = '\Verdigado\GrueneApiClient\models\Profile';
+        $returnType = '\Verdigado\Gruen eApiClient\models\Profile';
         $request = $this->deleteProfileImageRequest($profile_id, $contentType);
 
         return $this->client
@@ -1032,9 +1032,9 @@ class ProfilesApi
      * @param  string $type Filter by type (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findProfileTags'] to see the possible values for this operation
      *
-     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\GrueneApiClient\models\FindProfileTagsResponse
+     * @return \Verdigado\Gruen eApiClient\models\FindProfileTagsResponse
      */
     public function findProfileTags($limit = 20, $offset = null, $search = null, $type = null, string $contentType = self::contentTypes['findProfileTags'][0])
     {
@@ -1053,9 +1053,9 @@ class ProfilesApi
      * @param  string $type Filter by type (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findProfileTags'] to see the possible values for this operation
      *
-     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\GrueneApiClient\models\FindProfileTagsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\Gruen eApiClient\models\FindProfileTagsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function findProfileTagsWithHttpInfo($limit = 20, $offset = null, $search = null, $type = null, string $contentType = self::contentTypes['findProfileTags'][0])
     {
@@ -1098,23 +1098,23 @@ class ProfilesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\GrueneApiClient\models\FindProfileTagsResponse' === '\SplFileObject') {
+                    if ('\Verdigado\Gruen eApiClient\models\FindProfileTagsResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\GrueneApiClient\models\FindProfileTagsResponse' !== 'string') {
+                        if ('\Verdigado\Gruen eApiClient\models\FindProfileTagsResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\FindProfileTagsResponse', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\FindProfileTagsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\GrueneApiClient\models\FindProfileTagsResponse';
+            $returnType = '\Verdigado\Gruen eApiClient\models\FindProfileTagsResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1135,7 +1135,7 @@ class ProfilesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\GrueneApiClient\models\FindProfileTagsResponse',
+                        '\Verdigado\Gruen eApiClient\models\FindProfileTagsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1185,7 +1185,7 @@ class ProfilesApi
      */
     public function findProfileTagsAsyncWithHttpInfo($limit = 20, $offset = null, $search = null, $type = null, string $contentType = self::contentTypes['findProfileTags'][0])
     {
-        $returnType = '\Verdigado\GrueneApiClient\models\FindProfileTagsResponse';
+        $returnType = '\Verdigado\Gruen eApiClient\models\FindProfileTagsResponse';
         $request = $this->findProfileTagsRequest($limit, $offset, $search, $type, $contentType);
 
         return $this->client
@@ -1371,9 +1371,9 @@ class ProfilesApi
      * @param  string $division Division key to filter profiles. Only include profiles that are member of given division. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findProfiles'] to see the possible values for this operation
      *
-     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\GrueneApiClient\models\FindProfilesResponse
+     * @return \Verdigado\Gruen eApiClient\models\FindProfilesResponse
      */
     public function findProfiles($limit = 20, $tags = null, $offset = null, $search = null, $division = null, string $contentType = self::contentTypes['findProfiles'][0])
     {
@@ -1393,9 +1393,9 @@ class ProfilesApi
      * @param  string $division Division key to filter profiles. Only include profiles that are member of given division. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['findProfiles'] to see the possible values for this operation
      *
-     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\GrueneApiClient\models\FindProfilesResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\Gruen eApiClient\models\FindProfilesResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function findProfilesWithHttpInfo($limit = 20, $tags = null, $offset = null, $search = null, $division = null, string $contentType = self::contentTypes['findProfiles'][0])
     {
@@ -1438,23 +1438,23 @@ class ProfilesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\GrueneApiClient\models\FindProfilesResponse' === '\SplFileObject') {
+                    if ('\Verdigado\Gruen eApiClient\models\FindProfilesResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\GrueneApiClient\models\FindProfilesResponse' !== 'string') {
+                        if ('\Verdigado\Gruen eApiClient\models\FindProfilesResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\FindProfilesResponse', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\FindProfilesResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\GrueneApiClient\models\FindProfilesResponse';
+            $returnType = '\Verdigado\Gruen eApiClient\models\FindProfilesResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1475,7 +1475,7 @@ class ProfilesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\GrueneApiClient\models\FindProfilesResponse',
+                        '\Verdigado\Gruen eApiClient\models\FindProfilesResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1527,7 +1527,7 @@ class ProfilesApi
      */
     public function findProfilesAsyncWithHttpInfo($limit = 20, $tags = null, $offset = null, $search = null, $division = null, string $contentType = self::contentTypes['findProfiles'][0])
     {
-        $returnType = '\Verdigado\GrueneApiClient\models\FindProfilesResponse';
+        $returnType = '\Verdigado\Gruen eApiClient\models\FindProfilesResponse';
         $request = $this->findProfilesRequest($limit, $tags, $offset, $search, $division, $contentType);
 
         return $this->client
@@ -1719,9 +1719,9 @@ class ProfilesApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getOwnProfile'] to see the possible values for this operation
      *
-     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\GrueneApiClient\models\Profile
+     * @return \Verdigado\Gruen eApiClient\models\Profile
      */
     public function getOwnProfile(string $contentType = self::contentTypes['getOwnProfile'][0])
     {
@@ -1736,9 +1736,9 @@ class ProfilesApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getOwnProfile'] to see the possible values for this operation
      *
-     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\GrueneApiClient\models\Profile, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\Gruen eApiClient\models\Profile, HTTP status code, HTTP response headers (array of strings)
      */
     public function getOwnProfileWithHttpInfo(string $contentType = self::contentTypes['getOwnProfile'][0])
     {
@@ -1781,23 +1781,23 @@ class ProfilesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\GrueneApiClient\models\Profile' === '\SplFileObject') {
+                    if ('\Verdigado\Gruen eApiClient\models\Profile' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\GrueneApiClient\models\Profile' !== 'string') {
+                        if ('\Verdigado\Gruen eApiClient\models\Profile' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\Profile', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\Profile', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\GrueneApiClient\models\Profile';
+            $returnType = '\Verdigado\Gruen eApiClient\models\Profile';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1818,7 +1818,7 @@ class ProfilesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\GrueneApiClient\models\Profile',
+                        '\Verdigado\Gruen eApiClient\models\Profile',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1860,7 +1860,7 @@ class ProfilesApi
      */
     public function getOwnProfileAsyncWithHttpInfo(string $contentType = self::contentTypes['getOwnProfile'][0])
     {
-        $returnType = '\Verdigado\GrueneApiClient\models\Profile';
+        $returnType = '\Verdigado\Gruen eApiClient\models\Profile';
         $request = $this->getOwnProfileRequest($contentType);
 
         return $this->client
@@ -1992,9 +1992,9 @@ class ProfilesApi
      * @param  string $profile_id profile_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProfile'] to see the possible values for this operation
      *
-     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\GrueneApiClient\models\PublicProfile
+     * @return \Verdigado\Gruen eApiClient\models\PublicProfile
      */
     public function getProfile($profile_id, string $contentType = self::contentTypes['getProfile'][0])
     {
@@ -2010,9 +2010,9 @@ class ProfilesApi
      * @param  string $profile_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProfile'] to see the possible values for this operation
      *
-     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\GrueneApiClient\models\PublicProfile, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\Gruen eApiClient\models\PublicProfile, HTTP status code, HTTP response headers (array of strings)
      */
     public function getProfileWithHttpInfo($profile_id, string $contentType = self::contentTypes['getProfile'][0])
     {
@@ -2055,23 +2055,23 @@ class ProfilesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\GrueneApiClient\models\PublicProfile' === '\SplFileObject') {
+                    if ('\Verdigado\Gruen eApiClient\models\PublicProfile' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\GrueneApiClient\models\PublicProfile' !== 'string') {
+                        if ('\Verdigado\Gruen eApiClient\models\PublicProfile' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\PublicProfile', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\PublicProfile', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\GrueneApiClient\models\PublicProfile';
+            $returnType = '\Verdigado\Gruen eApiClient\models\PublicProfile';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2092,7 +2092,7 @@ class ProfilesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\GrueneApiClient\models\PublicProfile',
+                        '\Verdigado\Gruen eApiClient\models\PublicProfile',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2136,7 +2136,7 @@ class ProfilesApi
      */
     public function getProfileAsyncWithHttpInfo($profile_id, string $contentType = self::contentTypes['getProfile'][0])
     {
-        $returnType = '\Verdigado\GrueneApiClient\models\PublicProfile';
+        $returnType = '\Verdigado\Gruen eApiClient\models\PublicProfile';
         $request = $this->getProfileRequest($profile_id, $contentType);
 
         return $this->client
@@ -2282,12 +2282,12 @@ class ProfilesApi
      * Update user profile
      *
      * @param  string $profile_id profile_id (required)
-     * @param  \Verdigado\GrueneApiClient\models\UpdateProfile $update_profile update_profile (required)
+     * @param  \Verdigado\Gruen eApiClient\models\UpdateProfile $update_profile update_profile (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateProfile'] to see the possible values for this operation
      *
-     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\GrueneApiClient\models\Profile
+     * @return \Verdigado\Gruen eApiClient\models\Profile
      */
     public function updateProfile($profile_id, $update_profile, string $contentType = self::contentTypes['updateProfile'][0])
     {
@@ -2301,12 +2301,12 @@ class ProfilesApi
      * Update user profile
      *
      * @param  string $profile_id (required)
-     * @param  \Verdigado\GrueneApiClient\models\UpdateProfile $update_profile (required)
+     * @param  \Verdigado\Gruen eApiClient\models\UpdateProfile $update_profile (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateProfile'] to see the possible values for this operation
      *
-     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\GrueneApiClient\models\Profile, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\Gruen eApiClient\models\Profile, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateProfileWithHttpInfo($profile_id, $update_profile, string $contentType = self::contentTypes['updateProfile'][0])
     {
@@ -2349,23 +2349,23 @@ class ProfilesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\GrueneApiClient\models\Profile' === '\SplFileObject') {
+                    if ('\Verdigado\Gruen eApiClient\models\Profile' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\GrueneApiClient\models\Profile' !== 'string') {
+                        if ('\Verdigado\Gruen eApiClient\models\Profile' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\Profile', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\Profile', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\GrueneApiClient\models\Profile';
+            $returnType = '\Verdigado\Gruen eApiClient\models\Profile';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2386,7 +2386,7 @@ class ProfilesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\GrueneApiClient\models\Profile',
+                        '\Verdigado\Gruen eApiClient\models\Profile',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2402,7 +2402,7 @@ class ProfilesApi
      * Update user profile
      *
      * @param  string $profile_id (required)
-     * @param  \Verdigado\GrueneApiClient\models\UpdateProfile $update_profile (required)
+     * @param  \Verdigado\Gruen eApiClient\models\UpdateProfile $update_profile (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateProfile'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2424,7 +2424,7 @@ class ProfilesApi
      * Update user profile
      *
      * @param  string $profile_id (required)
-     * @param  \Verdigado\GrueneApiClient\models\UpdateProfile $update_profile (required)
+     * @param  \Verdigado\Gruen eApiClient\models\UpdateProfile $update_profile (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateProfile'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2432,7 +2432,7 @@ class ProfilesApi
      */
     public function updateProfileAsyncWithHttpInfo($profile_id, $update_profile, string $contentType = self::contentTypes['updateProfile'][0])
     {
-        $returnType = '\Verdigado\GrueneApiClient\models\Profile';
+        $returnType = '\Verdigado\Gruen eApiClient\models\Profile';
         $request = $this->updateProfileRequest($profile_id, $update_profile, $contentType);
 
         return $this->client
@@ -2475,7 +2475,7 @@ class ProfilesApi
      * Create request for operation 'updateProfile'
      *
      * @param  string $profile_id (required)
-     * @param  \Verdigado\GrueneApiClient\models\UpdateProfile $update_profile (required)
+     * @param  \Verdigado\Gruen eApiClient\models\UpdateProfile $update_profile (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateProfile'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2596,9 +2596,9 @@ class ProfilesApi
      * @param  \SplFileObject $profile_image profile_image (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateProfileImage'] to see the possible values for this operation
      *
-     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Verdigado\GrueneApiClient\models\Profile
+     * @return \Verdigado\Gruen eApiClient\models\Profile
      */
     public function updateProfileImage($profile_id, $profile_image, string $contentType = self::contentTypes['updateProfileImage'][0])
     {
@@ -2615,9 +2615,9 @@ class ProfilesApi
      * @param  \SplFileObject $profile_image (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateProfileImage'] to see the possible values for this operation
      *
-     * @throws \Verdigado\GrueneApiClient\ApiException on non-2xx response
+     * @throws \Verdigado\Gruen eApiClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Verdigado\GrueneApiClient\models\Profile, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Verdigado\Gruen eApiClient\models\Profile, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateProfileImageWithHttpInfo($profile_id, $profile_image, string $contentType = self::contentTypes['updateProfileImage'][0])
     {
@@ -2660,23 +2660,23 @@ class ProfilesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Verdigado\GrueneApiClient\models\Profile' === '\SplFileObject') {
+                    if ('\Verdigado\Gruen eApiClient\models\Profile' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Verdigado\GrueneApiClient\models\Profile' !== 'string') {
+                        if ('\Verdigado\Gruen eApiClient\models\Profile' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Verdigado\GrueneApiClient\models\Profile', []),
+                        ObjectSerializer::deserialize($content, '\Verdigado\Gruen eApiClient\models\Profile', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Verdigado\GrueneApiClient\models\Profile';
+            $returnType = '\Verdigado\Gruen eApiClient\models\Profile';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2697,7 +2697,7 @@ class ProfilesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Verdigado\GrueneApiClient\models\Profile',
+                        '\Verdigado\Gruen eApiClient\models\Profile',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2743,7 +2743,7 @@ class ProfilesApi
      */
     public function updateProfileImageAsyncWithHttpInfo($profile_id, $profile_image, string $contentType = self::contentTypes['updateProfileImage'][0])
     {
-        $returnType = '\Verdigado\GrueneApiClient\models\Profile';
+        $returnType = '\Verdigado\Gruen eApiClient\models\Profile';
         $request = $this->updateProfileImageRequest($profile_id, $profile_image, $contentType);
 
         return $this->client

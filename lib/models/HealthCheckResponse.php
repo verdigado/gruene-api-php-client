@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Verdigado\GrueneApiClient
+ * @package  Verdigado\Gruen eApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Verdigado\GrueneApiClient\models;
+namespace Verdigado\Gruen eApiClient\models;
 
 use \ArrayAccess;
-use \Verdigado\GrueneApiClient\ObjectSerializer;
+use \Verdigado\Gruen eApiClient\ObjectSerializer;
 
 /**
  * HealthCheckResponse Class Doc Comment
  *
  * @category Class
- * @package  Verdigado\GrueneApiClient
+ * @package  Verdigado\Gruen eApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,9 +58,9 @@ class HealthCheckResponse implements ModelInterface, ArrayAccess, \JsonSerializa
       */
     protected static $openAPITypes = [
         'status' => 'string',
-        'info' => 'array<string,\Verdigado\GrueneApiClient\models\HealthCheckResponseInfoValue>',
-        'error' => 'array<string,\Verdigado\GrueneApiClient\models\HealthCheckResponseErrorValue>',
-        'details' => 'array<string,\Verdigado\GrueneApiClient\models\HealthCheckResponseErrorValue>'
+        'info' => 'array<string,\Verdigado\Gruen eApiClient\models\HealthCheckResponseInfoValue>',
+        'error' => 'array<string,\Verdigado\Gruen eApiClient\models\HealthCheckResponseErrorValue>',
+        'details' => 'array<string,\Verdigado\Gruen eApiClient\models\HealthCheckResponseErrorValue>'
     ];
 
     /**
@@ -340,7 +340,7 @@ class HealthCheckResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets info
      *
-     * @return array<string,\Verdigado\GrueneApiClient\models\HealthCheckResponseInfoValue>|null
+     * @return array<string,\Verdigado\Gruen eApiClient\models\HealthCheckResponseInfoValue>|null
      */
     public function getInfo()
     {
@@ -350,7 +350,7 @@ class HealthCheckResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets info
      *
-     * @param array<string,\Verdigado\GrueneApiClient\models\HealthCheckResponseInfoValue>|null $info info
+     * @param array<string,\Verdigado\Gruen eApiClient\models\HealthCheckResponseInfoValue>|null $info info
      *
      * @return self
      */
@@ -367,7 +367,7 @@ class HealthCheckResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets error
      *
-     * @return array<string,\Verdigado\GrueneApiClient\models\HealthCheckResponseErrorValue>|null
+     * @return array<string,\Verdigado\Gruen eApiClient\models\HealthCheckResponseErrorValue>|null
      */
     public function getError()
     {
@@ -377,7 +377,7 @@ class HealthCheckResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets error
      *
-     * @param array<string,\Verdigado\GrueneApiClient\models\HealthCheckResponseErrorValue>|null $error error
+     * @param array<string,\Verdigado\Gruen eApiClient\models\HealthCheckResponseErrorValue>|null $error error
      *
      * @return self
      */
@@ -394,7 +394,7 @@ class HealthCheckResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets details
      *
-     * @return array<string,\Verdigado\GrueneApiClient\models\HealthCheckResponseErrorValue>|null
+     * @return array<string,\Verdigado\Gruen eApiClient\models\HealthCheckResponseErrorValue>|null
      */
     public function getDetails()
     {
@@ -404,7 +404,7 @@ class HealthCheckResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets details
      *
-     * @param array<string,\Verdigado\GrueneApiClient\models\HealthCheckResponseErrorValue>|null $details details
+     * @param array<string,\Verdigado\Gruen eApiClient\models\HealthCheckResponseErrorValue>|null $details details
      *
      * @return self
      */

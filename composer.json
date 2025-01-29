@@ -1,44 +1,40 @@
 {
-  "name": "verdigado/gruene-api-client",
-  "version": "0.9.0-dev",
-  "description": "PHP client library for gruene api",
-  "keywords": [
-    "openapitools",
-    "openapi-generator",
-    "openapi",
-    "php",
-    "sdk",
-    "rest",
-    "api"
-  ],
-  "homepage": "https://openapi-generator.tech",
-  "license": "unlicense",
-  "authors": [
-    {
-      "name": "OpenAPI-Generator contributors",
-      "homepage": "https://openapi-generator.tech"
+    "name": "verdigado/gruene-api-client",
+    "version": "0.9.0",
+    "description": "## OpenAPI Endpoints <a href=\"/api-json\">OpenAPI Spec in JSON</a><br> <a href=\"/api-yaml\">OpenAPI Spec in YAML</a><br>  ### Offboarding Every service conntected to Grünes Netz needs to remove users when they are removed from `saml.gruene.de`. Connected services need to pull a list of users waiting for removal at least once a week. api.gruene.de needs to be informed whether the user did not exist or was removed. API tokens can be obtained from `technik@verdigado.com`.",
+    "keywords": [
+        "openapitools",
+        "openapi-generator",
+        "openapi",
+        "php",
+        "sdk",
+        "rest",
+        "api"
+    ],
+    "homepage": "https://openapi-generator.tech",
+    "license": "unlicense",
+    "authors": [
+        {
+            "name": "OpenAPI-Generator contributors",
+            "homepage": "https://openapi-generator.tech"
+        }
+    ],
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "guzzlehttp/guzzle": "^7.3",
+        "guzzlehttp/psr7": "^1.7 || ^2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0 || ^9.0",
+        "friendsofphp/php-cs-fixer": "^3.5"
+    },
+    "autoload": {
+        "psr-4": { "Verdigado\\Gruen eApiClient\\" : "lib/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "Verdigado\\Gruen eApiClient\\Test\\" : "test/" }
     }
-  ],
-  "require": {
-    "php": "^7.4 || ^8.0",
-    "ext-curl": "*",
-    "ext-json": "*",
-    "ext-mbstring": "*",
-    "guzzlehttp/guzzle": "^7.3",
-    "guzzlehttp/psr7": "^1.7 || ^2.0"
-  },
-  "require-dev": {
-    "phpunit/phpunit": "^8.0 || ^9.0",
-    "friendsofphp/php-cs-fixer": "^3.5"
-  },
-  "autoload": {
-    "psr-4": {
-      "Verdigado\\GrueneApiClient\\": "lib/"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Verdigado\\GrueneApiClient\\Test\\": "test/"
-    }
-  }
 }
